@@ -2,7 +2,7 @@ import { Container, } from "src/components/common";
 
 const Example = () => (
 	<Container>
-		Example
+		Some Special Page Not From Contentful
 	</Container>
 );
 
