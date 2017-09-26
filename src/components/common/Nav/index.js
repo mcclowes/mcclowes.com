@@ -10,6 +10,8 @@ import Links from "./Links";
 import Burger from "./Burger";
 import Fade from "../Fade";
 
+import data from "src/data";
+
 // --------------------------------------------------
 
 const Wrapper = styled.nav`
@@ -72,7 +74,7 @@ const Logo = props =>
 	<LogoWrapper to = "/">
 		{
 			true
-			? <LogoText>LOGO TEXT</LogoText>
+			? <LogoText>{ data.siteName }</LogoText>
 			: <LogoImage src = "/img/igpf-logo.png"/>
 		}
 	</LogoWrapper>;

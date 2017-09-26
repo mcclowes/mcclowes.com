@@ -83,7 +83,14 @@ rawdata.items.forEach(item => {
 
 // --------------------------------------------------
 
+const pages = dataObj.page.map(R.pipe(
+	adjustFields("slug", "path", slug => "/" + slug)
+));
+
 // shape the data however you want my guy
-const retval = dataObj;
+const retval = {
+	...dataObj.siteSettings[0],
+	pages,
+};
 
 export default retval;
