@@ -2,7 +2,7 @@ import Helmet from "react-helmet";
 
 import * as vars from "../style/vars";
 
-import Data from "src/data";
+import data from "src/data";
 
 // --------------------------------------------------
 
@@ -12,34 +12,34 @@ const Head = ( { pageData, } ) => (
 		<meta http-equiv = "X-UA-Compatible" content = "IE=edge"/>
 		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
 
-		<link rel = "canonical" href = { `http://www.gregclark.com/${ pageData && pageData.slug ? pageData.slug : "" }` } />
+		<link rel = "canonical" href = { `https://www.mcclowes.com/${ pageData && pageData.slug ? pageData.slug : "" }` } />
 		<title>
 			{
 				pageData && pageData.title
-				? `${ pageData.title } | ${ Data.siteTitle }`
-				: `${ Data.siteTitle } | ${ Data.siteDescription }`
+				? `${ pageData.title } | ${ data.siteTitle }`
+				: `${ data.siteTitle } | ${ data.siteDescription }`
 			}
 		</title>
 		<meta name = "description" 
 			content = { 
 				pageData && pageData.description 
 				? pageData.description
-				: Data.siteDescription
+				: data.siteDescription
 			}
 		/>
-		<meta property = "og:url" content = { `http://www.gregclark.com/${ pageData && pageData.slug ? pageData.slug : "" }` } />
+		<meta property = "og:url" content = { `https://www.mcclowes.com/${ pageData && pageData.slug ? pageData.slug : "" }` } />
 		<meta property = "og:type" content = "website" />
 		<meta property = "og:title" content = {
 				pageData && pageData.title
-				? `${ pageData.title } | ${ Data.siteTitle }`
-				: `${ Data.siteTitle } | ${ Data.siteDescription }`
+				? `${ pageData.title } | ${ data.siteTitle }`
+				: `${ data.siteTitle } | ${ data.siteDescription }`
 			} 
 		/>
-		<meta property = "og:site_name" content = { Data.sitetitle } />
+		<meta property = "og:site_name" content = { data.sitetitle } />
 		<meta property = "og:description" content = { 
 				pageData && pageData.description 
 				? pageData.description
-				: Data.siteDescription
+				: data.siteDescription
 			} 
 		/>
 
@@ -49,7 +49,7 @@ const Head = ( { pageData, } ) => (
 			{ 
 				pageData && pageData.image
 				? pageData.image.url
-				: Data.homeImage.url
+				: data.siteImage.url
 			}
 		/>
 
@@ -58,7 +58,7 @@ const Head = ( { pageData, } ) => (
 			{ 
 				pageData && pageData.image
 				? pageData.image.url
-				: Data.homeImage.url
+				: data.siteImage.url
 			}
 		/>
 		<meta property = "og:image:width" content = "180" />
@@ -69,7 +69,7 @@ const Head = ( { pageData, } ) => (
 			content = { 
 				pageData && pageData.image
 				? pageData.image.url
-				: Data.homeImage.url
+				: data.siteImage.url
 			}
 		/>
 		<meta property = "og:image:width" content = "600" />
@@ -85,22 +85,22 @@ const Head = ( { pageData, } ) => (
 		{
 			pageData && pageData.title
 			? `<meta name = "twitter:title" content = ${ pageData.title } />`
-			: `<meta name = "twitter:title" content = ${ Data.siteTitle } />`
+			: `<meta name = "twitter:title" content = ${ data.siteTitle } />`
 		}
 
-		<meta name = "twitter:url" content = { `http://www.gregclark.com/${ pageData && pageData.slug ? pageData.slug : "" }` } />
+		<meta name = "twitter:url" content = { `https://www.mcclowes.com/${ pageData && pageData.slug ? pageData.slug : "" }` } />
 		<meta name = "twitter:description" content = 
 			{ 
 				pageData && pageData.description 
 				? pageData.description
-				: Data.siteDescription
+				: data.siteDescription
 			}
 		/>
 		<meta name = "twitter:image:src" content = 
 			{ 
 				pageData && pageData.image
 				? pageData.image.url
-				: Data.homeImage.url
+				: data.siteImage.url
 			}
 		/>
 

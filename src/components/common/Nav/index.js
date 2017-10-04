@@ -73,9 +73,10 @@ const LogoImage = styled.img`
 const Logo = props =>
 	<LogoWrapper to = "/">
 		{
-			true
-			? <LogoText>{ data.siteName }</LogoText>
-			: <LogoImage src = "/img/igpf-logo.png"/>
+			console.log(data),
+			data.siteTitle
+			? <LogoText>{ data.siteTitle }</LogoText>
+			: <LogoImage src = "/img/logo.png"/>
 		}
 	</LogoWrapper>;
 

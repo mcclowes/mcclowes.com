@@ -1,9 +1,9 @@
 import { Container, } from "src/components/common";
 
-const Example = () => (
+const AboutMe = () => (
 	<Container>
 		Some Special Page Not From Contentful
 	</Container>
 );
 
-export default Example;
+export default AboutMe;

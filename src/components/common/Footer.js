@@ -6,6 +6,8 @@ import * as vars from "../style/vars";
 
 import { Icon, } from "./misc";
 
+import data from "src/data.js";
+
 // --------------------------------------------------
 
 const Wrapper = styled.footer`
@@ -25,6 +27,16 @@ const Wrapper = styled.footer`
 
 const Left = styled.div`
 	font-weight: bold;
+	color: white;
+
+	a {
+		color: white;
+
+		&:hover,
+		&:active {
+			color: #eee;
+		}
+	}
 `;
 
 const Right = styled.div`
@@ -33,17 +45,28 @@ const Right = styled.div`
 	font-size: 1.5em;
 
 	a {
+		color: white;
 		margin-left: 0.5em;
+
+		&:hover,
+		&:active {
+			color: #eee;
+		}
 	}
 `;
 
 const Footer = () =>
 	<Wrapper>
-		<Left>Footer Text</Left>
+		<Left>Site by <a href="https://codogo.io">Codogo</a></Left>
 
 		<Right>
-			<a href = "#"><Icon type = "facebook-square"/></a>
-			<a href = "#"><Icon type = "twitter"/></a>
+			<a href = { `https://www.twitter.com/${ data.twitterUsername }` }><Icon type = "twitter"/></a>
+
+			<a href = { `https://www.medium.com/@${ data.mediumUsername }` }><Icon type = "medium"/></a>
+
+			<a href = { `https://www.linkedin.com/in/${ data.linkedInUsername }` }><Icon type = "linkedin"/></a>
+
+			<a href = { `https://www.github.com/${ data.githubUsername }` }><Icon type = "github"/></a>
 		</Right>
 	</Wrapper>;
 
