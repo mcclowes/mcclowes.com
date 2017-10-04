@@ -13,6 +13,8 @@ export const GridCell = styled.div`
 	p.flex ? `flex: ${ p.flex };` : "" };
 `;
 
+// --------------------------------------------------
+
 const textBoxMargins = objMap(vars.font.size, (key, val) => `-${val} 0`);
 
 export const TextBox = styled.div`
@@ -28,6 +30,8 @@ export const TextCell = props =>
 		</TextBox>
 	</GridCell>;
 
+// --------------------------------------------------
+
 export const Container = styled.div`
 	${ mixins.bpEach("padding", vars.dim.gutter.container) } ${p =>
 	p.fullWidth ? "" : `max-width: ${p.maxWidth || vars.bps.lg.min}px`};
@@ -37,6 +41,8 @@ export const Container = styled.div`
 		? `border-bottom: 1px solid ${vars.colors.lines};`
 		: ""} ${p => (p.center ? "text-align: center;" : "")};
 `;
+
+// --------------------------------------------------
 
 const bgTint = 0.3;
 export const Bg = styled.div`
@@ -173,3 +179,39 @@ export const Only = objMap(vars.bps, (key, val) => ({ children, }) =>
 		children = { children }
 	/>,
 );
+
+// --------------------------------------------------
+export const Posts = styled.div`
+	flex-direction: row;
+	display: flex;
+	flex-wrap: wrap;
+`;
+
+export const Post = styled.div`
+	flex-basis: 30%;
+	display: flex;
+	flex-direction: column;
+	${ mixins.xs`flex-basis: 100%;` }
+	width: 30%;
+	margin: 0.5em;
+`;
+
+// --------------------------------------------------
+
+export const GreyscaleImage = styled.div`
+	img {
+		width: 100%;
+		filter: gray; /* IE6-9 */
+		//-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+		filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+		transition: .5s;
+
+		/* Disable grayscale on hover */
+		&:hover {
+			-webkit-filter: grayscale(0);
+			filter: none;
+		}
+	}
+`;
+
+// --------------------------------------------------

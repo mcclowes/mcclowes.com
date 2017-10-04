@@ -22,6 +22,7 @@ const defaultGlobalStyles = css`
 
 	body {
 		background: white;
+		background: #333;
 		font-family: Helvetica, Arial, sans-serif;
 		${ mixins.bpEach("font-size", vars.font.size) }
 		color: ${ vars.colors.text };
