@@ -2,7 +2,6 @@ import Data from "./components/common/Data";
 import NotFound from "./components/pages/404";
 
 import Home from "./components/pages/Home";
-import Example from "./components/pages/ExamplePage";
 import Generic from "./components/pages/Generic";
 
 import data from "src/data";
@@ -30,19 +29,30 @@ const routesConfig = [
 		component: Data(rawdata),
 		show: false,
 	},
-	{
-		path: "/example",
-		title: "Example",
-		component: Example,
-		show: true,
-	},
 ];
+
+data.sections.forEach(section => {
+	routesConfig.push({
+		component: Generic,
+		show: true,
+		...section,
+	})
+})
 
 data.pages.forEach(page => {
 	routesConfig.push({
 		component: Generic,
 		show: true,
 		...page,
+	})
+})
+
+data.projects.forEach(project => {
+	routesConfig.push({
+		path: "/projects/" + project.slug,
+		component: Generic,
+		show: false,
+		...project,
 	})
 })
 

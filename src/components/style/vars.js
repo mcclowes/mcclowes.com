@@ -15,20 +15,20 @@ export const breakpoints = {
 export const bps = breakpoints;
 
 export const colors = {
-	text: "#444",
-	footer: "#fff",
+	text: "#fff",
+	nav: "#444",
+	footer: "#444",
 	grey: "rgba(0,0,0,0.2)",
 	lines: "rgba(0,0,0,0.2)",
 };
 
-colors.nav = colors.text;
 
 export const font = {
 	size: {
-		xs: "12px",
-		sm: "14px",
-		md: "16px",
-		lg: "17px",
+		xs: "14px",
+		sm: "16px",
+		md: "17px",
+		lg: "18px",
 	},
 
 	title: {
@@ -90,3 +90,9 @@ dimensions.gutter.container = {
 	xs: dimensions.gutter.full.xs,
 };
 export const dim = dimensions;
+
+export const meta = {
+	twitterUsername: "mcclowes",
+	twitterCreator: "codogoio",
+	googleSearch: "YQs24--DxVBln2zZc8hPo1kZFoxzc2amoF6-QWkDe7k",
+};

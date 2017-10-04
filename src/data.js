@@ -83,14 +83,33 @@ rawdata.items.forEach(item => {
 
 // --------------------------------------------------
 
+console.log(dataObj);
+
 const pages = dataObj.page.map(R.pipe(
 	adjustFields("slug", "path", slug => "/" + slug)
+));
+
+const projects = dataObj.project.map(R.pipe(
+	adjustFields("slug", "path", slug => "/" + slug)
+));
+
+const sections = dataObj.section.map(R.pipe(
+	adjustFields("slug", "path", slug => "/" + slug)
+));
+
+const posts = dataObj.post.map(R.pipe(
+	adjustFields("slug", "path", slug => "/posts/" + slug)
 ));
 
 // shape the data however you want my guy
 const retval = {
 	...dataObj.siteSettings[0],
 	pages,
+	projects,
+	sections,
+	posts,
 };
+
+console.log(retval);
 
 export default retval;
