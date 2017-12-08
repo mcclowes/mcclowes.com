@@ -22,7 +22,7 @@
     "react-responsive": "^1.3.4",
     "react-router": "^4.1.2",
     "react-router-dom": "^4.1.2",
-    "react-snapshot": "^2.0.0-1",
+    "react-snapshot": "^1.3.0",
     "recompose": "^0.24.0",
     "slugify": "^1.2.1",
     "split": "^1.0.1",
@@ -32,16 +32,18 @@
   "devDependencies": {
     "codogo-react-scripts": "1.0.8-beta.51",
     "eslint": "^4.4.1",
-    "prettier": "^1.5.3"
+    "prettier": "^1.5.3",
+    "sitemap-static": "^0.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "static": "node scripts/static",
+    "static": "yarn data && yarn build && react-snapshot && yarn sitemap",
     "data": "node scripts/static/makeDataFile",
     "test": "react-scripts test --env=jsdom",
     "lint": "react-scripts format",
     "format": "react-scripts format",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sitemap": "sitemap-static --prefix=https://thebusinessofcities.com/ build | sed -e \"s/\\.html//g\" > build/sitemap.xml"
   }
 }
