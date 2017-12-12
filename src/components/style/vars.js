@@ -15,13 +15,17 @@ export const breakpoints = {
 export const bps = breakpoints;
 
 export const colors = {
-	text: "#fff",
-	nav: "#444",
-	footer: "#444",
+	text: "#090D27",
+	background: "#DFD2B8",
+	nav: "#DFD2B8",
+	footer: "#DFD2B8",
+	primary: "#090D27",
 	grey: "rgba(0,0,0,0.2)",
 	lines: "rgba(0,0,0,0.2)",
 };
 
+colors.nav = colors.background;
+colors.footer = colors.background;
 
 export const font = {
 	size: {
