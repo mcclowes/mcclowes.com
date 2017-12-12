@@ -15,7 +15,7 @@ const Wrapper = styled.footer`
 	${ mixins.bpEither("height", vars.dim.footer.height) }
 	${ mixins.bpEither("padding", vars.dim.nav.margin) };
 	align-items: center;
-	border-top: 1px solid ${ mixins.tr(0.2) };
+	//border-top: 1px solid ${ mixins.tr(0.2) };
 	bottom: 0;
 	display: flex;
 	justify-content: space-between;
