@@ -15,7 +15,7 @@ import data from "src/data";
 // --------------------------------------------------
 
 const Wrapper = styled.nav`
-	${ mixins.bp.sm.min`${ mixins.shadow(1) }` } ${ mixins.bpEither(
+	${ mixins.bpEither(
 		"height",
 		vars.dim.nav.height,
 	) }
@@ -25,10 +25,9 @@ const Wrapper = styled.nav`
 	right: 0;
 	top: 0;
 	z-index: 2;
-	color: white;
 
 	& a {
-		color: white !important;
+		color: ${ vars.colors.text } !important;
 	}
 `;
 
@@ -63,6 +62,14 @@ const BurgerWrapper = styled.div`
 const LogoText = styled.div`
 	font-size: 2em;
 	font-family: ${vars.font.title.family};
+
+	&:after {
+		padding: 0.05em 0;
+		content: '';
+		display: block;
+		width: 5em;
+		border-bottom: 0.2em solid ${ vars.colors.bgdark };
+	}
 `;
 
 const LogoImage = styled.img`
@@ -124,7 +131,7 @@ const Nav = ({ open, closeMenu, toggleMenu, }) => (
 					<Burger
 						open = { open }
 						padding = { mixins.num(vars.dim.nav.margin.xs) }
-						color = { "white" }
+						color = { vars.colors.text }
 					/>
 				</BurgerWrapper>
 			</MobileStuff>
