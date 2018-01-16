@@ -1,7 +1,8 @@
-import Data from "./components/common/Data";
+import Data from "./components/toolbox/Data";
 import NotFound from "./components/pages/404";
 
 import Home from "./components/pages/Home";
+
 import Generic from "./components/pages/Generic";
 
 import data from "src/data";

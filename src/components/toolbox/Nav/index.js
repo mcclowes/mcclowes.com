@@ -15,20 +15,8 @@ import data from "src/data";
 // --------------------------------------------------
 
 const Wrapper = styled.nav`
-	${ mixins.bpEither(
-		"height",
-		vars.dim.nav.height,
-	) }
 	background-color: ${R.path([ "theme", "nav", ])};
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 2;
-
-	& a {
-		color: ${ vars.colors.text } !important;
-	}
+	z-index: 3;
 `;
 
 const Inner = styled.div`
@@ -62,6 +50,9 @@ const BurgerWrapper = styled.div`
 const LogoText = styled.div`
 	font-size: 2em;
 	font-family: ${vars.font.title.family};
+	color: ${R.path([ "theme", "logo1", ])};
+	text-transform: uppercase;
+	padding-top: 1.5em;
 
 	&:after {
 		padding: 0.05em 0;
@@ -80,7 +71,6 @@ const LogoImage = styled.img`
 const Logo = props =>
 	<LogoWrapper to = "/">
 		{
-			console.log(data),
 			data.siteTitle
 			? <LogoText>{ data.siteTitle }</LogoText>
 			: <LogoImage src = "/img/logo.png"/>
@@ -97,6 +87,7 @@ const LogoWrapper = styled(IndexLink)`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	padding-bottom: 1.5em;
 `;
 
 // --------------------------------------------------

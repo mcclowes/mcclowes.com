@@ -8,10 +8,10 @@ import {
 import routesConfig from "./routesConfig";
 import injectGlobalStyles from "./components/style/globalStyles";
 
-import Nav from "./components/common/Nav";
-import Main from "./components/common/Main";
-import Footer from "./components/common/Footer";
-import ScrollToTop from "./components/common/ScrollToTop";
+import Nav from "./components/toolbox/Nav";
+import Main from "./components/toolbox/Main";
+import Footer from "./components/toolbox/Footer";
+import ScrollToTop from "./components/toolbox/ScrollToTop";
 
 import * as vars from "./components/style/vars";
 

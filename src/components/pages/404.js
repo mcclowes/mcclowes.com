@@ -1,5 +1,5 @@
-import Head from "src/components/common/Head";
-
 export default () => (
-	<h1>404... Whoops!</h1>
+	<div>
+		<h1>404... Whoops!</h1>
+	</div>
 );

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import * as mixins from "../style/mixins";
 import * as vars from "../style/vars";
 
-import { Icon, } from "./misc";
+import { Icon, } from "./";
 
 import data from "src/data.js";
 
@@ -27,10 +27,10 @@ const Wrapper = styled.footer`
 
 const Left = styled.div`
 	font-weight: bold;
-	color: white;
+	color: ${R.path([ "theme", "text", ])};
 
 	a {
-		color: white;
+		color: ${R.path([ "theme", "text", ])};
 
 		&:hover,
 		&:active {
@@ -45,7 +45,7 @@ const Right = styled.div`
 	font-size: 1.5em;
 
 	a {
-		color: white;
+		color: ${R.path([ "theme", "text", ])};
 		margin-left: 0.5em;
 
 		&:hover,
