@@ -2,9 +2,9 @@ import styled, { css, } from "styled-components";
 import { Link, } from "react-router-dom";
 import MQ from "react-responsive";
 
-import * as mixins from "../style/mixins";
-import * as vars from "../style/vars";
-import { objMap, } from "../../lib/util";
+import * as mixins from "src/components/style/mixins";
+import * as vars from "src/components/style/vars";
+import { objMap, } from "src/lib/util";
 
 // --------------------------------------------------
 
@@ -181,19 +181,23 @@ export const Only = objMap(vars.bps, (key, val) => ({ children, }) =>
 );
 
 // --------------------------------------------------
+
 export const Posts = styled.div`
-	flex-direction: row;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 0.5em;
+	grid-gap: 0.5em;
 `;
 
-export const Post = styled.div`
-	flex-basis: 30%;
+// --------------------------------------------------
+
+export const Banner = styled.div`
+	flex-basis: 90%;
 	display: flex;
 	flex-direction: column;
 	${ mixins.xs`flex-basis: 100%;` }
-	width: 30%;
-	margin: 0.5em;
+	width: 90%;
+	margin-bottom: 1.5em;
 `;
 
 // --------------------------------------------------

@@ -13,6 +13,5 @@ const minHeights = objMap(
 );
 
 export default styled.div`
-	${ mixins.bpEither("margin-top", vars.dim.nav.height) }
 	background-color: ${R.path([ "theme", "body", ])};
 `;
