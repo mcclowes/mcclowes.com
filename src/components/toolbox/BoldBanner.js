@@ -7,9 +7,8 @@ import * as vars from "src/components/style/vars";
 // --------------------------------------------------
 
 const BannerTextWrapper = styled.div`
-	color: #fff;
-	text-align: right;
-	background: #000;
+	color: ${vars.colors.text};
+	background: ${vars.colors.background};
 	overflow: none;
 `;
 
@@ -33,48 +32,6 @@ const BannerText = styled.div`
 
     background-image: url(${ props => props.image });
     background-size: cover;
-
-	&:before,
-	&:after {
-	    position: absolute;
-	    opacity: 1;
-	    content: '';
-	    transition-duration: 0.5s;
-	}
-
-	&:before {
-	    top: 0;
-	    right: 0;
-	    bottom: 0;
-	    left: 0;
-	    background-image: inherit;
-	}
-
-	&:after {
-	    position: absolute;
-	    z-index: -1;
-	    top: .125em;
-	    right: .125em;
-	    bottom: .125em;
-	    left: .125em;
-	    background-color: #000;
-	}
-
-	&:before {
-	    background-size: cover;
-	}
-
-	&:after {
-	    content: none;
-	}
-
-	&:hover {
-		&:before,
-		&:after {
-		    opacity: 0.5;
-		    filter: blur(3px);
-		}
-	}
 `;
 
 const RightAlignedText = styled.div`
