@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { printObj, } from "src/lib/util";
-import { Container, } from "src/components/common";
+import { Container, } from "src/components/toolbox";
 
 // --------------------------------------------------
 

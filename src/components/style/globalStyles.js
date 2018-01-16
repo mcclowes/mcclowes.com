@@ -35,11 +35,28 @@ const defaultGlobalStyles = css`
 	a:visited,
 	a:active {
 		text-decoration: none;
-		color: ${ vars.colors.text };
+	}
+
+	p {
+		a,
+		a:hover,
+		a:visited,
+		a:active {
+			color: ${ vars.colors.text };
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
 	}
 
 	p, h1, h2, h3, h4 {
 		${ mixins.bpEach("margin", textMargins) }
+	}
+
+	h1, h2, h3, h4 {
+		font-family: ${vars.font.title.family};
+		font-weight: normal;
 	}
 
 	img {

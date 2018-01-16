@@ -2,24 +2,23 @@ import styled from "styled-components";
 
 import { 
 	Container,
-	GridCell,
-	TextCell,
-	Para,
-	Image,
-	Post,
-	Posts,
 	GreyscaleImage,
-} from "src/components/common";
+	Head,
+	PostTile,
+	Posts,
+	TextCell,
+} from "src/components/toolbox";
 
-import * as mixins from "src/components/style/mixins";
-
-import Head from "src/components/common/Head";
 import data from "src/data.js";
 
 // --------------------------------------------------
 
 const Project = styled.span`
 	padding: 5px;
+`;
+
+const Intro = styled.div`
+	max-width: 700px;
 `;
 
 // --------------------------------------------------
@@ -33,7 +32,7 @@ const Generic = ( page ) => (
 		<TextCell>
 			<h1>{ page.title }</h1>
 
-			<div dangerouslySetInnerHTML = {{
+			<Intro dangerouslySetInnerHTML = {{
 				__html: page.html,
 			}}/>
 		</TextCell>
@@ -97,23 +96,10 @@ const Generic = ( page ) => (
 					})
 					.map( post => {
 						return (
-							<Post
+							<PostTile
 								key = { post.slug }
-							>
-								<a href = { post.externalLink || post.link }>
-									{
-										post.image
-										? (
-											<GreyscaleImage>
-												<img src = { post.image.url }/>
-											</GreyscaleImage>
-										)
-										: null
-									}
-
-									<h4>{ post.title }</h4>
-								</a>
-							</Post>
+								post = { post }
+							/>
 						)
 					})
 				}

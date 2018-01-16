@@ -12,21 +12,21 @@ const wrapperStyle = [
 		transform: translateY(${ props => ( props.open ? 0 : -110 ) }%);
 		transition: 0.3s all ease-out;
 		${ mixins.shadow(2) }
-		position: absolute;
 		left: 0;
 		right: 0;
 		top: ${ vars.dim.nav.height.xs };
 		background-color: ${R.path([ "theme", "nav", ])};
 		align-items: center;
+		padding-top: 3em;
 	`,
-
 	`
-		position: absolute;
+		margin-top: 1em;
 		right: ${ mixins.num(vars.dim.nav.margin.other) * 0.5 }px;
 		top: 0;
 		bottom: 0;
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
+		flex-direction: column;
 	`,
 ];
 
@@ -50,15 +50,13 @@ const buttonStyle = [
 	`,
 
 	`
-		line-height: ${ vars.dim.nav.height.other };
-		padding: 0 ${ mixins.num(vars.dim.nav.margin.other) * 0.5 }px;
+		padding: 0 ${vars.dim.nav.margin.other} 0 0;
 		display: inline-block;
-		height: ${ vars.dim.nav.height.other };
 		border-bottom: 3px solid transparent;
 		border-top: 1px solid transparent;
 
 		&.active {
-			border-bottom-color: white;
+			opacity: 0.7;
 		}
 	`,
 ];
@@ -66,7 +64,8 @@ const buttonStyle = [
 // should be Link
 const Button = styled(NavLink)`
 	color: ${R.path([ "theme", "logo1", ])};
-	font-size: 1.1em;
+	font-size: 1.3em;
+	text-transform: uppercase;
 
 	${ mixins.xs`${ buttonStyle[0] }` }
 	${ mixins.bp.sm.min`${buttonStyle[1] }` }

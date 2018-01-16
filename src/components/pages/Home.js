@@ -1,13 +1,25 @@
-import { 
-	Container,
-	TextCell, 
-	Post,
-	Posts,
-	GreyscaleImage,
-} from "src/components/common";
+import styled from "styled-components";
 
-import Head from "src/components/common/Head";
+import { 
+	Container, 
+	PostTile,
+	Posts,
+	BoldBanner,
+	GreyscaleImage,
+	Head,
+} from "src/components/toolbox";
+
+import * as vars from "src/components/style/vars";
+
 import data from "src/data.js";
+
+// --------------------------------------------------
+
+const PostTitle = styled.a`
+	background-color: ${ vars.colors.bgdark };
+	position: absolute;
+	bottom: 0;
+`;
 
 // --------------------------------------------------
 
@@ -17,36 +29,31 @@ const Home = ( page ) => (
 			pageData = { page }
 		/>
 
-		<TextCell>
-			<Posts>
-				{
-					data.posts
-					.map( post => {
-						return ( 
-							<Post
-								key = { post.slug }
-							>
-								<a href = { post.externalLink || post.link }>
-									{
-										post.image
-										? (
-											<GreyscaleImage>
-												<img src = { post.image.url }/>
-											</GreyscaleImage>
-										)
-										: null
-									}
-								</a>
+		{
+			data.posts.slice(0,1)
+			.map( post => {
+				return ( 
+					<BoldBanner
+						key = { post.slug }
+						post = { post }
+					/>
+				)
+			})
+		}
 
-								<a href = { post.externalLink || post.link }>
-									<h4>{ post.title }</h4>
-								</a>
-							</Post>
-						)
-					})
-				}
-			</Posts>
-		</TextCell>
+		<Posts>
+			{
+				data.posts.slice(1)
+				.map( post => {
+					return ( 
+						<PostTile
+							key = { post.slug }
+							post = { post }
+						/>
+					)
+				})
+			}
+		</Posts>
 	</Container>
 );
 
