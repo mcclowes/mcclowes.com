@@ -84,6 +84,8 @@ rawdata.items.forEach(item => {
 
 // --------------------------------------------------
 
+console.log(dataObj);
+
 const pages = dataObj.page.map(R.pipe(
 	adjustFields("slug", "path", slug => "/" + slug)
 ));
@@ -108,5 +110,7 @@ const retval = {
 	sections,
 	posts,
 };
+
+console.log(retval);
 
 export default retval;
