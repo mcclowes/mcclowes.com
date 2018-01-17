@@ -1,5 +1,9 @@
+import { 
+	TextCell,
+} from "src/components/toolbox";
+
 export default () => (
-	<div>
+	<TextCell>
 		<h1>404... Whoops!</h1>
-	</div>
+	</TextCell>
 );
