@@ -97,7 +97,6 @@ const Generic = ( page ) => (
 					//check if any of the projects' sections match the page
 					return post.project.filter( 
 						project => { 
-							console.log(project.fields.section);
 							return project.fields.section.fields.title === page.title; 
 						}
 					).length > 0;
@@ -134,7 +133,6 @@ const Generic = ( page ) => (
 						//check if any of the projects' sections match the page
 						return post.project.filter( 
 							project => { 
-								console.log(project.fields.section);
 								return project.fields.section.fields.title === page.title; 
 							}
 						).length > 0;
