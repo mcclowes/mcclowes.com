@@ -15,7 +15,7 @@ export const breakpoints = {
 export const bps = breakpoints;
 
 export const colors = {
-	text: "#333",
+	text: "#000",
 	//background: "#DFD2B8",
 	background: "#fff",
 	primary: "#090D27",
@@ -37,6 +37,10 @@ export const font = {
 
 	title: {
 		family: "Montserrat, sans-serif",
+	},
+
+	body: {
+		family: "Lora, sans-serif",
 	},
 };
 

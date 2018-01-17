@@ -6,75 +6,35 @@ import * as vars from "src/components/style/vars";
 
 // --------------------------------------------------
 const PostTextWrapper = styled.div`
-	background: #000;
+	background: #000 url(${ props => props.image });
+	background-size: cover;
+	color: ${ vars.colors.text };
+	overflow: none;
+	padding: 1.5em;
+	align-items: flex-end;
+	display: flex;
+	min-height: ${ props => props.banner ? "30em" : "20em" };
+
+	&:hover {
+		opacity: 0.7;
+	}
 `;
 
 const PostText = styled.div`
+	align-items: start;
 	display: flex;
 	flex-direction: column;
 	flex: 1;
-	align-items: flex-end;
-	padding-top: 100%;
-	height: 100%;
-
-	font-family: ${vars.font.title.family};
+	max-width: 80%;
+    color: ${ vars.colors.text };
+    font-family: ${ vars.font.title.family };
     font-size: 2em;
-    line-height: 1;
-    position: relative;
-    padding: .5em .75em;
-    text-align: center;
-    color: #fff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    background-image: url(${ props => props.image });
-    background-size: cover;
-
-	&:before,
-	&:after {
-	    position: absolute;
-	    opacity: 1;
-	    content: '';
-	    transition-duration: 0.5s;
-	}
-
-	&:before {
-	    top: 0;
-	    right: 0;
-	    bottom: 0;
-	    left: 0;
-	    background-image: inherit;
-	}
-
-	&:after {
-	    position: absolute;
-	    z-index: -1;
-	    top: .125em;
-	    right: .125em;
-	    bottom: .125em;
-	    left: .125em;
-	    background-color: #000;
-	}
-
-	&:before {
-	    background-size: cover;
-	}
-
-	&:after {
-	    content: none;
-	}
-
-	&:hover {
-		&:before,
-		&:after {
-		    opacity: 0.3;
-		    filter: blur(6px);
-		}
-	}
+    line-height: 1.1;
+    padding: .35em .5em;
+    background-color: ${ vars.colors.background };
 `;
 
 const RightAlignedText = styled.div`
-	text-align: right
 `;
 
 const SmallText = styled(RightAlignedText)`
@@ -82,18 +42,33 @@ const SmallText = styled(RightAlignedText)`
 	clear: both;
 `;
 
+const ExtLink = (props) => (
+	(props.post && props.post.externalLink)
+	? (
+		<a href = { props.post.externalLink } >
+			{ props.children }
+		</a>
+	)
+	: (
+		<Link to = { "posts/" + props.post.slug } >
+			{ props.children }
+		</Link>
+	)
+);
+
 const PostTile = (props) => (
-	<PostTextWrapper>
-		<Link to = { "projects/" + props.post.slug } >
-			<PostText
-				image = { props.post.image.url }
-			>
+	<ExtLink post = { props.post }>
+		<PostTextWrapper 
+			banner = { props.banner || false }
+			image = { props.post && props.post.image && props.post.image.url }
+		>
+			<PostText>
 				<SmallText>{ props.post.project[0].fields.title }</SmallText>
 
 				<RightAlignedText>{ props.post.title }</RightAlignedText>
 			</PostText>
-		</Link>
-	</PostTextWrapper>
+		</PostTextWrapper>
+	</ExtLink>
 );
 
 export default PostTile;

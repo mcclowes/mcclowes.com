@@ -9,6 +9,8 @@ import { objMap, } from "src/lib/util";
 const textMargins = objMap(vars.font.size, (key, val) => val + " 0");
 
 const defaultGlobalStyles = css`
+	@import url('https://fonts.googleapis.com/css?family=Lora|Montserrat:400,700,800');
+
 	*, *:before, *:after {
 		box-sizing: border-box;
 		margin: 0;
@@ -38,6 +40,8 @@ const defaultGlobalStyles = css`
 	}
 
 	p {
+		font-family: ${ vars.font.body.family };
+
 		a,
 		a:hover,
 		a:visited,

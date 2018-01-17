@@ -104,36 +104,36 @@ export const ButtonWrapper = styled.div`
 
 	${({ outline, color, hoverColor, }) => 
 		outline || true
-			? css`
+		? css`
+			color: ${ color || vars.colors.text };
+			border: 1.5px solid ${ color || vars.colors.text };
+			${mixins.xs`border-width: 1px;`}
+			background: transparent;
+
+			&:hover,
+			&:visited,
+			&:active {
 				color: ${ color || vars.colors.text };
-				border: 1.5px solid ${ color || vars.colors.text };
-				${mixins.xs`border-width: 1px;`}
-				background: transparent;
+			}
+		`
+		: `
+			color: white;
+			background: ${ color || vars.colors.text };
 
-				&:hover,
-				&:visited,
-				&:active {
-					color: ${ color || vars.colors.text };
-				}
-			`
-			: `
+			&:hover,
+			&:visited,
+			&:active {
 				color: white;
-				background: ${ color || vars.colors.text };
+			}
 
-				&:hover,
-				&:visited,
-				&:active {
-					color: white;
-				}
+			&:hover {
+				background: ${
+					hoverColor ||
+					(color ? mixins.darken(color, 0.1) : mixins.lighten(vars.colors.text, 0.1))
+				};
+			}
 
-				&:hover {
-					background: ${
-						hoverColor ||
-						(color ? mixins.darken(color, 0.1) : mixins.lighten(vars.colors.text, 0.1))
-					};
-				}
-
-			`
+		`
 	}
 `;
 
@@ -184,7 +184,8 @@ export const Only = objMap(vars.bps, (key, val) => ({ children, }) =>
 
 export const Posts = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	${ mixins.xs`grid-template-columns: 1fr;` }
 	margin-top: 0.5em;
 	grid-gap: 0.5em;
 `;
