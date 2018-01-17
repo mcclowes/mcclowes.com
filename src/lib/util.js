@@ -13,11 +13,8 @@ export const printObj = obj => JSON.stringify(obj, null, "  ");
 
 export const sentenceCase = str => str.slice(0, 1).toUpperCase() + str.slice(1);
 
-export const plog = str => o => (console.log(str, o), o);
+export const plog = str => o => (o);
 
 export const logProps = str =>
 	lifecycle({
-		componentDidUpdate() {
-			console.log(str, this.props);
-		},
 	});
