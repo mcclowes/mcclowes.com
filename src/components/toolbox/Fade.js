@@ -77,6 +77,7 @@ export class Fader extends React.Component {
 				this.fadeIn(cb);
 			}
 		} catch (err) {
+			console.log("something went wrong with componentWillEnter");
 			cb();
 		}
 	}
@@ -89,6 +90,7 @@ export class Fader extends React.Component {
 				this.fadeOut(cb);
 			}
 		} catch (err) {
+			console.log("something went wrong with componentWillLeave");
 			cb();
 		}
 	}
