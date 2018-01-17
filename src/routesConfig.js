@@ -57,6 +57,15 @@ data.projects.forEach(project => {
 	})
 })
 
+data.posts.forEach(post => {
+	routesConfig.push({
+		path: "/posts/" + post.slug,
+		component: Generic,
+		show: false,
+		...post,
+	})
+})
+
 routesConfig.push({
 	component: NotFound,
 });

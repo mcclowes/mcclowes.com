@@ -15,7 +15,6 @@ import data from "src/data";
 // --------------------------------------------------
 
 const Wrapper = styled.nav`
-	background-color: ${R.path([ "theme", "nav", ])};
 	z-index: 3;
 `;
 
@@ -23,28 +22,51 @@ const Inner = styled.div`
 	width: 100%;
 	height: 100%;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75em 1.5em;
 `;
 
 const MobileStuff = styled.div`
-	${ mixins.bp.sm.min`display: none;`} ${mixins.contained()};
+	${ mixins.bp.sm.min`display: none;`}
+	${mixins.contained()};
 `;
 
 const Dark = styled.div`
 	${ mixins.contained() } position: fixed;
 	background: ${mixins.tr(0.5)};
+	pointer-events: none;
 `;
 
 const Overlay = styled.div`
-	${ mixins.contained() } ${({ open, }) =>
-	open ? mixins.shadow(1) : ""} transition: 0.3s all ease-out;
-	background-color: ${R.path([ "theme", "nav", ])};
+	${ mixins.contained() }
+	${({ open, }) =>
+		open ? mixins.shadow(1) : ""
+	}
+	transition: 0.3s all ease-out;
 `;
 
 const BurgerWrapper = styled.div`
 	position: absolute;
-	right: 0;
+	background-color: ${R.path([ "theme", "nav", ])};
+	right: 1.5em;
 	top: 50%;
 	margin-top: -20px;
+	z-index: 4;
+`;
+
+// --------------------------------------------------
+
+const IndexLink = props => <Link to = "/" { ...props } />;
+
+const LogoWrapper = styled(IndexLink)`
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	background-color: ${R.path([ "theme", "nav", ])};
+	position: relative;
+	z-index: 1;
 `;
 
 const LogoText = styled.div`
@@ -52,14 +74,21 @@ const LogoText = styled.div`
 	font-family: ${vars.font.title.family};
 	color: ${R.path([ "theme", "logo1", ])};
 	text-transform: uppercase;
-	padding-top: 1.5em;
+	padding: .25em 0.5em;
 
 	&:after {
 		padding: 0.05em 0;
 		content: '';
-		display: block;
-		width: 5em;
-		border-bottom: 0.2em solid ${ vars.colors.bgdark };
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		border-bottom: 0.1em solid ${ vars.colors.bgdark };
+		transition: 0.5s;
+	}
+
+	&:hover:after {
+		width: 100%;
 	}
 `;
 
@@ -75,20 +104,8 @@ const Logo = props =>
 			? <LogoText>{ data.siteTitle }</LogoText>
 			: <LogoImage src = "/img/logo.png"/>
 		}
-	</LogoWrapper>;
-
-const IndexLink = props => <Link to = "/" { ...props } />;
-
-const LogoWrapper = styled(IndexLink)`
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	${ mixins.bpEither("left", vars.dim.nav.margin )}
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding-bottom: 1.5em;
-`;
+	</LogoWrapper>
+;
 
 // --------------------------------------------------
 
@@ -104,11 +121,7 @@ const enhance = compose(
 const Nav = ({ open, closeMenu, toggleMenu, }) => (
 	<Wrapper>
 		<Inner>
-			<MobileStuff>
-				<Fade visible = { open }>
-					<Dark onClick = { closeMenu }/>
-				</Fade>
-			</MobileStuff>
+			<Logo />
 
 			<Links
 				close = { closeMenu }
@@ -126,9 +139,18 @@ const Nav = ({ open, closeMenu, toggleMenu, }) => (
 					/>
 				</BurgerWrapper>
 			</MobileStuff>
-			
-			<Logo />
 		</Inner>
+
+		{
+			open &&
+			(
+				<MobileStuff>
+					<Fade visible = { open }>
+						<Dark onClick = { closeMenu }/>
+					</Fade>
+				</MobileStuff>
+			)
+		}
 	</Wrapper>
 );
 
