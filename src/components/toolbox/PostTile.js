@@ -63,7 +63,8 @@ const PostTile = (props) => (
 			image = { props.post && props.post.image && props.post.image.url }
 		>
 			<PostText>
-				<SmallText>{ props.post.project[0].fields.title }</SmallText>
+				{console.log(props.post)}
+				<SmallText>{ R.pathOr("", ["post","project",0,"fields","title", ], props) }</SmallText>
 
 				<RightAlignedText>{ props.post.title }</RightAlignedText>
 			</PostText>
