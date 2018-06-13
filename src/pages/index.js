@@ -1,29 +1,26 @@
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react'
+import Link from 'gatsby-link'
 
-import { Button, Container, Header, Segment, } from "semantic-ui-react";
-
-// ----------------------------------------------------
-
-// ----------------------------------------------------
-
-const IndexPage = props => (
-	<div>
-		<h4>Max Clayton Clowes</h4>
+const IndexPage = () => (
+  <div>
+  		<br/>
+  		<br/>
+    	<h4>Max Clayton Clowes</h4>
 		
-		<p><a href="mailto:maxcc@me.com">Email</a></p>
+		<p>
+			<a href = "mailto:maxcc@me.com">Email</a><br/>
 
-		<p><a href="tel:+44 7976 136 097">Tel</a></p>
+			<a href = "tel:+44 7976 136 097">Tel</a><br/>
 
-		<p><a href="http://bit.ly/maxclaytonclowes">Portfolio</a></p>
+			<a href = "http://bit.ly/maxclaytonclowes">Portfolio</a><br/>
 
-		<p><a href="https://www.linkedin.com/in/maxclaytonclowes/">LinkedIn</a></p>
+			<a href = "https://www.linkedin.com/in/maxclaytonclowes/">LinkedIn</a><br/>
 
-		<p><a href="https://twitter.com/mcclowes">Twitter</a></p>
+			<a href = "https://twitter.com/mcclowes">Twitter</a><br/>
 
-		<p><a href="https://github.com/mcclowes">Github</a></p>
+			<a href = "https://github.com/mcclowes">Github</a>
+		</p>
+  </div>
+)
 
-	</div>
-);
-
-export default IndexPage;
+export default IndexPage
