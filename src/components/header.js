@@ -1,14 +1,17 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import Link from "gatsby-link";
+import PropTypes from "prop-types";
+import React from "react";
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      marginBottom: '1.45rem',
-    }}
-  >
-    
-  </div>
-)
+const Header = ({ siteTitle, }) => (
+	<div
+		style = { {
+			marginBottom: "1.45rem",
+		} }
+	 />
+);
 
-export default Header
+Header.propTypes = {
+	siteTitle: PropTypes.any,
+};
+
+export default Header;
