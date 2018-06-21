@@ -1,11 +1,12 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
+import Link from "gatsby-link";
+import PropTypes from "prop-types";
 
 const IndexPage = () => (
-  <div>
-  		<br/>
-  		<br/>
-    	<h4>Max Clayton Clowes</h4>
+	<div>
+		<br/>
+		<br/>
+		<h4>Max Clayton Clowes</h4>
 		
 		<p>
 			<a href = "mailto:maxcc@me.com">Email</a><br/>
@@ -20,7 +21,11 @@ const IndexPage = () => (
 
 			<a href = "https://github.com/mcclowes">Github</a>
 		</p>
-  </div>
-)
+	</div>
+);
 
-export default IndexPage
+IndexPage.propTypes = {
+	
+};
+
+export default IndexPage;
