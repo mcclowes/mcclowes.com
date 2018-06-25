@@ -32,7 +32,6 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "mcclowes-scripts format",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "mcclowes-scripts format"
   }
 }
