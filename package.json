@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "pre-commit": [
-    "build"
+    "format"
   ],
   "repository": {
     "type": "git",
