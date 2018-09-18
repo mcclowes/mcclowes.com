@@ -12,7 +12,7 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "mcclowes-scripts": "^0.4.0",
+    "mcclowes-scripts": "^0.5.0",
     "pre-commit": "^1.2.2"
   },
   "eslintConfig": {
