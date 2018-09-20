@@ -4,15 +4,17 @@
   "version": "0.1.0",
   "author": "Max Clayton Clowes <maxcc@me.com>",
   "dependencies": {
-    "gatsby": "^2.0.0",
+    "gatsby": "^2.0.6",
     "gatsby-link": "^2.0.1",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "greenkeeper-lockfile": "^1.15.1",
     "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "mcclowes-scripts": "^0.5.0",
+    "mcclowes-scripts": "^0.5.3",
     "pre-commit": "^1.2.2"
   },
   "eslintConfig": {
