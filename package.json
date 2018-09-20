@@ -8,6 +8,7 @@
     "gatsby-link": "^2.0.1",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "greenkeeper-lockfile": "^1.15.1",
+    "jest": "^23.6.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -19,6 +20,10 @@
   },
   "eslintConfig": {
     "extends": "mcclowes"
+  },
+  "jest": {
+    "rootDir": "./src",
+    "cacheDirectory": "./node_modules/.cache/jest"
   },
   "keywords": [
     "gatsby"
@@ -34,6 +39,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "mcclowes-scripts format"
+    "format": "mcclowes-scripts format",
+    "test": "jest"
   }
 }
