@@ -1,6 +1,4 @@
-import { mount, } from "enzyme";
-
-import React from "react";
+//import { mount, } from "enzyme";
 
 describe("Root", () => {
 	describe("should just pass", () => {
