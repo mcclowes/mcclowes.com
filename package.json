@@ -8,14 +8,14 @@
     "gatsby-link": "^2.0.1",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "greenkeeper-lockfile": "^1.15.1",
-    "jest": "^23.6.0",
+    "jest": "^24.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "mcclowes-scripts": "^0.5.3",
+    "mcclowes-scripts": "^0.8.0",
     "pre-commit": "^1.2.2"
   },
   "eslintConfig": {
