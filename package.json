@@ -10,7 +10,7 @@
     "greenkeeper-lockfile": "^1.15.1",
     "jest": "^24.0.0",
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
+    "react": "^16.8.3",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0"
   },
