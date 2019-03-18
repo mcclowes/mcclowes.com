@@ -51,7 +51,7 @@ const IndexPage = () => (
 		<Links>
 			<a href = "mailto:maxcc@me.com">Email</a><br/>
 
-			<a href = "tel:+44 7976 136 097">Tel</a><br/>
+			<a href = "tel:+447976136097">Tel</a><br/>
 
 			<a href = "http://bit.ly/maxclaytonclowes">Portfolio</a><br/>
 
