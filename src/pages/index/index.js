@@ -1,7 +1,7 @@
 import Link from "gatsby-link";
 import PropTypes from "prop-types";
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Page = styled.div`
 	background-color: black;
