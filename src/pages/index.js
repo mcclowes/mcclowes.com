@@ -4,32 +4,48 @@ import React from "react";
 import styled from "styled-components";
 
 const Page = styled.div`
-	background-color: black;
-
+	padding: 0 1rem;
+	width: 100%;
+	height: 100%;
 `;
 
-const Logo = styled.div`
-	font-weight: bolder;
-	font-family: helvetica;
-	text-transform: uppercase;
-	color: transparent;
+const Logo = styled.h1`
 	-webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: #DDA1B7;
+	color: transparent;
+	font-family: helvetica;
+	font-weight: bolder;
 	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+  -webkit-text-stroke-color: #DDA1B7;
 `;
 
 const Links = styled.p`
-	font-weight: bolder;
-	font-family: helvetica;
-	text-transform: uppercase;
-	color: transparent;
-	-webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: #DDA1B7;
-	letter-spacing: 0.3rem;
+	a {			
+		font-family: helvetica;
+		font-weight: bolder;
+		letter-spacing: 0.3rem;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 1.2rem;
+
+		&,
+		&:hover,
+		&:active {
+			-webkit-text-stroke-width: 1px;
+			color: transparent;
+		  -webkit-text-stroke-color: #DDA1B7;
+		}
+
+		&:hover,
+		&:active {
+			-webkit-text-stroke-width: 1px;
+		  -webkit-text-stroke-color: #BB8C9E;
+		}
+	}
 `;
 
 const IndexPage = () => (
-	<div>
+	<Page>
 		<Logo>Max Clayton Clowes</Logo>
 		
 		<Links>
@@ -45,7 +61,7 @@ const IndexPage = () => (
 
 			<a href = "https://github.com/mcclowes">Github</a>
 		</Links>
-	</div>
+	</Page>
 );
 
 IndexPage.propTypes = {
