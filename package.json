@@ -9,7 +9,7 @@
     "gatsby-plugin-react-helmet": "^3.0.0",
     "greenkeeper-lockfile": "^1.15.1",
     "mcclowes-scripts": "^0.8.1",
-    "react": "^16.5.2",
+    "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.1.3"
