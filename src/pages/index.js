@@ -59,7 +59,7 @@ const IndexPage = () => (
 
 			<a href = "https://twitter.com/mcclowes">Twitter</a><br/>
 
-			<a href = "https://github.com/mcclowes">Github</a>
+			<a href = "https://github.com/mcclowes">Github</a><br/>
 
 			<a href = "https://calendly.com/mcclowes">Book time with me</a>
 		</Links>
