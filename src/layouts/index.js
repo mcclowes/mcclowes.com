@@ -1,3 +1,4 @@
+import Footer from "../components/footer";
 import Header from "../components/header";
 import Helmet from "react-helmet";
 import PropTypes from "prop-types";
@@ -6,6 +7,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { graphql } from 'gatsby'
 
 const Page = styled.div`
+	padding: 0 1.5rem;
 	width: 100%;
 	height: 100%;
 `;
@@ -23,6 +25,10 @@ export const query = graphql`
 `;
 
 const GlobalStyle = createGlobalStyle`
+	* {
+		box-sizing: border-box;
+	}
+
 	body {
 		margin: 0;
 		background-color: black;
@@ -34,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ children, data, }) => (
 	<Page>
 		<Helmet
-			title = { data.site.siteMetadata.title }
+			title = { "m c c l o w e s" }
 			meta = { [
 				{ name: "description", content: "Max Clayton Clowes", },
 				{ name: "keywords", content: "mcclowes, max, clayton, clowes", },
@@ -44,7 +50,9 @@ const Layout = ({ children, data, }) => (
 
 		<GlobalStyle/>
 		
-		{ children() }
+		{ children }
+
+		<Footer/>
 	</Page>
 );
 
