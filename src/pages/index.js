@@ -2,12 +2,7 @@ import Link from "gatsby-link";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-
-const Page = styled.div`
-	padding: 0 1rem;
-	width: 100%;
-	height: 100%;
-`;
+import Layout from "../layouts";
 
 const Logo = styled.h1`
 	-webkit-text-stroke-width: 1px;
@@ -45,7 +40,7 @@ const Links = styled.p`
 `;
 
 const IndexPage = () => (
-	<Page>
+	<Layout>
 		<Logo>Max Clayton Clowes</Logo>
 		
 		<Links>
@@ -63,7 +58,7 @@ const IndexPage = () => (
 
 			<a href = "https://calendly.com/mcclowes">Book time with me</a>
 		</Links>
-	</Page>
+	</Layout>
 );
 
 IndexPage.propTypes = {
