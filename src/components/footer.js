@@ -34,7 +34,7 @@ const FooterLinks = styled.div`
 const Footer = ({ siteTitle, }) => (
 	<FooterLinks>
     <a href="https://personal-sites-web-ring.freddieridell.now.sh/prev">⬅️</a>
-    <a href="https://personal-sites-web-ring.freddieridell.now.sh/home">Webring</a>
+    <a href="https://personal-sites-web-ring.freddieridell.now.sh/">Webring</a>
     <a href="https://personal-sites-web-ring.freddieridell.now.sh/next">➡️</a>
     <a href="https://personal-sites-web-ring.freddieridell.now.sh/rand">🔀</a>
   </FooterLinks>
