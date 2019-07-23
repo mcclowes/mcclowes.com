@@ -6,7 +6,7 @@
   "dependencies": {
     "gatsby": "^2.13.33",
     "gatsby-link": "^2.2.2",
-    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-react-helmet": "^3.1.2",
     "greenkeeper-lockfile": "^1.15.1",
     "mcclowes-scripts": "^0.11.1",
     "react": "^16.8.6",
