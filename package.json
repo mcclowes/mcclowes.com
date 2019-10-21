@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "Max Clayton Clowes <maxcc@me.com>",
   "dependencies": {
-    "gatsby": "^2.16.1",
+    "gatsby": "^2.16.5",
     "gatsby-link": "^2.2.18",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "greenkeeper-lockfile": "^1.15.1",
