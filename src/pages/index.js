@@ -1,66 +1,54 @@
+import Layout from "../components/layout";
 import Link from "gatsby-link";
 import PropTypes from "prop-types";
 import React from "react";
-import styled from "styled-components";
-import Layout from "../layouts";
+import { Logo, Links } from './csx'
 
-const Logo = styled.h1`
-	-webkit-text-stroke-width: 1px;
-	color: transparent;
-	font-family: helvetica;
-	font-weight: bolder;
-	letter-spacing: 0.3rem;
-	text-transform: uppercase;
-  -webkit-text-stroke-color: #DDA1B7;
-`;
-
-const Links = styled.p`
-	a {			
-		font-family: helvetica;
-		font-weight: bolder;
-		letter-spacing: 0.3rem;
-		text-transform: uppercase;
-		text-decoration: none;
-		font-size: 1.2rem;
-
-		&,
-		&:hover,
-		&:active {
-			-webkit-text-stroke-width: 1px;
-			color: transparent;
-		  -webkit-text-stroke-color: #DDA1B7;
-		}
-
-		&:hover,
-		&:active {
-			-webkit-text-stroke-width: 1px;
-		  -webkit-text-stroke-color: #BB8C9E;
-		}
-	}
-`;
+const links = [
+	{
+		link: "mailto:maxcc@me.com",
+		text: "Email",
+	},
+	{
+		link: "tel:+447976136097",
+		text: "Tel",
+	},
+	{
+		link: "http://bit.ly/maxclaytonclowes",
+		text: "Portfolio",
+	},
+	{
+		link: "https://www.linkedin.com/in/maxclaytonclowes/",
+		text: "LinkedIn",
+	},
+	{
+		link: "https://twitter.com/mcclowes",
+		text: "Twitter",
+	},
+	{
+		link: "https://github.com/mcclowes",
+		text: "Github",
+	},
+	{
+		link: "https://dribbble.com/mcclowes",
+		text: "Dribbble",
+	},
+	{
+		link: "https://medium.com/@mcclowes",
+		text: "Medium",
+	},
+	{
+		link: "https://calendly.com/mcclowes",
+		text: "Book time with me",
+	},
+]
 
 const IndexPage = () => (
 	<Layout>
 		<Logo>Max Clayton Clowes</Logo>
 		
 		<Links>
-			<a href = "mailto:maxcc@me.com">Email</a><br/>
-
-			<a href = "tel:+447976136097">Tel</a><br/>
-
-			<a href = "http://bit.ly/maxclaytonclowes">Portfolio</a><br/>
-
-			<a href = "https://www.linkedin.com/in/maxclaytonclowes/">LinkedIn</a><br/>
-
-			<a href = "https://twitter.com/mcclowes">Twitter</a><br/>
-
-			<a href = "https://github.com/mcclowes">Github</a><br/>
-
-			<a href = "https://dribbble.com/mcclowes">Dribbble</a><br/>
-
-			<a href = "https://medium.com/@mcclowes">Medium</a><br/>
-
-			<a href = "https://calendly.com/mcclowes">Book time with me</a>
+			{ links && links.map((link, i)=><a key={i} href={link.link}>{link.text}</a>) }
 		</Links>
 	</Layout>
 );
