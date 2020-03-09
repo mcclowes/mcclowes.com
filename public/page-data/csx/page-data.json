@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-csx-js","path":"/csx/","result":{"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+{
+  "componentChunkName": "component---src-pages-csx-js",
+  "path": "/csx/",
+  "result": { "pageContext": {} }
+}
