@@ -55,6 +55,11 @@
       "pre-push": "npm run test"
     }
   },
+  "babelMacros": {
+    "styledComponents": {
+      "pure": true
+    }
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
