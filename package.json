@@ -56,11 +56,6 @@
       "pre-commit": "npm run format && npm run test"
     }
   },
-  "babelMacros": {
-    "styledComponents": {
-      "pure": true
-    }
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
