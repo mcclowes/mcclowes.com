@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Max Clayton Clowes <maxcc@me.com>",
   "dependencies": {
+    "babel-plugin-macros": "^2.8.0",
     "gatsby": "^2.17.8",
     "gatsby-cli": "^2.8.8",
     "gatsby-link": "^2.2.22",
