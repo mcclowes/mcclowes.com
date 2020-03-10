@@ -7,7 +7,7 @@ const Header = ({ siteTitle, }) => (
 		style = { {
 			marginBottom: "1.45rem",
 		} }
-	 />
+	/>
 );
 
 Header.propTypes = {
