@@ -2,6 +2,6 @@
 
 exports[`Padded renders default component 1`] = `
 <csx__PaddedWrapper
-  space="p1"
+  space="p3"
 />
 `;
