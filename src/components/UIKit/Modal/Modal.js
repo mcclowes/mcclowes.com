@@ -10,9 +10,9 @@ import Inner from "./Inner";
 
 import "./modal.css";
 
-if (process.env.NODE_ENV !== "test") ReactModal.setAppElement("#root");
-
 const Modal = props => {
+  if (process.env.NODE_ENV !== "test") ReactModal.setAppElement("#root");
+  
   const { children, doClose, open, closeIcon, trigger } = props;
 
   return (

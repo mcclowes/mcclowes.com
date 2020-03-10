@@ -8,7 +8,7 @@ exports[`Text Header renders default component 1`] = `
       "_foldedDefaultProps": Object {
         "theme": Object {
           "colors": Object {
-            "black": "#333333",
+            "text": "#333333",
           },
         },
       },
@@ -19,7 +19,7 @@ exports[`Text Header renders default component 1`] = `
         "rules": Array [
           "color:",
           [Function],
-          ";font-family:Helventica,Arial,sans-serif;",
+          ";font-family:Helventica,Arial,sans-serif;margin:0;",
         ],
       },
       "displayName": "csx__Paragraph",
@@ -36,7 +36,7 @@ exports[`Text Header renders default component 1`] = `
   theme={
     Object {
       "colors": Object {
-        "black": "#333333",
+        "text": "#333333",
       },
     }
   }
@@ -53,7 +53,7 @@ exports[`Text Text renders default component 1`] = `
       "_foldedDefaultProps": Object {
         "theme": Object {
           "colors": Object {
-            "black": "#333333",
+            "text": "#333333",
           },
         },
       },
@@ -64,7 +64,7 @@ exports[`Text Text renders default component 1`] = `
         "rules": Array [
           "color:",
           [Function],
-          ";font-family:Helventica,Arial,sans-serif;",
+          ";font-family:Helventica,Arial,sans-serif;margin:0;",
         ],
       },
       "displayName": "csx__Paragraph",
@@ -81,7 +81,7 @@ exports[`Text Text renders default component 1`] = `
   theme={
     Object {
       "colors": Object {
-        "black": "#333333",
+        "text": "#333333",
       },
     }
   }
@@ -98,7 +98,7 @@ exports[`Text Text renders default component 2`] = `
       "_foldedDefaultProps": Object {
         "theme": Object {
           "colors": Object {
-            "black": "#333333",
+            "text": "#333333",
           },
         },
       },
@@ -109,7 +109,7 @@ exports[`Text Text renders default component 2`] = `
         "rules": Array [
           "color:",
           [Function],
-          ";font-family:Helventica,Arial,sans-serif;",
+          ";font-family:Helventica,Arial,sans-serif;margin:0;",
         ],
       },
       "displayName": "csx__Paragraph",
@@ -126,7 +126,7 @@ exports[`Text Text renders default component 2`] = `
   theme={
     Object {
       "colors": Object {
-        "black": "#333333",
+        "text": "#333333",
       },
     }
   }
@@ -143,7 +143,7 @@ exports[`Text renders default component 1`] = `
       "_foldedDefaultProps": Object {
         "theme": Object {
           "colors": Object {
-            "black": "#333333",
+            "text": "#333333",
           },
         },
       },
@@ -154,7 +154,7 @@ exports[`Text renders default component 1`] = `
         "rules": Array [
           "color:",
           [Function],
-          ";font-family:Helventica,Arial,sans-serif;",
+          ";font-family:Helventica,Arial,sans-serif;margin:0;",
         ],
       },
       "displayName": "csx__Paragraph",
@@ -171,7 +171,7 @@ exports[`Text renders default component 1`] = `
   theme={
     Object {
       "colors": Object {
-        "black": "#333333",
+        "text": "#333333",
       },
     }
   }
