@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Logo, Links, ContentWrapper, ContentsWrapper, IndexWrapper } from './csx'
 import { Text, Padded } from '../components/UIKit'
+//import { useStaticQuery, graphql } from "gatsby"
 
 const links = [
 	{
@@ -11,24 +12,20 @@ const links = [
 		text: "Email",
 	},
 	{
-		link: "tel:+447976136097",
-		text: "Tel",
+		link: "https://calendly.com/mcclowes",
+		text: "Book time with me",
 	},
 	{
-		link: "http://bit.ly/maxclaytonclowes",
-		text: "Portfolio",
-	},
-	{
-		link: "https://www.linkedin.com/in/maxclaytonclowes/",
-		text: "LinkedIn",
+		link: "https://github.com/mcclowes",
+		text: "Github",
 	},
 	{
 		link: "https://twitter.com/mcclowes",
 		text: "Twitter",
 	},
-	{
-		link: "https://github.com/mcclowes",
-		text: "Github",
+		{
+		link: "https://www.linkedin.com/in/maxclaytonclowes/",
+		text: "LinkedIn",
 	},
 	{
 		link: "https://dribbble.com/mcclowes",
@@ -38,29 +35,36 @@ const links = [
 		link: "https://medium.com/@mcclowes",
 		text: "Medium",
 	},
-	{
-		link: "https://calendly.com/mcclowes",
-		text: "Book time with me",
-	},
 ]
 
-const IndexPage = () => (
+const IndexPage = () => {
+	 // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
+
+	return 
 	<Layout>
 		<IndexWrapper>
-			<Padded space="p5">
+			<Padded space="p4">
 				<Logo>Max Clayton Clowes</Logo>
 			</Padded>
 
-			<Padded space="p5">
-				<ContentWrapper>
-					<Links>
-						{ links && links.map((link, i)=><a key={i} href={link.link}>{link.text}</a>) }
-					</Links>
-				</ContentWrapper>
-			</Padded>
-
 			<ContentsWrapper>
-				<Padded space="p5">
+				<Padded space="p4">
+					<ContentWrapper>
+						<Links>
+							{ links && links.map((link, i)=><a key={i} href={link.link}>{link.text}</a>) }
+						</Links>
+					</ContentWrapper>
+				</Padded>
+
+				<Padded space="p4">
 					<ContentWrapper>
 						<Text.Header>My Thoughts</Text.Header>
 
@@ -68,7 +72,7 @@ const IndexPage = () => (
 					</ContentWrapper>
 				</Padded>
 
-				<Padded space="p5">
+				<Padded space="p4">
 					<ContentWrapper>
 						<Text.Header>My Thoughts</Text.Header>
 
@@ -76,7 +80,7 @@ const IndexPage = () => (
 					</ContentWrapper>
 				</Padded>
 
-				<Padded space="p5">
+				<Padded space="p4">
 					<ContentWrapper>
 						<Text.Header>My Thoughts</Text.Header>
 
@@ -84,7 +88,7 @@ const IndexPage = () => (
 					</ContentWrapper>
 				</Padded>
 
-				<Padded space="p5">
+				<Padded space="p4">
 					<ContentWrapper>
 						<Text.Header>My Thoughts</Text.Header>
 
@@ -92,7 +96,7 @@ const IndexPage = () => (
 					</ContentWrapper>
 				</Padded>
 
-				<Padded space="p5">
+				<Padded space="p4">
 					<ContentWrapper>
 						<Text.Header>My Thoughts</Text.Header>
 
@@ -102,7 +106,7 @@ const IndexPage = () => (
 			</ContentsWrapper>
 		</IndexWrapper>
 	</Layout>
-);
+};
 
 IndexPage.propTypes = {
 	
