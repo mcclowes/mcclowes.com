@@ -1,3 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IndexPage renders component 1`] = `""`;
+exports[`IndexPage renders component 1`] = `
+<Layout>
+  <csx__IndexWrapper>
+    <Padded
+      space="p4"
+    >
+      <csx__Logo>
+        Max Clayton Clowes
+      </csx__Logo>
+    </Padded>
+    <csx__ContentsWrapper>
+      <Padded
+        space="p4"
+      >
+        <csx__ContentWrapper>
+          <csx__Links>
+            <a
+              href="mailto:maxcc@me.com"
+              key="0"
+            >
+              Email
+            </a>
+            <a
+              href="https://calendly.com/mcclowes"
+              key="1"
+            >
+              Book time with me
+            </a>
+            <a
+              href="https://github.com/mcclowes"
+              key="2"
+            >
+              Github
+            </a>
+            <a
+              href="https://twitter.com/mcclowes"
+              key="3"
+            >
+              Twitter
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maxclaytonclowes/"
+              key="4"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://dribbble.com/mcclowes"
+              key="5"
+            >
+              Dribbble
+            </a>
+            <a
+              href="https://medium.com/@mcclowes"
+              key="6"
+            >
+              Medium
+            </a>
+          </csx__Links>
+        </csx__ContentWrapper>
+      </Padded>
+      <Padded
+        space="p4"
+      >
+        <csx__ContentWrapper>
+          <csx__Header
+            theme={
+              Object {
+                "colors": Object {
+                  "text": "#333333",
+                },
+              }
+            }
+          >
+            My Thoughts
+          </csx__Header>
+          <Text>
+            Nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
+          </Text>
+        </csx__ContentWrapper>
+      </Padded>
+      <Padded
+        space="p4"
+      >
+        <csx__ContentWrapper>
+          <csx__Header
+            theme={
+              Object {
+                "colors": Object {
+                  "text": "#333333",
+                },
+              }
+            }
+          >
+            My Thoughts
+          </csx__Header>
+          <Text>
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
+          </Text>
+        </csx__ContentWrapper>
+      </Padded>
+      <Padded
+        space="p4"
+      >
+        <csx__ContentWrapper>
+          <csx__Header
+            theme={
+              Object {
+                "colors": Object {
+                  "text": "#333333",
+                },
+              }
+            }
+          >
+            My Thoughts
+          </csx__Header>
+          <Text>
+            Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
+          </Text>
+        </csx__ContentWrapper>
+      </Padded>
+      <Padded
+        space="p4"
+      >
+        <csx__ContentWrapper>
+          <csx__Header
+            theme={
+              Object {
+                "colors": Object {
+                  "text": "#333333",
+                },
+              }
+            }
+          >
+            My Thoughts
+          </csx__Header>
+          <Text>
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
+          </Text>
+        </csx__ContentWrapper>
+      </Padded>
+      <Padded
+        space="p4"
+      >
+        <csx__ContentWrapper>
+          <csx__Header
+            theme={
+              Object {
+                "colors": Object {
+                  "text": "#333333",
+                },
+              }
+            }
+          >
+            My Thoughts
+          </csx__Header>
+          <Text>
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
+          </Text>
+        </csx__ContentWrapper>
+      </Padded>
+    </csx__ContentsWrapper>
+  </csx__IndexWrapper>
+</Layout>
+`;
