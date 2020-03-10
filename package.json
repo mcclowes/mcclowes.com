@@ -24,7 +24,6 @@
     "husky": "^4.2.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
-    "pre-commit": "^1.2.2",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
     "prop-types": "^15.7.2",
@@ -43,9 +42,6 @@
     "blog"
   ],
   "license": "MIT",
-  "pre-commit": [
-    "format"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/mcclowes/mcclowes.com"
