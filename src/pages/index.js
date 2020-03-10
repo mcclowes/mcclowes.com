@@ -2,7 +2,8 @@ import Layout from "../components/Layout";
 import Link from "gatsby-link";
 import PropTypes from "prop-types";
 import React from "react";
-import { Logo, Links } from './csx'
+import { Logo, Links, ContentWrapper, ContentsWrapper, IndexWrapper } from './csx'
+import { Text, Padded } from '../components/UIKit'
 
 const links = [
 	{
@@ -45,11 +46,61 @@ const links = [
 
 const IndexPage = () => (
 	<Layout>
-		<Logo>Max Clayton Clowes</Logo>
-		
-		<Links>
-			{ links && links.map((link, i)=><a key={i} href={link.link}>{link.text}</a>) }
-		</Links>
+		<IndexWrapper>
+			<Padded space="p5">
+				<Logo>Max Clayton Clowes</Logo>
+			</Padded>
+
+			<Padded space="p5">
+				<ContentWrapper>
+					<Links>
+						{ links && links.map((link, i)=><a key={i} href={link.link}>{link.text}</a>) }
+					</Links>
+				</ContentWrapper>
+			</Padded>
+
+			<ContentsWrapper>
+				<Padded space="p5">
+					<ContentWrapper>
+						<Text.Header>My Thoughts</Text.Header>
+
+						<Text>Nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.</Text>
+					</ContentWrapper>
+				</Padded>
+
+				<Padded space="p5">
+					<ContentWrapper>
+						<Text.Header>My Thoughts</Text.Header>
+
+						<Text>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.</Text>
+					</ContentWrapper>
+				</Padded>
+
+				<Padded space="p5">
+					<ContentWrapper>
+						<Text.Header>My Thoughts</Text.Header>
+
+						<Text>Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.</Text>
+					</ContentWrapper>
+				</Padded>
+
+				<Padded space="p5">
+					<ContentWrapper>
+						<Text.Header>My Thoughts</Text.Header>
+
+						<Text>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.</Text>
+					</ContentWrapper>
+				</Padded>
+
+				<Padded space="p5">
+					<ContentWrapper>
+						<Text.Header>My Thoughts</Text.Header>
+
+						<Text>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.</Text>
+					</ContentWrapper>
+				</Padded>
+			</ContentsWrapper>
+		</IndexWrapper>
 	</Layout>
 );
 
