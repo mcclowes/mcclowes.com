@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 {
   "componentChunkName": "component---src-pages-csx-js",
   "path": "/csx/",
   "result": { "pageContext": {} }
 }
-=======
-{"componentChunkName":"component---src-pages-csx-js","path":"/csx/","result":{"pageContext":{}}}
->>>>>>> [feat] design finished
