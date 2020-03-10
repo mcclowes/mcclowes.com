@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FooterLinks = styled.div`
   background: ${props=>props.theme.colors.black};
   padding: 1rem;
+  padding-left: 2.5em;
 
   a {
     color: white;

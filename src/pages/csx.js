@@ -13,6 +13,7 @@ export const Logo = styled.h1`
   letter-spacing: 0.3rem;
   margin: 0;
   text-transform: uppercase;
+  margin-bottom: 0.75em;
 `;
 
 export const Links = styled.div`
@@ -46,7 +47,8 @@ export const Links = styled.div`
 
 export const ContentsWrapper = styled.div`
   display: grid;
-  grid: auto-flow / 1fr 1fr;
+  grid: auto-flow / 1fr;
+  max-width: 600px;
 `
 
 export const ContentWrapper = styled.div`
