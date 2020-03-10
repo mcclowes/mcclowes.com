@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+{
+  "componentChunkName": "component---src-pages-index-js",
+  "path": "/",
+  "result": { "pageContext": {} }
+}
+=======
+{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"data":{"site":{"siteMetadata":{"title":"@mcclowes"}}},"pageContext":{}}}
+>>>>>>> [feat] design finished
