@@ -1,3 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IndexPage renders component 1`] = `""`;
+exports[`IndexPage renders component 1`] = `
+<Layout>
+  <csx__Logo>
+    Max Clayton Clowes
+  </csx__Logo>
+  <csx__Links>
+    <a
+      href="mailto:maxcc@me.com"
+      key="0"
+    >
+      Email
+    </a>
+    <a
+      href="tel:+447976136097"
+      key="1"
+    >
+      Tel
+    </a>
+    <a
+      href="http://bit.ly/maxclaytonclowes"
+      key="2"
+    >
+      Portfolio
+    </a>
+    <a
+      href="https://www.linkedin.com/in/maxclaytonclowes/"
+      key="3"
+    >
+      LinkedIn
+    </a>
+    <a
+      href="https://twitter.com/mcclowes"
+      key="4"
+    >
+      Twitter
+    </a>
+    <a
+      href="https://github.com/mcclowes"
+      key="5"
+    >
+      Github
+    </a>
+    <a
+      href="https://dribbble.com/mcclowes"
+      key="6"
+    >
+      Dribbble
+    </a>
+    <a
+      href="https://medium.com/@mcclowes"
+      key="7"
+    >
+      Medium
+    </a>
+    <a
+      href="https://calendly.com/mcclowes"
+      key="8"
+    >
+      Book time with me
+    </a>
+  </csx__Links>
+</Layout>
+`;
