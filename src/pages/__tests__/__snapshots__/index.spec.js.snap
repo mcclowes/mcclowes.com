@@ -10,158 +10,97 @@ exports[`IndexPage renders component 1`] = `
         Max Clayton Clowes
       </csx__Logo>
     </Padded>
-    <csx__ContentsWrapper>
-      <Padded
-        space="p4"
-      >
-        <csx__ContentWrapper>
-          <csx__Links>
-            <a
-              href="mailto:maxcc@me.com"
-              key="0"
-            >
-              Email
-            </a>
-            <a
-              href="https://calendly.com/mcclowes"
-              key="1"
-            >
-              Book time with me
-            </a>
-            <a
-              href="https://github.com/mcclowes"
-              key="2"
-            >
-              Github
-            </a>
-            <a
-              href="https://twitter.com/mcclowes"
-              key="3"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://www.linkedin.com/in/maxclaytonclowes/"
-              key="4"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://dribbble.com/mcclowes"
-              key="5"
-            >
-              Dribbble
-            </a>
-            <a
-              href="https://medium.com/@mcclowes"
-              key="6"
-            >
-              Medium
-            </a>
-          </csx__Links>
-        </csx__ContentWrapper>
-      </Padded>
-      <Padded
-        space="p4"
-      >
-        <csx__ContentWrapper>
-          <csx__Header
-            theme={
-              Object {
-                "colors": Object {
-                  "text": "#333333",
+    <csx__Columns>
+      <csx__ContentsWrapper>
+        <Post
+          key="0"
+          post={
+            Object {
+              "description": "Another good ol description",
+              "id": "56c31326-af74-4be9-ab2f-285f47467be6",
+              "image": Object {
+                "file": Object {
+                  "url": "some-url.com",
                 },
-              }
+              },
+              "publishingDate": "Wed Mar 11 2020 18:34:30 GMT+0000 (Greenwich Mean Time)",
+              "title": "Dummy Post 2",
             }
-          >
-            My Thoughts
-          </csx__Header>
-          <Text>
-            Nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
-          </Text>
-        </csx__ContentWrapper>
-      </Padded>
-      <Padded
-        space="p4"
-      >
-        <csx__ContentWrapper>
-          <csx__Header
-            theme={
-              Object {
-                "colors": Object {
-                  "text": "#333333",
+          }
+        />
+        <Post
+          key="1"
+          post={
+            Object {
+              "description": "A nice description",
+              "externalLink": "some-other-url.com",
+              "id": "f0c15b3f-c067-450c-a684-78900c4866c1",
+              "image": Object {
+                "file": Object {
+                  "url": "some-url.com",
                 },
-              }
+              },
+              "publishingDate": "Wed Mar 10 2020 18:34:30 GMT+0000 (Greenwich Mean Time)",
+              "title": "Dummy Post 1",
             }
+          }
+        />
+      </csx__ContentsWrapper>
+      <csx__ContentsWrapper>
+        <Padded
+          space="p4"
+        >
+          <csx__ContentWrapper
+            sticky={true}
           >
-            My Thoughts
-          </csx__Header>
-          <Text>
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
-          </Text>
-        </csx__ContentWrapper>
-      </Padded>
-      <Padded
-        space="p4"
-      >
-        <csx__ContentWrapper>
-          <csx__Header
-            theme={
-              Object {
-                "colors": Object {
-                  "text": "#333333",
-                },
-              }
-            }
-          >
-            My Thoughts
-          </csx__Header>
-          <Text>
-            Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
-          </Text>
-        </csx__ContentWrapper>
-      </Padded>
-      <Padded
-        space="p4"
-      >
-        <csx__ContentWrapper>
-          <csx__Header
-            theme={
-              Object {
-                "colors": Object {
-                  "text": "#333333",
-                },
-              }
-            }
-          >
-            My Thoughts
-          </csx__Header>
-          <Text>
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
-          </Text>
-        </csx__ContentWrapper>
-      </Padded>
-      <Padded
-        space="p4"
-      >
-        <csx__ContentWrapper>
-          <csx__Header
-            theme={
-              Object {
-                "colors": Object {
-                  "text": "#333333",
-                },
-              }
-            }
-          >
-            My Thoughts
-          </csx__Header>
-          <Text>
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.
-          </Text>
-        </csx__ContentWrapper>
-      </Padded>
-    </csx__ContentsWrapper>
+            <csx__Links>
+              <a
+                href="mailto:maxcc@me.com"
+                key="0"
+              >
+                Email
+              </a>
+              <a
+                href="https://calendly.com/mcclowes"
+                key="1"
+              >
+                Book time with me
+              </a>
+              <a
+                href="https://github.com/mcclowes"
+                key="2"
+              >
+                Github
+              </a>
+              <a
+                href="https://twitter.com/mcclowes"
+                key="3"
+              >
+                Twitter
+              </a>
+              <a
+                href="https://www.linkedin.com/in/maxclaytonclowes/"
+                key="4"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://dribbble.com/mcclowes"
+                key="5"
+              >
+                Dribbble
+              </a>
+              <a
+                href="https://medium.com/@mcclowes"
+                key="6"
+              >
+                Medium
+              </a>
+            </csx__Links>
+          </csx__ContentWrapper>
+        </Padded>
+      </csx__ContentsWrapper>
+    </csx__Columns>
   </csx__IndexWrapper>
 </Layout>
 `;
