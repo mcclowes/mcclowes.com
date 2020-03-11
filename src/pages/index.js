@@ -10,7 +10,7 @@ import {
   Columns,
   ExternalLink,
   Link
-} from "./csx";
+} from "./styles/csx";
 import { Text, Padded } from "../components/UIKit";
 import { useStaticQuery, graphql } from "gatsby";
 
