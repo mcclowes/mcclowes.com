@@ -15,6 +15,15 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: `preview.contentful.com`
       }
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        ignore: {
+          patterns: [`**/csx.(js|ts)?(x)`]
+        }
+      }
     }
   ]
 };
