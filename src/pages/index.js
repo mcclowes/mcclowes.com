@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import Link from "gatsby-link";
 import PropTypes from "prop-types";
 import React from "react";
 import {
@@ -7,10 +6,37 @@ import {
   Links,
   ContentWrapper,
   ContentsWrapper,
-  IndexWrapper
+  IndexWrapper,
+  Columns,
+  ExternalLink,
+  Link
 } from "./csx";
 import { Text, Padded } from "../components/UIKit";
-//import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
+
+const Post = props => {
+  const { id, title, description, image, externalLink } = props.post;
+
+  return (
+    <Padded space="p4">
+      <ContentWrapper>
+        <Text.Header>{title}</Text.Header>
+
+        {description && (
+          <Padded space="pb4">
+            <Text>{description}</Text>
+          </Padded>
+        )}
+
+        {externalLink ? (
+          <ExternalLink href={externalLink}>Read more →</ExternalLink>
+        ) : (
+          <Link to={"post/" + id}>Read more →</Link>
+        )}
+      </ContentWrapper>
+    </Padded>
+  );
+};
 
 const links = [
   {
@@ -44,15 +70,31 @@ const links = [
 ];
 
 const IndexPage = () => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query AllPosts {
+      contentfulPosts: allContentfulPost {
+        edges {
+          node {
+            id
+            title
+            description
+            image {
+              file {
+                url
+              }
+            }
+            externalLink
+            publishingDate
+          }
+        }
+      }
+    }
+  `);
+
+  const posts = data.contentfulPosts.edges;
+  posts.sort(function(a, b) {
+    return new Date(b.node.publishingDate) - new Date(a.node.publishingDate);
+  });
 
   return (
     <Layout>
@@ -61,97 +103,28 @@ const IndexPage = () => {
           <Logo>Max Clayton Clowes</Logo>
         </Padded>
 
-        <ContentsWrapper>
-          <Padded space="p4">
-            <ContentWrapper>
-              <Links>
-                {links &&
-                  links.map((link, i) => (
-                    <a key={i} href={link.link}>
-                      {link.text}
-                    </a>
-                  ))}
-              </Links>
-            </ContentWrapper>
-          </Padded>
+        <Columns>
+          <ContentsWrapper>
+            {posts.map((post, i) => (
+              <Post key={i} post={post.node} />
+            ))}
+          </ContentsWrapper>
 
-          <Padded space="p4">
-            <ContentWrapper>
-              <Text.Header>My Thoughts</Text.Header>
-
-              <Text>
-                Nascetur ridiculus mus. Sed posuere consectetur est at lobortis.
-                Nullam quis risus eget urna mollis ornare vel eu leo. Nulla
-                vitae elit libero, a pharetra augue. Etiam porta sem malesuada
-                magna mollis euismod. Integer posuere erat a ante venenatis
-                dapibus posuere velit aliquet. Curabitur blandit tempus
-                porttitor.
-              </Text>
-            </ContentWrapper>
-          </Padded>
-
-          <Padded space="p4">
-            <ContentWrapper>
-              <Text.Header>My Thoughts</Text.Header>
-
-              <Text>
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Sed posuere consectetur est at lobortis.
-                Nullam quis risus eget urna mollis ornare vel eu leo. Nulla
-                vitae elit libero, a pharetra augue. Etiam porta sem malesuada
-                magna mollis euismod. Integer posuere erat a ante venenatis
-                dapibus posuere velit aliquet. Curabitur blandit tempus
-                porttitor.
-              </Text>
-            </ContentWrapper>
-          </Padded>
-
-          <Padded space="p4">
-            <ContentWrapper>
-              <Text.Header>My Thoughts</Text.Header>
-
-              <Text>
-                Nullam quis risus eget urna mollis ornare vel eu leo. Nulla
-                vitae elit libero, a pharetra augue. Etiam porta sem malesuada
-                magna mollis euismod. Integer posuere erat a ante venenatis
-                dapibus posuere velit aliquet. Curabitur blandit tempus
-                porttitor.
-              </Text>
-            </ContentWrapper>
-          </Padded>
-
-          <Padded space="p4">
-            <ContentWrapper>
-              <Text.Header>My Thoughts</Text.Header>
-
-              <Text>
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Sed posuere consectetur est at lobortis.
-                Nullam quis risus eget urna mollis ornare vel eu leo. Nulla
-                vitae elit libero, a pharetra augue. Etiam porta sem malesuada
-                magna mollis euismod. Integer posuere erat a ante venenatis
-                dapibus posuere velit aliquet. Curabitur blandit tempus
-                porttitor.
-              </Text>
-            </ContentWrapper>
-          </Padded>
-
-          <Padded space="p4">
-            <ContentWrapper>
-              <Text.Header>My Thoughts</Text.Header>
-
-              <Text>
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Sed posuere consectetur est at lobortis.
-                Nullam quis risus eget urna mollis ornare vel eu leo. Nulla
-                vitae elit libero, a pharetra augue. Etiam porta sem malesuada
-                magna mollis euismod. Integer posuere erat a ante venenatis
-                dapibus posuere velit aliquet. Curabitur blandit tempus
-                porttitor.
-              </Text>
-            </ContentWrapper>
-          </Padded>
-        </ContentsWrapper>
+          <ContentsWrapper>
+            <Padded space="p4">
+              <ContentWrapper sticky>
+                <Links>
+                  {links &&
+                    links.map((link, i) => (
+                      <a key={i} href={link.link}>
+                        {link.text}
+                      </a>
+                    ))}
+                </Links>
+              </ContentWrapper>
+            </Padded>
+          </ContentsWrapper>
+        </Columns>
       </IndexWrapper>
     </Layout>
   );
