@@ -27,217 +27,53 @@ exports[`Dropdown interaction 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "_foldedDefaultProps": Object {
-              "theme": Object {
-                "colors": Object {
-                  "gray": "#aaaaaa",
-                  "lightgray": "#eeeeee",
-                  "white": "#ffffff",
-                },
-                "sizes": Object {
-                  "border": Object {
-                    "radius": "3px",
-                  },
-                },
-              },
-            },
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "csx__DropdownWrapper-sc-1epnltm-3",
-              "isStatic": false,
-              "lastClassName": "dRHfxq",
-              "rules": Array [
-                "border:1px solid ",
-                [Function],
-                ";border-radius:",
-                [Function],
-                ";cursor:pointer;background:",
-                [Function],
-                ";",
-                ".csx__DropdownPlaceholder-sc-1epnltm-0",
-                "{svg{fill:",
-                [Function],
-                ";transform:",
-                [Function],
-                ";}}",
-                ".csx__DropdownOption-sc-1epnltm-2",
-                "{padding:0.25em 0.5em;&:hover{background-color:",
-                [Function],
-                ";}&:active{background-color:",
-                [Function],
-                ";}}",
-              ],
-            },
-            "displayName": "csx__DropdownWrapper",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "csx__DropdownWrapper-sc-1epnltm-3",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <div
+        className="csx__DropdownWrapper-sc-1epnltm-3 cTMelR"
         onClick={[Function]}
-        theme={
-          Object {
-            "colors": Object {
-              "gray": "#aaaaaa",
-              "lightgray": "#eeeeee",
-              "white": "#ffffff",
-            },
-            "sizes": Object {
-              "border": Object {
-                "radius": "3px",
-              },
-            },
-          }
-        }
       >
-        <div
-          className="csx__DropdownWrapper-sc-1epnltm-3 dRHfxq"
-          onClick={[Function]}
-        >
-          <csx__DropdownPlaceholder
-            open={true}
-            theme={
-              Object {
-                "colors": Object {
-                  "gray": "#aaaaaa",
-                },
-              }
+        <csx__DropdownPlaceholder
+          open={true}
+          theme={
+            Object {
+              "colors": Object {
+                "gray": "#aaaaaa",
+              },
             }
+          }
+        >
+          <div
+            className="csx__DropdownPlaceholder-sc-1epnltm-0 fBkXtc"
+            open={true}
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "_foldedDefaultProps": Object {
-                    "theme": Object {
-                      "colors": Object {
-                        "gray": "#aaaaaa",
-                      },
-                    },
-                  },
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "csx__DropdownPlaceholder-sc-1epnltm-0",
-                    "isStatic": false,
-                    "lastClassName": "niFpV",
-                    "rules": Array [
-                      "padding:0.25em 0.5em;display:flex;justify-content:space-between;flex-direction:row;align-items:center;",
-                      [Function],
-                      ";",
-                    ],
-                  },
-                  "displayName": "csx__DropdownPlaceholder",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "csx__DropdownPlaceholder-sc-1epnltm-0",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              open={true}
-              theme={
-                Object {
-                  "colors": Object {
-                    "gray": "#aaaaaa",
-                  },
-                }
-              }
+            Default Dropdown
+            <Icon
+              icon="DOWN"
             >
-              <div
-                className="csx__DropdownPlaceholder-sc-1epnltm-0 niFpV"
-                open={true}
+              <csx__IconWrapper
+                focusable="false"
+                theme={
+                  Object {
+                    "colors": Object {
+                      "black": "#333",
+                    },
+                  }
+                }
+                viewBox="0 0 32 32"
               >
-                Default Dropdown
-                <Icon
-                  icon="DOWN"
+                <svg
+                  className="csx__IconWrapper-sc-1hrbkrj-0 gePOIQ"
+                  focusable="false"
+                  viewBox="0 0 32 32"
                 >
-                  <csx__IconWrapper
-                    focusable="false"
-                    theme={
-                      Object {
-                        "colors": Object {
-                          "black": "#333",
-                        },
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                  >
-                    <StyledComponent
-                      focusable="false"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "theme": Object {
-                              "colors": Object {
-                                "black": "#333",
-                              },
-                            },
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "csx__IconWrapper-sc-1hrbkrj-0",
-                            "isStatic": false,
-                            "lastClassName": "hrShOs",
-                            "rules": Array [
-                              "fill:",
-                              [Function],
-                              ";width:",
-                              [Function],
-                              ";height:",
-                              [Function],
-                              ";",
-                            ],
-                          },
-                          "displayName": "csx__IconWrapper",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "csx__IconWrapper-sc-1hrbkrj-0",
-                          "target": "svg",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      theme={
-                        Object {
-                          "colors": Object {
-                            "black": "#333",
-                          },
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                    >
-                      <svg
-                        className="csx__IconWrapper-sc-1hrbkrj-0 hrShOs"
-                        focusable="false"
-                        viewBox="0 0 32 32"
-                      >
-                        <path
-                          d="M3.75,6.13,16,18.38,28.25,6.13,32,9.87l-16,16L0,9.87Z"
-                        />
-                      </svg>
-                    </StyledComponent>
-                  </csx__IconWrapper>
-                </Icon>
-              </div>
-            </StyledComponent>
-          </csx__DropdownPlaceholder>
-        </div>
-      </StyledComponent>
+                  <path
+                    d="M3.75,6.13,16,18.38,28.25,6.13,32,9.87l-16,16L0,9.87Z"
+                  />
+                </svg>
+              </csx__IconWrapper>
+            </Icon>
+          </div>
+        </csx__DropdownPlaceholder>
+      </div>
     </csx__DropdownWrapper>
   </Dropdown>
 </DropdownContainer>
