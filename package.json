@@ -8,7 +8,7 @@
     "gatsby": "^2.20.13",
     "gatsby-link": "^2.3.2",
     "gatsby-plugin-page-creator": "^2.2.1",
-    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-react-helmet": "^3.3.0",
     "gatsby-plugin-styled-components": "^3.2.1",
     "gatsby-source-contentful": "^2.2.7",
     "react": "^16.13.1",
