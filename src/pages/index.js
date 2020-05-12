@@ -9,12 +9,12 @@ import {
   IndexWrapper,
   Columns,
   ExternalLink,
-  Link
+  Link,
 } from "./styles/csx";
 import { Text, Padded } from "../components/UIKit";
 import { useStaticQuery, graphql } from "gatsby";
 
-const Post = props => {
+const Post = (props) => {
   const { id, title, description, image, externalLink } = props.post;
 
   return (
@@ -40,33 +40,33 @@ const Post = props => {
 
 const links = [
   {
-    link: "mailto:maxcc@me.com",
-    text: "Email"
+    link: "mailto:contact@mcclowes.com",
+    text: "Email",
   },
   {
     link: "https://calendly.com/mcclowes",
-    text: "Book time with me"
+    text: "Book time with me",
   },
   {
     link: "https://github.com/mcclowes",
-    text: "Github"
+    text: "Github",
   },
   {
     link: "https://twitter.com/mcclowes",
-    text: "Twitter"
+    text: "Twitter",
   },
   {
     link: "https://www.linkedin.com/in/maxclaytonclowes/",
-    text: "LinkedIn"
+    text: "LinkedIn",
   },
   {
     link: "https://dribbble.com/mcclowes",
-    text: "Dribbble"
+    text: "Dribbble",
   },
   {
     link: "https://medium.com/@mcclowes",
-    text: "Medium"
-  }
+    text: "Medium",
+  },
 ];
 
 const IndexPage = () => {
@@ -92,7 +92,7 @@ const IndexPage = () => {
   `);
 
   const posts = data.contentfulPosts.edges;
-  posts.sort(function(a, b) {
+  posts.sort(function (a, b) {
     return new Date(b.node.publishingDate) - new Date(a.node.publishingDate);
   });
 
