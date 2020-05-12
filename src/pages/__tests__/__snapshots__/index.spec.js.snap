@@ -55,7 +55,7 @@ exports[`IndexPage renders component 1`] = `
           >
             <csx__Links>
               <a
-                href="mailto:maxcc@me.com"
+                href="mailto:contact@mcclowes.com"
                 key="0"
               >
                 Email
