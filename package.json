@@ -5,7 +5,7 @@
   "author": "Max Clayton Clowes <maxcc@me.com>",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "gatsby": "^2.21.22",
+    "gatsby": "^2.24.23",
     "gatsby-link": "^2.4.10",
     "gatsby-plugin-page-creator": "^2.3.14",
     "gatsby-plugin-react-helmet": "^3.3.4",
