@@ -21,7 +21,7 @@
     "babel-jest": "^26.2.2",
     "babel-plugin-macros": "^2.8.0",
     "babel-plugin-styled-components": "^1.10.7",
-    "babel-preset-gatsby": "^0.3.1",
+    "babel-preset-gatsby": "^0.5.12",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",
