@@ -7,7 +7,7 @@
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.26",
     "gatsby-link": "^2.4.10",
-    "gatsby-plugin-page-creator": "^2.3.19",
+    "gatsby-plugin-page-creator": "^2.3.30",
     "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-styled-components": "^3.3.6",
     "gatsby-source-contentful": "^2.3.34",
