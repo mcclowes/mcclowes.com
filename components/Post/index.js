@@ -1,31 +1,46 @@
-const Post = (props) => {
-  const { publishingDate, image, title, description } = props
+import styled from "styled-components";
 
-  if(!publishingDate) return null
+const Container = styled.div`
+  display: flex;
+  border-radius: 3px;
+  margin: 5px;
+  background-color: white;
+  overflow: hidden;
+`;
+
+const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+`;
+
+const Image = styled.img`
+  max-width: 300px;
+`;
+
+const Post = (props) => {
+  const { publishingDate, image, title, description } = props;
+
+  if (!publishingDate) return null;
 
   return (
-    <div className="post">
-      {
-        image && image.fields
-        ? <img alt={image.fields.description} src={`https:${image.fields.file.url}`} />
-        : null
-      }
+    <Container className="post">
+      {image && image.fields ? (
+        <Image
+          alt={image.fields.description}
+          src={`https:${image.fields.file.url}`}
+        />
+      ) : null}
 
-      <div className="description">{description}</div>
-
-      <div className="text">
+      <Text>
         <h2>{title}</h2>
 
         <h3>{publishingDate.substring(0, 10)}</h3>
-      </div>
 
-      <style jsx>{`
-        img {
-          max-width: 300px;
-        }
-      `}</style>
-    </div>
-  )
-}
+        <div className="description">{description}</div>
+      </Text>
+    </Container>
+  );
+};
 
-export default Post
+export default Post;
