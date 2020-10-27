@@ -1,5 +1,7 @@
-const Header = () => {
-  return <h1 className="title">mcclowes</h1>
-}
+import React from "react";
 
-export default Header
+const Header = () => {
+  return <h1 className="title">mcclowes</h1>;
+};
+
+export default Header;

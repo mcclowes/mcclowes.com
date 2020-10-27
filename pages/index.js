@@ -1,3 +1,5 @@
+import React from "react";
+
 import Head from "next/head";
 
 import { fetchEntries } from "@utils/contentfulPosts";
@@ -6,7 +8,7 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Post from "@components/Post";
 
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 import { GlobalStyle } from "../utils/styles/globalStyles";
 
