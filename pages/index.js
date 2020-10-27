@@ -70,8 +70,9 @@ export default Home
 export const getStaticProps = async () => {
   const res = await fetchEntries()
 
-  const posts = await res.map((p) => {
-    return p.fields
+  // normalize
+  const posts = await res.map((post) => {
+    return post.fields
   })
 
   return {
