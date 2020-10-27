@@ -17,8 +17,8 @@ const Home = ({ posts }) => {
       <main>
         <Header />
         <div className="posts">
-          {posts.map((post) => {
-            return <Post key={post.date} {...post} />
+          {posts.map((post, i) => {
+            return <Post key={i} {...post} />
           })}
         </div>
       </main>
