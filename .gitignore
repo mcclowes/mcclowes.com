@@ -98,3 +98,5 @@ yarn-error.log
 .now.next
 /out
 .next/
+
+.vercel
