@@ -45,6 +45,7 @@ const Home = ({ posts }) => {
 
         .posts {
           display: flex;
+          flex-direction: column;
         }
       `}</style>
 
