@@ -1,7 +1,6 @@
 const Post = (props) => {
   const { publishingDate, image, title } = props
 
-  console.log(props)
   if(!publishingDate) return null
 
   return (
