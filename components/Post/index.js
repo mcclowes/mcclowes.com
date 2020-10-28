@@ -3,20 +3,27 @@ import styled from "styled-components/macro";
 
 const Container = styled.div`
   display: flex;
-  border-radius: 3px;
   margin: 5px;
-  background-color: white;
+  background-color: var(--white);
   overflow: hidden;
 `;
 
 const Text = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 0 1em;
+
+  h2,
+  h3 {
+    margin-top: 0;
+  }
 `;
 
 const Image = styled.img`
   max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
 `;
 
 const Post = (props) => {

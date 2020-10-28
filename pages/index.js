@@ -22,7 +22,6 @@ const Main = styled.main`
   padding: 5px;
   display: flex;
   flex-direction: column;
-  background-color: #333;
 `;
 
 const Posts = styled.div`
