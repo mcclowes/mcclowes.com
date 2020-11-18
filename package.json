@@ -3,18 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "circleci:validate": "circleci config validate",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
     "format": "prettier --write src/",
     "format:staged": "pretty-quick --staged",
+    "test": "CI=true jest",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll",
-    "chromatic": "npx chromatic --project-token CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes"
+    "chromatic": "npx chromatic --project-token ${CHROMATIC_PROJECT_TOKEN} --exit-zero-on-changes"
   },
   "dependencies": {
     "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-styled-components": "^1.11.1",
     "contentful": "^7.14.6",
     "next": "^9.5.0",
     "react": "^16.13.1",
@@ -28,15 +31,27 @@
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-links": "^6.0.28",
     "@storybook/react": "^6.0.28",
+    "@testing-library/dom": "^7.27.1",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.0",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.1",
     "chromatic": "^5.4.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1",
     "husky": "^4.3.0",
-    "jest": "^26.6.1",
+    "jest": "^26.6.3",
+    "jest-dom": "^4.0.0",
+    "jest-styled-components": "^7.0.3",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.1.0",
     "react-is": "^17.0.1",
     "react-testing-library": "^8.0.1",
     "storybook": "^6.0.28"
+  },
+  "babelMacros": {
+    "styledComponents": {}
   },
   "husky": {
     "hooks": {
