@@ -1,0 +1,8 @@
+import Header from "./index";
+import React from "react";
+
+export default { title: "Header" };
+
+export const empty = () => {
+  return <Header />;
+};
