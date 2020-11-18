@@ -1,7 +1,10 @@
 import React from "react";
+import styled from "styled-components";
+
+const HeaderWrapper = styled.h1``;
 
 const Header = () => {
-  return <h1 className="title">mcclowes</h1>;
+  return <HeaderWrapper className="title">mcclowes</HeaderWrapper>;
 };
 
 export default Header;
