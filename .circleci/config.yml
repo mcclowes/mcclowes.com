@@ -2,7 +2,7 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 version: 2
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/node:13.7.0
     working_directory: ~/repo
@@ -18,6 +18,21 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run test # run tests!
+  build:
+    docker:
+      - image: circleci/node:13.7.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache: # Download and cache dependencies
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies- # fallback to using the latest cache if no exact match is found
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run build
   chromatic-deployment:
     docker:
@@ -31,3 +46,10 @@ jobs:
             - v1-dependencies-
       - run: npm run install
       - run: npm run chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} # 👇 Runs the Chromatic CLI
+workflows:
+  version: 2
+  build_test_validate:
+    jobs:
+      - test
+      - build
+      - chromatic-deployment
