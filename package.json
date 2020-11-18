@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "circleci:validate": "circleci config validate",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
