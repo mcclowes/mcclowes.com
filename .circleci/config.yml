@@ -30,9 +30,3 @@ jobs:
             - v1-dependencies-
       - run: yarn install
       - run: yarn chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} # 👇 Runs the Chromatic CLI
-
-workflows:
-  chromatic-deploy: # 👇 Adds Chromatic to the workflow
-    jobs:
-      - chromatic-deployment # 👈 Runs the Chromatic job implemented above
-
