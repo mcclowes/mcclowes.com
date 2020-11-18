@@ -44,7 +44,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
-      - run: npm run install
+      - run: npm install
       - run: npm run chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} # 👇 Runs the Chromatic CLI
 workflows:
   version: 2
