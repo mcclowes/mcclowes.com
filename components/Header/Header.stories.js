@@ -3,6 +3,6 @@ import React from "react";
 
 export default { title: "Header" };
 
-export const empty = () => {
+export const header = () => {
   return <Header />;
 };
