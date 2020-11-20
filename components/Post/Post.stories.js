@@ -22,5 +22,5 @@ export const emptyPost = () => {
 };
 
 export const post = () => {
-  return <Post />;
+  return <Post {...postProps} />;
 };
