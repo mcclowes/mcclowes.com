@@ -48,7 +48,7 @@ export const ButtonWrapper = styled.button`
 ButtonWrapper.defaultProps = {
   theme: {
     colors: {
-      primary: "#aaaaaa",
+      primary: "#666666",
       alt: "#888888",
       white: "#ffffff",
     },
