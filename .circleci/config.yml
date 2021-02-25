@@ -13,11 +13,11 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies- # fallback to using the latest cache if no exact match is found
       - run: npm install
+      - run: npm run test # run tests!
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run test # run tests!
   build:
     docker:
       - image: circleci/node:13.7.0
@@ -29,11 +29,12 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies- # fallback to using the latest cache if no exact match is found
       - run: npm install
+      - run: npm run build
       - save_cache:
           paths:
             - node_modules
+            - ./.next/cache
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run build
   chromatic-deployment:
     docker:
       - image: circleci/node:13.7.0
