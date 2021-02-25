@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "next build",
+    "build:ci": "CI=true next build",
+    "build:storybook": "build-storybook --no-dll",
+    "chromatic": "npx chromatic --project-token ${CHROMATIC_PROJECT_TOKEN} --exit-zero-on-changes",
     "circleci:validate": "circleci config validate",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
     "export": "next export",
     "format": "prettier --write src/",
     "format:staged": "pretty-quick --staged",
-    "test": "CI=true jest",
+    "start": "next start",
     "storybook": "start-storybook -p 6006 --no-dll",
-    "build-storybook": "build-storybook --no-dll",
-    "chromatic": "npx chromatic --project-token ${CHROMATIC_PROJECT_TOKEN} --exit-zero-on-changes"
+    "test": "jest",
+    "test:ci": "CI=true jest"
   },
   "dependencies": {
     "babel-plugin-macros": "^2.8.0",
