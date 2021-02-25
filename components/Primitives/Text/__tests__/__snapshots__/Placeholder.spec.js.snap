@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Header renders default component 1`] = `
+.c0 {
+  color: #333333;
+  font-family: "Cantarell",sans-serif;
+}
+
+<p
+  className="c0"
+>
+  Some text goes here
+</p>
+`;
+
+exports[`Text Text renders default component 1`] = `
+.c0 {
+  color: #333333;
+  font-family: "Cantarell",sans-serif;
+}
+
+<p
+  className="c0"
+>
+  Some text goes here
+</p>
+`;
+
+exports[`Text Text renders default component 2`] = `
+.c0 {
+  color: #333333;
+  font-family: "Cantarell",sans-serif;
+}
+
+<p
+  className="c0"
+>
+  Some text goes here
+</p>
+`;
+
+exports[`Text renders default component 1`] = `
+.c0 {
+  color: #333333;
+  font-family: "Cantarell",sans-serif;
+}
+
+<p
+  className="c0"
+>
+  Some text goes here
+</p>
+`;
