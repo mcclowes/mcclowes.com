@@ -16,7 +16,7 @@
     "chromatic": "npx chromatic --project-token ${CHROMATIC_PROJECT_TOKEN} --exit-zero-on-changes"
   },
   "dependencies": {
-    "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-macros": "^3.0.1",
     "babel-plugin-styled-components": "^1.11.1",
     "contentful": "^7.14.6",
     "next": "^10.2.0",
