@@ -45,47 +45,28 @@ const Home = ({ posts }) => {
         <Header />
 
         <div>
-          <p>Mike Clowes is a film composer.</p>
+          <h2>This site is work in progress</h2>
 
-          <h2>Representation</h2>
+          <p>There's not much here at the moment! I'm hoping to build out this space over 2021. In the meantime:</p>
 
-          <p>Max Clayton Clowes</p>
+          <ul>
+            <li>You can check out my <a href="https://github.com/mcclowes?tab=repositories">code and projects</a></li>
+            <li>My full CV is <a href="https://cv.mcclowes.com/">here</a></li>
+            <li>I got a new camera and am <a href="https://www.instagram.com/mcclowes/">using Instagram more</a></li>
+            <li>I recently <a href="https://www.instagram.com/welcometothegrandparade/">bought a house and am doing it up</a></li>
+            <li>I occasionally write about <a href="https://mcclowes.substack.com/">productivity and tech</a></li>
+          </ul>
 
           <p>
-            <a href="mailto:maxcc@me.com">maxcc@me.com</a>
-          </p>
-
-          <p>
-            <a href="tel:00447976136097">+44 (0) 7976 136 097</a>
+            See more <a href="https://linktr.ee/mcclowes">links and social media</a>...
           </p>
         </div>
 
-{/*       <Main> */}
-{/*         <Header /> */}
-{/*  */}
-{/*         <div> */}
-{/*           <h2>This site is work in progress</h2> */}
-{/*  */}
-{/*           <p>There's not much here at the moment! I'm hoping to build out this space over 2021. In the meantime:</p> */}
-{/*  */}
-{/*           <ul> */}
-{/*             <li>You can check out my <a href="https://github.com/mcclowes?tab=repositories">code and projects</a></li> */}
-{/*             <li>My full CV is <a href="https://cv.mcclowes.com/">here</a></li> */}
-{/*             <li>I got a new camera and am <a href="https://www.instagram.com/mcclowes/">using Instagram more</a></li> */}
-{/*             <li>I recently <a href="https://www.instagram.com/welcometothegrandparade/">bought a house and am doing it up</a></li> */}
-{/*             <li>I occasionally write about <a href="https://mcclowes.substack.com/">productivity and tech</a></li> */}
-{/*           </ul> */}
-{/*  */}
-{/*           <p> */}
-{/*             See more <a href="https://linktr.ee/mcclowes">links and social media</a>... */}
-{/*           </p> */}
-{/*         </div> */}
-
-        {/* <Posts> */}
-        {/*   {posts.map((post, i) => { */}
-        {/*     return <Post key={i} {...post} />; */}
-        {/*   })} */}
-        {/* </Posts> */}
+        <Posts>
+          {posts.map((post, i) => {
+            return <Post key={i} {...post} />;
+          })}
+        </Posts>
       </Main>
 
       <Footer />
