@@ -41,11 +41,11 @@ const Post = (props) => {
       ) : null}
 
       <Text>
-        <h2>{title}</h2>
+        <h4>{title}</h4>
 
-        <h3>{publishingDate.substring(0, 10)}</h3>
+        <p>{publishingDate.substring(0, 10)}</p>
 
-        <div className="description">{description}</div>
+        <p className="description">{description}</p>
       </Text>
     </Container>
   );
