@@ -62,6 +62,10 @@ const Home = ({ posts }) => {
           </p>
         </div>
 
+        <div>
+          <h2>Thoughts</h2>
+        </div>
+
         <Posts>
           {posts.map((post, i) => {
             return <Post key={i} {...post} />;

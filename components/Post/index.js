@@ -21,7 +21,7 @@ const Text = styled.div`
 
 const Image = styled.img`
   max-width: 300px;
-  max-height: 240px;
+  max-height: 200px;
   width: 100%;
   object-fit: cover;
 `;
