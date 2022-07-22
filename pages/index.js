@@ -47,7 +47,7 @@ const Home = ({ posts }) => {
         <div>
           <h2>This site is work in progress</h2>
 
-          <p>There's not much here at the moment! I'm hoping to build out this space over 2021. In the meantime:</p>
+          <p>There's not much here at the moment! In the meantime:</p>
 
           <ul>
             <li>You can check out my <a href="https://github.com/mcclowes?tab=repositories">code and projects</a></li>
