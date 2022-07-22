@@ -21,9 +21,17 @@ const Text = styled.div`
 
 const Image = styled.img`
   max-width: 300px;
-  max-height: 300px;
+  max-height: 240px;
   width: 100%;
   object-fit: cover;
+`;
+
+const Date = styled.p`
+  opacity: 0.9;
+`;
+
+const Description = styled.p`
+
 `;
 
 const Post = (props) => {
@@ -43,9 +51,9 @@ const Post = (props) => {
       <Text>
         <h4>{title}</h4>
 
-        <p>{publishingDate.substring(0, 10)}</p>
+        <Date>{publishingDate.substring(0, 10)}</Date>
 
-        <p className="description">{description}</p>
+        <Description>{description}</Description>
       </Text>
     </Container>
   );
