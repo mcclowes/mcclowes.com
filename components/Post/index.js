@@ -7,6 +7,10 @@ const Container = styled.div`
   margin: 5px;
   background-color: var(--white);
   overflow: hidden;
+
+  @media screen and (max-width: 990px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Text = styled.div`
@@ -22,10 +26,14 @@ const Text = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 300px;
-  max-height: 200px;
   width: 100%;
   object-fit: cover;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 990px) {
+    max-width: 300px;
+    max-height: 200px;
+  }
 `;
 
 const Date = styled.p`
