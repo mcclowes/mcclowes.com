@@ -32,6 +32,8 @@ const Posts = styled.div`
 `;
 
 const Home = ({ posts }) => {
+  console.log(posts);
+
   return (
     <Container>
       <GlobalStyle />
@@ -45,25 +47,46 @@ const Home = ({ posts }) => {
         <Header />
 
         <div>
-          <h2>This site is work in progress</h2>
+          <h2>🛠 This site is work in progress</h2>
 
           <p>There's not much here at the moment! In the meantime:</p>
 
           <ul>
-            <li>You can check out my <a href="https://github.com/mcclowes?tab=repositories">code and projects</a></li>
-            <li>My full CV is <a href="https://cv.mcclowes.com/">here</a></li>
-            <li>I got a new camera and am <a href="https://www.instagram.com/mcclowes/">using Instagram more</a></li>
-            <li>I recently <a href="https://www.instagram.com/welcometothegrandparade/">bought a house and am doing it up</a></li>
-            <li>I occasionally write about <a href="https://mcclowes.substack.com/">productivity and tech</a></li>
+            <li>
+              💻 You can check out my{" "}
+              <a href="https://github.com/mcclowes?tab=repositories">
+                code and projects
+              </a>
+            </li>
+            <li>
+              📄 My full CV is <a href="https://cv.mcclowes.com/">here</a>
+            </li>
+            <li>
+              📸 I got a new camera and am{" "}
+              <a href="https://www.instagram.com/mcclowes/">
+                using Instagram more
+              </a>
+            </li>
+            <li>
+              🏡 I recently{" "}
+              <a href="https://www.instagram.com/welcometothegrandparade/">
+                bought a house and am doing it up
+              </a>
+            </li>
+            <li>
+              ✍️ I occasionally write about{" "}
+              <a href="https://mcclowes.substack.com/">productivity and tech</a>
+            </li>
           </ul>
 
           <p>
-            See more <a href="https://linktr.ee/mcclowes">links and social media</a>...
+            See more{" "}
+            <a href="https://linktr.ee/mcclowes">links and social media</a>...
           </p>
         </div>
 
         <div>
-          <h2>Thoughts</h2>
+          <h2>🧠 Thoughts</h2>
         </div>
 
         <Posts>
@@ -81,7 +104,10 @@ const Home = ({ posts }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const res = await fetchEntries();
+  const res = await fetchEntries({
+    content_type: "post",
+    order: "-fields.publishingDate",
+  });
 
   // normalize
   const posts = await res.map((post) => {
