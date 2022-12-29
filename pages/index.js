@@ -32,8 +32,6 @@ const Posts = styled.div`
 `;
 
 const Home = ({ posts }) => {
-  console.log(posts);
-
   return (
     <Container>
       <GlobalStyle />
