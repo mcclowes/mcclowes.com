@@ -1,0 +1,66 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+/*  --white: #FFFFFF;
+  --primary-light: #8EE3C6;
+  --primary: #437868;
+  --primary-dark: #2E5A4D;
+  --gray: #666;
+  --black: #171D1B;*/
+/*
+
+  --ifm-color-primary: #437868;
+  --ifm-color-primary-dark: #2E5A4D;
+  --ifm-color-primary-darker: #2E5A4D;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #8EE3C6;
+  --ifm-color-primary-lighter: #8EE3C6;
+  --ifm-color-primary-lightest: #8EE3C6;*/
+
+  --ifm-color-primary: #437868;
+  --ifm-color-primary-dark: #3c6c5e;
+  --ifm-color-primary-darker: #396658;
+  --ifm-color-primary-darkest: #2f5449;
+  --ifm-color-primary-light: #4a8472;
+  --ifm-color-primary-lighter: #4d8a78;
+  --ifm-color-primary-lightest: #579c87;
+  
+  --ifm-code-font-size: 95%;
+
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  --ifm-heading-font-family: Cormorant, serif;
+}
+
+article > header > h2 {
+  font-size: 2em !important;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+/*  --white: #18191A;
+  --primary-light: #DDA1B7;
+  --primary: #DDA1B7;
+  --primary-dark: #DDA1B7;
+  --gray: #ccc;
+  --black: #ffffff;*/
+
+  --ifm-color-primary: #dda1b7;
+  --ifm-color-primary-dark: #d385a2;
+  --ifm-color-primary-darker: #ce7797;
+  --ifm-color-primary-darkest: #bf4d77;
+  --ifm-color-primary-light: #e7bdcc;
+  --ifm-color-primary-lighter: #eccbd7;
+  --ifm-color-primary-lightest: #fbf5f7;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+

@@ -1,13 +1,41 @@
-# mcclowes.com
+# Website
 
-[![CircleCI](https://circleci.com/gh/mcclowes/mcclowes.com.svg?style=svg&circle-token=XXXX)](https://circleci.com/gh/mcclowes/mcclowes.com)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmcclowes%2Fmcclowes.com.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmcclowes%2Fmcclowes.com?ref=badge_shield)
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+### Installation
 
-Personal site, very much work in progress   Personal site, very much work in progress
+```
+$ yarn
+```
 
+### Local Development
 
-## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmcclowes%2Fmcclowes.com.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmcclowes%2Fmcclowes.com?ref=badge_large)
+```
+$ yarn start
+```
 
-Based on <https://github.com/cassidoo/next-contentful-starter>
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```
+$ yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
