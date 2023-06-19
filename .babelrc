@@ -1,8 +1,0 @@
-{
-  "presets": ["next/babel"],
-  "plugins": [
-    "macros",
-    "@babel/plugin-transform-react-jsx",
-    "babel-plugin-styled-components"
-  ]
-}
