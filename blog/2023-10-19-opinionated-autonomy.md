@@ -14,7 +14,7 @@ For knowledge workers like product managers and software engineers, the freedom 
 
 Examples of the risks of unopinionated autonomy can be seen in some of the biases observed in software engineers' behavior. In the absence of a defined process, engineers often prioritize tasks they find more interesting or familiar, focus on quantity (lines of code) over quality, or perpetually tend towards novel approaches over tried practices for purely academic reasons.
 
-Where individuals are fully autonomous, the ability to improve as a team is compromised. In ‘The Rise and Fall of Getting Things Done’, the shortcomings of personal-productivity are made clear - it doesn't directly address the fundamental problem: the insidiously haphazard way that work unfolds at the organizational level. They only help individuals cope with its effects. A highly optimized personal productivity approach might help an individual organize the hundreds of tasks that arrive haphazardly in their in-box daily, but it does nothing to reduce the quantity of these requests. 
+Where individuals are fully autonomous, the ability to improve as a team is compromised. In [The Rise and Fall of Getting Things Done](https://www.newyorker.com/tech/annals-of-technology/the-rise-and-fall-of-getting-things-done), the shortcomings of personal-productivity are made clear - it doesn't directly address the fundamental problem: the insidiously haphazard way that work unfolds at the organizational level. They only help individuals cope with its effects. A highly optimized personal productivity approach might help an individual organize the hundreds of tasks that arrive haphazardly in their in-box daily, but it does nothing to reduce the quantity of these requests. 
 
 ---
 
@@ -55,5 +55,5 @@ To instill opinionated autonomy within an organization:
 
 #### Further reading
 
-- https://www.newyorker.com/tech/annals-of-technology/the-rise-and-fall-of-getting-things-done?utm_source=pocket_saves
+- https://www.newyorker.com/tech/annals-of-technology/the-rise-and-fall-of-getting-things-done
 - https://hbr.org/2019/07/how-to-give-your-team-the-right-amount-of-autonomy
