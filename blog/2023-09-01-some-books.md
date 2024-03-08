@@ -16,57 +16,6 @@ As with Earthsea, the author’s purposeful avoidance of a world with grand warf
 we get to experience an intimate and real experience, first hand via the archival format.
 
 
-<!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
-<style type="text/css" media="screen">
-  .gr_custom_container_1709918497 {
-    /* customize your Goodreads widget container here*/
-    border: 1px solid gray;
-    border-radius:10px;
-    padding: 10px 5px 10px 5px;
-    background-color: #FFFFFF;
-    color: #000000;
-    width: 300px
-  }
-  .gr_custom_header_1709918497 {
-    /* customize your Goodreads header here*/
-    border-bottom: 1px solid gray;
-    width: 100%;
-    margin-bottom: 5px;
-    text-align: center;
-    font-size: 120%
-  }
-  .gr_custom_each_container_1709918497 {
-    /* customize each individual book container here */
-    width: 100%;
-    clear: both;
-    margin-bottom: 10px;
-    overflow: auto;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #aaa;
-  }
-  .gr_custom_book_container_1709918497 {
-    /* customize your book covers here */
-    overflow: hidden;
-    height: 60px;
-      float: left;
-      margin-right: 4px;
-      width: 39px;
-  }
-  .gr_custom_author_1709918497 {
-    /* customize your author names here */
-    font-size: 10px;
-  }
-  .gr_custom_tags_1709918497 {
-    /* customize your tags here */
-    font-size: 10px;
-    color: gray;
-  }
-  .gr_custom_rating_1709918497 {
-    /* customize your rating stars here */
-    float: right;
-  }
-</style>
-
 <div id="gr_custom_widget_1709918497">
     <div class="gr_custom_container_1709918497">
       <h2 class="gr_custom_header_1709918497">
