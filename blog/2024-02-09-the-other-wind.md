@@ -8,7 +8,7 @@ tags: [book, review]
 
 <!--truncate-->
 
-In my review, I share some thoughts on "The Other Wind" by Ursula K. Le Guin, a book I find captivating. It strikes a perfect balance between the mundane, nutty aspects of real, believable human lives and the exciting high magic and wonder reminiscent of "Lord of the Rings" and other classic fantasies.
+I recently read *The Other Wind* by Ursula K. Le Guin. It strikes a perfect balance between the mundane aspects of real, believable human lives and exciting high magic and wonder, reminiscent of "Lord of the Rings" and other classic fantasies.
 
 I've always been a fan of low magic settings where magic seeps in softly, insidiously, and perhaps even superstitiously, rather than overtly. This preference stems from a belief that, without the crutch of spells or lengthy descriptions of battles, there's a push towards complexity and confrontation driven by personalities. Ursula K. Le Guin masters this approach, blending the best of low fantasy settings with the excitement of dragons, wizards, and grand cities. She accomplishes this by rooting her narrative in the most basic of real emotions and fears, thereby achieving a convincing believability.
 
