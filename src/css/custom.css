@@ -22,7 +22,25 @@
   --ifm-color-primary-lighter: #8EE3C6;
   --ifm-color-primary-lightest: #8EE3C6;*/
 
-  --ifm-color-primary: #437868;
+
+  --color-green: #4b5f5f;
+  --color-offwhite: #fffae1;
+
+  --color-font-primary: #333;
+  --color-font-header: var(--color-green);
+  --color-font-alt: var(--color-offwhite);
+
+  --color-background-primary: var(--color-offwhite);
+  --color-background-alt: var(--color-green);
+
+  --ifm-navbar-background-color: var(--color-background-primary);
+  --ifm-footer-background-color: var(--color-background-alt);
+
+  --ifm-heading-color: var(--color-font-header);  
+  --ifm-navbar-link-color: var(--color-font-header);  
+
+
+  --ifm-color-primary: var(--color-green); /*#437868;*/
   --ifm-color-primary-dark: #3c6c5e;
   --ifm-color-primary-darker: #396658;
   --ifm-color-primary-darkest: #2f5449;
@@ -35,9 +53,13 @@
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-  --ifm-heading-font-family: Cormorant, serif;
+  --ifm-heading-font-family: Merriweather, serif;
+}
+
+body #__docusaurus {
+  background-color: var(--color-background-primary);
 }
 
 article > header > h2 {
@@ -53,7 +75,14 @@ article > header > h2 {
   --gray: #ccc;
   --black: #ffffff;*/
 
-  --ifm-color-primary: #dda1b7;
+  --color-font-primary: #333;
+  --color-font-header: var(--color-offwhite);
+  --color-font-alt: var(--color-green);
+
+  --color-background-primary: var(--color-green);
+  --color-background-alt: var(--color-offwhite);
+
+  --ifm-color-primary: var(--color-offwhite); /*#dda1b7;*/
   --ifm-color-primary-dark: #d385a2;
   --ifm-color-primary-darker: #ce7797;
   --ifm-color-primary-darkest: #bf4d77;
@@ -64,3 +93,22 @@ article > header > h2 {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+article h1,
+article h2 {
+  background: var(--color-background-alt);
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  color: var(--color-font-alt);
+}
+
+article h2 a {
+  color: var(--color-font-alt);
+}
+/*primary: "#DD3437",
+alt: "#F87479",
+white: "#ffffff",
+offwhite: "#FEE8F1",
+black: "#333333",
+gray: "#aaaaaa",
+lightgray: "#eeeeee",
+error: "#DD3437",*/
