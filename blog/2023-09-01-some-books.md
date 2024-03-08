@@ -147,8 +147,6 @@ we get to experience an intimate and real experience, first hand via the archiva
           </div>
           <div class="gr_custom_review_1709918497">
             This book balances on a katanas edge, managing to be both epic yet cosy, sweeping in in scale yet minutely detailed (sometimes a little to the detriment of its pacing), full of brutality yet also compassion.
-      
-      Despite the grandeur of its ...
           </div>
       </div>
       <br style="clear: both"/>
@@ -160,4 +158,3 @@ we get to experience an intimate and real experience, first hand via the archiva
       </noscript>
     </div>
 </div>
-<script src="https://www.goodreads.com/review/custom_widget/77525785.Max's%20bookshelf:%20read?cover_position=left&cover_size=small&num_books=5&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=1&show_tags=1&show_title=1&sort=date_started&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1709918497&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
