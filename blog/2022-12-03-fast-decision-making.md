@@ -1,6 +1,6 @@
 ---
 slug: fast-decision-making
-title: The art fast decision-making
+title: The art of fast decision-making
 description: In the fast-paced world of product management, making quick decisions is essential to success. Learn why being agile and adaptable, measuring success, and reversing decisions when necessary can help you drive effective product strategies.
 authors: mcclowes
 tags: [ai, product]
