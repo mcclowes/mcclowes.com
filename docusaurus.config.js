@@ -57,6 +57,10 @@ const config = {
     ],
   ],
 
+  plugins: [
+    'vercel-analytics',
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
