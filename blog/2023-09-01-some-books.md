@@ -19,7 +19,7 @@ we get to experience an intimate and real experience, first hand via the archiva
 <div id="gr_custom_widget_1709918497">
     <div class="gr_custom_container_1709918497">
       <h2 class="gr_custom_header_1709918497">
-        <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/77525785-max-clayton-clowes?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">Max&#39;s bookshelf: read</a>
+        <a style={{textDecoration: "none"}} rel="nofollow" href="https://www.goodreads.com/review/list/77525785-max-clayton-clowes?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">Max&#39;s bookshelf: read</a>
       </h2>
       <div class="gr_custom_each_container_1709918497">
           <div class="gr_custom_book_container_1709918497">
@@ -98,12 +98,6 @@ we get to experience an intimate and real experience, first hand via the archiva
             This book balances on a katanas edge, managing to be both epic yet cosy, sweeping in in scale yet minutely detailed (sometimes a little to the detriment of its pacing), full of brutality yet also compassion.
           </div>
       </div>
-      <br style="clear: both"/>
-      <center>
-      <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
-      </center>
-      <noscript>
-      Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Max, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
-      </noscript>
+      <br style={{clear: "both"}}/>
     </div>
 </div>
