@@ -2,7 +2,7 @@
 title: 5 Reasons to Keep a Notebook
 description: Expressing ideas and thoughts — whether by some hurried doodle on a post-it or with a finely crafted sentence in a leather-bound journal — is incredibly important.
 authors: mcclowes
-tags: [ai, product]
+tags: [productivity]
 ---
 
 Expressing ideas and thoughts — whether by some hurried doodle on a post-it or with a finely crafted sentence in a leather-bound journal — is incredibly important.

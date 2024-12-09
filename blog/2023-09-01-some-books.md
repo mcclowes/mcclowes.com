@@ -4,23 +4,27 @@ authors: mcclowes
 tags: [blog]
 ---
 
-A few reflections on last year.
+I decided to make 2023 my year of reading. These are a few of my recent reads.
+
+Follow me on [Goodreads](https://www.goodreads.com/user/show/77525785-max-clayton-clowes).
 
 <!--truncate-->
 
-## The Left Hand of Darkness
+---
+
+### The Left Hand of Darkness
 
 Rarely can an author create a fictional word that feels both so alien, and yet so authentic in its substance. 
 This authenticity makes the alien feel so relatable. 
-As with Earthsea, the author’s purposeful avoidance of a world with grand warfare and other typical tropes of sci-fi and fantasy alike, 
-we get to experience an intimate and real experience, first hand via the archival format.
+As with Earthsea, the author’s purposeful avoidance of a world with grand warfare and other typical tropes of sci-fi and fantasy alike, we get to experience an intimate and real experience, first hand via the archival format.
 
+---
 
 <div id="gr_custom_widget_1709918497">
     <div class="gr_custom_container_1709918497">
-      <h2 class="gr_custom_header_1709918497">
+      <h3 class="gr_custom_header_1709918497">
         <a style={{textDecoration: "none"}} rel="nofollow" href="https://www.goodreads.com/review/list/77525785-max-clayton-clowes?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">Max&#39;s bookshelf: read</a>
-      </h2>
+      </h3>
       <div class="gr_custom_each_container_1709918497">
           <div class="gr_custom_book_container_1709918497">
             <a title="The Other Wind (Earthsea Cycle, #6)" rel="nofollow" href="https://www.goodreads.com/review/show/5645407446?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Other Wind" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1309285821l/13658._SY75_.jpg" /></a>
@@ -75,10 +79,6 @@ we get to experience an intimate and real experience, first hand via the archiva
           </div>
           <div class="gr_custom_author_1709918497">
             by <a rel="nofollow" href="https://www.goodreads.com/author/show/40593.Gabrielle_Zevin">Gabrielle Zevin</a>
-          </div>
-          <div class="gr_custom_tags_1709918497">
-            tagged:
-            book-club
           </div>
       </div>
       <div class="gr_custom_each_container_1709918497">

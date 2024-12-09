@@ -4,9 +4,10 @@ title: About me
 
 I am a Product Manager with a diverse software engineering and design background. I use my background to get the best out of my developement peers, and the best for my developer users. Intuition lead, data backed. I've been delivering websites and apps for 10+ years. DoY's Young Entrepreneur Award winner as a founder.
 
+[/cv](https://cv.mcclowes.com/)
 [/contact](mailto:contact@mcclowes.com)
 
----
+<!-- ---
 
 🛠 This site is work in progress. There's not much here at the moment! 
 
@@ -17,4 +18,4 @@ In the meantime:
 - 🏡 I recently [bought a house and am doing it up](https://www.instagram.com/welcometothegrandparade/)
 - ✍️ I occasionally write about [productivity and tech](https://mcclowes.substack.com/)
 
-See more [links and social media](https://linktr.ee/mcclowes)...
+See more [links and social media](https://linktr.ee/mcclowes)... -->
