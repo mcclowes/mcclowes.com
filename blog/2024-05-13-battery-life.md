@@ -1,5 +1,5 @@
 ---
-title: "It just works... finally!"
+title: "Battery life matters"
 authors: mcclowes
 tags: [apple, tech]
 ---
