@@ -1,5 +1,5 @@
 ---
-title: "The lure of stationery"
+title: "The allure of stationery"
 authors: mcclowes
 tags: [apple, tech]
 ---

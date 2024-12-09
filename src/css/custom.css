@@ -49,34 +49,20 @@
   
   --ifm-code-font-size: 95%;
 
-
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-  --ifm-heading-font-family: Merriweather, serif;
+  --font-mono: "Roboto Mono",  monospace;
+  --font-serif: Merriweather, serif;
+
+  --ifm-heading-font-family: var(--font-serif);
+  --ifm-footer-title-color: var(--color-font-header);
+  --ifm-footer-link-color: var(--color-font-header);
 }
 
-body #__docusaurus {
-  background-color: var(--color-background-primary);
-}
-
-p {
-  font-family: "Roboto Mono", monospace;
-  font-size: 0.9em;
-}
-
-h1 {
-  font-size: 2em !important;
-}
-
-article > header > h2 {
-  font-size: 2em !important;
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
 /*  --white: #18191A;
   --primary-light: #DDA1B7;
@@ -85,7 +71,7 @@ article > header > h2 {
   --gray: #ccc;
   --black: #ffffff;*/
 
-  --color-font-primary: #333;
+  --color-font-primary: var(--color-offwhite);
   --color-font-header: var(--color-offwhite);
   --color-font-alt: var(--color-green);
 
@@ -101,6 +87,32 @@ article > header > h2 {
   --ifm-color-primary-lightest: #fbf5f7;
   
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-color-content: var(--color-font-primary) !important;
+}
+
+body #__docusaurus {
+  background-color: var(--color-background-primary);
+}
+
+p,
+li {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+/* Article */
+
+article > header > h1,
+article > header > h2 {
+  font-size: 2em !important;
 }
 
 article h1,
@@ -113,7 +125,33 @@ article h2 {
 
 article h2 a {
   color: var(--color-font-alt);
+
+  &:hover {
+    color: var(--color-font);
+    opacity: 0.75;
+  }
 }
+
+article p a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.75;
+  }
+}
+
+[class*="sidebarItemTitle"] {
+  font-family: var(--font-serif);
+  color: var(--color-font-header);
+}
+
+li[class*="sidebarItem"] {
+  font-family: var(--font-mono);
+  margin-top: 0.2em;
+  text-decoration: underline;
+}
+
 /*primary: "#DD3437",
 alt: "#F87479",
 white: "#ffffff",
@@ -122,3 +160,44 @@ black: "#333333",
 gray: "#aaaaaa",
 lightgray: "#eeeeee",
 error: "#DD3437",*/
+
+/* Navbar */
+
+.navbar {
+  box-shadow: none;
+  font-family: var(--font-serif);
+}
+
+.navbar__title {
+  font-family: var(--font-serif);
+  background-color: var(--color-font-header);
+  color: var(--color-font-alt);
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+}
+
+.navbar__logo {
+  display: none;
+}
+
+.navbar__item:hover {
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--color-green);
+  color: var(--color-offwhite); 
+}
+
+.footer__title,
+.footer__item a {
+  color: var(--color-offwhite); 
+}
+
+.footer__item a:hover {
+  color: var(--color-offwhite);
+  opacity: 0.75;
+}
