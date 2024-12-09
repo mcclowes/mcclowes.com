@@ -25,7 +25,7 @@ const FeatureList = [
     ),
   },
   {
-    title: '/linktree',
+    title: '/links',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     link: 'https://linktr.ee/mcclowes',
     description: (
