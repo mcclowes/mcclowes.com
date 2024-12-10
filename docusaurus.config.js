@@ -43,6 +43,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarCount: 'ALL',
+
           // editUrl:
           //   'https://github.com/mcclowes/mcclowes.com',
         },
@@ -55,6 +57,13 @@ const config = {
 
   plugins: [
     'vercel-analytics',
+    "docusaurus-plugin-sass",
+    '@docusaurus/theme-live-codeblock',
+    'docusaurus-plugin-image-zoom'
+  ],
+
+  themes: [
+    "@docusaurus/theme-mermaid"
   ],
 
   themeConfig:
@@ -138,7 +147,27 @@ const config = {
         darkTheme: prismThemes.dracula,
         additionalLanguages: ['bash', 'diff', 'json'],
       },
+
+      liveCodeBlock: {
+        /**
+         * The position of the live playground, above or under the editor
+         * Possible values: "top" | "bottom"
+         */
+        playgroundPosition: 'bottom',
+      },
+
+      zoom: {
+        selector: '.markdown > p > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)'
+        },
+      },
     }),
+  
+  markdown: {
+    mermaid: true, // In order for Mermaid code blocks in Markdown to work, you also need to enable the Remark plugin with this option
+  },
 };
 
 module.exports = config;
