@@ -160,14 +160,14 @@ li[class*="sidebarItem"] {
   text-decoration: underline;
 }
 
-/*primary: "#DD3437",
-alt: "#F87479",
-white: "#ffffff",
-offwhite: "#FEE8F1",
-black: "#333333",
-gray: "#aaaaaa",
-lightgray: "#eeeeee",
-error: "#DD3437",*/
+li[class*="sidebarItem"] a {
+  color: var(--color-font-body);
+
+  &:hover {
+    color: var(--color-font-body);
+    opacity: 0.75;
+  }
+}
 
 /* Navbar */
 
