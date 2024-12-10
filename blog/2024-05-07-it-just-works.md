@@ -1,5 +1,5 @@
 ---
-title: "It just works... finally!"
+title: "It just works... finally"
 authors: mcclowes
 tags: [apple, tech]
 ---
@@ -12,9 +12,9 @@ I think in my experience they've always worked better than the competitor device
 
 For the first time though recently, I bought a product which I find does just work all of the time. I've been using AirPods for quite some time since the AirPods second generation came out and I bought, not the second generation, but the cheapest ones I could buy and they've been really nice and convenient headphones for that time. Small, compact, okay battery life, okay quality, reasonable connectivity, but unfortunately they recently were left in my pocket and went through the wash and came out the other side not working. 
 
-Rather than buy a new pair, I decided to fork out for AirPod Max's. I've tried them in the store and have been quite impressed at the noise cancelling and the spatial audio. 
+Rather than buy a new pair, I decided to fork out for the AirPods Max. I've tried them in the store and have been quite impressed at the noise cancelling and the spatial audio. 
 
-What I hadn't realised was just quite how seamless and flawless the experience of owning AirPods Max's really is. As a multi-device user, I'm constantly bouncing between a laptop, a phone, an iPad and more. And the most impressive thing about the AirPods Max's is how flawlessly it navigates that multi-device experience, perfectly switching between these devices based on what I'm doing. Never getting it wrong, never struggling to connect to a device. Certainly with the old, I guess more primitive Bluetooth implementations of AirPods, I quite frequently couldn't get them to connect or other technical issues would happen. But with these new AirPods, I'm constantly connected. It intelligently knows what I'm doing and which one should be prioritised. The volume never seems to spike as I switch devices. And this is just a bit of a game changer for using the Apple ecosystem as a whole. 
+What I hadn't realised was just quite how seamless and flawless the experience of owning the AirPods Max really is. As a multi-device user, I'm constantly bouncing between a laptop, a phone, an iPad and more. And the most impressive thing about the AirPods Max is how flawlessly it navigates that multi-device experience, perfectly switching between these devices based on what I'm doing. Never getting it wrong, never struggling to connect to a device. Certainly with the old, I guess more primitive Bluetooth implementations of AirPods, I quite frequently couldn't get them to connect or other technical issues would happen. But with these new AirPods, I'm constantly connected. It intelligently knows what I'm doing and which one should be prioritised. The volume never seems to spike as I switch devices. And this is just a bit of a game changer for using the Apple ecosystem as a whole. 
 
 The second way in which it just works is the battery life. I liked the old AirPods, but all too frequently I would put them in and hear that sound warning me that they were close to running out of battery. I didn't even realise this before buying them, but the AirPod Max comes equipped with a 20 hour battery life, which means that I have never put them on and found them dead. And increasingly I've found battery life being such a critical part of things just working. Something can't work if it's off, obviously. 
 

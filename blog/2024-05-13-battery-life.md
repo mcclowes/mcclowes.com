@@ -4,6 +4,8 @@ authors: mcclowes
 tags: [apple, tech]
 ---
 
+![Test](/img/posts/IMG_0571.jpeg)
+
 As I recently posted, I bought the AirPods Max and one of the nice features there was its massive 20-hour battery life.
 This is actually the third device I bought in six months where battery life has been a massive part of loving it. 
 
