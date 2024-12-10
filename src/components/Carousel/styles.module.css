@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  overflow-x: scroll;
+  margin: 2em 0;
+}
+
+.image {
+  min-width: 400px;
+  width: 33%;
+  border: 1px solid #efefef;
+  margin-right: 1em
+}
