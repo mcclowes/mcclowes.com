@@ -19,7 +19,7 @@ function ColorGrid({ size = 9 }) {
       const newOpacities = [...opacities];
       newOpacities[index] = newOpacities[index] === 1 ? 0 : 1; // Toggle opacity
       setOpacities(newOpacities);
-    }, 1000); // Change interval as needed
+    }, 650); // Change interval as needed
 
     return () => clearInterval(interval);
   }, [opacities, size]);
