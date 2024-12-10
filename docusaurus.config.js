@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'mcclowes',
+  title: '@mcclowes',
   tagline: 'Personal blog',
   favicon: 'img/favicon.ico',
 
@@ -76,7 +76,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'mcclowes',
+        title: '@mcclowes',
         logo: {
           alt: 'mcclowes logo',
           src: 'img/logo.svg',
