@@ -57,7 +57,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   --font-mono: "Roboto Mono",  monospace;
-  --font-serif: Merriweather, serif;
+  --font-serif: "Inknut Antiqua", "Merriweather", serif;
 
   --ifm-heading-font-family: var(--font-serif);
   --ifm-footer-title-color: var(--color-font-header);
