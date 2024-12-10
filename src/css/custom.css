@@ -84,6 +84,10 @@
   --ifm-color-content: var(--color-font-primary) !important;
 }
 
+html {
+  background-color: var(--color-background-primary);
+}
+
 body #__docusaurus {
   background-color: var(--color-background-primary);
 }
