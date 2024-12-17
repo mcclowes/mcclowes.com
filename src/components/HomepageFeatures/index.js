@@ -43,7 +43,7 @@ function Feature({Svg, title, description, link}) {
       {/*   <Svg className={styles.featureSvg} role="img" /> */}
       {/* </div> */}
       <div className="padding-horiz--md">
-        <Link to={link}><h3>{title}</h3></Link>
+        <Link className={styles.featureLink} to={link}><h3>{title}</h3></Link>
 
         <p>{description}</p>
       </div>

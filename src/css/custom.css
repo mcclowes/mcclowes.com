@@ -9,24 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 
-/* You can override the default Infima variables here. */
 :root {
-/*  --white: #FFFFFF;
-  --primary-light: #8EE3C6;
-  --primary: #437868;
-  --primary-dark: #2E5A4D;
-  --gray: #666;
-  --black: #171D1B;*/
-/*
-
-  --ifm-color-primary: #437868;
-  --ifm-color-primary-dark: #2E5A4D;
-  --ifm-color-primary-darker: #2E5A4D;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #8EE3C6;
-  --ifm-color-primary-lighter: #8EE3C6;
-  --ifm-color-primary-lightest: #8EE3C6;*/
-
   --color-green: #4b5f5f;
   --color-offwhite: #fffae1;
   --color-red: #ff7070;
@@ -40,28 +23,27 @@
   --color-background-primary: var(--color-offwhite);
   --color-background-alt: var(--color-green);
 
+  --ifm-color-primary: var(--color-green);
+
   --ifm-navbar-background-color: var(--color-background-primary);
   --ifm-footer-background-color: var(--color-background-alt);
+  --ifm-hr-background-color: var(--ifm-color-primary);
 
   --ifm-heading-color: var(--color-font-header);  
   --ifm-navbar-link-color: var(--color-font-header);  
-
-
-  --ifm-color-primary: var(--color-green); /*#437868;*/
 
   --ifm-link-color: var(--color-red);
   --ifm-blockquote-color: var(--color-darker-offwhite);
   
   --ifm-code-font-size: 95%;
-
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-
-  --font-mono: "Roboto Mono",  monospace;
-  --font-serif: "Inknut Antiqua", "Merriweather", serif;
 
   --ifm-heading-font-family: var(--font-serif);
   --ifm-footer-title-color: var(--color-font-header);
   --ifm-footer-link-color: var(--color-font-header);
+
+  --font-mono: "Roboto Mono", monospace;
+  --font-serif: "Inknut Antiqua", "Merriweather", serif;
 }
 
 [data-theme='dark'] {
@@ -143,7 +125,7 @@ article li a {
 }
 
 article img {
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 [class*="authorCol"] {
