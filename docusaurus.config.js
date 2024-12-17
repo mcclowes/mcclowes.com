@@ -86,6 +86,11 @@ const config = {
         items: [
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/about-me',label: 'About',position: 'left'},
+          {
+            href: 'https://cv.mcclowes.com/',
+            label: 'CV',
+            position: 'left',
+          },
           //{ to: '/docs', label: 'Docs', position: 'left' },
           // {
           //   type: 'docSidebar',

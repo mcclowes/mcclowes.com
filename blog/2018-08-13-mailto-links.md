@@ -25,6 +25,8 @@ You might have a link opening fine in Mail on a Mac, only to realise that the li
 
 Even the Wikipedia page for mailto: gives instructions that won't work by default on Outlook (which requires its users to actively turn on commas separation of email addresses).
 
+![Mailto graphic](/img/posts/mailto.png)
+
 ## Getting it right
 
 Here is an example of a complex, robust, href link:

@@ -16,7 +16,9 @@ One approach to reversing a decision is to focus on delivering incremental value
 
 If you find that a decision needs to be reversed, don't panic. It's not the end of the world! Acting quickly and transparently is key. Involve your team and stakeholders in the decision-making process, analyze the impact of the decision, and make necessary adjustments to the product strategy.
 
-Now, let's talk about the importance of making quick decisions in more detail. When you're a product manager, there's often a lot riding on the decisions you make. Whether it's a new feature, a change to the pricing strategy, or a major pivot, the success of the product can be affected by your decisions.
+![Doodle](/img/posts/tiles-noodle.png)
+
+When you're a product manager, there's often a lot riding on the decisions you make. Whether it's a new feature, a change to the pricing strategy, or a major pivot, the success of the product can be affected by your decisions.
 
 Of course, you don't want to make decisions recklessly or without considering all the relevant factors. But sometimes, taking too long to make a decision can be just as harmful as making a bad decision. That's why I believe in the value of agility and adaptability.
 

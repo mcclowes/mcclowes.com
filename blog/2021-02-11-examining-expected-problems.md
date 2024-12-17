@@ -9,6 +9,8 @@ A little while ago I (finally) got myself a decent desk and set up my workspace.
 
 <!--truncate-->
 
+![my window view](/img/posts/window.png)
+
 However, since snow arrived in London, it’s been incredibly unpleasant - the window is freezing! That’s not a huge surprise given it’s a 110 year old building and these are traditional sash windows.
 
 At first I tried using the blinds to try and trap the room’s heat. I whacked up the radiator… no success. After a few days of shivering I started looking up how much replacing the old window with new double glazed sash windows would cost - as much as I do want my home to eco-friendly, £800+ per window is not ideal.
