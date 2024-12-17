@@ -35,6 +35,6 @@ A single idea formed in isolation is inherently limited; great original creation
 
 ### 5) A notebook is great for quality of life
 
-On top of helping you stay organised and giving your brain a spring clean, preserving memories and your mind at a point in time is a massively important part of enjoying life. Somewhat philosophically, if you take the view that a life consists of your experiences and memories made, documenting your thoughts inherently gets you more out of life.
+On top of helping you stay organized and giving your brain a spring clean, preserving memories and your mind at a point in time is a massively important part of enjoying life. Somewhat philosophically, if you take the view that a life consists of your experiences and memories made, documenting your thoughts inherently gets you more out of life.
 
 These are just some of the reasons I carry a notebook at all times, and have done for around 7 years now. I recommend trying Moleskine Soft Underwater Blue Large Dotted Notebook if you are a visual person, or their Soft Large Underwater Blue Ruled Notebook if you prefer just writing.
