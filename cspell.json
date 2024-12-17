@@ -1,0 +1,13 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Docusaurus", 
+    "frontend", 
+    "Codat"  // Add project-specific words here
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "build/**"
+  ]
+}
