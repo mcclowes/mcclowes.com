@@ -1,0 +1,39 @@
+name: Spellcheck Markdown Files
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'  # Trigger only when Markdown files are changed
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Install cspell
+      - name: Install cspell
+        run: |
+          npm install -g cspell
+
+      # Step 3: Get list of changed Markdown files
+      - name: List changed Markdown files
+        id: changed_files
+        run: |
+          echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} | grep '\.md$' | xargs)" >> $GITHUB_ENV
+
+      # Step 4: Run spellcheck on changed files
+      - name: Run cspell
+        if: env.CHANGED_FILES != ''
+        run: |
+          echo "Files to check: $CHANGED_FILES"
+          cspell $CHANGED_FILES
+
+      # Step 5: Fail if errors are found
+      - name: Verify results
+        if: failure()
+        run: |
+          echo "❌ Spellcheck failed. Please fix the errors above."
