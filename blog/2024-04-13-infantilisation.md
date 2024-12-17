@@ -1,7 +1,8 @@
 ---
-title: "23 things to celebrate from 2023"
+title: "Infantilisation"
 authors: mcclowes
 tags: [blog]
+draft: true
 ---
 
 The trend of eg the balloon museum continues a trend of infantilisation,
