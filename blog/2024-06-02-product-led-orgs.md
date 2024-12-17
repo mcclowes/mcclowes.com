@@ -26,4 +26,4 @@ Using both of these devices had become so painful simply because of poor battery
 
 ![Test](/img/posts/product-led-neutral.jpeg)
 
-The true balancing of these concerns is where the product led organisation lies.
+The true balancing of these concerns is where the product led organization lies.
