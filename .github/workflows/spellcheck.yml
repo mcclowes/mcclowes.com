@@ -10,9 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Checkout the repository with full history
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full Git history
 
       # Step 2: Install cspell
       - name: Install cspell
@@ -23,7 +25,10 @@ jobs:
       - name: List changed Markdown files
         id: changed_files
         run: |
-          echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} | grep '\.md$' | xargs)" >> $GITHUB_ENV
+          BASE_SHA=${{ github.event.pull_request.base.sha }}
+          echo "Comparing against base SHA: $BASE_SHA"
+          CHANGED_FILES=$(git diff --name-only $BASE_SHA | grep '\.md$' || echo "")
+          echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_ENV
 
       # Step 4: Run spellcheck on changed files
       - name: Run cspell
@@ -32,7 +37,7 @@ jobs:
           echo "Files to check: $CHANGED_FILES"
           cspell $CHANGED_FILES
 
-      # Step 5: Fail if errors are found
+      # Step 5: Verify results
       - name: Verify results
         if: failure()
         run: |
