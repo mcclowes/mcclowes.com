@@ -4,7 +4,7 @@ authors: mcclowes
 tags: [apple, tech]
 ---
 
-As a lifelong Apple user - yep my parents were designers and I've never owned a PC - I've always slightly tongue-in-cheekily said that Apple products just work. And, of course, they do work pretty well. 
+As a lifelong Apple user - yep my parents were designers and I've never owned a PC - I've always slightly tongue-in-cheekily said that Apple products _just work_. And, of course, they do work pretty well. 
 
 <!--truncate-->
 

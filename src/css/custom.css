@@ -51,6 +51,7 @@
   --ifm-heading-color: var(--color-font-header);  
   --ifm-navbar-link-color: var(--color-font-header);  
 
+  --ifm-menu-color: var(--color-font-header);
   --ifm-link-color: var(--color-red);
   --ifm-blockquote-color: var(--color-darker-offwhite);
   
