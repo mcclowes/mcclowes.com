@@ -9,3 +9,12 @@
   height: 200px;
   width: 200px;
 }
+
+.featureLink {
+  color: var(--ifm-heading-color );
+
+  &:hover {
+    opacity: 0.75;
+    color: var(--ifm-heading-color);
+  }
+}

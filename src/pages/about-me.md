@@ -2,7 +2,9 @@
 title: About me
 ---
 
-I am a Product Manager with a diverse software engineering and design background. I use my background to get the best out of my developement peers, and the best for my developer users. Intuition lead, data backed. I've been delivering websites and apps for 10+ years. DoY's Young Entrepreneur Award winner as a founder.
+![Tiles](/img/posts/tiles.png)
+
+Results-driven product leader with 10+ years of experience delivering impactful products across SaaS and fintech industries. Proven expertise in defining product strategy, nurturing talent, and driving adoption. Adept at aligning product vision with organizational goals to deliver measurable growth. Intuition led, data backed. DoY's Young Entrepreneur Award winner as a founder.
 
 [/cv](https://cv.mcclowes.com/)
 [/contact](mailto:contact@mcclowes.com)
