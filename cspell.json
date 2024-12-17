@@ -4,7 +4,9 @@
   "words": [
     "Docusaurus", 
     "frontend", 
-    "Codat"  // Add project-specific words here
+    "Codat",
+    "mcclowes",
+    "Monzo",
   ],
   "ignorePaths": [
     "node_modules/**",
