@@ -128,10 +128,6 @@ const config = {
                 label: 'LinkedIn',
                 href: 'https://www.linkedin.com/in/maxclaytonclowes/',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/mcclowes',
-              },
             ],
           },
           {
