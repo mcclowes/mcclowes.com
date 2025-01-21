@@ -1,23 +1,27 @@
 ---
-title: "My first ever design document"
+title: "Food for Thought"
 authors: mcclowes
-tags: [product, game design]
-draft: true
+tags: [urbanism, design]
 ---
 
 import Carousel from '@site/src/components/Carousel';
 
-I recently found the first ever design document I created, from back in 2000.
+![Heygate estate](/img/posts/lcc/happymeal1.jpg)
 
 <!--truncate-->
+
+The sides of this set of Happy Meal boxes tell the story of three destructive behaviours of McDonalds and the resulting effects. Accompanying the boxes were a set of six toys based on the information on the boxes.
+
+I recently found the first ever design document I created, from back in 2000.
+
 
 Aged 10, 
 
 <Carousel 
   images={[
-    "/img/posts/design-doc/design-doc-1-1.jpeg",
-    "/img/posts/design-doc/design-doc-1-2.jpeg",
-    "/img/posts/design-doc/design-doc-1-3.jpeg",
+    "/img/posts/lcc/happymeal2.jpg",
+    "/img/posts/lcc/happymeal3.jpg",
+    "/img/posts/lcc/happymeal4.jpg",
   ]}
 />
 
@@ -29,14 +33,4 @@ just love is that when I turn the device on it works, it isn't out of battery.
 I can go and sit on the sofa and not be plugged in and my laptop isn't going to die on me. I could work there for an hour and then pop to the coffee shop for another few hours. 
 I can watch YouTube on my phone on the bus, then take calls. None of my devices are running out of battery when I need them most. 
 
-I know this might feel obvious but I think in 2024 this is the first time in my life where my devices 
-aren't lasting the day with me. Whenever I need to do something with them they're able to do it. 
-I no longer have power access anxiety, and it's just such a sort of simple but brilliant quality of life improvement.
-
-<Carousel 
-  images={[
-    "/img/posts/design-doc/design-doc-2-1.jpeg",
-    "/img/posts/design-doc/design-doc-2-2.jpeg",
-    "/img/posts/design-doc/design-doc-2-3.jpeg",
-  ]}
-/>
+![Heygate estate](/img/posts/lcc/happymeal5.jpeg)
