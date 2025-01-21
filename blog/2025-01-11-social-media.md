@@ -10,4 +10,4 @@ I've deleted my Facebook, Twitter, and Instagram accounts.
 
 This article is a reasonable approximation of why:
 
-<https://asylumsquare.com/backstage/2025-01-12/why-i-deleted-my-social-media-accounts>
+[https://asylumsquare.com/backstage/2025-01-12/why-i-deleted-my-social-media-accounts](https://asylumsquare.com/backstage/2025-01-12/why-i-deleted-my-social-media-accounts)
