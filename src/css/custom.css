@@ -53,7 +53,7 @@
 
   --ifm-menu-color: var(--color-font-header);
   --ifm-link-color: var(--color-red);
-  --ifm-blockquote-color: var(--color-darker-offwhite);
+  --ifm-blockquote-color: var(--color-offwhite-alt-dark);
   
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
