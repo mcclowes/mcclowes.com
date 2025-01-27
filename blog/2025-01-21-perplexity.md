@@ -21,5 +21,5 @@ E.g. if I want to visit The Guardian's website, I'll type in 'the guardian'. The
 
 After a few days of similarly frustrating search results, I returned to Google.
 
-To be fair to Perplexity, it consistently markets itself as a _research_ tool, rather than a search tool. If I had asked "When was the Guardian founded?", it would likely give me sufficiently good results. However, based on current web browser paradigms, Perplexity is looking for user stickiness by becoming the search engine of choice. Perplexity will need to be able to differentiate between these two modes of search engine behaviour - searching and researching - and provide appropriate results accordingly.
+Perplexity wants to answer questions and, to be fair to Perplexity, it consistently markets itself as a _research_ tool (rather than a *search* tool). If I had asked "When was the Guardian founded?", it would likely give me sufficiently good results. However, based on current web browser paradigms, Perplexity is looking for user stickiness by becoming the search engine of choice. Perplexity will need to be able to differentiate between these two modes of search engine behaviour - searching and researching - and provide appropriate results accordingly.
 
