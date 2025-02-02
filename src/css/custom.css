@@ -225,3 +225,8 @@ li[class*="sidebarItem"] a {
   color: var(--color-offwhite);
   opacity: 0.75;
 }
+
+iframe {
+  border-radius: 8px;
+  overflow: hidden;
+}
