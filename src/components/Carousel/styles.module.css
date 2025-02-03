@@ -8,7 +8,8 @@
 
 .image {
   min-width: 400px;
-  width: 33%;
+  /*width: 33%;*/
+  width: auto;
   border: 1px solid var(--color-green-dark);
   margin-right: 1em
 }
