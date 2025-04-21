@@ -5,7 +5,7 @@ tags: [teams, culture]
 draft: false
 ---
 
-I recently ran a values exercise with a team of engineers in 1-1s. Each had to select three sticky-note values from a predefined set of values. Every single one of them chose Cooperation.
+I recently ran a values exercise with a team of engineers in 1-1s. Each had to select three sticky-notes from a predefined set of values. Every single one of them chose Cooperation.
 
 When we asked what cooperation meant, I got five completely different answers:
 
