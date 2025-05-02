@@ -4,7 +4,11 @@ title: About me
 
 ![Tiles](/img/posts/tiles.png)
 
-Results-driven product leader with 10+ years of experience delivering impactful products across SaaS and fintech industries. Proven expertise in defining product strategy, nurturing talent, and driving adoption. Adept at aligning product vision with organizational goals to deliver measurable growth. Intuition led, data backed. DoY's Young Entrepreneur Award winner as a founder.
+I’m a product director with over a decade of experience building tools that work with the grain of people and systems. My background spans engineering, design, and strategy—shaping software that solves real problems, and quietly endures.
+
+I’ve led product in startups and scale-ups across SaaS and fintech, founded my own venture, and helped teams align on what matters. I think in systems, care about craft, and trust intuition sharpened by data. In 2017, I was awarded the Duke of York’s Young Entrepreneur Award.
+
+Outside of work, I write essays, compose music, and sketch. I'm interested in the emotional texture of tools, the aesthetics of decision-making, and how creative practice can inform the structures we build. This site is a place to explore that intersection.
 
 [/cv](https://cv.mcclowes.com/)
 [/contact](mailto:contact@mcclowes.com)
