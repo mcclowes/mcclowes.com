@@ -3,8 +3,116 @@ import styles from './styles.module.css';
 
 const pokemonData = [
   {
+    id: 1,
+    name: "Flatipi",
+    image: "/img/posts/pokemon/1-flatipi.png",
+    types: ["normal"]
+  },
+  {
+    id: 99,
+    name: "Canuto",
+    image: "/img/posts/pokemon/99-canuto.png",
+    types: ["fighting"]
+  },
+  {
+    id: 109,
+    name: "Koffing",
+    image: "/img/posts/pokemon/109-koffing.png",
+    types: ["poison"]
+  },
+  {
+    id: 110,
+    name: "Weezing",
+    image: "/img/posts/pokemon/110-weezing.png",
+    types: ["poison"]
+  },
+  {
+    id: 120,
+    name: "Pilbark",
+    image: "/img/posts/pokemon/120-pilbark.png",
+    types: ["grass"]
+  },
+  {
+    id: 121,
+    name: "Pilnrin",
+    image: "/img/posts/pokemon/121-pilnrin.png",
+    types: ["grass"]
+  },
+  {
+    id: 147,
+    name: "Bizzy",
+    image: "/img/posts/pokemon/147-bizzy.png",
+    types: ["bug"]
+  },
+  {
+    id: 148,
+    name: "Bluzzard",
+    image: "/img/posts/pokemon/148-bluzzard.png",
+    types: ["ice", "flying"]
+  },
+  {
+    id: 149,
+    name: "Glarius",
+    image: "/img/posts/pokemon/149-glarius.png",
+    types: ["ice", "flying"]
+  },
+  {
+    id: 97,
+    name: "Crobark",
+    image: "/img/posts/pokemon/97-crobark.png",
+    types: ["rock"]
+  },
+  {
+    id: 98,
+    name: "Crabuto",
+    image: "/img/posts/pokemon/98-crabuto.png",
+    types: ["rock"]
+  },
+  {
+    id: 0,
+    name: "Aniseed",
+    image: "/img/posts/pokemon/Aniseed.png",
+    types: ["grass"]
+  },
+  {
+    id: 0,
+    name: "Magrab",
+    image: "/img/posts/pokemon/Magrab.png",
+    types: ["rock"]
+  },
+  {
+    id: 0,
+    name: "Natterjack",
+    image: "/img/posts/pokemon/natterjack1.png",
+    types: ["water"]
+  },
+  {
+    id: 0,
+    name: "Natterjack",
+    image: "/img/posts/pokemon/natterjack2.png",
+    types: ["water"]
+  },
+  {
+    id: 0,
+    name: "Steevil",
+    image: "/img/posts/pokemon/Steevil.png",
+    types: ["steel"]
+  },
+  {
+    id: 0,
+    name: "Turpine",
+    image: "/img/posts/pokemon/Turpine.png",
+    types: ["grass"]
+  },
+  {
+    id: 23,
+    name: "Totori Ekans",
+    image: "/img/posts/pokemon/23-ekans.png",
+    types: ["fire", "poison"]
+  },
+  {
     id: 24,
-    name: "Arbok",
+    name: "Totori Arbok",
     image: "/img/posts/pokemon/24-arbok.png",
     types: ["fire", "poison"]
   },
@@ -12,12 +120,6 @@ const pokemonData = [
     id: 14,
     name: "Barata",
     image: "/img/posts/pokemon/Barata.png",
-    types: ["fighting"]
-  },
-  {
-    id: 15,
-    name: "Canuto",
-    image: "/img/posts/pokemon/Canuto.png",
     types: ["fighting"]
   },
   {
@@ -96,7 +198,7 @@ const pokemonData = [
     id: 38,
     name: "Harvine",
     image: "/img/posts/pokemon/38-harvine.png",
-    types: ["grass"]
+    types: ["grass", "steel"]
   },
   {
     id: 35,
