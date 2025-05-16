@@ -6,37 +6,37 @@ const pokemonData = [
     id: 1,
     name: "Flatipi",
     image: "/img/posts/pokemon/1-flatipi.png",
-    types: ["normal"]
+    types: ["water"]
   },
   {
     id: 99,
     name: "Canuto",
     image: "/img/posts/pokemon/99-canuto.png",
-    types: ["fighting"]
+    types: ["steel"]
   },
   {
     id: 109,
-    name: "Koffing",
+    name: "Totori Koffing",
     image: "/img/posts/pokemon/109-koffing.png",
-    types: ["poison"]
+    types: ["fire", "poison"]
   },
   {
     id: 110,
-    name: "Weezing",
+    name: "Totori Weezing",
     image: "/img/posts/pokemon/110-weezing.png",
-    types: ["poison"]
+    types: ["fire", "poison"]
   },
   {
     id: 120,
     name: "Pilbark",
     image: "/img/posts/pokemon/120-pilbark.png",
-    types: ["grass"]
+    types: ["grass", "dragon"]
   },
   {
     id: 121,
     name: "Pilnrin",
     image: "/img/posts/pokemon/121-pilnrin.png",
-    types: ["grass"]
+    types: ["grass", "dragon"]
   },
   {
     id: 147,
@@ -60,19 +60,19 @@ const pokemonData = [
     id: 97,
     name: "Crobark",
     image: "/img/posts/pokemon/97-crobark.png",
-    types: ["rock"]
+    types: ["grass"]
   },
   {
     id: 98,
     name: "Crabuto",
     image: "/img/posts/pokemon/98-crabuto.png",
-    types: ["rock"]
+    types: ["steel"]
   },
   {
     id: 0,
     name: "Aniseed",
     image: "/img/posts/pokemon/Aniseed.png",
-    types: ["grass"]
+    types: ["grass", "fire"]
   },
   {
     id: 0,
@@ -120,7 +120,7 @@ const pokemonData = [
     id: 14,
     name: "Barata",
     image: "/img/posts/pokemon/Barata.png",
-    types: ["fighting"]
+    types: ["fighting", "flying"]
   },
   {
     id: 27,
@@ -292,10 +292,11 @@ const Pokedex = ({ pokemon=pokemonData }) => {
             alt={pokemon.name} 
             className={styles.pokemonImage}
           />
+          <div className={styles.pokemonId}>#{pokemon.id}</div>
           <h3 className={styles.pokemonName}>{pokemon.name}</h3>
           <div className={styles.pokemonTypes}>
             {pokemon.types.map((type) => (
-              <span key={type} className={styles.typeBadge}>
+              <span key={type} className={`${styles.typeBadge} ${styles[`type${type.charAt(0).toUpperCase() + type.slice(1)}`]}`}>
                 {type}
               </span>
             ))}

@@ -41,10 +41,89 @@
 }
 
 .typeBadge {
-  background-color: var(--color-background-primary);
-  color: var(--color-font-primary);
   padding: 0.25rem 0.75rem;
   border-radius: 16px;
   font-size: 0.875rem;
   text-transform: capitalize;
+  color: white;
+  font-weight: 500;
+}
+
+/* Type-specific colors */
+.typeNormal {
+  background-color: #A8A878;
+}
+
+.typeFire {
+  background-color: #F08030;
+}
+
+.typeWater {
+  background-color: #6890F0;
+}
+
+.typeElectric {
+  background-color: #F8D030;
+}
+
+.typeGrass {
+  background-color: #78C850;
+}
+
+.typeIce {
+  background-color: #98D8D8;
+}
+
+.typeFighting {
+  background-color: #C03028;
+}
+
+.typePoison {
+  background-color: #A040A0;
+}
+
+.typeGround {
+  background-color: #E0C068;
+}
+
+.typeFlying {
+  background-color: #A890F0;
+}
+
+.typePsychic {
+  background-color: #F85888;
+}
+
+.typeBug {
+  background-color: #A8B820;
+}
+
+.typeRock {
+  background-color: #B8A038;
+}
+
+.typeGhost {
+  background-color: #705898;
+}
+
+.typeDragon {
+  background-color: #7038F8;
+}
+
+.typeDark {
+  background-color: #705848;
+}
+
+.typeSteel {
+  background-color: #B8B8D0;
+}
+
+.typeFairy {
+  background-color: #EE99AC;
+}
+
+.pokemonId {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.25rem;
 } 
