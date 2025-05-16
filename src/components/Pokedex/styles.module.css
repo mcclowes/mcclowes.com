@@ -19,8 +19,8 @@
 }
 
 .pokemonImage {
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
   margin-bottom: 0.5rem;
   /*mix-blend-mode: multiply;*/
