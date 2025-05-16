@@ -9,6 +9,18 @@ const pokemonData = [
     types: ["water"]
   },
   {
+    id: 2,
+    name: "Flatipus",
+    image: "/img/posts/pokemon/2-flatipus.png",
+    types: ["water"]
+  },
+  {
+    id: 7,
+    name: "Stoak",
+    image: "/img/posts/pokemon/7-stoak.png",
+    types: ["fire"]
+  },
+  {
     id: 99,
     name: "Canuto",
     image: "/img/posts/pokemon/99-canuto.png",
@@ -16,13 +28,13 @@ const pokemonData = [
   },
   {
     id: 109,
-    name: "Totori Koffing",
+    name: "Totorian Koffing",
     image: "/img/posts/pokemon/109-koffing.png",
     types: ["fire", "poison"]
   },
   {
     id: 110,
-    name: "Totori Weezing",
+    name: "Totorian Weezing",
     image: "/img/posts/pokemon/110-weezing.png",
     types: ["fire", "poison"]
   },
@@ -57,10 +69,34 @@ const pokemonData = [
     types: ["ice", "flying"]
   },
   {
-    id: 97,
+    id: 90,
+    name: "Logodile",
+    image: "/img/posts/pokemon/90-logodile.png",
+    types: ["water"]
+  },
+  {
+    id: 91,
     name: "Crobark",
-    image: "/img/posts/pokemon/97-crobark.png",
+    image: "/img/posts/pokemon/91-crobark.png",
     types: ["grass"]
+  },
+  {
+    id: 91,
+    name: "Crobark",
+    image: "/img/posts/pokemon/91-crobark2.png",
+    types: ["grass"]
+  },
+  {
+    id: 96,
+    name: "Boyant",
+    image: "/img/posts/pokemon/96-boyant.png",
+    types: ["water"]
+  },
+  {
+    id: 97,
+    name: "Boysterous",
+    image: "/img/posts/pokemon/97-boysterous.png",
+    types: ["water"]
   },
   {
     id: 98,
@@ -69,70 +105,82 @@ const pokemonData = [
     types: ["steel"]
   },
   {
-    id: 0,
+    id: 100,
     name: "Aniseed",
-    image: "/img/posts/pokemon/Aniseed.png",
+    image: "/img/posts/pokemon/100-aniseed.png",
     types: ["grass", "fire"]
   },
   {
-    id: 0,
+    id: 100,
+    name: "Anisage",
+    image: "/img/posts/pokemon/101-anisage.png",
+    types: ["grass", "fire"]
+  },
+  {
+    id: 116,
     name: "Magrab",
-    image: "/img/posts/pokemon/Magrab.png",
-    types: ["rock"]
+    image: "/img/posts/pokemon/116-magrab.png",
+    types: ["water", "fire"]
   },
   {
-    id: 0,
+    id: 117,
+    name: "Volcrab",
+    image: "/img/posts/pokemon/117-volcrab.png",
+    types: ["water", "fire"]
+  },
+  {
+    id: 133,
     name: "Natterjack",
-    image: "/img/posts/pokemon/natterjack1.png",
-    types: ["water"]
+    image: "/img/posts/pokemon/133-natterjack1.png",
+    types: ["water", "grass"]
   },
   {
-    id: 0,
+    id: 134,
     name: "Natterjack",
-    image: "/img/posts/pokemon/natterjack2.png",
-    types: ["water"]
+    image: "/img/posts/pokemon/134-natterjack2.png",
+    types: ["water", "poison"]
   },
   {
-    id: 0,
-    name: "Steevil",
-    image: "/img/posts/pokemon/Steevil.png",
+    id: 104,
+    name: "Steever",
+    image: "/img/posts/pokemon/104-steever.png",
     types: ["steel"]
   },
   {
-    id: 0,
+    id: 118,
     name: "Turpine",
-    image: "/img/posts/pokemon/Turpine.png",
+    image: "/img/posts/pokemon/118-turpine.png",
     types: ["grass"]
   },
   {
     id: 23,
-    name: "Totori Ekans",
+    name: "Totorian Ekans",
     image: "/img/posts/pokemon/23-ekans.png",
     types: ["fire", "poison"]
   },
   {
     id: 24,
-    name: "Totori Arbok",
+    name: "Totorian Arbok",
     image: "/img/posts/pokemon/24-arbok.png",
     types: ["fire", "poison"]
   },
   {
-    id: 14,
+    id: 106,
     name: "Barata",
-    image: "/img/posts/pokemon/Barata.png",
+    image: "/img/posts/pokemon/106-barata.png",
     types: ["fighting", "flying"]
   },
   {
     id: 27,
     name: "Icky",
     image: "/img/posts/pokemon/27-icky.png",
-    types: ["poison", "normal"]
+    types: ["poison"]
   },
   {
     id: 28,
     name: "Spicky",
     image: "/img/posts/pokemon/28-spicky.png",
-    types: ["poison", "normal"]
+    types: ["poison"]
   },
   {
     id: 43,
@@ -215,7 +263,7 @@ const pokemonData = [
   {
     id: 131,
     name: "Holoray",
-    image: "/img/posts/pokemon/Holoray.png",
+    image: "/img/posts/pokemon/131-holoray.png",
     types: ["psychic", "water"]
   }, 
   {
@@ -273,10 +321,10 @@ const pokemonData = [
     types: ["ice", "ground"]
   },
   {
-    id: 140,
+    id: 150,
     name: "Linyu",
     image: "/img/posts/pokemon/Linyu.png",
-    types: ["rock", "normal"]
+    types: ["rock"]
   },
 ];
 
