@@ -1,9 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import styles from './styles.module.css';
 import { pokemonData } from './pokemonData';
+import Modal from '../Modal';
+import PokemonDetail from '../PokemonDetail';
 
 const Pokedex = ({ pokemon=pokemonData }) => {
   const [selectedType, setSelectedType] = useState('all');
+  const [selectedPokemon, setSelectedPokemon] = useState(null);
   
   const typeCounts = useMemo(() => {
     const counts = {};
@@ -46,7 +49,11 @@ const Pokedex = ({ pokemon=pokemonData }) => {
       </div>
       <div className={styles.pokedex}>
         {filteredPokemon.map((pokemon) => (
-          <div key={pokemon.id} className={styles.pokemonCard}>
+          <div 
+            key={pokemon.id} 
+            className={styles.pokemonCard}
+            onClick={() => setSelectedPokemon(pokemon)}
+          >
             <img 
               src={pokemon.image} 
               alt={pokemon.name} 
@@ -64,6 +71,12 @@ const Pokedex = ({ pokemon=pokemonData }) => {
           </div>
         ))}
       </div>
+      <Modal 
+        isOpen={selectedPokemon !== null} 
+        onClose={() => setSelectedPokemon(null)}
+      >
+        {selectedPokemon && <PokemonDetail pokemon={selectedPokemon} />}
+      </Modal>
     </div>
   );
 };

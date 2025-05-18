@@ -37,33 +37,33 @@ export const pokemonData = [
   },
   {
     id: 11,
-    name: "Bee",
+    name: "Mudaub",
     image: "/img/posts/pokemon/11-bee.png",
     types: ["ground", "bug"]
   },
   {
     id: 12,
-    name: "Punch",
+    name: "Vespidug",
     image: "/img/posts/pokemon/12-punch.png",
     types: ["ground", "bug"]
   },
   {
     id: 14,
-    name: "Unknown",
+    name: "Dufflit",
     image: "/img/posts/pokemon/14.png",
-    types: ["normal"]
+    types: ["grass"]
   },
   {
     id: 19,
     name: "Cat Variant",
     image: "/img/posts/pokemon/19-cat2.png",
-    types: ["normal"]
+    types: ["dark"]
   },
   {
     id: 20,
     name: "Panstare",
     image: "/img/posts/pokemon/20-panstare.png",
-    types: ["normal"]
+    types: ["dark"]
   },
   {
     id: 21,
@@ -187,15 +187,15 @@ export const pokemonData = [
   },
   {
     id: 118,
-    name: "Turpine",
-    image: "/img/posts/pokemon/118-turpine.png",
-    types: ["grass"]
+    name: "Statree",
+    image: "/img/posts/pokemon/54-statree.png",
+    types: ["electric"]
   },
   {
     id: 119,
-    name: "Pingrove",
-    image: "/img/posts/pokemon/119-pingrove.png",
-    types: ["grass"]
+    name: "Braintree",
+    image: "/img/posts/pokemon/55-braintree.png",
+    types: ["electric", "psychic"]
   },
   {
     id: 23,
@@ -244,6 +244,18 @@ export const pokemonData = [
     name: "Khandark",
     image: "/img/posts/pokemon/45-khandark.png",
     types: ["water", "steel"]
+  },
+  {
+    id: 54,
+    name: "Turpine",
+    image: "/img/posts/pokemon/118-turpine.png",
+    types: ["grass"]
+  },
+  {
+    id: 55,
+    name: "Pingrove",
+    image: "/img/posts/pokemon/119-pingrove.png",
+    types: ["grass"]
   },
   {
     id: 123,
@@ -381,7 +393,7 @@ export const pokemonData = [
     id: 150,
     name: "Jadu",
     image: "/img/posts/pokemon/150-jadu.png",
-    types: ["psychic"]
+    types: ["fairy"]
   },
   {
     id: 151,
@@ -418,18 +430,6 @@ export const pokemonData = [
     name: "Catacitor",
     image: "/img/posts/pokemon/47-ds.png",
     types: ["electric"]
-  },
-  {
-    id: 54,
-    name: "Statree",
-    image: "/img/posts/pokemon/54-statree.png",
-    types: ["electric"]
-  },
-  {
-    id: 55,
-    name: "Braintree",
-    image: "/img/posts/pokemon/55-braintree.png",
-    types: ["electric", "psychic"]
   },
   {
     id: 83,
