@@ -10,12 +10,20 @@
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .pokemonCard:hover {
   transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pokemonCard:active {
+  transform: translateY(-2px);
 }
 
 .pokemonImage {
@@ -23,7 +31,11 @@
   height: auto;
   object-fit: contain;
   margin-bottom: 0.5rem;
-  /*mix-blend-mode: multiply;*/
+  transition: transform 0.3s ease;
+}
+
+.pokemonCard:hover .pokemonImage {
+  transform: scale(1.05);
 }
 
 .pokemonName {
@@ -142,21 +154,20 @@
 
 .typeFilter {
   padding: 0.5rem 1rem;
-  border: 2px solid #e0e0e0;
   border-radius: 8px;
+  border: 1px solid var(--color-background-alt);
+  background-color: var(--color-background);
+  color: var(--color-font);
   font-size: 1rem;
-  background-color: white;
   cursor: pointer;
-  min-width: 150px;
-  color: #333;
+  transition: border-color 0.2s;
 }
 
-.typeFilter:focus {
-  outline: none;
-  border-color: #666;
+.typeFilter:hover {
+  border-color: var(--color-font-alt);
 }
 
 .filterCount {
+  color: var(--color-font-alt);
   font-size: 0.9rem;
-  color: #ddd;
 } 
