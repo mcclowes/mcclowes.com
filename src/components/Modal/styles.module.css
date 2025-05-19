@@ -12,25 +12,31 @@
   animation: fadeIn 0.2s ease-in-out;
 }
 
-.modalContent {
-  background-color: var(--color-background);
+.modalContainer {
+  background-color: var(--color-background-alt);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0.5rem;
   position: relative;
   max-width: 90%;
   max-height: 90vh;
   overflow-y: auto;
   animation: slideIn 0.3s ease-out;
+  height: 100%;
+}
+
+.modalContent {
+  overflow-y: auto;
+  height: 100%;
 }
 
 .closeButton {
-  position: fixed;
-  top: calc(50% - 45vh - 2.5rem);
-  right: calc(50% - 45% - 2.5rem);
-  background: var(--color-background);
+  position: absolute;
+  background: none;
+  top: 0;
+  right: 0;
   border: none;
   font-size: 1.5rem;
-  color: var(--color-font);
+  color: var(--color-font-alt);
   cursor: pointer;
   padding: 0.5rem;
   line-height: 1;

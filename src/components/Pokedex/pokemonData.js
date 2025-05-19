@@ -51,11 +51,11 @@ export const pokemonData = [
     id: 14,
     name: "Dufflit",
     image: "/img/posts/pokemon/14.png",
-    types: ["grass"]
+    types: ["bug", "grass"]
   },
   {
     id: 19,
-    name: "Cat Variant",
+    name: "Gazian",
     image: "/img/posts/pokemon/19-cat2.png",
     types: ["dark"]
   },
@@ -67,13 +67,13 @@ export const pokemonData = [
   },
   {
     id: 21,
-    name: "Deerist",
+    name: "Misdeery",
     image: "/img/posts/pokemon/21-deerist.png",
     types: ["normal", "ice"]
   },
   {
     id: 22,
-    name: "Misdeer",
+    name: "Haart",
     image: "/img/posts/pokemon/22-stag.png",
     types: ["normal", "ice"]
   },
