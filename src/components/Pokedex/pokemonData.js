@@ -157,7 +157,7 @@ export const pokemonData = [
   },
   {
     id: 100,
-    name: "Aniseed",
+    name: "Anisear",
     image: "/img/posts/pokemon/100-aniseed.png",
     types: ["grass", "fire"]
   },
