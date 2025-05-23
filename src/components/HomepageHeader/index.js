@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import clsx from 'clsx';
 
 import styles from './styles.module.css';
@@ -9,41 +9,81 @@ function ColorGrid() {
   const gridRef = useRef(null);
   
   // Calculate number of squares based on container size
-  useEffect(() => {
-    const calculateDimensions = () => {
-      if (!gridRef.current) return;
-      
-      const containerWidth = gridRef.current.clientWidth;
-      const containerHeight = gridRef.current.clientHeight;
-      
-      // Square width is 50px + 10px (5px margin on each side)
-      const squareWidth = 60;
-      const squareHeight = 60;
-      
-      const cols = Math.floor(containerWidth / squareWidth);
-      const rows = Math.floor(containerHeight / squareHeight);
-      
-      // Ensure at least 1 row and column
-      setDimensions({
-        rows: Math.max(1, rows),
-        cols: Math.max(1, cols)
-      });
-    };
+  const calculateDimensions = useCallback(() => {
+    if (!gridRef.current) return;
+    
+    const containerWidth = gridRef.current.clientWidth;
+    const containerHeight = gridRef.current.clientHeight;
+    
+    // Get the computed style to determine square size based on current media query
+    const computedStyle = window.getComputedStyle(document.documentElement);
+    const isMobile = window.innerWidth <= 480;
+    const isTablet = window.innerWidth <= 768 && window.innerWidth > 480;
+    
+    // Adjust square size based on media query
+    let squareSize, margin;
+    if (isMobile) {
+      squareSize = 30;
+      margin = 3;
+    } else if (isTablet) {
+      squareSize = 40;
+      margin = 4;
+    } else {
+      squareSize = 50;
+      margin = 5;
+    }
+    
+    // Calculate effective square dimension including margin
+    const squareWidth = squareSize + (margin * 2);
+    const squareHeight = squareSize + (margin * 2);
+    
+    const cols = Math.floor(containerWidth / squareWidth);
+    const rows = Math.floor(containerHeight / squareHeight);
+    
+    // Ensure at least 1 row and column
+    setDimensions({
+      rows: Math.max(1, rows),
+      cols: Math.max(1, cols)
+    });
+  }, []);
 
+  // Setup resize observer and event listener
+  useEffect(() => {
+    // Initial calculation after component mounts
     calculateDimensions();
     
-    // Add resize listener
+    // Use ResizeObserver for more accurate container size tracking
+    let resizeObserver;
+    if (gridRef.current && typeof ResizeObserver === 'function') {
+      resizeObserver = new ResizeObserver(() => {
+        calculateDimensions();
+      });
+      resizeObserver.observe(gridRef.current);
+    }
+    
+    // Also listen for window resize events
     window.addEventListener('resize', calculateDimensions);
     
+    // Recalculate after a short delay to ensure container has fully rendered
+    const timeout = setTimeout(calculateDimensions, 100);
+    
     // Cleanup
-    return () => window.removeEventListener('resize', calculateDimensions);
-  }, []);
+    return () => {
+      window.removeEventListener('resize', calculateDimensions);
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
+      clearTimeout(timeout);
+    };
+  }, [calculateDimensions]);
 
   // Initialize the grid with initial opacity
   useEffect(() => {
     const totalSquares = dimensions.rows * dimensions.cols;
-    const initialOpacities = Array.from({ length: totalSquares }, () => 0);
-    setOpacities(initialOpacities);
+    if (totalSquares > 0) {
+      const initialOpacities = Array.from({ length: totalSquares }, () => 0);
+      setOpacities(initialOpacities);
+    }
   }, [dimensions]);
 
   // Function to fade a random square in or out at random intervals

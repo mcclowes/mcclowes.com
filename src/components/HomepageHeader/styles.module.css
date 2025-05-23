@@ -3,6 +3,8 @@
   padding: 25px;
   max-height: 300px;
   overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
 }
 
 .grid {
@@ -10,6 +12,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
   max-height: 100%;
   width: 100%;
@@ -26,5 +29,21 @@
 
   &:hover {
     opacity: 1!important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .square {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .square {
+    width: 30px;
+    height: 30px;
+    margin: 3px;
   }
 }
