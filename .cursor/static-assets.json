@@ -1,0 +1,11 @@
+{
+  "name": "static-assets-directory",
+  "description": "Enforces the use of /static directory for static assets instead of /public",
+  "rules": [
+    {
+      "pattern": "/public/",
+      "message": "Static assets should be placed in the /static directory, not /public",
+      "severity": "warning"
+    }
+  ]
+} 
