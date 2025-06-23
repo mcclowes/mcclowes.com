@@ -7,6 +7,7 @@ tags: [tech, ai]
 During my computer science studies, our introduction to artificial intelligence didn’t begin with neural networks or robotics, but with a parade of definitions:
 
 - **“We call programs intelligent if they exhibit behaviors that would be regarded intelligent if they were exhibited by human beings.”** — Herbert Simon  
+<!--truncate-->
 - **“AI is the study of how to make computers do things at which, at the moment, people are better.”** — Elaine Rich and Kevin Knight  
 - **“AI is the science of common sense.”** — Claudson Bornstein  
 - **“AI is the attempt to make computers do what people think computers cannot do.”** — Douglas Baker  
