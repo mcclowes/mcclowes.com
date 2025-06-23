@@ -25,8 +25,6 @@ Critics seize on this mechanistic truth to dismiss these systems as mere “stoc
 
 Yet the same models write working code, pass professional exams, offer therapeutic dialogue, plan complex trips, interpret poetry, draft legislation, and even play chess tutor or romantic confidant. They are reshaping law, journalism, design, education, and medicine—often in profound ways. The mechanisms may be simple, but their outputs can surprise, unsettle, amuse, and even move us. For most users, intelligence isn’t a property hidden under the hood—it’s an experience at the interface.
 
----
-
 ## Black boxes everywhere
 
 We’re surrounded by systems we only half understand. You can’t describe exactly how your pancreas regulates insulin, how your car’s fuel injection works, or how a judge arrives at sentencing. You model what you don’t see—simulating beliefs, desires, and likely actions in people, institutions, and now, machines.
@@ -45,8 +43,6 @@ Every time AI masters a new benchmark, we redefine “intelligence” to exclude
 
 This intellectual retreat obscures what is already happening and lulls us into complacency. If we keep shifting the bar, we risk ignoring systems capable of influence, persuasion, or even manipulation—simply because they don’t think “our” way. 
 
----
-
 ## What intelligence feels like
 
 In everyday life, we judge people by their words and deeds, not by their brain chemistry. We call someone intelligent if they communicate clearly, solve problems deftly, or adapt to new challenges—without demanding a tour of their neural pathways. We infer intelligence from interaction and outcome.
@@ -55,12 +51,12 @@ The same standard applies to machines. When an LLM untangles a confusing questio
 
 ## Seeing clearly, responding wisely
 
-To navigate the AI era, we must hold two truths simultaneously:
+Navigating this AI era, you must hold two truths simultaneously:
 
 1. **Engineered artifacts:** These systems are built, with no intrinsic understanding or self-awareness.  
 2. **Competent actors:** In interaction, they often behave indistinguishably from intelligent beings.
 
-Ignoring either truth leads to errors: techno-mysticism on one side ([or worse](https://academic.oup.com/schizophreniabulletin/article/49/6/1418/7251361)), dismissive complacency on the other. Instead, we need a Turing-style lens that treats intelligence as relational—a property that emerges in the space between system and user. 
+Ignoring either leads to mistakes: techno-mysticism on one side ([or worse](https://academic.oup.com/schizophreniabulletin/article/49/6/1418/7251361)), dismissive complacency on the other. Instead, we need a Turing-style lens that treats intelligence as relational, a property that emerges in the space between system and user. 
 
 That doesn’t mean abandoning rigor or skepticism. It means focusing on outcomes as well as architecture, and acknowledging what’s already changing—even if we don’t yet fully grasp how.
 
