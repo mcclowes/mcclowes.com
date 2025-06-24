@@ -11,7 +11,7 @@ A custom DND concept: The Tribune. This PDF contains the complete rules and mech
 import PDFViewer from '@site/src/components/PDFViewer';
 
 <PDFViewer 
-  src="/pdfs/dnd/tribune.pdf"
+  src="/pdf/dnd/tribune.pdf"
   title="DND Tribune PDF"
   height="700px"
   showDownload={true}

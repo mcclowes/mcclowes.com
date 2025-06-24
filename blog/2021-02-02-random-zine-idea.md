@@ -11,7 +11,7 @@ First few pages of a draft idea for a zine. Didn't go anywhere obviously.
 <!--truncate-->
 
 <PDFViewer 
-  src="/pdfs/magazine.pdf"
+  src="/pdf/magazine.pdf"
   title="Magazine PDF"
   height="700px"
   showDownload={true}

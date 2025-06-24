@@ -11,7 +11,7 @@ A custom DND concept: The Combat Medic. This PDF contains the complete rules and
 import PDFViewer from '@site/src/components/PDFViewer';
 
 <PDFViewer 
-  src="/pdfs/dnd/combat-medic.pdf"
+  src="/pdf/dnd/combat-medic.pdf"
   title="DND Combat Medic PDF"
   height="700px"
   showDownload={true}
