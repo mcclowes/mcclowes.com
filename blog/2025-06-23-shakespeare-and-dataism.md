@@ -10,4 +10,4 @@ Consider Shakespeare. Nearly every one of his plots hinges on someone not knowin
 
 This tension between what is known and what cannot be known isn't just theatrical, it's fun! In Sam Sorensen's game [Cataphracts](https://samsorensen.blot.im/cataphracts-design-diary-1), a wargame simulating Byzantine campaigns, you can see how the real drama lies not in combat mechanics but in the fog of war—supply chains faltering, orders misunderstood, messengers ambushed. The challenge isn't what to do, but whether your intention will survive the distance between thought and action.
 
-[Dataism](https://en.wikipedia.org/wiki/Dataism) tends to frame incomplete information as a bug to be fixed. But Shakespeare, and war, and life, suggest it's more like the operating system. The gaps between us aren't obstacles to be eliminated; they're where story and strategy live. 
+[Dataism](https://en.wikipedia.org/wiki/Dataism) tends to frame complete information as some oerfect state, and income knowledge as a bug to be fixed. But these examples indicate it might be a little dull knowing everything.
