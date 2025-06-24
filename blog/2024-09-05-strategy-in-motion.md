@@ -1,5 +1,5 @@
 ---
-title: "Strategy in Motion"
+title: "Strategy in motion"
 authors: mcclowes
 tags: [leadership, teams]
 draft: false
