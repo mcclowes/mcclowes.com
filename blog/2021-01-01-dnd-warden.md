@@ -11,7 +11,7 @@ A custom DND concept: The Warden. This PDF contains the complete rules and mecha
 import PDFViewer from '@site/src/components/PDFViewer';
 
 <PDFViewer 
-  src="/img/posts/dnd/warden.pdf"
+  src="/pdfs/dnd/warden.pdf"
   title="DND Warden PDF"
   height="700px"
   showDownload={true}
