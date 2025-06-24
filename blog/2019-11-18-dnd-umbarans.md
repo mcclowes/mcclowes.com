@@ -11,7 +11,7 @@ A custom DND concept: The Umbarans. This PDF contains the complete rules and mec
 import PDFViewer from '@site/src/components/PDFViewer';
 
 <PDFViewer 
-  src="/pdfs/dnd/umbarans.pdf"
+  src="/pdf/dnd/umbarans.pdf"
   title="DND Umbarans PDF"
   height="700px"
   showDownload={true}
