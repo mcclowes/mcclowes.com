@@ -15,15 +15,17 @@ During my computer science studies, our introduction to artificial intelligence 
 - **“Research scientists in AI try to get machines to exhibit behavior that we call intelligent when we observe it in human beings.”** — James Slagle  
 - **“AI is a collective name for problems which we do not yet know how to solve properly by computer.”** — Bertram Raphael  
 
-In hindsight, these definitions reveal a persistent tension: is intelligence located in the mechanism itself, or in the results it produces? Should we evaluate a system by its inner workings—or by how it makes us feel?
+In hindsight, these definitions reveal a persistent tension: is intelligence located in the mechanism itself, or in the results it produces? Should we evaluate a system by its inner workings, or by how it makes us feel?
 
 ## The simple engine behind the curtain
 
-At their core, large language models like GPT are conceptually straightforward: they predict the next token in a sequence, guided by statistical patterns gleaned from vast corpora. There’s no memory of past interactions, no goals driving their output, and no self-awareness. If you trace a response step by step, you won’t find “thought” as we experience it.
+At their core, large language models like GPT are conceptually straightforward: they predict the next token in a sequence, guided by statistical patterns. If you trace a response step by step, you won’t find “thought” as we experience it, and certainly not self-awareness.
 
-Critics seize on this mechanistic truth to dismiss these systems as mere “stochastic parrots”—mathematical engines that remix human-authored text without genuine understanding. At the level of mechanism, that critique is fair.
+Critics seize on this mechanistic truth to dismiss these systems as mere [stochastic parrots](https://en.wikipedia.org/wiki/Stochastic_parrot) — mathematical engines that remix human-authored text without genuine understanding. This is true.
 
-Yet the same models write working code, pass professional exams, offer therapeutic dialogue, plan complex trips, interpret poetry, draft legislation, and even play chess tutor or romantic confidant. They are reshaping law, journalism, design, education, and medicine—often in profound ways. The mechanisms may be simple, but their outputs can surprise, unsettle, amuse, and even move us. For most users, intelligence isn’t a property hidden under the hood—it’s an experience at the interface.
+Yet these same models write working code, pass professional exams, offer effective therapy, plan complex trips, interpret poetry, draft legislation, and even play chess tutor or romantic confidant. People build relationships with these LLMs that, to them, are very real.
+
+They are reshaping law, journalism, design, education, and medicine—often in profound ways. The mechanisms may be simple, but their outputs can surprise, unsettle, amuse, and even move us. For most users, intelligence isn’t a property hidden under the hood—it’s an experience at the interface.
 
 ## Black boxes everywhere
 
@@ -56,7 +58,7 @@ Navigating this AI era, you must hold two truths simultaneously:
 1. **Engineered artifacts:** These systems are built, with no intrinsic understanding or self-awareness.  
 2. **Competent actors:** In interaction, they often behave indistinguishably from intelligent beings.
 
-Ignoring either leads to mistakes: techno-mysticism on one side ([or worse](https://academic.oup.com/schizophreniabulletin/article/49/6/1418/7251361)), dismissive complacency on the other. Instead, we need a Turing-style lens that treats intelligence as relational, a property that emerges in the space between system and user. 
+Ignoring either leads to mistakes: techno-mysticism on one side ([or worse](https://academic.oup.com/schizophreniabulletin/article/49/6/1418/7251361)), dismissive complacency on the other. Instead, we need a Turing-style perspective that recognises intelligence as a property that emerges in the space between system and user. 
 
 That doesn’t mean abandoning rigor or skepticism. It means focusing on outcomes as well as architecture, and acknowledging what’s already changing—even if we don’t yet fully grasp how.
 
