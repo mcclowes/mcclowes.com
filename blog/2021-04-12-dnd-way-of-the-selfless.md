@@ -11,7 +11,7 @@ A custom DND concept: The Way of the Selfless. This PDF contains the complete ru
 import PDFViewer from '@site/src/components/PDFViewer';
 
 <PDFViewer 
-  src="/img/posts/dnd/way-of-the-selfless.pdf"
+  src="/pdfs/dnd/way-of-the-selfless.pdf"
   title="DND Way of the Selfless PDF"
   height="700px"
   showDownload={true}
