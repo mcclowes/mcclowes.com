@@ -1,0 +1,36 @@
+.pdfViewer {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pdfFrame {
+  border: none;
+  display: block;
+  background: #f8f9fa;
+}
+
+.downloadSection {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.downloadButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.downloadButton:hover {
+  background: #0056b3;
+  color: white;
+  text-decoration: none;
+} 
