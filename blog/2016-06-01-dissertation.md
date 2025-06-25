@@ -8,6 +8,8 @@ tags: [blog]
 
 <!--truncate-->
 
+import PDFViewer from '@site/src/components/PDFViewer';
+
 ## Abstract
 
 ### Context/Background
@@ -48,3 +50,11 @@ this data was gathered, make the technique particularly effective.
 
 
 [See the code on GitHub](https://github.com/mcclowes/knights-and-crosses/tree/master)
+
+
+<PDFViewer 
+  src="/pdf/genetic-ai-dissertation.pdf"
+  title="Genetic AI Dissertation PDF"
+  height="700px"
+  showDownload={true}
+/>
