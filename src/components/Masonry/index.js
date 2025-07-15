@@ -12,12 +12,14 @@ const MasonryGallery = ({images, breakpointCols = {default: 3, 1100: 2, 700: 1}}
       >
         {images.map((image, index) => (
           <div key={index} className={styles.imageContainer}>
-            <img
-              src={image}
-              alt={`Image ${index + 1}`}
-              className={styles.image}
-              loading="lazy"
-            />
+            <p className="markdown">
+              <img
+                src={image}
+                alt={`Image ${index + 1}`}
+                className={`${styles.image} markdown-img`}
+                loading="lazy"
+              />
+            </p>
           </div>
         ))}
       </Masonry>

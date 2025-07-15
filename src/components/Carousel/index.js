@@ -5,12 +5,15 @@ const Carousel = ({images}) => {
     <div className={styles.wrapper}>
       {
         images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Imagem ${index}`}
-            className={styles.image}
-          />
+          <div key={index} className={styles.imageContainer}>
+            <p className="markdown">
+              <img
+                src={image}
+                alt={`Imagem ${index}`}
+                className={`${styles.image} markdown-img`}
+              />
+            </p>
+          </div>
         ))
       }
     </div>

@@ -6,6 +6,10 @@
   margin: 2em 0;
 }
 
+.imageContainer {
+  flex-shrink: 0;
+}
+
 .image {
   max-height: 90vh;
   height: auto;

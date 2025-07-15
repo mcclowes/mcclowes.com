@@ -14,7 +14,6 @@
 }
 
 .imageContainer {
-  margin-bottom: 1rem;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;

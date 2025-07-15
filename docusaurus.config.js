@@ -158,7 +158,7 @@ const config = {
       },
 
       zoom: {
-        selector: '.markdown > p > img',
+        selector: '.markdown > p > img, .markdown-img',
         background: {
           light: 'rgb(255, 255, 255)',
           dark: 'rgb(50, 50, 50)'
