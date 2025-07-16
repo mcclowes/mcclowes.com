@@ -6,9 +6,11 @@ import styles from './styles.module.css';
 function ColorGrid({ size = 9 }) {
   const [opacities, setOpacities] = useState([]);
 
-  // Initialize the grid with full opacity
+  // Initialize the grid with some squares visible
   useEffect(() => {
-    const initialOpacities = Array.from({ length: size * size }, () => 0);
+    const initialOpacities = Array.from({ length: size * size }, (_, i) => 
+      Math.random() > 0.7 ? 1 : 0 // Start with about 30% of squares visible
+    );
     setOpacities(initialOpacities);
   }, [size]);
 
@@ -25,7 +27,7 @@ function ColorGrid({ size = 9 }) {
   }, [opacities, size]);
 
   return (
-    <div className={styles.grid} style={{ gridTemplateColumns: `repeat(${size}, 50px)` }}>
+    <div className={styles.grid}>
       {opacities.map((opacity, index) => (
         <div key={index} className={styles.square} style={{ opacity }} />
       ))}
@@ -38,7 +40,22 @@ function ColorGrid({ size = 9 }) {
 function HomepageHeader() {
   return (
     <header className={styles.heroBanner}>
-      <ColorGrid/>
+      <div className={styles.heroContent}>
+        <div className={styles.heroText}>
+          <h1 className={styles.heroTitle}>Max Clayton-Clowes</h1>
+          <p className={styles.heroSubtitle}>
+            Product director with 10+ years of experience building tools that work with the grain of people and systems.
+          </p>
+          <div className={styles.heroLinks}>
+            <a href="/about-me" className={styles.heroButton}>About me</a>
+            <a href="/blog" className={styles.heroButton}>Blog</a>
+            <a href="https://cv.mcclowes.com/" className={styles.heroButton}>CV</a>
+          </div>
+        </div>
+        <div className={styles.heroGrid}>
+          <ColorGrid size={6}/>
+        </div>
+      </div>
     </header>
   );
 }

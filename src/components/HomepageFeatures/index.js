@@ -5,29 +5,29 @@ import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: '/blog',
+    title: 'Blog',
     link: '/blog',
     description: (
       <>
-        Thoughts and musings.
+        Essays on product management, technology, and creative practice. From technical deep-dives to philosophical reflections on building tools that work with people.
       </>
     ),
   },
   {
-    title: '/about-me',
+    title: 'About',
     link: '/about-me',
     description: (
       <>
-        Contact and social media links.
+        Learn more about my background spanning engineering, design, and product strategy. Philosophy of practice and approach to building meaningful tools.
       </>
     ),
   },
   {
-    title: '/links',
-    link: 'https://linktr.ee/mcclowes',
+    title: 'CV & Links',
+    link: 'https://cv.mcclowes.com/',
     description: (
       <>
-        Linktree with various links.
+        Full professional experience and portfolio. Connect with me on LinkedIn or explore my code and projects on GitHub.
       </>
     ),
   },
