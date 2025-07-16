@@ -1,0 +1,58 @@
+# Blog Post Style and Grammar Rules
+
+## Title and Header Formatting
+- Use **sentence casing** for all titles and headers (capitalize only the first word and proper nouns)
+- Examples:
+  - ✅ "The 4 Ps of good business"
+  - ✅ "Deleting social media"
+  - ✅ "Perplexity vs. Google for search"
+  - ❌ "The 4 Ps of Good Business"
+  - ❌ "Deleting Social Media"
+
+## Oxford Comma Usage
+- **Always use Oxford commas** (serial commas) in lists of three or more items
+- Examples:
+  - ✅ "I've deleted my Facebook, Twitter, and Instagram accounts."
+  - ✅ "Purpose, people, process, and product are the four pillars."
+  - ❌ "I've deleted my Facebook, Twitter and Instagram accounts."
+  - ❌ "Purpose, people, process and product are the four pillars."
+
+## General Writing Style
+- Write in a conversational, direct tone
+- Use active voice when possible
+- Keep sentences concise and clear
+- Use markdown formatting appropriately (bold for emphasis, italics for titles/names)
+- Include relevant images and links to support your points
+- Use blockquotes for external references or notable quotes
+
+## Blog Post Structure
+- Start with YAML frontmatter including title, authors, tags, and draft status
+- Use `<!--truncate-->` to indicate where the preview should end
+- Use clear, descriptive section headers
+- Include relevant images with descriptive alt text
+- End with a clear conclusion or call to action when appropriate
+
+## Code and Technical Content
+- Use backticks for inline code and file names
+- Use code blocks for longer code examples
+- Include context and explanations for technical concepts
+- Link to relevant documentation or resources
+
+## Links and References
+- Use descriptive link text rather than raw URLs
+- Include source citations when referencing external content
+- Use markdown link format: `[descriptive text](url)`
+
+## Image Guidelines
+- Use descriptive file names for images
+- Include alt text for accessibility
+- Reference images using the `/img/posts/` directory structure
+- Images are infact stored in the repo in `/static/img/posts/` 
+- Use appropriate image formats (PNG for screenshots, JPEG for photos)
+
+## Content Guidelines
+- Write from personal experience when possible
+- Be honest about limitations and uncertainties
+- Include practical takeaways or insights
+- Connect ideas to broader themes or trends
+- Maintain consistency with your established voice and perspective 
