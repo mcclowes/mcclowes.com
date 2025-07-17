@@ -69,8 +69,7 @@
 }
 
 .imageContainerSmall {
-  transform: scale(0.67);
-  transform-origin: center;
+  max-height: 50vh;
 }
 
 .image {
