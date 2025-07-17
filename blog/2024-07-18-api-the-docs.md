@@ -1,5 +1,5 @@
 ---
-title: "API The Docs Podcast - Documentation by humans, for humans"
+title: "API the docs podcast - documentation by humans, for humans"
 authors: mcclowes
 tags: [podcast, tech]
 ---

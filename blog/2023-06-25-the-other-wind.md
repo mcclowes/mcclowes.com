@@ -1,5 +1,5 @@
 ---
-title: "The Other Wind - Ursula Le Guin"
+title: "The other wind - Ursula Le Guin"
 authors: mcclowes
 tags: [book, review]
 ---

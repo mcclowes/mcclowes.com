@@ -1,5 +1,5 @@
 ---
-title: "DND: Way of the Selfless"
+title: "DND: way of the Selfless"
 authors: mcclowes
 tags: [dnd, gaming, homebrew]
 ---

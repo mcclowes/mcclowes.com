@@ -1,5 +1,5 @@
 ---
-title: "Hand Typed"
+title: "Hand typed"
 authors: mcclowes
 tags: [typography, design, art]
 ---

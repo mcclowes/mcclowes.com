@@ -1,5 +1,5 @@
 ---
-title: "New Nature"
+title: "New nature"
 authors: mcclowes
 tags: [writing, poetry]
 ---

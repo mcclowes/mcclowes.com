@@ -1,5 +1,5 @@
 ---
-title: "Some books I've read recently"
+title: "Some books i've read recently"
 authors: mcclowes
 tags: [blog]
 ---

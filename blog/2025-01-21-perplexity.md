@@ -1,5 +1,5 @@
 ---
-title: "Perplexity vs. Google for Search"
+title: "Perplexity vs. Google for search"
 authors: mcclowes
 tags: [blog]
 ---

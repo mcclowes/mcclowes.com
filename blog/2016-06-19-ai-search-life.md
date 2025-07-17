@@ -1,5 +1,5 @@
 ---
-title: "Optimizing Life: Lessons from AI Search Approaches"
+title: "Optimizing life: lessons from AI search approaches"
 authors: mcclowes
 tags: [ai, product]
 ---

@@ -1,5 +1,5 @@
 ---
-title: "The Age of Ideas"
+title: "The age of ideas"
 authors: mcclowes
 tags: [ai, product, tech]
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "The Bar for AI Keeps Shifting"
+title: "The bar for AI keeps shifting"
 authors: mcclowes
 tags: [tech, ai]
 ---

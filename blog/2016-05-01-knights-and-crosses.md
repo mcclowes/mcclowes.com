@@ -1,5 +1,5 @@
 ---
-title: "Knights and Crosses"
+title: "Knights and crosses"
 authors: mcclowes
 tags: [music]
 ---

@@ -1,5 +1,5 @@
 ---
-title: "The New Generalist"
+title: "The new generalist"
 authors: mcclowes
 tags: [ai, career, productivity]
 draft: false

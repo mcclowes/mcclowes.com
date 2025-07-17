@@ -1,5 +1,5 @@
 ---
-title: "Paintings May 25"
+title: "Paintings may 25"
 authors: mcclowes
 tags: [art]
 ---

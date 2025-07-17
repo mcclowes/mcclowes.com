@@ -1,5 +1,5 @@
 ---
-title: "DND: Combat Medic"
+title: "DND: combat medic"
 authors: mcclowes
 tags: [dnd, gaming, homebrew]
 ---

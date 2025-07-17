@@ -1,5 +1,5 @@
 ---
-title: "John Clowes - At Last!"
+title: "John Clowes - at last!"
 authors: mcclowes
 tags: [music]
 ---

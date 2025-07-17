@@ -1,5 +1,5 @@
 ---
-title: "Butterfly Brands"
+title: "Butterfly brands"
 authors: mcclowes
 tags: [art, design]
 ---

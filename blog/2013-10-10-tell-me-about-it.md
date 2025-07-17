@@ -1,5 +1,5 @@
 ---
-title: "Tell Me About It"
+title: "Tell me about it"
 authors: mcclowes
 tags: [music]
 ---

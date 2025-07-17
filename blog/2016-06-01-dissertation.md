@@ -1,5 +1,5 @@
 ---
-title: "The Use of Genetic AI in the Balancing of Competitive Multiplayer Games"
+title: "The use of genetic AI in the balancing of competitive multiplayer games"
 authors: mcclowes
 tags: [blog]
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Food for Thought"
+title: "Food for thought"
 authors: mcclowes
 tags: [urbanism, design]
 ---

@@ -1,5 +1,5 @@
 ---
-title: "The 4 Ps of Good Business"
+title: "The 4 ps of good business"
 authors: mcclowes
 tags: [business, leadership, management]
 draft: false

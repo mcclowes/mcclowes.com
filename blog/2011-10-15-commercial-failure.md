@@ -1,5 +1,5 @@
 ---
-title: " Is Commercial Failure Indicative of Poor Design?"
+title: " Is commercial failure indicative of poor design?"
 authors: mcclowes
 tags: [design]
 ---

@@ -1,5 +1,5 @@
 ---
-title: "UK Technical Communication Awards 2024"
+title: "UK technical communication awards 2024"
 authors: mcclowes
 tags: [blog]
 ---
