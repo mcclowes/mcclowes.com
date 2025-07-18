@@ -1,5 +1,5 @@
 ---
-title: "Godfreys Website - Still Driving Around London 12 Years Later"
+title: "Godfreys.co - still driving around London 12 years later"
 authors: mcclowes
 tags: [blog, design, portfolio]
 ---
