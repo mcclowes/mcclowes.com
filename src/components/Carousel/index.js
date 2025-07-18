@@ -59,11 +59,16 @@ const Carousel = ({images, variant}) => {
     if (variant === 'small') {
       className += ` ${styles.imageContainerSmall}`;
     }
+    className += ` markdown`;
     return className;
   };
 
   const getWrapperClassName = () => {
     let className = styles.wrapper;
+    
+    if (variant === 'small') {
+      className += ` ${styles.wrapperSmall}`;
+    }
     
     if (scrollState.isAtStart && scrollState.isAtEnd) {
       // All content fits, no gradient needed
@@ -84,10 +89,10 @@ const Carousel = ({images, variant}) => {
 
   return (
     <div ref={wrapperRef} className={getWrapperClassName()}>
-      {
-        images.map((image, index) => (
-          <div key={index} className={getImageContainerClassName()}>
-            <p className="markdown">
+      <div className={styles.carouselTrack}>
+        {
+          images.map((image, index) => (
+            <p key={index} className={getImageContainerClassName()}>
               <img
                 src={image}
                 alt={`Imagem ${index}`}
@@ -95,9 +100,9 @@ const Carousel = ({images, variant}) => {
                 onLoad={handleImageLoad}
               />
             </p>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </div>
   )
 }
