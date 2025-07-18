@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from './styles.module.css';
 
-const Carousel = ({images}) => {
+const Carousel = ({images, variant}) => {
   const [scrollState, setScrollState] = useState({
     isAtStart: true,
     isAtEnd: false
@@ -54,6 +54,14 @@ const Carousel = ({images}) => {
     }
   }, [loadedImages, images.length]);
 
+  const getImageContainerClassName = () => {
+    let className = styles.imageContainer;
+    if (variant === 'small') {
+      className += ` ${styles.imageContainerSmall}`;
+    }
+    return className;
+  };
+
   const getWrapperClassName = () => {
     let className = styles.wrapper;
     
@@ -78,7 +86,7 @@ const Carousel = ({images}) => {
     <div ref={wrapperRef} className={getWrapperClassName()}>
       {
         images.map((image, index) => (
-          <div key={index} className={styles.imageContainer}>
+          <div key={index} className={getImageContainerClassName()}>
             <p className="markdown">
               <img
                 src={image}
