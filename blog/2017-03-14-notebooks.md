@@ -9,7 +9,7 @@ Expressing ideas and thoughts — whether by some hurried doodle on a post-it or
 
 <!--truncate-->
 
-### 1) Thoughts are forgotten (obvious)
+### 1) Sometimes, thoughts are forgotten (obviously)
 
 Your mind is constantly whirring, processing new information, generating new thoughts, forming memories. When forming memories, our incredible brains sift through our experiences and thoughts, only retaining information we are unlikely to require in the future. Every day incredible ideas are lost, as memories unformed or un-recalled.
 
@@ -17,7 +17,7 @@ That cool idea you had at 1am could be worthless to you today but 10 years down 
 
 That amazing fact you read probably seems unimportant to you now, but in a few years time you may encounter a problem for which that knowledge is invaluable.
 
-### 2) Sometimes thoughts need be forgotten
+### 2) Sometimes, thoughts *need be* forgotten
 
 The other side of the coin is that the aforementioned amazing fact or cool idea you won’t need until a few years down the line is not useful now. Let your brain move past the thought now — write it down. By documenting it you remove the need to keep thinking about it, and you free up your mind for thinking about more pressing matters safe in the knowledge you can return to the thought later.
 

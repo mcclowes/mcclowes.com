@@ -2,7 +2,7 @@
 title: About me
 ---
 
-![Tiles](/img/posts/tiles.png)
+![Tiles](/img/posts/tiles/tiles.png)
 
 I’m a product director with over a decade of experience building tools that work with the grain of people and systems. My background spans engineering, design, and strategy—shaping software that solves real problems, and quietly endures.
 
