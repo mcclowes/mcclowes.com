@@ -1,34 +1,40 @@
-import React, {useCallback, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 import styles from './styles.module.css';
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
-function HoloCard({ src, alt, maskMode }) {
-  const cardRef = useRef(null);
-  const foilRef = useRef(null);
+function getOverlaySrc(originalSrc) {
+  if (typeof originalSrc !== 'string') return null;
+  const hasExt = /\.[a-zA-Z0-9]+$/.test(originalSrc);
+  if (hasExt) {
+    return originalSrc.replace(/(\.[a-zA-Z0-9]+)$/,'-overlay$1');
+  }
+  return `${originalSrc}-overlay`;
+}
 
-  const resetCard = useCallback(() => {
-    const card = cardRef.current;
-    if (!card) return;
+function HoloCard({ src, alt, maskMode }) {
+  const [showOverlay, setShowOverlay] = useState(true);
+
+  const overlaySrc = useMemo(() => getOverlaySrc(src), [src]);
+
+  const handlePointerLeave = useCallback((e) => {
+    const card = e.currentTarget;
     card.style.setProperty('--mx', '50%');
     card.style.setProperty('--my', '50%');
     card.style.setProperty('--rx', '0deg');
     card.style.setProperty('--ry', '0deg');
-    if (foilRef.current) {
-      foilRef.current.style.setProperty('--angle', '0deg');
-    }
+    card.style.setProperty('--angle', '0deg');
   }, []);
 
-  const handleMove = useCallback((clientX, clientY) => {
-    const card = cardRef.current;
-    const foil = foilRef.current;
-    if (!card || !foil) return;
+  const handlePointerMove = useCallback((e) => {
+    const card = e.currentTarget;
+    if (!card) return;
 
     const rect = card.getBoundingClientRect();
-    const x = clamp(clientX - rect.left, 0, rect.width);
-    const y = clamp(clientY - rect.top, 0, rect.height);
+    const x = clamp(e.clientX - rect.left, 0, rect.width);
+    const y = clamp(e.clientY - rect.top, 0, rect.height);
     const px = x / rect.width;
     const py = y / rect.height;
 
@@ -45,12 +51,8 @@ function HoloCard({ src, alt, maskMode }) {
     const cx = rect.width / 2;
     const cy = rect.height / 2;
     const angle = Math.atan2(y - cy, x - cx) * 180 / Math.PI;
-    foil.style.setProperty('--angle', `${angle + 180}deg`);
+    card.style.setProperty('--angle', `${angle + 180}deg`);
   }, []);
-
-  const onPointerMove = useCallback((e) => {
-    handleMove(e.clientX, e.clientY);
-  }, [handleMove]);
 
   const foilClassName = useMemo(() => {
     const base = styles.foil;
@@ -68,21 +70,32 @@ function HoloCard({ src, alt, maskMode }) {
   }, [maskMode]);
 
   return (
-    <div className={styles.card} ref={cardRef}
-      onPointerMove={onPointerMove}
-      onPointerLeave={resetCard}
-      role="img" aria-label={alt}
+    <div
+      className={styles.card}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={handlePointerLeave}
+      role="img"
+      aria-label={alt}
     >
       <div className={styles.art}>
         <img src={src} alt={alt} />
       </div>
       <div
         className={foilClassName}
-        ref={foilRef}
         style={{ WebkitMaskImage: `url(${src})`, maskImage: `url(${src})` }}
         aria-hidden="true"
       />
       <div className={styles.shine} aria-hidden="true" />
+      {showOverlay && overlaySrc ? (
+        <img
+          className={styles.overlay}
+          src={overlaySrc}
+          alt=""
+          aria-hidden="true"
+          onError={() => setShowOverlay(false)}
+          draggable={false}
+        />
+      ) : null}
     </div>
   );
 }

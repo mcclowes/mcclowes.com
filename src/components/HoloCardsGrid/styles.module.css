@@ -166,6 +166,14 @@
   transform: translateZ(3px);
 }
 
+.overlay {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  pointer-events: none;
+  transform: translateZ(4px);
+}
+
 :global(.theme-doc-markdown) .grid,
 :global(.markdown) .grid {
   /* Ensure grid spans container width inside MDX */
