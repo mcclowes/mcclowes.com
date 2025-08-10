@@ -1,0 +1,62 @@
+---
+title: "Holographic cards"
+authors: mcclowes
+tags: [art, web, experiment]
+---
+
+import HoloCardsGrid from '@site/src/components/HoloCardsGrid';
+
+I wanted to recreate the feel of holographic trading cards on the web, using CSS masks, blend modes, and a bit of perspective.
+
+<!--truncate-->
+
+Below is a small grid of cards using images I generated with ChatGPT. Move your mouse (or touch) to tilt and reveal the foil. Use the toggle to switch between different mask modes.
+
+<HoloCardsGrid
+  images={[
+    "/img/posts/holocards/holo1.png",
+    "/img/posts/holocards/holo2.png",
+    "/img/posts/holocards/holo3.png",
+    "/img/posts/holocards/holo4.png",
+  ]}
+  titles={[
+    "Holo 1",
+    "Holo 2",
+    "Holo 3",
+    "Holo 4",
+  ]}
+/> 
+
+<HoloCardsGrid
+  images={[
+    "/img/posts/holocards/holo-punch-1.png",
+    "/img/posts/holocards/holo-punch-2.png",
+  ]}
+  titles={[
+    "Holo punch 1",
+    "Holo punch 2",
+  ]}
+/> 
+
+<HoloCardsGrid
+  images={[
+    "/img/posts/holocards/holo-scrap-1.png",
+    "/img/posts/holocards/holo-scrap-2.png",
+    "/img/posts/holocards/holo-scrap-3.png",
+    "/img/posts/holocards/holo-scrap-4.png",
+    "/img/posts/holocards/holo-scrap-5.png",
+    "/img/posts/holocards/holo-scrap-6.png",
+    "/img/posts/holocards/holo-scrap-7.png",
+    "/img/posts/holocards/holo-scrap-8.png",
+  ]}
+  titles={[
+    "Holo scrap 1",
+    "Holo scrap 2",
+    "Holo scrap 3",
+    "Holo scrap 4",
+    "Holo scrap 5",
+    "Holo scrap 6",
+    "Holo scrap 7",
+    "Holo scrap 8",
+  ]}
+/> 
