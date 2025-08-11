@@ -62,6 +62,8 @@
     0 2px 6px rgba(0,0,0,.7) inset;
   isolation: isolate;
   cursor: pointer;
+  /* Allow panning/zooming without blocking our pointer events; enables smooth touch move */
+  touch-action: none;
 }
 
 .art {

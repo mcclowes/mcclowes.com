@@ -19,14 +19,42 @@ function HoloCard({ src, alt, maskMode }) {
 
   const overlaySrc = useMemo(() => getOverlaySrc(src), [src]);
 
-  const handlePointerLeave = useCallback((e) => {
-    const card = e.currentTarget;
+  const resetCard = useCallback((card) => {
     card.style.setProperty('--mx', '50%');
     card.style.setProperty('--my', '50%');
     card.style.setProperty('--rx', '0deg');
     card.style.setProperty('--ry', '0deg');
     card.style.setProperty('--angle', '0deg');
   }, []);
+
+  const handlePointerLeave = useCallback((e) => {
+    const card = e.currentTarget;
+    resetCard(card);
+  }, [resetCard]);
+
+  const handlePointerDown = useCallback((e) => {
+    const card = e.currentTarget;
+    try {
+      card.setPointerCapture?.(e.pointerId);
+    } catch (_) {
+      /* noop */
+    }
+  }, []);
+
+  const handlePointerUp = useCallback((e) => {
+    const card = e.currentTarget;
+    try {
+      card.releasePointerCapture?.(e.pointerId);
+    } catch (_) {
+      /* noop */
+    }
+    resetCard(card);
+  }, [resetCard]);
+
+  const handlePointerCancel = useCallback((e) => {
+    const card = e.currentTarget;
+    resetCard(card);
+  }, [resetCard]);
 
   const handlePointerMove = useCallback((e) => {
     const card = e.currentTarget;
@@ -72,8 +100,11 @@ function HoloCard({ src, alt, maskMode }) {
   return (
     <div
       className={styles.card}
+      onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerCancel}
       role="img"
       aria-label={alt}
     >
