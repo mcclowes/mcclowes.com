@@ -172,6 +172,9 @@
   object-fit: cover;
   pointer-events: none;
   transform: translateZ(4px);
+  height: 100%;
+  width: 100%;
+  object-position: top center;
 }
 
 :global(.theme-doc-markdown) .grid,
