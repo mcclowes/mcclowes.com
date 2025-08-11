@@ -131,8 +131,25 @@ function HoloCard({ src, alt, maskMode }) {
   );
 }
 
-export default function HoloCardsGrid({ images, titles }) {
+export default function HoloCardsGrid({ items, images, titles }) {
   const [maskMode, setMaskMode] = useState('alpha');
+
+  // Normalize inputs to a single array of { src, title }
+  const normalizedItems = useMemo(() => {
+    if (Array.isArray(items)) {
+      return items.map((item) => {
+        if (typeof item === 'string') {
+          return { src: item, title: undefined };
+        }
+        // Expecting shape: { src, title }
+        return { src: item.src, title: item.title };
+      });
+    }
+    if (Array.isArray(images)) {
+      return images.map((src, idx) => ({ src, title: titles?.[idx] }));
+    }
+    return [];
+  }, [items, images, titles]);
 
   const cycleMode = useCallback(() => {
     setMaskMode((prev) => {
@@ -156,10 +173,10 @@ export default function HoloCardsGrid({ images, titles }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.grid}>
-        {images.map((src, idx) => (
-          <div key={src} className={styles.item}>
-            <HoloCard src={src} alt={titles?.[idx] || 'Card art'} maskMode={maskMode} />
-            {titles?.[idx] ? <div className={styles.caption}>{titles[idx]}</div> : null}
+        {normalizedItems.map(({ src, title }, idx) => (
+          <div key={`${src}-${idx}`} className={styles.item}>
+            <HoloCard src={src} alt={title || 'Card art'} maskMode={maskMode} />
+            {title ? <div className={styles.caption}>{title}</div> : null}
           </div>
         ))}
       </div>

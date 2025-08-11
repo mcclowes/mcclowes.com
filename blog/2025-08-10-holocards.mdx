@@ -10,53 +10,36 @@ I wanted to recreate the feel of holographic trading cards on the web, using CSS
 
 <!--truncate-->
 
-Below is a small grid of cards using images I generated with ChatGPT. Move your mouse (or touch) to tilt and reveal the foil. Use the toggle to switch between different mask modes. FOr some, I've created an extra non-holo overlay manually.
+Below is a small grid of cards using images I generated with ChatGPT. Move your mouse (or touch) to tilt and reveal the foil. Use the toggle to switch between different mask modes. For each, I've created an non-holo overlay manually, making some elements sit apart from the holographic card elements.
 
 <HoloCardsGrid
-  images={[
-    "/img/posts/holocards/holo1.png",
-    "/img/posts/holocards/holo2.png",
-    "/img/posts/holocards/holo3.png",
-    "/img/posts/holocards/holo4.png",
+  items={[
+    { src: "/img/posts/holocards/holo1.png", title: "Caoman" },
+    { src: "/img/posts/holocards/holo7.png", title: "Frostpup" },
+    { src: "/img/posts/holocards/holo2.png", title: "Lantowl" },
+    { src: "/img/posts/holocards/holo3.png", title: "Spineedle" },
+    { src: "/img/posts/holocards/holo4.png", title: "Twolup" },
+    { src: "/img/posts/holocards/holo5.png", title: "Kitlune"},
+    { src: "/img/posts/holocards/holo6.png", title: "Wombatik" },
   ]}
-  titles={[
-    "Holo 1",
-    "Holo 2",
-    "Holo 3",
-    "Holo 4",
-  ]}
-/> 
+/>
 
 <HoloCardsGrid
-  images={[
-    "/img/posts/holocards/holo-punch-1.png",
-    "/img/posts/holocards/holo-punch-2.png",
+  items={[
+    { src: "/img/posts/holocards/holo-punch-1.png", title: "Holo punch 1" },
+    { src: "/img/posts/holocards/holo-punch-2.png", title: "Holo punch 2" },
   ]}
-  titles={[
-    "Holo punch 1",
-    "Holo punch 2",
-  ]}
-/> 
+/>
 
 <HoloCardsGrid
-  images={[
-    "/img/posts/holocards/holo-scrap-1.png",
-    "/img/posts/holocards/holo-scrap-2.png",
-    "/img/posts/holocards/holo-scrap-3.png",
-    "/img/posts/holocards/holo-scrap-4.png",
-    "/img/posts/holocards/holo-scrap-5.png",
-    "/img/posts/holocards/holo-scrap-6.png",
-    "/img/posts/holocards/holo-scrap-7.png",
-    "/img/posts/holocards/holo-scrap-8.png",
+  items={[
+    { src: "/img/posts/holocards/holo-scrap-1.png", title: "Holo scrap 1" },
+    { src: "/img/posts/holocards/holo-scrap-2.png", title: "Holo scrap 2" },
+    { src: "/img/posts/holocards/holo-scrap-3.png", title: "Holo scrap 3" },
+    { src: "/img/posts/holocards/holo-scrap-4.png", title: "Holo scrap 4" },
+    { src: "/img/posts/holocards/holo-scrap-5.png", title: "Holo scrap 5" },
+    { src: "/img/posts/holocards/holo-scrap-6.png", title: "Holo scrap 6" },
+    { src: "/img/posts/holocards/holo-scrap-7.png", title: "Holo scrap 7" },
+    { src: "/img/posts/holocards/holo-scrap-8.png", title: "Holo scrap 8" },
   ]}
-  titles={[
-    "Holo scrap 1",
-    "Holo scrap 2",
-    "Holo scrap 3",
-    "Holo scrap 4",
-    "Holo scrap 5",
-    "Holo scrap 6",
-    "Holo scrap 7",
-    "Holo scrap 8",
-  ]}
-/> 
+/>
