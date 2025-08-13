@@ -1,7 +1,7 @@
 ---
 title: "Paintings May 25"
 authors: mcclowes
-tags: [art]
+tags: [art, painting]
 ---
 
 import Carousel from '@site/src/components/Carousel';

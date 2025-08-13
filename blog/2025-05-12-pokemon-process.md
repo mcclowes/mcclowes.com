@@ -1,7 +1,7 @@
 ---
 title: "Fakemon process with AI"
 authors: mcclowes
-tags: [fun]
+tags: [game design, tcg]
 ---
 
 import Carousel from '@site/src/components/Carousel';

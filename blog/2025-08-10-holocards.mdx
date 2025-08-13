@@ -1,7 +1,7 @@
 ---
 title: "Holographic cards"
 authors: mcclowes
-tags: [art, web, experiment]
+tags: [game design, tcg]
 ---
 
 import HoloCardsGrid from '@site/src/components/HoloCardsGrid';
@@ -15,11 +15,11 @@ Below is a small grid of cards using images I generated with ChatGPT. Move your 
 <HoloCardsGrid
   items={[
     { src: "/img/posts/holocards/holo1.png", title: "Caoman" },
-    { src: "/img/posts/holocards/holo7.png", title: "Frostpup" },
-    { src: "/img/posts/holocards/holo2.png", title: "Lantowl" },
+    { src: "/img/posts/holocards/holo7.png", title: "Frostpup", palette: "cool", },
+    { src: "/img/posts/holocards/holo2.png", title: "Lantowl", maskMode: "refined-alpha", palette: "electric",},
     { src: "/img/posts/holocards/holo3.png", title: "Spineedle" },
-    { src: "/img/posts/holocards/holo4.png", title: "Twolup" },
-    { src: "/img/posts/holocards/holo5.png", title: "Kitlune"},
+    { src: "/img/posts/holocards/holo4.png", title: "Twolup", maskMode: "refined-alpha", },
+    { src: "/img/posts/holocards/holo5.png", title: "Kitlune", maskMode: "refined-alpha", gradient: "linear", palette: "cool", },
     { src: "/img/posts/holocards/holo6.png", title: "Wombatik" },
   ]}
 />

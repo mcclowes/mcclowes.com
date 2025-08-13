@@ -1,7 +1,7 @@
 ---
 title: "Imperfect AI is perfect"
 authors: mcclowes
-tags: [ai, technology, design]
+tags: [ai, tech, design]
 ---
 
 In a recent piece, I made the case that we should stop trying to build "perfect" AI. That imperfection is not a failure mode — it's intrinsic to how these systems work. Here, I want to go one step further: not just to excuse AI's flaws, but to explore how we can use them. How we can design with imperfection in mind.
