@@ -46,7 +46,7 @@
   --my: 50%;
   --rx: 0deg;
   --ry: 0deg;
-  --tilt: 12deg;
+  --tilt: 24deg;
 
   position: relative;
   width: var(--w);
