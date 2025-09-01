@@ -20,3 +20,4 @@ Streaming dashboards reveal what “works,” and modern tools make it trivial t
 If ignorance is the fuel of play, then a little fog of war is a design feature, not a bug. Keep some hidden information, time‑delayed feedback, or friction in the loop, and the space for creativity reopens.
 
 
+
