@@ -14,7 +14,7 @@ tags: [product, tech]
 3. As part of SaaS model adoption, user experience and providing users with ongoing engaging content is taken seriously. 
 4. Taking user experience seriously requires understanding user expections and providing consistent and expected experiences (99% of the time)
 5. Ongoing improvement requires continuous integration, and decoupling to enable efficient refactoring
-6. Underneath all this, the development ecosystem is allowing fragmentation and seperation of concerns in a way that allows seperation of structure (, style (styled components), functionality (eg lambda)
+6. Underneath all this, the development ecosystem is allowing fragmentation and seperation of concerns in a way that allows seperation of structure, style (styled components), functionality (eg lambda)
 7. Fragmenting and packing up components
 8. Fragmentation enables true reusability, and therefore consistency, whilst the decoupling of style/ functionality allows customisation - recognised by Google with their revamped material design approach allowing that flexibility
 9. Finally, tools like React native enable cross compatibility and therefore consistency like never before. The blend of native and custom is great too
