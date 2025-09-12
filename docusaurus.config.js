@@ -59,7 +59,8 @@ const config = {
     'vercel-analytics',
     "docusaurus-plugin-sass",
     '@docusaurus/theme-live-codeblock',
-    'docusaurus-plugin-image-zoom'
+    'docusaurus-plugin-image-zoom',
+    [require.resolve('./src/plugins/posthog-plugin'), {}]
   ],
 
   themes: [
