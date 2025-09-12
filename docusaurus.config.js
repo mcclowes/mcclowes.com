@@ -59,7 +59,16 @@ const config = {
     'vercel-analytics',
     "docusaurus-plugin-sass",
     '@docusaurus/theme-live-codeblock',
-    'docusaurus-plugin-image-zoom'
+    'docusaurus-plugin-image-zoom',
+    [require.resolve('./src/plugins/posthog-plugin'), {}]
+  ],
+
+  // Inject environment variables into the client
+  scripts: [
+    {
+      src: '/env.js',
+      async: false,
+    },
   ],
 
   themes: [

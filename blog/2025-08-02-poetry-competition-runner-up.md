@@ -1,7 +1,7 @@
 ---
 title: "Poetry competition runner up"
 authors: mcclowes
-tags: [blog, poetry, writing]
+tags: [poetry, writing]
 ---
 
 The [Laughter Lines poetry competition](https://penstricken.com/2025/08/02/winner-of-laughter-lines-poetry-competition-announced/) was run by [Penstricken](https://penstricken.com/), a literary magazine. My poem "Sunset" was one of the top three runners up.
