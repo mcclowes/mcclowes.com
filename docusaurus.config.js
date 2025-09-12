@@ -63,6 +63,14 @@ const config = {
     [require.resolve('./src/plugins/posthog-plugin'), {}]
   ],
 
+  // Inject environment variables into the client
+  scripts: [
+    {
+      src: '/env.js',
+      async: false,
+    },
+  ],
+
   themes: [
     "@docusaurus/theme-mermaid"
   ],

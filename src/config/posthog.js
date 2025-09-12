@@ -1,15 +1,23 @@
 // PostHog Configuration
 // Copy this file and rename to posthog.local.js with your actual keys
 
+// Browser-safe environment variable access
+const getEnvVar = (key, defaultValue) => {
+  if (typeof window !== 'undefined' && window.__ENV__) {
+    return window.__ENV__[key] || defaultValue;
+  }
+  return defaultValue;
+};
+
 export const posthogConfig = {
   // Get your project key from https://app.posthog.com/project/settings
-  key: process.env.POSTHOG_KEY || 'phc-your-project-key-here',
+  key: getEnvVar('POSTHOG_KEY', 'phc-your-project-key-here'),
   
   // PostHog host (use https://app.posthog.com for cloud, or your self-hosted instance)
-  host: process.env.POSTHOG_HOST || 'https://app.posthog.com',
+  host: getEnvVar('POSTHOG_HOST', 'https://app.posthog.com'),
   
   // Enable debug mode in development
-  debug: process.env.NODE_ENV === 'development',
+  debug: getEnvVar('NODE_ENV', 'production') === 'development',
   
   // Automatically capture page views
   capture_pageview: true,

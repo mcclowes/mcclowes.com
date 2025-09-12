@@ -1,5 +1,3 @@
-const { getCLS, getFID, getFCP, getLCP, getTTFB } = require('web-vitals');
-
 function posthogPlugin(context, options) {
   return {
     name: 'posthog-plugin',
@@ -12,7 +10,7 @@ function posthogPlugin(context, options) {
           {
             tagName: 'script',
             innerHTML: `
-              // Web Vitals tracking
+              // Web Vitals tracking - will be loaded dynamically
               function sendToPostHog(metric) {
                 if (window.posthog) {
                   window.posthog.capture('web_vital', {
@@ -25,12 +23,19 @@ function posthogPlugin(context, options) {
                 }
               }
 
-              // Track Core Web Vitals
-              getCLS(sendToPostHog);
-              getFID(sendToPostHog);
-              getFCP(sendToPostHog);
-              getLCP(sendToPostHog);
-              getTTFB(sendToPostHog);
+              // Load web-vitals dynamically to avoid SSR issues
+              if (typeof window !== 'undefined') {
+                import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+                  // Track Core Web Vitals
+                  getCLS(sendToPostHog);
+                  getFID(sendToPostHog);
+                  getFCP(sendToPostHog);
+                  getLCP(sendToPostHog);
+                  getTTFB(sendToPostHog);
+                }).catch(err => {
+                  console.warn('Failed to load web-vitals:', err);
+                });
+              }
             `,
           },
         ],
