@@ -1,13 +1,13 @@
 ---
-title: "Ode to heather Christle"
+title: "Ode to Heather Christle"
 authors: mcclowes
 tags: [writing, poetry]
 ---
 
-I own like six nail clippers
-and I honestly can’t
-find 
-even one
+I own like six nail clippers  
+and I honestly can’t  
+find   
+even one  
 
 <!--truncate-->
 
