@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import HomepageHeader from '@site/src/components/HomepageHeader';
+import HeroSection from '@site/src/components/HeroSection';
+import RecentPosts from '@site/src/components/RecentPosts';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import { usePageTracking } from '@site/src/hooks/usePostHog';
 
@@ -16,11 +17,12 @@ export default function Home() {
   return (
     <Layout
       title="Home"
-      description="I am a Product Manager with a diverse software engineering and design background. I use my background to get the best out of my developement peers, and the best for my developer users. Intuition lead, data backed. I've been delivering websites and apps for 10+ years. DoY's Young Entrepreneur Award winner as a founder"
+      description="Product Director with 10+ years building tools that work with the grain of people and systems. Expertise spanning engineering, design, and strategy across SaaS and fintech."
     >
-      <HomepageHeader />
+      <HeroSection />
       
       <main>
+        <RecentPosts />
         <HomepageFeatures />
       </main>
     </Layout>
