@@ -30,6 +30,11 @@
   "engines": {
     "node": ">=16.14"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "command -v git-lfs >/dev/null 2>&1 && git lfs pre-push \"$@\" || true"
+    }
+  },
   "dependencies": {
     "@docusaurus/core": "^3.6.3",
     "@docusaurus/module-type-aliases": "^3.6.3",
