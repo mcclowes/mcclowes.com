@@ -2,6 +2,7 @@
 title: "Perfect knowledge ruins fun and creativity"
 authors: mcclowes
 tags: [philosophy, games, music]
+enableComments: true
 ---
 
 In my earlier post, [Shakespeare and Dataism](/blog/2025/06/23/shakespeare-and-dataism), I argued that incomplete information creates drama, surprise, and joy. Perfect information flattens experience.
