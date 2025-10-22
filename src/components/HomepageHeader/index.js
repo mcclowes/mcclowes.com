@@ -1,46 +1,56 @@
 import React, { useEffect, useState } from 'react';
-import clsx from 'clsx';
 
 import styles from './styles.module.css';
 
-function ColorGrid({ size = 9 }) {
-  const [opacities, setOpacities] = useState([]);
+export const createOpacityGrid = (size) =>
+  Array.from({ length: size * size }, () => 0);
 
-  // Initialize the grid with full opacity
+export function ColorGrid({ size = 9 }) {
+  const [opacities, setOpacities] = useState(() => createOpacityGrid(size));
+
   useEffect(() => {
-    const initialOpacities = Array.from({ length: size * size }, () => 0);
-    setOpacities(initialOpacities);
+    setOpacities(createOpacityGrid(size));
   }, [size]);
 
-  // Function to fade a random square in or out at random intervals
   useEffect(() => {
     const interval = setInterval(() => {
-      const index = Math.floor(Math.random() * size * size);
-      const newOpacities = [...opacities];
-      newOpacities[index] = newOpacities[index] === 1 ? 0 : 1; // Toggle opacity
-      setOpacities(newOpacities);
-    }, 650); // Change interval as needed
+      setOpacities((previousOpacities) => {
+        const totalSquares = size * size;
+        const index = Math.floor(Math.random() * totalSquares);
+
+        return previousOpacities.map((opacity, currentIndex) =>
+          currentIndex === index ? (opacity === 1 ? 0 : 1) : opacity,
+        );
+      });
+    }, 650);
 
     return () => clearInterval(interval);
-  }, [opacities, size]);
+  }, [size]);
 
   return (
-    <div className={styles.grid} style={{ gridTemplateColumns: `repeat(${size}, 50px)` }}>
+    <div
+      className={styles.grid}
+      data-testid="color-grid"
+      style={{ gridTemplateColumns: `repeat(${size}, 50px)` }}
+    >
       {opacities.map((opacity, index) => (
-        <div key={index} className={styles.square} style={{ opacity }} />
+        <div
+          key={index}
+          className={styles.square}
+          data-testid="color-grid-square"
+          style={{ opacity }}
+        />
       ))}
     </div>
   );
 }
 
-//export default ColorGrid;
-
 function HomepageHeader() {
   return (
     <header className={styles.heroBanner}>
-      <ColorGrid/>
+      <ColorGrid />
     </header>
   );
 }
 
-export default HomepageHeader
+export default HomepageHeader;
