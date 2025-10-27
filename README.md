@@ -2,19 +2,7 @@
 
 ![Website Deploy](https://deploy-badge.vercel.app/?url=https://vercel.com/mcclowes/mcclowes.com&name=website) [![Linkinator CI](https://github.com/mcclowes/mcclowes.com/actions/workflows/linknator.yml/badge.svg)](https://github.com/mcclowes/mcclowes.com/actions/workflows/linknator.yml) [![Vercel Deployment Monitor](https://github.com/mcclowes/mcclowes.com/actions/workflows/vercel-deployment-monitor.yml/badge.svg)](https://github.com/mcclowes/mcclowes.com/actions/workflows/vercel-deployment-monitor.yml)
 
-Results-driven product leader with 10+ years of experience delivering impactful products across SaaS and fintech industries. Proven expertise in defining product strategy, nurturing talent, and driving adoption. Adept at aligning product vision with organizational goals to deliver measurable growth. Intuition led, data backed. DoY's Young Entrepreneur Award winner as a founder.
-
-## Features
-
-### Automated Deployment Monitoring
-
-This repository includes an automated system that monitors Vercel deployments and creates GitHub issues when production deployments fail. The system runs every 5 minutes and provides detailed information about failed deployments to help maintain site reliability.
-
-For setup instructions and details, see [Vercel Deployment Monitor Documentation](docs/vercel-deployment-monitor.md).
-
-### Giscus Comments
-
-Blog posts support GitHub Discussions-powered comments via Giscus. To enable comments on your blog posts, follow the setup guide in [GISCUS_SETUP.md](GISCUS_SETUP.md).
+Results-driven product leader with 10+ years of experience delivering impactful products across SaaS and fintech industries. Proven expertise in defining product strategy, nurturing talent, and driving adoption. Adept at aligning product vision with organizational goals to deliver measurable growth. Intuition led, data backed. 
 
 ## Setup
 

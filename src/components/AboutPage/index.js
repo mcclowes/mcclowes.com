@@ -25,7 +25,7 @@ export default function AboutPage() {
               </p>
               
               <p>
-                I've led product in startups and scale-ups across SaaS and fintech, founded my own venture, and helped teams align on what matters. I think in systems, care about craft, and trust intuition sharpened by data. In 2017, I was awarded the Duke of York's Young Entrepreneur Award.
+                I've led product in startups and scale-ups across SaaS and fintech, founded my own venture, and helped teams align on what matters. I think in systems, care about craft, and trust intuition sharpened by data.
               </p>
               
               <p>

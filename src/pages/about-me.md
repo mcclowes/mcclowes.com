@@ -6,7 +6,7 @@ title: About me
 
 I’m a product director with over a decade of experience building tools that work with the grain of people and systems. My background spans engineering, design, and strategy—shaping software that solves real problems, and quietly endures.
 
-I’ve led product in startups and scale-ups across SaaS and fintech, founded my own venture, and helped teams align on what matters. I think in systems, care about craft, and trust intuition sharpened by data. In 2017, I was awarded the Duke of York’s Young Entrepreneur Award.
+I’ve led product in startups and scale-ups across SaaS and fintech, founded my own venture, and helped teams align on what matters. I think in systems, care about craft, and trust intuition sharpened by data.
 
 Outside of work, I write essays, compose music, and sketch. I'm interested in the emotional texture of tools, the aesthetics of decision-making, and how creative practice can inform the structures we build. This site is a place to explore that intersection.
 
