@@ -6,6 +6,7 @@ const Carousel = ({images, variant}) => {
     isAtStart: true,
     isAtEnd: false
   });
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [loadedImages, setLoadedImages] = useState(0);
   const wrapperRef = useRef(null);
 
@@ -16,7 +17,12 @@ const Carousel = ({images, variant}) => {
     const isAtStart = scrollLeft <= 0;
     const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 1; // -1 for rounding errors
     
+    // Calculate scroll progress percentage
+    const maxScroll = scrollWidth - clientWidth;
+    const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
+    
     setScrollState({ isAtStart, isAtEnd });
+    setScrollProgress(Math.min(100, Math.max(0, progress)));
   };
 
   const handleImageLoad = () => {
@@ -33,7 +39,10 @@ const Carousel = ({images, variant}) => {
         const { scrollLeft, scrollWidth, clientWidth } = wrapper;
         const isAtStart = scrollLeft <= 0;
         const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 1;
+        const maxScroll = scrollWidth - clientWidth;
+        const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
         setScrollState({ isAtStart, isAtEnd });
+        setScrollProgress(Math.min(100, Math.max(0, progress)));
       }, 100);
       
       return () => {
@@ -88,21 +97,34 @@ const Carousel = ({images, variant}) => {
   };
 
   return (
-    <div ref={wrapperRef} className={getWrapperClassName()}>
-      <div className={styles.carouselTrack}>
-        {
-          images.map((image, index) => (
-            <p key={index} className={getImageContainerClassName()}>
-              <img
-                src={image}
-                alt={`Imagem ${index}`}
-                className={`${styles.image} markdown-img`}
-                onLoad={handleImageLoad}
-              />
-            </p>
-          ))
-        }
+    <div>
+      <div ref={wrapperRef} className={getWrapperClassName()}>
+        <div className={styles.carouselTrack}>
+          {
+            images.map((image, index) => (
+              <p key={index} className={getImageContainerClassName()}>
+                <img
+                  src={image}
+                  alt={`Imagem ${index}`}
+                  className={`${styles.image} markdown-img`}
+                  onLoad={handleImageLoad}
+                />
+              </p>
+            ))
+          }
+        </div>
       </div>
+      {/* Scroll indicator - only show if there's content to scroll */}
+      {!scrollState.isAtStart || !scrollState.isAtEnd ? (
+        <div className={styles.scrollIndicatorContainer}>
+          <div className={styles.scrollIndicatorTrack}>
+            <div 
+              className={styles.scrollIndicatorThumb}
+              style={{ width: `${scrollProgress}%` }}
+            />
+          </div>
+        </div>
+      ) : null}
     </div>
   )
 }

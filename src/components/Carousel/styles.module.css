@@ -92,3 +92,23 @@
   /* Ensure image maintains aspect ratio */
   aspect-ratio: auto;
 }
+
+/* Scroll indicator styles */
+.scrollIndicatorContainer {
+  margin-top: 0.5em;
+}
+
+.scrollIndicatorTrack {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-gray-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.scrollIndicatorThumb {
+  height: 100%;
+  background-color: var(--color-green);
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
