@@ -6,11 +6,9 @@ tags: [photography, urbanism, street]
 
 import Masonry from '@site/src/components/Masonry';
 
-A collection of "no parking" signs captured around the city. Each one tells a story of urban planning, enforcement, and the constant negotiation between public and private space.
+seriously
 
 <!--truncate-->
-
-These signs represent more than just parking restrictions — they're markers of how we organize our shared spaces, the rules we live by, and the visual language of urban life. From weathered metal to fresh paint, each sign has its own character and context.
 
 <Masonry 
   images={[
