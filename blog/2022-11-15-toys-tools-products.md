@@ -6,7 +6,30 @@ tags: [product, tech]
 
 A foundational part of product management, often overlooked, is understanding the nuanced difference between toys, tools, and products.
 
-<!--truncate-->  
+<!--truncate-->
+
+```mermaid
+graph LR
+    subgraph Spectrum
+        A[Toys]
+        B[Tools]
+        C[Products]
+    end
+
+    A --> |More effort required| B
+    B --> |More effort required| C
+
+    A -.Delight<br/>Curiosity.-> A
+    B -.Versatility<br/>Adaptability.-> B
+    C -.Opinionated<br/>Effortless.-> C
+
+    B -.AI augmentation.-> C2[Product-like<br/>Experience]
+
+    style A fill:#fff4e1
+    style B fill:#e1f0ff
+    style C fill:#e8ffe1
+    style C2 fill:#ffe8f5,stroke-dasharray: 5 5
+```
 
 Toys are experiences rather than solutions. They delight us, invite curiosity, and provide intrinsic enjoyment. A good toy doesn't necessarily accomplish anything practical—but that's precisely why it resonates. Delight itself is its success metric.
 
