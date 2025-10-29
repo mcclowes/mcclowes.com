@@ -7,9 +7,11 @@ export const createOpacityGrid = (size) =>
 
 export function ColorGrid({ size = 9 }) {
   const [opacities, setOpacities] = useState(() => createOpacityGrid(size));
+  const [toggledSquares, setToggledSquares] = useState(() => new Set());
 
   useEffect(() => {
     setOpacities(createOpacityGrid(size));
+    setToggledSquares(new Set());
   }, [size]);
 
   useEffect(() => {
@@ -27,6 +29,18 @@ export function ColorGrid({ size = 9 }) {
     return () => clearInterval(interval);
   }, [size]);
 
+  const handleSquareClick = (index) => {
+    setToggledSquares((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
+
   return (
     <div
       className={styles.grid}
@@ -36,9 +50,10 @@ export function ColorGrid({ size = 9 }) {
       {opacities.map((opacity, index) => (
         <div
           key={index}
-          className={styles.square}
+          className={`${styles.square} ${toggledSquares.has(index) ? styles.toggled : ''}`}
           data-testid="color-grid-square"
           style={{ opacity }}
+          onClick={() => handleSquareClick(index)}
         />
       ))}
     </div>

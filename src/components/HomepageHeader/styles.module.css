@@ -20,9 +20,14 @@
   height: 50px;
   border-radius: 4px;
   background-color: var(--color-background-primary);
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease, background-color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     opacity: 1!important;
+  }
+
+  &.toggled {
+    background-color: var(--ifm-color-primary);
   }
 }
