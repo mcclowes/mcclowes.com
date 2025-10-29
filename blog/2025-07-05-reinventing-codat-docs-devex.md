@@ -4,7 +4,7 @@ authors: mcclowes
 tags: [devex, documentation]
 ---
 
-I recorded a quick walkthrough of how I rebuilt Codat's documentation and developer experience from the ground up. It captures the principles, process, and the design decisions that made the new setup faster for both writers and engineers.
+As part of the annual [API the Docs](https://apithedocs.org/) Dev Portal Awards, my team spoke to our reimagining of Codat's documentation and wider developer experience.
 
 <!--truncate-->
 
