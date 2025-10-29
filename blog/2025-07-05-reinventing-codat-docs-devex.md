@@ -1,0 +1,21 @@
+---
+title: "Reinventing Codat's docs and developer experience"
+authors: mcclowes
+tags: [devex, documentation]
+---
+
+As part of the annual [API the Docs](https://apithedocs.org/) Dev Portal Awards, my team spoke to our reimagining of Codat's documentation and wider developer experience.
+
+<!--truncate-->
+
+Below is the talk for anyone curious about the full story and the product thinking behind the overhaul.
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/uVAgH6i0aaU?si=EjpUNsaHLiIL7dDs"
+  title="Reinventing Codat docs and devex"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+></iframe>
