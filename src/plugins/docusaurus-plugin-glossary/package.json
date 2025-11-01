@@ -1,0 +1,32 @@
+{
+  "name": "docusaurus-plugin-glossary",
+  "version": "1.0.0",
+  "description": "A Docusaurus plugin for creating and managing glossary terms with auto-generated pages and inline tooltips",
+  "main": "index.js",
+  "keywords": [
+    "docusaurus",
+    "glossary",
+    "plugin",
+    "documentation",
+    "terms",
+    "definitions",
+    "tooltip"
+  ],
+  "author": "mcclowes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcclowes/mcclowes.com"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": "^3.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=16.14"
+  }
+}

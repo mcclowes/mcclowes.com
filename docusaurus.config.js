@@ -60,7 +60,14 @@ const config = {
     "docusaurus-plugin-sass",
     '@docusaurus/theme-live-codeblock',
     'docusaurus-plugin-image-zoom',
-    [require.resolve('./src/plugins/posthog-plugin'), {}]
+    [require.resolve('./src/plugins/posthog-plugin'), {}],
+    [
+      require.resolve('./src/plugins/docusaurus-plugin-glossary'),
+      {
+        glossaryPath: 'glossary/glossary.json',
+        routePath: '/glossary',
+      }
+    ]
   ],
 
   // Inject environment variables into the client
@@ -95,6 +102,7 @@ const config = {
         items: [
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/about-me',label: 'About',position: 'left'},
+          {to: '/glossary', label: 'Glossary', position: 'left'},
           {
             href: 'https://cv.mcclowes.com/',
             label: 'CV',

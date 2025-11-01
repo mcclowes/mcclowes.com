@@ -1,0 +1,70 @@
+{
+  "description": "A collection of technical terms and their definitions",
+  "terms": [
+    {
+      "term": "API",
+      "abbreviation": "Application Programming Interface",
+      "definition": "A set of rules and protocols that allows different software applications to communicate with each other. APIs define the methods and data formats that applications can use to request and exchange information.",
+      "relatedTerms": ["REST", "GraphQL", "SDK"]
+    },
+    {
+      "term": "REST",
+      "abbreviation": "Representational State Transfer",
+      "definition": "An architectural style for designing networked applications. REST uses HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources identified by URLs.",
+      "relatedTerms": ["API", "HTTP"]
+    },
+    {
+      "term": "GraphQL",
+      "definition": "A query language for APIs and a runtime for executing those queries. GraphQL provides a complete and understandable description of the data in your API and gives clients the power to ask for exactly what they need.",
+      "relatedTerms": ["API", "REST"]
+    },
+    {
+      "term": "SDK",
+      "abbreviation": "Software Development Kit",
+      "definition": "A collection of software development tools, libraries, documentation, code samples, and guides that help developers create applications for a specific platform or framework.",
+      "relatedTerms": ["API"]
+    },
+    {
+      "term": "HTTP",
+      "abbreviation": "Hypertext Transfer Protocol",
+      "definition": "The foundation of data communication on the World Wide Web. HTTP is an application-layer protocol used for transmitting hypermedia documents, such as HTML.",
+      "relatedTerms": ["REST", "HTTPS"]
+    },
+    {
+      "term": "HTTPS",
+      "abbreviation": "Hypertext Transfer Protocol Secure",
+      "definition": "An extension of HTTP that uses encryption (via TLS/SSL) to secure communication between a client and server. HTTPS protects the privacy and integrity of data exchanged over the internet.",
+      "relatedTerms": ["HTTP", "TLS"]
+    },
+    {
+      "term": "TLS",
+      "abbreviation": "Transport Layer Security",
+      "definition": "A cryptographic protocol designed to provide secure communication over a computer network. TLS is the successor to SSL and is widely used to secure web traffic (HTTPS), email, and other data transfers.",
+      "relatedTerms": ["HTTPS", "SSL"]
+    },
+    {
+      "term": "JSON",
+      "abbreviation": "JavaScript Object Notation",
+      "definition": "A lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. JSON is commonly used for transmitting data in web applications.",
+      "relatedTerms": ["API", "XML"]
+    },
+    {
+      "term": "CLI",
+      "abbreviation": "Command Line Interface",
+      "definition": "A text-based interface used to interact with software and operating systems by typing commands. CLIs are powerful tools for developers and system administrators.",
+      "relatedTerms": ["Terminal", "Shell"]
+    },
+    {
+      "term": "DevOps",
+      "abbreviation": "Development and Operations",
+      "definition": "A set of practices that combines software development (Dev) and IT operations (Ops) to shorten the development lifecycle and provide continuous delivery with high software quality.",
+      "relatedTerms": ["CI/CD", "Agile"]
+    },
+    {
+      "term": "CI/CD",
+      "abbreviation": "Continuous Integration/Continuous Deployment",
+      "definition": "A method to frequently deliver apps to customers by introducing automation into the stages of app development. CI/CD bridges the gaps between development and operations activities.",
+      "relatedTerms": ["DevOps"]
+    }
+  ]
+}
