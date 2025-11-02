@@ -1,0 +1,13 @@
+diff --git a/node_modules/docusaurus-plugin-glossary/index.js b/node_modules/docusaurus-plugin-glossary/index.js
+index ee37479..b55dc55 100644
+--- a/node_modules/docusaurus-plugin-glossary/index.js
++++ b/node_modules/docusaurus-plugin-glossary/index.js
+@@ -44,7 +44,7 @@ function glossaryPlugin(context, options = {}) {
+       // Add glossary page route
+       addRoute({
+         path: routePath,
+-        component: '@site/src/plugins/docusaurus-plugin-glossary/components/GlossaryPage.js',
++        component: path.join(__dirname, 'components/GlossaryPage.js'),
+         exact: true,
+         modules: {
+           glossaryData: glossaryDataPath,

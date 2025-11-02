@@ -62,7 +62,7 @@ const config = {
     'docusaurus-plugin-image-zoom',
     [require.resolve('./src/plugins/posthog-plugin'), {}],
     [
-      require.resolve('./src/plugins/docusaurus-plugin-glossary'),
+      'docusaurus-plugin-glossary',
       {
         glossaryPath: 'glossary/glossary.json',
         routePath: '/glossary',
