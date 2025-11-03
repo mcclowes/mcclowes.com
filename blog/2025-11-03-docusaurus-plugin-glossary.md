@@ -4,7 +4,6 @@ authors: mcclowes
 tags: [dev, open source, documentation]
 ---
 
-import GlossaryTerm from '@theme/GlossaryTerm';
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';
 
 <GitHubRepoCard repo="mcclowes/docusaurus-plugin-glossary" />
@@ -21,7 +20,7 @@ That's why I built [docusaurus-plugin-glossary](https://github.com/mcclowes/docu
 
 The plugin does two things well:
 
-1. **Interactive tooltips**: Hover over any linked term and see its definition instantly. Click to navigate to the full glossary page for related terms.
+1. **Interactive tooltips**: Hover over any linked term (like this - Docusaurus) and see its definition instantly. Click to navigate to the full glossary page for related terms.
 
 2. **Automatic term detection**: It scans your markdown files and automatically links glossary terms with a subtle dotted underline. No manual markup required.
 

@@ -4,7 +4,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import {createRequire} from 'module';
 import {fileURLToPath} from 'url';
-import glossaryPlugin, {getRemarkPlugin} from 'docusaurus-plugin-glossary';
+import {getRemarkPlugin} from 'docusaurus-plugin-glossary';
 
 const require = createRequire(import.meta.url);
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
@@ -101,7 +101,6 @@ const config = {
       {
         glossaryPath: 'glossary/glossary.json',
         routePath: '/glossary',
-        autoLinkTerms: true,
       }
     ]
   ],
