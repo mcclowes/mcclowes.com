@@ -68,13 +68,13 @@
   opacity: 0.9;
 }
 
-.keywords {
+.topics {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.keyword {
+.topic {
   font-size: 12px;
   padding: 2px 8px;
   border-radius: 999px;

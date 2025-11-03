@@ -67,14 +67,11 @@ export default function NpmPackageCard({ package: packageName, className, style 
       </p>
 
       <div className={styles.metaRow}>
-        {latestVersion ? (
-          <span className={styles.metaItem} title="Latest version">📌 v{latestVersion}</span>
-        ) : null}
         {license ? (
-          <span className={styles.metaItem} title="License">📄 {license}</span>
+          <span className={styles.metaItem} title="License">📄 {Array.isArray(license) ? license.join(', ') : license}</span>
         ) : null}
         {publishedDate ? (
-          <span className={styles.metaItem} title="Published">
+          <span className={styles.metaItem} title="Last updated">
             ⏱️ {publishedDate.toLocaleDateString()}
           </span>
         ) : null}
@@ -86,9 +83,9 @@ export default function NpmPackageCard({ package: packageName, className, style 
       </div>
 
       {Array.isArray(keywords) && keywords.length > 0 ? (
-        <div className={styles.keywords}>
+        <div className={styles.topics}>
           {keywords.slice(0, 6).map((k) => (
-            <span key={k} className={styles.keyword}>{k}</span>
+            <span key={k} className={styles.topic}>{k}</span>
           ))}
         </div>
       ) : null}
