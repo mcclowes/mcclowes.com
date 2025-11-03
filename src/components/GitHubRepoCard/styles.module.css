@@ -1,0 +1,85 @@
+.card {
+  display: block;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 10px;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  background: var(--ifm-card-background-color);
+  transition: box-shadow 0.2s ease, transform 0.05s ease;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.repoName {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.githubIcon {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  opacity: 0.7;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--ifm-color-secondary);
+  color: var(--ifm-font-color-base-inverse);
+}
+
+.badgeError {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #b00020;
+  color: #fff;
+}
+
+.description {
+  margin: 8px 0 12px;
+  color: var(--ifm-font-color-secondary);
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.metaItem {
+  opacity: 0.9;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topic {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--ifm-toc-border-color);
+}
+
+
