@@ -65,6 +65,12 @@
       "abbreviation": "Continuous Integration/Continuous Deployment",
       "definition": "A method to frequently deliver apps to customers by introducing automation into the stages of app development. CI/CD bridges the gaps between development and operations activities.",
       "relatedTerms": ["DevOps"]
+    },
+    {
+      "term": "Docusaurus",
+      "abbreviation": "Docusaurus",
+      "definition": "A static site generator for React-based websites. Docusaurus is used to build this website.",
+      "relatedTerms": ["React", "Website"]
     }
   ]
 }

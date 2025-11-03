@@ -2,6 +2,12 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import {createRequire} from 'module';
+import {fileURLToPath} from 'url';
+import glossaryPlugin, {getRemarkPlugin} from 'docusaurus-plugin-glossary';
+
+const require = createRequire(import.meta.url);
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -38,15 +44,44 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [
+            getRemarkPlugin(
+              {
+                glossaryPath: 'glossary/glossary.json',
+                routePath: '/glossary',
+              },
+              { siteDir: __dirname }
+            ),
+          ],
           // editUrl:
           //   'https://github.com/mcclowes/mcclowes.com',
         },
         blog: {
           showReadingTime: true,
           blogSidebarCount: 'ALL',
+          remarkPlugins: [
+            getRemarkPlugin(
+              {
+                glossaryPath: 'glossary/glossary.json',
+                routePath: '/glossary',
+              },
+              { siteDir: __dirname }
+            ),
+          ],
 
           // editUrl:
           //   'https://github.com/mcclowes/mcclowes.com',
+        },
+        pages: {
+          remarkPlugins: [
+            getRemarkPlugin(
+              {
+                glossaryPath: 'glossary/glossary.json',
+                routePath: '/glossary',
+              },
+              { siteDir: __dirname }
+            ),
+          ],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -66,6 +101,7 @@ const config = {
       {
         glossaryPath: 'glossary/glossary.json',
         routePath: '/glossary',
+        autoLinkTerms: true,
       }
     ]
   ],
@@ -188,4 +224,4 @@ const config = {
   },
 };
 
-module.exports = config;
+export default config;
