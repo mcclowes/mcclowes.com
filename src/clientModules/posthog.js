@@ -1,5 +1,19 @@
 import posthog from 'posthog-js';
 import { posthogConfig } from '../config/posthog';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
+// Function to send web vitals to PostHog
+function sendToPostHog(metric) {
+  if (window.posthog) {
+    window.posthog.capture('web_vital', {
+      name: metric.name,
+      value: metric.value,
+      delta: metric.delta,
+      id: metric.id,
+      navigationType: metric.navigationType
+    });
+  }
+}
 
 // Initialize PostHog
 if (typeof window !== 'undefined') {
@@ -18,6 +32,13 @@ if (typeof window !== 'undefined') {
 
   // Make PostHog available globally for debugging
   window.posthog = posthog;
+
+  // Track Core Web Vitals
+  onCLS(sendToPostHog);
+  onINP(sendToPostHog);
+  onFCP(sendToPostHog);
+  onLCP(sendToPostHog);
+  onTTFB(sendToPostHog);
 }
 
 export default posthog;
