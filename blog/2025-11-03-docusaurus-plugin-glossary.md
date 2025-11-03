@@ -4,6 +4,7 @@ authors: mcclowes
 tags: [dev, open source, documentation]
 ---
 
+import GlossaryTerm from '@theme/GlossaryTerm';
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';
 
 <GitHubRepoCard repo="mcclowes/docusaurus-plugin-glossary" />
