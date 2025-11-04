@@ -9,6 +9,8 @@
   transition: box-shadow 0.2s ease, transform 0.05s ease;
   margin-top: 16px;
   margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -80,6 +82,17 @@
   padding: 2px 8px;
   border-radius: 999px;
   border: 1px solid var(--ifm-toc-border-color);
+}
+
+.githubLogo {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.15;
+  color: var(--ifm-font-color-base);
+  pointer-events: none;
 }
 
 

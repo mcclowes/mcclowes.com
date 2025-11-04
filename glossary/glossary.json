@@ -71,9 +71,15 @@
       "abbreviation": "Docusaurus",
       "definition": "A static site generator for React-based websites. Docusaurus is used to build this website.",
       "relatedTerms": ["React", "Website"]
-    }
+    },
     {
-      "test": "jargon",
-      "definition": "Technical jargon is a type of language that is used to describe technical concepts in a precise and concise manner. It is often used in scientific, engineering, and technical fields.",
+      "term": "jargon",
+      "definition": "Technical jargon is a type of language that is used to describe technical concepts in a precise and concise manner. It is often used in scientific, engineering, and technical fields."
+    },
+    {
+      "term": "vercel",
+      "definition": "Vercel is a cloud platform for frontend developers. It is used to deploy and host websites and web applications.",
+      "relatedTerms": ["Website", "Web Application"]
+    }
   ]
 }

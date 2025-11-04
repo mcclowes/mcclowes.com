@@ -232,3 +232,12 @@ iframe {
   border-radius: 8px;
   overflow: hidden;
 }
+
+/* Image Zoom Plugin - ensure it appears above navbar */
+.medium-zoom-overlay {
+  z-index: 300 !important;
+}
+
+.medium-zoom-image--opened {
+  z-index: 301 !important;
+}

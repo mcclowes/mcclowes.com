@@ -1,19 +1,21 @@
 .card {
   display: block;
-  border: 1px solid var(--ifm-toc-border-color);
-  border-radius: 10px;
+  border: 1px solid rgba(203, 56, 55, 0.15);
+  border-radius: 8px;
   padding: 16px;
   text-decoration: none;
   color: inherit;
   background: var(--ifm-card-background-color);
-  transition: box-shadow 0.2s ease, transform 0.05s ease;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
   margin-top: 16px;
   margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
-  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(203, 56, 55, 0.15);
+  border-color: rgba(203, 56, 55, 0.3);
 }
 
 .header {
@@ -21,63 +23,96 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .packageName {
   font-weight: 600;
+  font-size: 16px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  color: #CB3837;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .npmIcon {
-  opacity: 0.7;
+  font-size: 20px;
+  opacity: 1;
 }
 
 .badge {
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--ifm-color-secondary);
-  color: var(--ifm-font-color-base-inverse);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #CB3837;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .badgeError {
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 999px;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
   background: #b00020;
   color: #fff;
+  font-weight: 500;
 }
 
 .description {
-  margin: 8px 0 12px;
+  margin: 10px 0 14px;
   color: var(--ifm-font-color-secondary);
+  line-height: 1.5;
+  font-size: 14px;
 }
 
 .metaRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  font-size: 14px;
-  margin-bottom: 8px;
+  gap: 16px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: var(--ifm-font-color-secondary);
 }
 
 .metaItem {
-  opacity: 0.9;
+  opacity: 0.8;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .topics {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
+  margin-top: 4px;
 }
 
 .topic {
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid var(--ifm-toc-border-color);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(203, 56, 55, 0.2);
+  background: rgba(203, 56, 55, 0.05);
+  color: var(--ifm-font-color-base);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover .topic {
+  border-color: rgba(203, 56, 55, 0.3);
+  background: rgba(203, 56, 55, 0.08);
+}
+
+.npmLogo {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.15;
+  color: var(--ifm-font-color-base);
+  pointer-events: none;
 }
 

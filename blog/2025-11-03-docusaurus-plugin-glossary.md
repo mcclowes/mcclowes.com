@@ -5,8 +5,11 @@ tags: [dev, open source, documentation]
 ---
 
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';
+import NpmPackageCard from '@site/src/components/NpmPackageCard';
 
 <GitHubRepoCard repo="mcclowes/docusaurus-plugin-glossary" />
+
+
 
 <!--truncate-->
 
@@ -41,6 +44,8 @@ You can install it from npm:
 ```bash
 npm install docusaurus-plugin-glossary
 ```
+
+<NpmPackageCard package="docusaurus-plugin-glossary" />
 
 Or check out the [GitHub repository](https://github.com/mcclowes/docusaurus-plugin-glossary) for documentation, examples, and source code.
 
