@@ -80,6 +80,11 @@
       "term": "vercel",
       "definition": "Vercel is a cloud platform for frontend developers. It is used to deploy and host websites and web applications.",
       "relatedTerms": ["Website", "Web Application"]
+    },
+    {
+      "term": "MLP",
+      "definition": "A Minimum Lovable Product is a product that is built with the minimum set of features that are enough to satisfy early adopters and provide a basis for feedback and future development.",
+      "relatedTerms": ["Product", "MVP"]
     }
   ]
 }
