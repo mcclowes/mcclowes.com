@@ -48,3 +48,4 @@ Both plugins are available through the [xbar plugin browser](https://xbarapp.com
 - [Things 3 Today plugin](https://github.com/matryer/xbar-plugins/blob/aae40dc5daf278d155703560854a749ce5e99c38/Lifestyle/Things/thingstoday.6s.sh)
 - [Things 3 Inbox plugin documentation](https://xbarapp.com/docs/plugins/Lifestyle/Things/thingsinbox.6s.sh.html)
 
+

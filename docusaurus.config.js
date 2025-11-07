@@ -5,6 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import {createRequire} from 'module';
 import {fileURLToPath} from 'url';
 import {getRemarkPlugin} from 'docusaurus-plugin-glossary';
+import cookieConsentOptions from './src/config/cookieConsent.js';
 
 const require = createRequire(import.meta.url);
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
@@ -93,6 +94,11 @@ const config = {
   plugins: [
     'vercel-analytics',
     "docusaurus-plugin-sass",
+    [require.resolve('./src/plugins/cookie-consent-shim'), {}],
+    [
+      'docusaurus-plugin-cookie-consent',
+      cookieConsentOptions,
+    ],
     '@docusaurus/theme-live-codeblock',
     'docusaurus-plugin-image-zoom',
     [require.resolve('./src/plugins/posthog-plugin'), {}],
@@ -137,7 +143,6 @@ const config = {
         items: [
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/about-me',label: 'About',position: 'left'},
-          {to: '/glossary', label: 'Glossary', position: 'left'},
           {
             href: 'https://cv.mcclowes.com/',
             label: 'CV',
@@ -170,6 +175,10 @@ const config = {
               {
                 label: 'About',
                 to: '/about-me',
+              },
+              {
+                label: 'Glossary',
+                to: '/glossary',
               },
             ],
           },
