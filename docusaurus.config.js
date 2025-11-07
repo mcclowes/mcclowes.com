@@ -100,11 +100,31 @@ const config = {
     [
       cookieConsent,
       {
-        title: 'Cookies',
+        title: 'Cookie Consent',
         description:
-          'I use cookies to understand how the site is used and to improve future posts.',
+          'This site uses cookies to enhance your browsing experience and analyze site traffic to improve future content.',
         storageKey: 'mcclowes-cookie-consent',
         toastMode: true,
+        acceptAllText: 'Accept All',
+        rejectOptionalText: 'Essential Only',
+        rejectAllText: 'Reject All',
+        categories: {
+          necessary: {
+            label: 'Essential Cookies',
+            description:
+              'Required for the website to function properly. These cannot be disabled.',
+          },
+          analytics: {
+            label: 'Analytics Cookies',
+            description:
+              'Help us understand how visitors interact with the site and improve content.',
+          },
+          functional: {
+            label: 'Functional Cookies',
+            description:
+              'Enable enhanced functionality and personalization features.',
+          },
+        },
       },
     ],
     '@docusaurus/theme-live-codeblock',
