@@ -9,10 +9,6 @@ import { getRemarkPlugin } from 'docusaurus-plugin-glossary';
 const require = createRequire(import.meta.url);
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
-const { default: cookieConsentPlugin } = require('docusaurus-plugin-cookie-consent');
-const cookieConsent = /** @type {import('@docusaurus/types').PluginModule<any>} */ (
-  cookieConsentPlugin
-);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -98,11 +94,11 @@ const config = {
     'vercel-analytics',
     'docusaurus-plugin-sass',
     [
-      cookieConsent,
+      'docusaurus-plugin-cookie-consent',
       {
         title: 'Cookie Consent',
         description:
-          'This site uses cookies to enhance your browsing experience and analyze site traffic to improve future content.',
+          'We use cookies to enhance your browsing experience, analyze site traffic, and improve future content. You can accept all cookies or choose to accept only essential ones.',
         storageKey: 'mcclowes-cookie-consent',
         toastMode: true,
         acceptAllText: 'Accept All',
@@ -117,12 +113,17 @@ const config = {
           analytics: {
             label: 'Analytics Cookies',
             description:
-              'Help us understand how visitors interact with the site and improve content.',
+              'Help us understand how visitors interact with the site, analyze traffic patterns, and improve content quality.',
+          },
+          marketing: {
+            label: 'Marketing Cookies',
+            description:
+              'Used to track visitors across websites to display relevant advertisements and measure campaign effectiveness.',
           },
           functional: {
             label: 'Functional Cookies',
             description:
-              'Enable enhanced functionality and personalization features.',
+              'Enable enhanced functionality, personalization features, and remember your preferences.',
           },
         },
       },
