@@ -18,14 +18,14 @@ const Modal = ({ isOpen, onClose, children }) => {
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
-      <div className={styles.modalContainer} onClick={e => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose}>×</button>
-        <div className={styles.modalContent}>
-          {children}
-        </div>
+      <div className={styles.modalContainer} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.closeButton} onClick={onClose}>
+          ×
+        </button>
+        <div className={styles.modalContent}>{children}</div>
       </div>
     </div>
   );
 };
 
-export default Modal; 
+export default Modal;

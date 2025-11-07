@@ -39,7 +39,7 @@ require.extensions['.css'] = function registerCss(module) {
     {},
     {
       get: (target, property) => property,
-    },
+    }
   );
 };
 

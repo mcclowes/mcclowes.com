@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
 
-export const createOpacityGrid = (size) =>
-  Array.from({ length: size * size }, () => 0);
+export const createOpacityGrid = (size) => Array.from({ length: size * size }, () => 0);
 
 export function ColorGrid({ size = 9 }) {
   const [opacities, setOpacities] = useState(() => createOpacityGrid(size));
@@ -21,7 +20,7 @@ export function ColorGrid({ size = 9 }) {
         const index = Math.floor(Math.random() * totalSquares);
 
         return previousOpacities.map((opacity, currentIndex) =>
-          currentIndex === index ? (opacity === 1 ? 0 : 1) : opacity,
+          currentIndex === index ? (opacity === 1 ? 0 : 1) : opacity
         );
       });
     }, 650);

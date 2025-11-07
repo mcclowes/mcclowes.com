@@ -11,7 +11,7 @@
 }
 
 .featureLink {
-  color: var(--ifm-heading-color );
+  color: var(--ifm-heading-color);
 
   &:hover {
     opacity: 0.75;

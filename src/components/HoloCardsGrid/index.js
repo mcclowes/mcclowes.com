@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import styles from './styles.module.css';
 
 function clamp(value, min, max) {
@@ -9,7 +9,7 @@ function getOverlaySrc(originalSrc) {
   if (typeof originalSrc !== 'string') return null;
   const hasExt = /\.[a-zA-Z0-9]+$/.test(originalSrc);
   if (hasExt) {
-    return originalSrc.replace(/(\.[a-zA-Z0-9]+)$/,'-overlay$1');
+    return originalSrc.replace(/(\.[a-zA-Z0-9]+)$/, '-overlay$1');
   }
   return `${originalSrc}-overlay`;
 }
@@ -29,10 +29,13 @@ function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic'
     card.style.setProperty('--angle', '37deg');
   }, []);
 
-  const handlePointerLeave = useCallback((e) => {
-    const card = e.currentTarget;
-    resetCard(card);
-  }, [resetCard]);
+  const handlePointerLeave = useCallback(
+    (e) => {
+      const card = e.currentTarget;
+      resetCard(card);
+    },
+    [resetCard]
+  );
 
   const handlePointerDown = useCallback((e) => {
     const card = e.currentTarget;
@@ -43,22 +46,28 @@ function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic'
     }
   }, []);
 
-  const handlePointerUp = useCallback((e) => {
-    const card = e.currentTarget;
-    try {
-      card.releasePointerCapture?.(e.pointerId);
-    } catch (_) {
-      /* noop */
-    }
-    if (!motionEnabled) {
-      resetCard(card);
-    }
-  }, [resetCard, motionEnabled]);
+  const handlePointerUp = useCallback(
+    (e) => {
+      const card = e.currentTarget;
+      try {
+        card.releasePointerCapture?.(e.pointerId);
+      } catch (_) {
+        /* noop */
+      }
+      if (!motionEnabled) {
+        resetCard(card);
+      }
+    },
+    [resetCard, motionEnabled]
+  );
 
-  const handlePointerCancel = useCallback((e) => {
-    const card = e.currentTarget;
-    resetCard(card);
-  }, [resetCard]);
+  const handlePointerCancel = useCallback(
+    (e) => {
+      const card = e.currentTarget;
+      resetCard(card);
+    },
+    [resetCard]
+  );
 
   const handlePointerMove = useCallback((e) => {
     const card = e.currentTarget;
@@ -82,7 +91,7 @@ function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic'
 
     const cx = rect.width / 2;
     const cy = rect.height / 2;
-    const angle = Math.atan2(y - cy, x - cx) * 180 / Math.PI;
+    const angle = (Math.atan2(y - cy, x - cx) * 180) / Math.PI;
     card.style.setProperty('--angle', `${angle + 180}deg`);
   }, []);
 
@@ -98,11 +107,11 @@ function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic'
 
       // Limit tilt range for stability
       const gammaClamped = clamp(gamma, -30, 30); // left/right
-      const betaClamped = clamp(beta, -30, 30);   // front/back
+      const betaClamped = clamp(beta, -30, 30); // front/back
 
       // Map to 0..1 within our clamped range
       const px = (gammaClamped + 30) / 60; // 0 left, 1 right
-      const py = (betaClamped + 30) / 60;  // 0 top, 1 bottom
+      const py = (betaClamped + 30) / 60; // 0 top, 1 bottom
 
       card.style.setProperty('--mx', `${px * 100}%`);
       card.style.setProperty('--my', `${py * 100}%`);
@@ -114,7 +123,7 @@ function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic'
       card.style.setProperty('--rx', `${rx}deg`);
       card.style.setProperty('--ry', `${ry}deg`);
 
-      const angle = Math.atan2(py - 0.5, px - 0.5) * 180 / Math.PI;
+      const angle = (Math.atan2(py - 0.5, px - 0.5) * 180) / Math.PI;
       card.style.setProperty('--angle', `${angle + 180}deg`);
     };
 
@@ -232,14 +241,32 @@ export default function HoloCardsGrid({ items, images, titles }) {
     if (Array.isArray(items)) {
       return items.map((item) => {
         if (typeof item === 'string') {
-          return { src: item, title: undefined, maskMode: undefined, gradient: undefined, palette: undefined };
+          return {
+            src: item,
+            title: undefined,
+            maskMode: undefined,
+            gradient: undefined,
+            palette: undefined,
+          };
         }
         // Expecting shape: { src, title, maskMode?, gradient?, palette? }
-        return { src: item.src, title: item.title, maskMode: item.maskMode, gradient: item.gradient, palette: item.palette };
+        return {
+          src: item.src,
+          title: item.title,
+          maskMode: item.maskMode,
+          gradient: item.gradient,
+          palette: item.palette,
+        };
       });
     }
     if (Array.isArray(images)) {
-      return images.map((src, idx) => ({ src, title: titles?.[idx], maskMode: undefined, gradient: undefined, palette: undefined }));
+      return images.map((src, idx) => ({
+        src,
+        title: titles?.[idx],
+        maskMode: undefined,
+        gradient: undefined,
+        palette: undefined,
+      }));
     }
     return [];
   }, [items, images, titles]);
@@ -247,13 +274,24 @@ export default function HoloCardsGrid({ items, images, titles }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.grid}>
-        {normalizedItems.map(({ src, title, maskMode: itemMaskMode, gradient: itemGradient, palette: itemPalette }, idx) => (
-          <div key={`${src}-${idx}`} className={styles.item}>
-            <HoloCard src={src} alt={title || 'Card art'} maskMode={itemMaskMode || 'alpha'} gradient={itemGradient || 'radial'} palette={itemPalette || 'classic'} />
-            {title ? <div className={styles.caption}>{title}</div> : null}
-          </div>
-        ))}
+        {normalizedItems.map(
+          (
+            { src, title, maskMode: itemMaskMode, gradient: itemGradient, palette: itemPalette },
+            idx
+          ) => (
+            <div key={`${src}-${idx}`} className={styles.item}>
+              <HoloCard
+                src={src}
+                alt={title || 'Card art'}
+                maskMode={itemMaskMode || 'alpha'}
+                gradient={itemGradient || 'radial'}
+                palette={itemPalette || 'classic'}
+              />
+              {title ? <div className={styles.caption}>{title}</div> : null}
+            </div>
+          )
+        )}
       </div>
     </div>
   );
-} 
+}

@@ -74,9 +74,11 @@ Failed deployment issues will include:
 **Commit Link:** https://github.com/owner/repo/commit/abc123def456
 
 ## Error Information
+
 **Error:** Build failed during compilation
 
 ## Next Steps
+
 - [ ] Check the Vercel dashboard for detailed build logs
 - [ ] Review the failed commit for potential issues
 - [ ] Fix the underlying issue

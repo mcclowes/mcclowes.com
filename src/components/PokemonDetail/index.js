@@ -5,19 +5,15 @@ const PokemonDetail = ({ pokemon }) => {
   return (
     <div className={styles.pokemonDetail}>
       <div className={styles.imageContainer}>
-        <img 
-          src={pokemon.image} 
-          alt={pokemon.name} 
-          className={styles.pokemonImage}
-        />
+        <img src={pokemon.image} alt={pokemon.name} className={styles.pokemonImage} />
       </div>
       <div className={styles.infoContainer}>
         <h2 className={styles.pokemonName}>{pokemon.name}</h2>
         <div className={styles.pokemonId}>#{pokemon.id}</div>
         <div className={styles.pokemonTypes}>
           {pokemon.types.map((type) => (
-            <span 
-              key={type} 
+            <span
+              key={type}
               className={`${styles.typeBadge} ${styles[`type${type.charAt(0).toUpperCase() + type.slice(1)}`]}`}
             >
               {type}
@@ -36,8 +32,8 @@ const PokemonDetail = ({ pokemon }) => {
         </div>
         <div className={styles.description}>
           <p>
-            {pokemon.name} is a {pokemon.types.join(' and ')} type Pokémon. 
-            It is known for its unique abilities and characteristics that make it stand out among other Pokémon.
+            {pokemon.name} is a {pokemon.types.join(' and ')} type Pokémon. It is known for its
+            unique abilities and characteristics that make it stand out among other Pokémon.
           </p>
         </div>
       </div>
@@ -45,4 +41,4 @@ const PokemonDetail = ({ pokemon }) => {
   );
 };
 
-export default PokemonDetail; 
+export default PokemonDetail;

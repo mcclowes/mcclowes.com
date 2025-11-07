@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { 
-  trackEvent, 
-  identifyUser, 
-  setUserProperties, 
+import {
+  trackEvent,
+  identifyUser,
+  setUserProperties,
   trackPageView,
   getFeatureFlag,
-  onFeatureFlag
+  onFeatureFlag,
 } from '../utils/posthog';
 
 export const usePostHog = () => {
@@ -20,7 +20,7 @@ export const usePostHog = () => {
         setTimeout(checkPostHog, 100);
       }
     };
-    
+
     checkPostHog();
   }, []);
 

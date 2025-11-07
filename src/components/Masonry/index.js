@@ -2,7 +2,7 @@ import React from 'react';
 import Masonry from 'react-masonry-css';
 import styles from './styles.module.css';
 
-const MasonryGallery = ({images, breakpointCols = {default: 3, 1100: 2, 700: 1}}) => {
+const MasonryGallery = ({ images, breakpointCols = { default: 3, 1100: 2, 700: 1 } }) => {
   return (
     <div className={styles.wrapper}>
       <Masonry
@@ -27,4 +27,4 @@ const MasonryGallery = ({images, breakpointCols = {default: 3, 1100: 2, 700: 1}}
   );
 };
 
-export default MasonryGallery; 
+export default MasonryGallery;

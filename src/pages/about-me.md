@@ -32,7 +32,7 @@ Some finished. Most not. It’s all part of the same practice: doing the thing, 
 
 <!-- ---
 
-🛠 This site is work in progress. There's not much here at the moment! 
+🛠 This site is work in progress. There's not much here at the moment!
 
 In the meantime:
 - 💻 You can check out my [code and projects](https://github.com/mcclowes?tab=repositories)

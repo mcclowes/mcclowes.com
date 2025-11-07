@@ -3,7 +3,7 @@ name: Spellcheck Markdown Files
 on:
   pull_request:
     paths:
-      - '**/*.md'  # Trigger only when Markdown files are changed
+      - '**/*.md' # Trigger only when Markdown files are changed
 
 jobs:
   spellcheck:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch full Git history
+          fetch-depth: 0 # Fetch full Git history
 
       # Step 2: Install cspell
       - name: Install cspell
@@ -43,7 +43,7 @@ jobs:
         run: |
           echo "❌ Spellcheck failed. Please fix the errors above."
 
-# Step 5: Post spellcheck results as a PR comment
+      # Step 5: Post spellcheck results as a PR comment
       - name: Comment on PR with spellcheck results
         if: env.CHANGED_FILES != ''
         uses: actions/github-script@v7

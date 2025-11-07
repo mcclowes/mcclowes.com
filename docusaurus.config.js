@@ -1,14 +1,18 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-import {themes as prismThemes} from 'prism-react-renderer';
-import {createRequire} from 'module';
-import {fileURLToPath} from 'url';
-import {getRemarkPlugin} from 'docusaurus-plugin-glossary';
-import cookieConsentOptions from './src/config/cookieConsent.js';
+import { themes as prismThemes } from 'prism-react-renderer';
+import { createRequire } from 'module';
+import { fileURLToPath } from 'url';
+import { getRemarkPlugin } from 'docusaurus-plugin-glossary';
 
 const require = createRequire(import.meta.url);
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
+
+const { default: cookieConsentPlugin } = require('docusaurus-plugin-cookie-consent');
+const cookieConsent = /** @type {import('@docusaurus/types').PluginModule<any>} */ (
+  cookieConsentPlugin
+);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,7 +20,6 @@ const config = {
   tagline: 'Personal blog',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://mcclowes.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
@@ -93,11 +96,16 @@ const config = {
 
   plugins: [
     'vercel-analytics',
-    "docusaurus-plugin-sass",
-    [require.resolve('./src/plugins/cookie-consent-shim'), {}],
+    'docusaurus-plugin-sass',
     [
-      'docusaurus-plugin-cookie-consent',
-      cookieConsentOptions,
+      cookieConsent,
+      {
+        title: 'Cookies',
+        description:
+          'I use cookies to understand how the site is used and to improve future posts.',
+        storageKey: 'mcclowes-cookie-consent',
+        toastMode: true,
+      },
     ],
     '@docusaurus/theme-live-codeblock',
     'docusaurus-plugin-image-zoom',
@@ -107,8 +115,8 @@ const config = {
       {
         glossaryPath: 'glossary/glossary.json',
         routePath: '/glossary',
-      }
-    ]
+      },
+    ],
   ],
 
   // Inject environment variables into the client
@@ -119,9 +127,7 @@ const config = {
     },
   ],
 
-  themes: [
-    "@docusaurus/theme-mermaid"
-  ],
+  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -137,12 +143,12 @@ const config = {
         logo: {
           alt: 'mcclowes logo',
           src: 'img/logo.svg',
-          srcDark: 'img/logo-dark.svg'
+          srcDark: 'img/logo-dark.svg',
         },
         hideOnScroll: true,
         items: [
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/about-me',label: 'About',position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/about-me', label: 'About', position: 'left' },
           {
             href: 'https://cv.mcclowes.com/',
             label: 'CV',
@@ -203,7 +209,7 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} mcclowes, Built with Docusaurus.`,
       },
-      
+
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
@@ -222,11 +228,11 @@ const config = {
         selector: '.markdown > p > img, .markdown-img',
         background: {
           light: 'rgb(255, 255, 255)',
-          dark: 'rgb(50, 50, 50)'
+          dark: 'rgb(50, 50, 50)',
         },
       },
     }),
-  
+
   markdown: {
     mermaid: true, // In order for Mermaid code blocks in Markdown to work, you also need to enable the Remark plugin with this option
   },

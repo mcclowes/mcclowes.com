@@ -14,7 +14,9 @@
     "serve": "docusaurus serve",
     "test": "node --require ./scripts/test-register.cjs --test",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "browserslist": {
     "production": [
@@ -46,8 +48,8 @@
     "@giscus/react": "^3.1.0",
     "@mdx-js/react": "^3.0.1",
     "clsx": "^2.1.1",
-    "docusaurus-plugin-cookie-consent": "^2.0.1",
-    "docusaurus-plugin-glossary": "^2.0.0",
+    "docusaurus-plugin-cookie-consent": "^2.0.4",
+    "docusaurus-plugin-glossary": "^2.0.2",
     "docusaurus-plugin-image-zoom": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.6",
     "dotenv": "^17.2.3",
@@ -58,5 +60,8 @@
     "react-dom": "^18.3.1",
     "react-masonry-css": "^1.0.16",
     "web-vitals": "^5.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   }
 }

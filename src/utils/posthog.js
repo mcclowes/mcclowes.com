@@ -23,7 +23,7 @@ export const trackPageView = (pageName, properties = {}) => {
   if (typeof window !== 'undefined' && window.posthog) {
     posthog.capture('$pageview', {
       page: pageName,
-      ...properties
+      ...properties,
     });
   }
 };
@@ -33,7 +33,7 @@ export const trackBlogPostView = (postTitle, postSlug, tags = []) => {
     post_title: postTitle,
     post_slug: postSlug,
     tags: tags,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   });
 };
 
@@ -42,7 +42,7 @@ export const trackBlogPostRead = (postTitle, postSlug, readTime) => {
     post_title: postTitle,
     post_slug: postSlug,
     read_time: readTime,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   });
 };
 
@@ -51,7 +51,7 @@ export const trackExternalLinkClick = (url, linkText, source) => {
     url: url,
     link_text: linkText,
     source: source,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   });
 };
 
@@ -60,7 +60,7 @@ export const trackComponentInteraction = (componentName, action, properties = {}
     component: componentName,
     action: action,
     ...properties,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   });
 };
 
@@ -68,7 +68,7 @@ export const trackSearch = (query, resultsCount = 0) => {
   trackEvent('search_performed', {
     query: query,
     results_count: resultsCount,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   });
 };
 
@@ -77,7 +77,7 @@ export const trackDownload = (fileName, fileType, source) => {
     file_name: fileName,
     file_type: fileType,
     source: source,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   });
 };
 

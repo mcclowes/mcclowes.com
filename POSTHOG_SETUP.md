@@ -37,6 +37,7 @@ export const posthogConfig = {
 ## Features Included
 
 ### Automatic Tracking
+
 - **Page Views**: Automatically tracked on all pages
 - **Web Vitals**: Core Web Vitals (CLS, FID, FCP, LCP, TTFB) are tracked
 - **Route Changes**: SPA navigation is tracked
@@ -45,16 +46,18 @@ export const posthogConfig = {
 ### Custom Tracking Functions
 
 #### Event Tracking
+
 ```javascript
 import { trackEvent } from '@site/src/utils/posthog';
 
 trackEvent('button_clicked', {
   button_name: 'subscribe',
-  page: 'homepage'
+  page: 'homepage',
 });
 ```
 
 #### Blog Post Tracking
+
 ```javascript
 import { trackBlogPostView } from '@site/src/utils/posthog';
 
@@ -62,6 +65,7 @@ trackBlogPostView('My Blog Post', '/blog/my-post', ['tech', 'product']);
 ```
 
 #### External Link Tracking
+
 ```javascript
 import { trackExternalLinkClick } from '@site/src/utils/posthog';
 
@@ -71,77 +75,70 @@ trackExternalLinkClick('https://example.com', 'Example Link', 'footer');
 ### React Hooks
 
 #### usePostHog Hook
+
 ```javascript
 import { usePostHog } from '@site/src/hooks/usePostHog';
 
 function MyComponent() {
   const { trackEvent, isLoaded } = usePostHog();
-  
+
   const handleClick = () => {
     if (isLoaded) {
       trackEvent('custom_event', { component: 'MyComponent' });
     }
   };
-  
+
   return <button onClick={handleClick}>Click me</button>;
 }
 ```
 
 #### usePageTracking Hook
+
 ```javascript
 import { usePageTracking } from '@site/src/hooks/usePostHog';
 
 function MyPage() {
   usePageTracking('My Page', {
     page_type: 'custom',
-    section: 'features'
+    section: 'features',
   });
-  
+
   return <div>My page content</div>;
 }
 ```
 
 #### useFeatureFlag Hook
+
 ```javascript
 import { useFeatureFlag } from '@site/src/hooks/usePostHog';
 
 function MyComponent() {
   const showNewFeature = useFeatureFlag('new-feature', false);
-  
-  return (
-    <div>
-      {showNewFeature && <div>New feature content</div>}
-    </div>
-  );
+
+  return <div>{showNewFeature && <div>New feature content</div>}</div>;
 }
 ```
 
 ### Components
 
 #### TrackedLink Component
+
 ```javascript
 import TrackedLink from '@site/src/components/TrackedLink';
 
-<TrackedLink 
-  href="https://example.com" 
-  source="homepage"
-  className="my-link"
->
+<TrackedLink href="https://example.com" source="homepage" className="my-link">
   External Link
-</TrackedLink>
+</TrackedLink>;
 ```
 
 #### TrackedComponent Component
+
 ```javascript
 import TrackedComponent from '@site/src/components/TrackedComponent';
 
-<TrackedComponent 
-  componentName="NewsletterSignup"
-  action="click"
-  className="newsletter-form"
->
+<TrackedComponent componentName="NewsletterSignup" action="click" className="newsletter-form">
   <form>...</form>
-</TrackedComponent>
+</TrackedComponent>;
 ```
 
 ## Privacy Considerations
@@ -157,13 +154,13 @@ In development mode, PostHog will log events to the console. You can also access
 
 ```javascript
 // Check if PostHog is loaded
-window.posthog
+window.posthog;
 
 // Manually capture an event
-window.posthog.capture('test_event', { test: true })
+window.posthog.capture('test_event', { test: true });
 
 // Check feature flags
-window.posthog.isFeatureEnabled('my-feature-flag')
+window.posthog.isFeatureEnabled('my-feature-flag');
 ```
 
 ## Production Deployment

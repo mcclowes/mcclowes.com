@@ -21,7 +21,7 @@ if (fs.existsSync(envPath)) {
 
 // Parse environment variables
 const envVars = {};
-envContent.split('\n').forEach(line => {
+envContent.split('\n').forEach((line) => {
   line = line.trim();
   if (line && !line.startsWith('#')) {
     const [key, ...valueParts] = line.split('=');

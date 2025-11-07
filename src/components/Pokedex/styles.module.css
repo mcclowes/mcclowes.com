@@ -63,55 +63,55 @@
 
 /* Type-specific colors */
 .typeNormal {
-  background-color: #A8A878;
+  background-color: #a8a878;
 }
 
 .typeFire {
-  background-color: #F08030;
+  background-color: #f08030;
 }
 
 .typeWater {
-  background-color: #6890F0;
+  background-color: #6890f0;
 }
 
 .typeElectric {
-  background-color: #F8D030;
+  background-color: #f8d030;
 }
 
 .typeGrass {
-  background-color: #78C850;
+  background-color: #78c850;
 }
 
 .typeIce {
-  background-color: #98D8D8;
+  background-color: #98d8d8;
 }
 
 .typeFighting {
-  background-color: #C03028;
+  background-color: #c03028;
 }
 
 .typePoison {
-  background-color: #A040A0;
+  background-color: #a040a0;
 }
 
 .typeGround {
-  background-color: #E0C068;
+  background-color: #e0c068;
 }
 
 .typeFlying {
-  background-color: #A890F0;
+  background-color: #a890f0;
 }
 
 .typePsychic {
-  background-color: #F85888;
+  background-color: #f85888;
 }
 
 .typeBug {
-  background-color: #A8B820;
+  background-color: #a8b820;
 }
 
 .typeRock {
-  background-color: #B8A038;
+  background-color: #b8a038;
 }
 
 .typeGhost {
@@ -119,7 +119,7 @@
 }
 
 .typeDragon {
-  background-color: #7038F8;
+  background-color: #7038f8;
 }
 
 .typeDark {
@@ -127,11 +127,11 @@
 }
 
 .typeSteel {
-  background-color: #B8B8D0;
+  background-color: #b8b8d0;
 }
 
 .typeFairy {
-  background-color: #EE99AC;
+  background-color: #ee99ac;
 }
 
 .pokemonId {
@@ -170,4 +170,4 @@
 .filterCount {
   color: var(--color-font-alt);
   font-size: 0.9rem;
-} 
+}

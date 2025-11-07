@@ -9,11 +9,13 @@ Giscus is a comments system powered by GitHub Discussions. It allows visitors to
 ## Prerequisites
 
 ✅ **Already completed:**
+
 - `@giscus/react` package installed
 - Giscus component created at `/src/components/GiscusComponent/index.jsx`
 - BlogPostItem wrapper created at `/src/theme/BlogPostItem/index.js`
 
 ⚠️ **Still needed:**
+
 1. Enable GitHub Discussions on your repository
 2. Get your Giscus configuration IDs
 3. Update the Giscus component with your IDs
@@ -54,9 +56,9 @@ Open `/src/components/GiscusComponent/index.jsx` and replace the placeholder val
 ```jsx
 <Giscus
   repo="mcclowes/mcclowes.com"
-  repoId="YOUR_REPO_ID"          // ← Replace with your actual repo ID
-  category="General"              // ← Replace with your chosen category
-  categoryId="YOUR_CATEGORY_ID"  // ← Replace with your actual category ID
+  repoId="YOUR_REPO_ID" // ← Replace with your actual repo ID
+  category="General" // ← Replace with your chosen category
+  categoryId="YOUR_CATEGORY_ID" // ← Replace with your actual category ID
   mapping="pathname"
   strict="0"
   reactionsEnabled="1"
@@ -69,6 +71,7 @@ Open `/src/components/GiscusComponent/index.jsx` and replace the placeholder val
 ```
 
 ### Example (with real values):
+
 ```jsx
 <Giscus
   repo="mcclowes/mcclowes.com"
@@ -92,7 +95,7 @@ To enable comments on a blog post, add `enableComments: true` to the frontmatter
 
 ```markdown
 ---
-title: "Your Blog Post Title"
+title: 'Your Blog Post Title'
 authors: mcclowes
 tags: [tag1, tag2]
 enableComments: true
@@ -172,6 +175,7 @@ export default function GiscusComponent() {
 ### Conditional Display
 
 The current setup only shows comments when:
+
 1. `enableComments: true` is in the post frontmatter
 2. The user is viewing the full blog post page (not the list)
 
@@ -218,7 +222,7 @@ Make sure you're using `{colorMode}` from the hook:
 ```jsx
 const { colorMode } = useColorMode();
 // ...
-theme={colorMode}  // Not theme="dark" or theme="light"
+theme = { colorMode }; // Not theme="dark" or theme="light"
 ```
 
 ## Privacy & Moderation

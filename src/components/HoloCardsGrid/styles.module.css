@@ -58,8 +58,8 @@
   overflow: hidden;
   background: #0f1118;
   box-shadow:
-    0 12px 30px rgba(0,0,0,.6),
-    0 2px 6px rgba(0,0,0,.7) inset;
+    0 12px 30px rgba(0, 0, 0, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.7) inset;
   isolation: isolate;
   cursor: pointer;
   /* Allow panning/zooming without blocking our pointer events; enables smooth touch move */
@@ -92,13 +92,20 @@
   /* Default foil spectrum; overridden by palette classes via --foil-spectrum */
   --foil-spectrum: conic-gradient(
     from var(--angle, 37deg),
-    #ff0040, #ff7a00, #ffd400, #4cff00, #00edff, #3b4dff, #b600ff, #ff0040
+    #ff0040,
+    #ff7a00,
+    #ffd400,
+    #4cff00,
+    #00edff,
+    #3b4dff,
+    #b600ff,
+    #ff0040
   );
 
   background:
-    radial-gradient(120px 120px at 20% 30%, rgba(255,255,255,.4), transparent 60%),
-    radial-gradient(160px 160px at 80% 70%, rgba(255,255,255,.35), transparent 60%),
-    repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 2px, transparent 2px 4px),
+    radial-gradient(120px 120px at 20% 30%, rgba(255, 255, 255, 0.4), transparent 60%),
+    radial-gradient(160px 160px at 80% 70%, rgba(255, 255, 255, 0.35), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 2px, transparent 2px 4px),
     var(--foil-spectrum);
   background-blend-mode: screen, screen, soft-light, normal;
   filter: saturate(1) brightness(1.1);
@@ -121,7 +128,7 @@
   .foil {
     -webkit-mask: none;
     mask: none;
-    opacity: 1.0;
+    opacity: 1;
   }
 }
 
@@ -138,13 +145,13 @@
   mask-mode: alpha;
   opacity: 1;
   mix-blend-mode: color-dodge;
-  filter: saturate(2) brightness(.4);
+  filter: saturate(2) brightness(0.4);
 }
 
 .noMask {
   -webkit-mask-image: none !important;
   mask-image: none !important;
-  opacity: 0.40;
+  opacity: 0.4;
   mix-blend-mode: color-dodge;
   filter: saturate(1) brightness(1.1);
 }
@@ -161,41 +168,79 @@
 .paletteClassic {
   --foil-spectrum: conic-gradient(
     from var(--angle, 37deg),
-    #ff0040, #ff7a00, #ffd400, #4cff00, #00edff, #3b4dff, #b600ff, #ff0040
+    #ff0040,
+    #ff7a00,
+    #ffd400,
+    #4cff00,
+    #00edff,
+    #3b4dff,
+    #b600ff,
+    #ff0040
   );
 }
 
 .paletteCool {
   --foil-spectrum: conic-gradient(
     from var(--angle, 37deg),
-    #00edff, #3b4dff, #b600ff, #6a00ff, #00c6ff, #00edff
+    #00edff,
+    #3b4dff,
+    #b600ff,
+    #6a00ff,
+    #00c6ff,
+    #00edff
   );
 }
 
 .paletteWarm {
   --foil-spectrum: conic-gradient(
     from var(--angle, 37deg),
-    #ff002e, #ff7a00, #ffd400, #ff6ec7, #ff3f3f, #ff002e
+    #ff002e,
+    #ff7a00,
+    #ffd400,
+    #ff6ec7,
+    #ff3f3f,
+    #ff002e
   );
 }
 
 .paletteAurora {
   --foil-spectrum: conic-gradient(
     from var(--angle, 37deg),
-    #00ff88, #00edff, #3b4dff, #b600ff, #4cff00, #00ff88
+    #00ff88,
+    #00edff,
+    #3b4dff,
+    #b600ff,
+    #4cff00,
+    #00ff88
   );
 }
 
 .paletteElectric {
   --foil-spectrum: conic-gradient(
     from var(--angle, 37deg),
-    #00b3ff, #00e5ff, #f7ff00, #ffd000, #00b3ff
+    #00b3ff,
+    #00e5ff,
+    #f7ff00,
+    #ffd000,
+    #00b3ff
   );
 }
 
 @keyframes twinkle {
-  0% { background-position: 0px 0px, 0px 0px, 0 0, 0 0; }
-  100% { background-position: 40px 0px, -60px 0px, 0 20px, 0 0; }
+  0% {
+    background-position:
+      0px 0px,
+      0px 0px,
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      40px 0px,
+      -60px 0px,
+      0 20px,
+      0 0;
+  }
 }
 
 .shine {
@@ -207,17 +252,22 @@
 }
 
 .shineRadial {
-  background: radial-gradient(140px 140px at var(--mx) var(--my), rgba(255,255,255,.55), rgba(255,255,255,.05) 45%, transparent 60%);
+  background: radial-gradient(
+    140px 140px at var(--mx) var(--my),
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 255, 255, 0.05) 45%,
+    transparent 60%
+  );
 }
 
 .shineLinear {
   background: linear-gradient(
     var(--angle, 37deg),
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.12) 40%,
-    rgba(255,255,255,0.6) 50%,
-    rgba(255,255,255,0.12) 60%,
-    rgba(255,255,255,0) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.12) 40%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.12) 60%,
+    rgba(255, 255, 255, 0) 100%
   );
 }
 
@@ -236,4 +286,4 @@
 :global(.markdown) .grid {
   /* Ensure grid spans container width inside MDX */
   width: 100%;
-} 
+}

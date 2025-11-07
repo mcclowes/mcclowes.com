@@ -3,7 +3,7 @@ name: Broken Links Check
 on:
   pull_request:
     types: [opened, reopened, synchronize]
-  workflow_dispatch:  # Allows manual triggering from the GitHub UI
+  workflow_dispatch: # Allows manual triggering from the GitHub UI
 
 jobs:
   link-check:
@@ -11,19 +11,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '20'
-      
+
       - name: Install linkinator
         run: npm install -g linkinator
-      
+
       - name: Run linkinator
         run: npx linkinator https://mcclowes.com --recurse --retry --verbosity error --skip .*github.* --format json > link-results.json
-        continue-on-error: true  # Ensure the workflow continues even if linkinator finds broken links
-      
+        continue-on-error: true # Ensure the workflow continues even if linkinator finds broken links
+
       - name: Delete Previous Comments
         uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
@@ -57,7 +57,7 @@ jobs:
             const results = JSON.parse(fs.readFileSync('link-results.json', 'utf8'));
             const filtered = results.links
               .filter(link => link.status !== 403 && link.status !== 500 && link.status !== 0)
-            
+
             const printList = filtered
               .map(link => `[${link.status}] ${link.url}`);
             const output = `Link check results (filtered):\n\`\`\`\n${JSON.stringify(printList, null, 2)}\n\`\`\``;

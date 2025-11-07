@@ -1,13 +1,7 @@
 import React from 'react';
 import { trackExternalLinkClick } from '@site/src/utils/posthog';
 
-export default function TrackedLink({ 
-  href, 
-  children, 
-  className, 
-  source = 'unknown',
-  ...props 
-}) {
+export default function TrackedLink({ href, children, className, source = 'unknown', ...props }) {
   const handleClick = (e) => {
     // Check if it's an external link
     if (href && (href.startsWith('http') || href.startsWith('mailto:'))) {
@@ -17,12 +11,7 @@ export default function TrackedLink({
   };
 
   return (
-    <a 
-      href={href} 
-      className={className}
-      onClick={handleClick}
-      {...props}
-    >
+    <a href={href} className={className} onClick={handleClick} {...props}>
       {children}
     </a>
   );

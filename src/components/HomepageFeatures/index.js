@@ -7,29 +7,17 @@ const FeatureList = [
   {
     title: '/blog',
     link: '/blog',
-    description: (
-      <>
-        Thoughts and musings.
-      </>
-    ),
+    description: <>Thoughts and musings.</>,
   },
   {
     title: '/about-me',
     link: '/about-me',
-    description: (
-      <>
-        Contact and social media links.
-      </>
-    ),
+    description: <>Contact and social media links.</>,
   },
   {
     title: '/links',
     link: 'https://linktr.ee/mcclowes',
-    description: (
-      <>
-        Linktree with various links.
-      </>
-    ),
+    description: <>Linktree with various links.</>,
   },
 ];
 
@@ -37,7 +25,9 @@ function Feature({ title, description, link }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="padding-horiz--md">
-        <Link className={styles.featureLink} to={link}><h3>{title}</h3></Link>
+        <Link className={styles.featureLink} to={link}>
+          <h3>{title}</h3>
+        </Link>
 
         <p>{description}</p>
       </div>
@@ -51,7 +41,7 @@ export default function HomepageFeatures() {
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
-            < Feature key = { idx } { ...props } />
+            <Feature key={idx} {...props} />
           ))}
         </div>
       </div>

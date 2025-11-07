@@ -11,7 +11,7 @@ export default function BlogPostTracker({ children }) {
       trackBlogPostView(
         metadata.title,
         metadata.permalink,
-        metadata.tags?.map(tag => tag.label) || []
+        metadata.tags?.map((tag) => tag.label) || []
       );
     }
   }, [metadata]);

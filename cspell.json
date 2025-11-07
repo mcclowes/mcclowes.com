@@ -1,15 +1,6 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": [
-    "Docusaurus", 
-    "frontend", 
-    "Codat",
-    "mcclowes",
-    "Monzo",
-  ],
-  "ignorePaths": [
-    "node_modules/**",
-    "build/**"
-  ]
+  "words": ["Docusaurus", "frontend", "Codat", "mcclowes", "Monzo"],
+  "ignorePaths": ["node_modules/**", "build/**"]
 }

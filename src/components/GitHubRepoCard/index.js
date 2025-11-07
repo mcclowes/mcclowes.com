@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 
 function formatNumber(num) {
@@ -30,7 +30,9 @@ export default function GitHubRepoCard({ repo, className, style }) {
       }
     }
     if (repo) fetchRepo();
-    return () => { mounted = false; };
+    return () => {
+      mounted = false;
+    };
   }, [repo]);
 
   const repoUrl = data?.html_url ?? `https://github.com/${repo}`;
@@ -45,7 +47,9 @@ export default function GitHubRepoCard({ repo, className, style }) {
     >
       <div className={styles.header}>
         <div className={styles.repoName}>
-          <span className={styles.githubIcon} aria-hidden></span>
+          <span className={styles.githubIcon} aria-hidden>
+            
+          </span>
           {repo}
         </div>
         {loading ? (
@@ -53,22 +57,32 @@ export default function GitHubRepoCard({ repo, className, style }) {
         ) : error ? (
           <span className={styles.badgeError}>Error</span>
         ) : (
-          <span className={styles.badge}>{data?.visibility === 'private' ? 'Private' : 'Public'}</span>
+          <span className={styles.badge}>
+            {data?.visibility === 'private' ? 'Private' : 'Public'}
+          </span>
         )}
       </div>
 
       <p className={styles.description}>
-        {loading ? 'Fetching repository details…' : (data?.description || 'No description provided.')}
+        {loading ? 'Fetching repository details…' : data?.description || 'No description provided.'}
       </p>
 
       <div className={styles.metaRow}>
-        <span className={styles.metaItem} title="Stars">⭐ {formatNumber(data?.stargazers_count || 0)}</span>
-        <span className={styles.metaItem} title="Forks">🍴 {formatNumber(data?.forks_count || 0)}</span>
+        <span className={styles.metaItem} title="Stars">
+          ⭐ {formatNumber(data?.stargazers_count || 0)}
+        </span>
+        <span className={styles.metaItem} title="Forks">
+          🍴 {formatNumber(data?.forks_count || 0)}
+        </span>
         {data?.language ? (
-          <span className={styles.metaItem} title="Primary language">💻 {data.language}</span>
+          <span className={styles.metaItem} title="Primary language">
+            💻 {data.language}
+          </span>
         ) : null}
         {data?.license?.spdx_id && data.license.spdx_id !== 'NOASSERTION' ? (
-          <span className={styles.metaItem} title="License">📄 {data.license.spdx_id}</span>
+          <span className={styles.metaItem} title="License">
+            📄 {data.license.spdx_id}
+          </span>
         ) : null}
         {data?.updated_at ? (
           <span className={styles.metaItem} title="Last updated">
@@ -80,7 +94,9 @@ export default function GitHubRepoCard({ repo, className, style }) {
       {Array.isArray(data?.topics) && data.topics.length > 0 ? (
         <div className={styles.topics}>
           {data.topics.slice(0, 6).map((t) => (
-            <span key={t} className={styles.topic}>{t}</span>
+            <span key={t} className={styles.topic}>
+              {t}
+            </span>
           ))}
         </div>
       ) : null}
@@ -102,7 +118,3 @@ export default function GitHubRepoCard({ repo, className, style }) {
     </a>
   );
 }
-
-
-
-

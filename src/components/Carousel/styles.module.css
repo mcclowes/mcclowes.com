@@ -12,7 +12,7 @@
 
 .carouselTrack {
   display: flex;
-  flex-wrap: nowrap;     /* prevents wrapping */
+  flex-wrap: nowrap; /* prevents wrapping */
 }
 
 .wrapperSmall {
@@ -21,13 +21,7 @@
 
 .fadeBoth {
   /* Show fade on both sides when in middle of scroll */
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 5%,
-    black 95%,
-    transparent 100%
-  );
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
@@ -39,34 +33,14 @@
 
 .fadeLeft {
   /* Show fade only on left when at end */
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 5%,
-    black 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 5%,
-    black 100%
-  );
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 100%);
 }
 
 .fadeRight {
   /* Show fade only on right when at start */
-  mask-image: linear-gradient(
-    to right,
-    black 0%,
-    black 95%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    black 0%,
-    black 95%,
-    transparent 100%
-  );
+  mask-image: linear-gradient(to right, black 0%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 95%, transparent 100%);
 }
 
 .imageContainer {

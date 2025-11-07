@@ -49,3 +49,5 @@ Both plugins are available through the [xbar plugin browser](https://xbarapp.com
 - [Things 3 Inbox plugin documentation](https://xbarapp.com/docs/plugins/Lifestyle/Things/thingsinbox.6s.sh.html)
 
 
+
+
