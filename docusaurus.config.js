@@ -96,6 +96,7 @@ const config = {
     [
       'docusaurus-plugin-cookie-consent',
       {
+        enabled: true,
         title: 'Cookie Consent',
         description:
           'We use cookies to enhance your browsing experience, analyze site traffic, and improve future content. You can accept all cookies or choose to accept only essential ones.',
