@@ -86,5 +86,10 @@
       "definition": "A Minimum Lovable Product is a product that is built with the minimum set of features that are enough to satisfy early adopters and provide a basis for feedback and future development.",
       "relatedTerms": ["Product", "MVP"]
     }
+    {
+      "term": "PWA",
+      "definition": "A Progressive Web App (PWA) is a type of web application that is built with progressive enhancement, rather than traditional web development techniques. PWAs are designed to be fast, reliable, and installable on a user's device.",
+      "relatedTerms": ["Web Application", "Progressive Enhancement"]
+    }
   ]
 }
