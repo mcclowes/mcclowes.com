@@ -1,7 +1,7 @@
 ---
 title: "Is commercial failure indicative of poor design?"
 authors: mcclowes
-tags: [design]
+tags: [design, foundation]
 ---
 
 There is an important co-dependency between design and business. In the words of Terence Conran, “A businessman with little knowledge of design is unlikely to be a very good businessman, and a designer with no knowledge of business is unlikely to remain a designer for very long”. 

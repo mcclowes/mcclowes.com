@@ -1,6 +1,7 @@
 ---
 title: "Winning the Durham University Blueprint Enterprise Competition"
 authors: mcclowes
+tags: [uni, startup]
 ---
 
 <!--truncate-->

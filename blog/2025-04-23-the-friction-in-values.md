@@ -1,7 +1,7 @@
 ---
 title: "What's in a value?"
 authors: mcclowes
-tags: [teams, culture]
+tags: [leadership, thinking]
 draft: false
 ---
 

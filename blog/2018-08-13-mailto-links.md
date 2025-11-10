@@ -3,7 +3,7 @@ slug: mailto-links
 title: "Creating mailto: links that actually work"
 description: "A comprehensive guide to creating mailto: links that work across all email clients."
 authors: mcclowes
-tags: [development]
+tags: [dev]
 ---
 
 *mailto:* provides a way of creating hyperlinks in websites that will tell your computer to open the default mail client and create a new email without the user having to copy and paste the email address. You can even pre-fill the message subject and content.

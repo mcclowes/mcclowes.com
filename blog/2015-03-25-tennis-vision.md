@@ -1,7 +1,7 @@
 ---
 title: "Tennis vision: computer vision for match analysis"
 authors: mcclowes
-tags: [dev, open source, computer vision, sports, tennis]
+tags: [dev, uni]
 draft: false
 ---
 
@@ -43,6 +43,7 @@ The project is open source, so you can check out the code, experiment with the t
 
 **Links:**
 - [GitHub Repository](https://github.com/mcclowes/tennis-vision)
+
 
 
 

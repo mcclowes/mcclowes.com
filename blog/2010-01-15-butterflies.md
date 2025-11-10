@@ -1,7 +1,7 @@
 ---
 title: "Butterfly Brands"
 authors: mcclowes
-tags: [art, design]
+tags: [art, design, foundation]
 ---
 
 ![Butterfly Brands](/img/posts/lcc/butterflies.jpg)

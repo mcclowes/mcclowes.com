@@ -1,8 +1,7 @@
 ---
 title: "Cryptic crossword #1"
-description: "How cryptic crosswords became my daily mental workout"
 authors: mcclowes
-tags: [puzzles, mental-health, hobbies]
+tags: [puzzles]
 ---
 
 ![A completed cryptic crossword puzzle](/img/posts/crosswords/crossword-1.png)

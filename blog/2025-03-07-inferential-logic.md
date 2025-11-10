@@ -1,7 +1,7 @@
 ---
 title: "Inferential vs explicit logic"
 authors: mcclowes
-tags: [software engineering, frontend]
+tags: [thinking]
 ---
 
 In software engineering, complexity often masquerades as sophistication. Nowhere is this clearer than in frontend code that relies on inferential logic: the practice of deducing user intent or state based on limited information, rather than explicitly guiding the user experience.

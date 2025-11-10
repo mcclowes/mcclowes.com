@@ -1,7 +1,7 @@
 ---
 title: "Food for Thought"
 authors: mcclowes
-tags: [urbanism, design]
+tags: [design, foundation]
 ---
 
 import Carousel from '@site/src/components/Carousel';

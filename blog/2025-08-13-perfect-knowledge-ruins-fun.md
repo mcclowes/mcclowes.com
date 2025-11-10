@@ -1,7 +1,7 @@
 ---
 title: "Perfect knowledge ruins fun and creativity"
 authors: mcclowes
-tags: [philosophy, games, music]
+tags: [thinking]
 enableComments: true
 ---
 

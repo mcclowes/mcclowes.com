@@ -1,7 +1,7 @@
 ---
 title: "Optimizing life: lessons from AI search approaches"
 authors: mcclowes
-tags: [ai, product]
+tags: [ai, productivity]
 ---
 
 Life can often feel like a journey towards a specific goal, be it happiness, wealth, expertise, or fame. And just like in artificial intelligence, achieving our goals can be seen as an optimization problem. But what if we thought of life itself as an AI search problem? What lessons could we learn from the various search approaches used by computer scientists and mathematicians?

@@ -1,7 +1,7 @@
 ---
 title: "Durham's river deaths"
 authors: mcclowes
-tags: [news]
+tags: [news, uni]
 ---
 
 import Carousel from '@site/src/components/Carousel';

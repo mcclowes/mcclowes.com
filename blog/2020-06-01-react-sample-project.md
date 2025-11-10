@@ -1,7 +1,7 @@
 ---
-title: "A Fully-Kitted React Starter Template"
+title: "A React starter template"
 authors: mcclowes
-tags: [dev, open source, react, template, tooling]
+tags: [dev, open source]
 ---
 
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';
