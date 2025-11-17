@@ -4,7 +4,6 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import { createRequire } from 'module';
 import { fileURLToPath } from 'url';
-import { getRemarkPlugin } from 'docusaurus-plugin-glossary';
 
 const require = createRequire(import.meta.url);
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
@@ -39,49 +38,23 @@ const config = {
 
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      'docusaurus-plugin-glossary/preset',
+      /** @type {import('@docusaurus/preset-classic').Options & {glossary?: any}} */
       ({
+        glossary: {
+          glossaryPath: 'glossary/glossary.json',
+          routePath: '/glossary',
+        },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [
-            getRemarkPlugin(
-              {
-                glossaryPath: 'glossary/glossary.json',
-                routePath: '/glossary',
-              },
-              { siteDir: __dirname }
-            ),
-          ],
           // editUrl:
           //   'https://github.com/mcclowes/mcclowes.com',
         },
         blog: {
           showReadingTime: true,
           blogSidebarCount: 'ALL',
-          remarkPlugins: [
-            getRemarkPlugin(
-              {
-                glossaryPath: 'glossary/glossary.json',
-                routePath: '/glossary',
-              },
-              { siteDir: __dirname }
-            ),
-          ],
-
           // editUrl:
           //   'https://github.com/mcclowes/mcclowes.com',
-        },
-        pages: {
-          remarkPlugins: [
-            getRemarkPlugin(
-              {
-                glossaryPath: 'glossary/glossary.json',
-                routePath: '/glossary',
-              },
-              { siteDir: __dirname }
-            ),
-          ],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -132,13 +105,6 @@ const config = {
     '@docusaurus/theme-live-codeblock',
     'docusaurus-plugin-image-zoom',
     [require.resolve('./src/plugins/posthog-plugin'), {}],
-    [
-      'docusaurus-plugin-glossary',
-      {
-        glossaryPath: 'glossary/glossary.json',
-        routePath: '/glossary',
-      },
-    ],
   ],
 
   // Inject environment variables into the client
