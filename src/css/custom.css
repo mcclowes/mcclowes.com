@@ -241,3 +241,12 @@ iframe {
 .medium-zoom-image--opened {
   z-index: 301 !important;
 }
+
+/* Cookie Consent Modal - background color customization */
+.cookie-consent-modal {
+  background-color: var(--color-background-primary) !important;
+}
+
+.cookie-consent-toast {
+  background-color: var(--color-background-primary) !important;
+}

@@ -26,7 +26,6 @@ const config = {
   projectName: 'mcclowes.com', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -72,7 +71,7 @@ const config = {
         enabled: true,
         title: 'Cookie Consent',
         description:
-          'We use cookies to enhance your browsing experience, analyze site traffic, and improve future content. You can accept all cookies or choose to accept only essential ones.',
+          'We use cookies and browser storage to enhance your browsing experience, analyze site traffic, and improve future content. Read our [Privacy Policy](/privacy) for details.',
         storageKey: 'mcclowes-cookie-consent',
         toastMode: true,
         acceptAllText: 'Accept All',
@@ -82,22 +81,23 @@ const config = {
           necessary: {
             label: 'Essential Cookies',
             description:
-              'Required for the website to function properly. These cannot be disabled.',
+              'Required for the website to function properly, including storing your cookie preferences. These cannot be disabled.',
           },
           analytics: {
             label: 'Analytics Cookies',
             description:
-              'Help us understand how visitors interact with the site, analyze traffic patterns, and improve content quality.',
+              'Help us understand how visitors interact with the site through PostHog analytics. Includes web vitals tracking and optional session recording.',
           },
           marketing: {
             label: 'Marketing Cookies',
             description:
-              'Used to track visitors across websites to display relevant advertisements and measure campaign effectiveness.',
+              'Currently not used on this site.',
+            enabled: false,
           },
           functional: {
             label: 'Functional Cookies',
             description:
-              'Enable enhanced functionality, personalization features, and remember your preferences.',
+              'Enable enhanced functionality like Giscus comments (requires GitHub authentication). Stores authentication tokens in browser storage.',
           },
         },
       },
@@ -223,6 +223,9 @@ const config = {
 
   markdown: {
     mermaid: true, // In order for Mermaid code blocks in Markdown to work, you also need to enable the Remark plugin with this option
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
 };
 
