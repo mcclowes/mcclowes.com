@@ -56,3 +56,4 @@ Both plugins are available through the [xbar plugin browser](https://xbarapp.com
 
 
 
+
