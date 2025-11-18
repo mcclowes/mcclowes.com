@@ -1,5 +1,5 @@
 ---
-title: "Building a glossary plugin for Docusaurus"
+title: "A glossary plugin for Docusaurus"
 authors: mcclowes
 tags: [dev, open source, documentation]
 ---
@@ -55,4 +55,4 @@ Or check out the [GitHub repository](https://github.com/mcclowes/docusaurus-plug
 - [GitHub Repository](https://github.com/mcclowes/docusaurus-plugin-glossary)
 - [npm Package](https://www.npmjs.com/package/docusaurus-plugin-glossary)
 - [Documentation](https://github.com/mcclowes/docusaurus-plugin-glossary#readme)
-
+- [Claude Docusaurus Skills](https://github.com/mcclowes/claude-docusaurus-skills)
