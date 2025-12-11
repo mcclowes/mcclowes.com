@@ -14,12 +14,17 @@ function getOverlaySrc(originalSrc) {
   return `${originalSrc}-overlay`;
 }
 
-function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic' }) {
+function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic', overlay }) {
   const [showOverlay, setShowOverlay] = useState(true);
   const [motionEnabled, setMotionEnabled] = useState(false);
   const cardRef = useRef(null);
 
-  const overlaySrc = useMemo(() => getOverlaySrc(src), [src]);
+  // overlay prop: false = no overlay, string = explicit URL, undefined = auto-generate
+  const overlaySrc = useMemo(() => {
+    if (overlay === false) return null;
+    if (typeof overlay === 'string') return overlay;
+    return getOverlaySrc(src);
+  }, [src, overlay]);
 
   const resetCard = useCallback((card) => {
     card.style.setProperty('--mx', '50%');
@@ -247,15 +252,17 @@ export default function HoloCardsGrid({ items, images, titles }) {
             maskMode: undefined,
             gradient: undefined,
             palette: undefined,
+            overlay: undefined,
           };
         }
-        // Expecting shape: { src, title, maskMode?, gradient?, palette? }
+        // Expecting shape: { src, title, maskMode?, gradient?, palette?, overlay? }
         return {
           src: item.src,
           title: item.title,
           maskMode: item.maskMode,
           gradient: item.gradient,
           palette: item.palette,
+          overlay: item.overlay,
         };
       });
     }
@@ -266,6 +273,7 @@ export default function HoloCardsGrid({ items, images, titles }) {
         maskMode: undefined,
         gradient: undefined,
         palette: undefined,
+        overlay: undefined,
       }));
     }
     return [];
@@ -276,7 +284,7 @@ export default function HoloCardsGrid({ items, images, titles }) {
       <div className={styles.grid}>
         {normalizedItems.map(
           (
-            { src, title, maskMode: itemMaskMode, gradient: itemGradient, palette: itemPalette },
+            { src, title, maskMode: itemMaskMode, gradient: itemGradient, palette: itemPalette, overlay: itemOverlay },
             idx
           ) => (
             <div key={`${src}-${idx}`} className={styles.item}>
@@ -286,6 +294,7 @@ export default function HoloCardsGrid({ items, images, titles }) {
                 maskMode={itemMaskMode || 'alpha'}
                 gradient={itemGradient || 'radial'}
                 palette={itemPalette || 'classic'}
+                overlay={itemOverlay}
               />
               {title ? <div className={styles.caption}>{title}</div> : null}
             </div>
