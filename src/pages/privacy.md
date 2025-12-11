@@ -17,6 +17,7 @@ This site respects your privacy. We collect minimal data to improve the site exp
 ### Essential Data (Always Active)
 
 **Cookie Preferences**
+
 - **What**: Your cookie consent choices
 - **How**: Stored in browser localStorage as `mcclowes-cookie-consent`
 - **Purpose**: Remember your privacy preferences
@@ -26,6 +27,7 @@ This site respects your privacy. We collect minimal data to improve the site exp
 ### Analytics Data (Optional)
 
 **PostHog Analytics**
+
 - **What**: Page views, events, web vitals (CLS, INP, FCP, LCP, TTFB), optional session recordings
 - **How**: First-party cookies (`ph_*`) and localStorage (`ph_*`)
 - **Data stored**:
@@ -41,6 +43,7 @@ This site respects your privacy. We collect minimal data to improve the site exp
 - **Can be disabled**: Yes (reject analytics cookies)
 
 **Vercel Web Analytics**
+
 - **What**: Page views, geolocation (country, state, city), device type, browser, OS
 - **How**: Cookieless edge-based tracking (no cookies or localStorage)
 - **Data stored**: Anonymous aggregated metrics only
@@ -57,6 +60,7 @@ This site respects your privacy. We collect minimal data to improve the site exp
 ### Functional Data (Optional)
 
 **Giscus Comments**
+
 - **What**: GitHub authentication token for comments
 - **How**: Encrypted token stored in browser localStorage
 - **Purpose**: Enable you to post comments using your GitHub account
@@ -73,6 +77,7 @@ This site respects your privacy. We collect minimal data to improve the site exp
 ### Cookie Consent Banner
 
 When you first visit this site, a cookie consent banner appears. You can:
+
 - **Accept All**: Enable all features including analytics and comments
 - **Essential Only**: Use only required features (cookie preferences)
 - **Reject All**: Disable optional features
@@ -80,6 +85,7 @@ When you first visit this site, a cookie consent banner appears. You can:
 ### Change Your Preferences
 
 You can update your cookie preferences at any time by:
+
 1. Clearing your browser's localStorage for this site
 2. Refreshing the page to see the consent banner again
 3. Making a new selection
@@ -87,6 +93,7 @@ You can update your cookie preferences at any time by:
 ### Browser Controls
 
 You can also control cookies through your browser settings:
+
 - **Chrome**: Settings → Privacy and security → Cookies and other site data
 - **Firefox**: Settings → Privacy & Security → Cookies and Site Data
 - **Safari**: Settings → Privacy → Manage Website Data
@@ -97,18 +104,21 @@ You can also control cookies through your browser settings:
 This site uses the following third-party services:
 
 ### PostHog
+
 - **Purpose**: Analytics and user behavior tracking
 - **Privacy Policy**: [PostHog Privacy Policy](https://posthog.com/privacy)
 - **Data location**: Cloud-hosted by PostHog
 - **GDPR compliance**: GDPR compliant
 
 ### Vercel
+
 - **Purpose**: Web analytics and hosting
 - **Privacy Policy**: [Vercel Privacy Policy](https://vercel.com/legal/privacy-policy)
 - **Data location**: Edge locations worldwide
 - **GDPR compliance**: GDPR compliant
 
 ### GitHub (Giscus)
+
 - **Purpose**: Comment system via GitHub Discussions
 - **Privacy Policy**: [GitHub Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
 - **Data location**: GitHub's infrastructure
@@ -117,6 +127,7 @@ This site uses the following third-party services:
 ## Your Rights
 
 Under GDPR and similar privacy laws, you have the right to:
+
 - **Access**: Request a copy of your data
 - **Rectification**: Correct inaccurate data
 - **Erasure**: Request deletion of your data
@@ -128,6 +139,7 @@ Under GDPR and similar privacy laws, you have the right to:
 ## Data Security
 
 We implement appropriate security measures to protect your data:
+
 - HTTPS encryption for all connections
 - First-party cookies only (no third-party tracking cookies)
 - Minimal data collection (only what's necessary)
@@ -149,10 +161,10 @@ If you have questions about this privacy policy or how we handle your data, cont
 
 ## Cookie Table
 
-| Cookie/Storage | Type | Purpose | Duration | Can Disable |
-|---|---|---|---|---|
-| `mcclowes-cookie-consent` | localStorage | Store cookie preferences | Until cleared | No |
-| `ph_*` | Cookie | PostHog distinct ID and session ID | Session/Persistent | Yes (reject analytics) |
-| `ph_*` | localStorage | PostHog analytics data | Persistent | Yes (reject analytics) |
-| Giscus token | localStorage | GitHub authentication | Until revoked | Yes (reject functional) |
-| Vercel Analytics | None | Cookieless analytics | 24 hours | No (but privacy-preserving) |
+| Cookie/Storage            | Type         | Purpose                            | Duration           | Can Disable                 |
+| ------------------------- | ------------ | ---------------------------------- | ------------------ | --------------------------- |
+| `mcclowes-cookie-consent` | localStorage | Store cookie preferences           | Until cleared      | No                          |
+| `ph_*`                    | Cookie       | PostHog distinct ID and session ID | Session/Persistent | Yes (reject analytics)      |
+| `ph_*`                    | localStorage | PostHog analytics data             | Persistent         | Yes (reject analytics)      |
+| Giscus token              | localStorage | GitHub authentication              | Until revoked      | Yes (reject functional)     |
+| Vercel Analytics          | None         | Cookieless analytics               | 24 hours           | No (but privacy-preserving) |

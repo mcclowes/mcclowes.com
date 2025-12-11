@@ -8,7 +8,6 @@ import { fileURLToPath } from 'url';
 const require = createRequire(import.meta.url);
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '@mcclowes',
@@ -90,8 +89,7 @@ const config = {
           },
           marketing: {
             label: 'Marketing Cookies',
-            description:
-              'Currently not used on this site.',
+            description: 'Currently not used on this site.',
             enabled: false,
           },
           functional: {
@@ -105,6 +103,16 @@ const config = {
     '@docusaurus/theme-live-codeblock',
     'docusaurus-plugin-image-zoom',
     [require.resolve('./src/plugins/posthog-plugin'), {}],
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,
+        max: 1030, // max resized image's size
+        min: 640, // min resized image's size
+        steps: 2, // number of images generated between min and max
+        disableInDev: false,
+      },
+    ],
   ],
 
   // Inject environment variables into the client

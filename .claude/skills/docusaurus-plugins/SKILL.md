@@ -40,6 +40,7 @@ module.exports = function remarkPlugin(options = {}) {
 ## Reference Files
 
 Detailed guides for each plugin type:
+
 - [references/remark-plugins.md](references/remark-plugins.md) - Markdown transformation
 - [references/rehype-plugins.md](references/rehype-plugins.md) - HTML processing
 - [references/lifecycle-plugins.md](references/lifecycle-plugins.md) - Routes, webpack, global data
