@@ -8,6 +8,7 @@
 Use when sequence is significant (ordered steps, phases, priorities).
 
 **Example:**
+
 1. Open the configuration file.
 2. Add your API key.
 3. Save the file.
@@ -16,6 +17,7 @@ Use when sequence is significant (ordered steps, phases, priorities).
 Use for nonsequential items (options, features, examples).
 
 **Example:**
+
 - API supports JSON and XML
 - Rate limits apply per project
 - Authentication is required
@@ -24,6 +26,7 @@ Use for nonsequential items (options, features, examples).
 Use for terms with descriptions, definitions, or explanations.
 
 **Example:**
+
 - **API Key**: A unique identifier for your project
 - **Endpoint**: The URL where you send requests
 - **Response**: The data returned by the API
@@ -33,6 +36,7 @@ Use for terms with descriptions, definitions, or explanations.
 Introduce lists with complete sentences.
 
 **Recommended:**
+
 - "The API supports the following formats:"
 - "To configure authentication, complete these steps:"
 
@@ -44,9 +48,11 @@ Use a colon when the introduction immediately precedes the list.
 **For numbered, lettered, and bulleted lists:**
 
 **Capital letters:**
+
 - Start each item with a capital letter (unless case matters, like code)
 
 **Periods:**
+
 - Add periods to items containing verbs or complete thoughts
 - Omit punctuation for:
   - Single-word items
@@ -56,6 +62,7 @@ Use a colon when the introduction immediately precedes the list.
 
 **Consistency rule:**
 If punctuation is inconsistent, either:
+
 1. Rewrite using parallel construction, or
 2. Add end punctuation to every item
 
@@ -64,11 +71,13 @@ If punctuation is inconsistent, either:
 Use the same syntax/structure for all list items.
 
 **Recommended:**
+
 - Configure the settings
 - Install the dependencies
 - Run the tests
 
 **Avoid mixing structures:**
+
 - Configure the settings (verb phrase)
 - Dependencies must be installed (passive voice)
 - You should run the tests (full sentence)
@@ -76,6 +85,7 @@ Use the same syntax/structure for all list items.
 ### Description List Formatting
 
 **Run-in headings:**
+
 - Bold the term
 - End consistently with periods OR colons within the same list
 
@@ -83,10 +93,12 @@ Use the same syntax/structure for all list items.
 **After colons:** Use lowercase
 
 **Example with periods:**
+
 - **GET.** Retrieves data from the server.
 - **POST.** Sends data to the server.
 
 **Example with colons:**
+
 - **GET**: retrieves data from the server
 - **POST**: sends data to the server
 
@@ -110,12 +122,14 @@ Instead, introduce lists to clarify they're non-exhaustive.
 ### When to Use Numerals
 
 **Use numerals for:**
+
 - Numbers 10 and above
 - All numbers in technical contexts (measurements, versions, quantities)
 - Negative numbers
 - Decimals and fractions
 
 **Spell out:**
+
 - Numbers zero through nine (except in technical contexts)
 - Numbers at the beginning of sentences
 
@@ -128,22 +142,26 @@ Use en dash for ranges: "10–20 seconds"
 ### Date Format
 
 Use international format to avoid confusion:
+
 - **Recommended:** "17 January 2025" or "2025-01-17" (ISO 8601)
 - **Avoid:** "1/17/2025" (ambiguous internationally)
 
 ### Time References
 
 **Avoid time-specific references:**
+
 - Don't use "currently" without a date
 - Don't use "recently," "soon," "in the future"
 
 **When necessary:**
+
 - "As of January 2025..."
 - "In version 2.0 (released January 2025)..."
 
 ### Timezones
 
 Always specify timezone when providing specific times:
+
 - "The service updates at 00:00 UTC"
 - "Maintenance window: 3:00 AM–5:00 AM PST"
 
@@ -152,6 +170,7 @@ Always specify timezone when providing specific times:
 ### Code Font
 
 Use `code font` for:
+
 - Code elements (variables, functions, classes)
 - Filenames and paths
 - Command-line commands
@@ -160,6 +179,7 @@ Use `code font` for:
 ### UI Elements
 
 **Bold for interactive elements:**
+
 - Buttons: "Click **Submit**"
 - Menu items: "Select **File** > **Open**"
 
@@ -168,11 +188,13 @@ Use `code font` for:
 Use descriptive placeholder names in ALL_CAPS:
 
 **Recommended:**
+
 ```
 gcloud projects create YOUR_PROJECT_ID
 ```
 
 **Make placeholders obvious:**
+
 - `YOUR_PROJECT_ID` not `project-id`
 - `YOUR_API_KEY` not `key`
 - `YOUR_REGION` not `region`

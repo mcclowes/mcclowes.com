@@ -23,7 +23,7 @@ module.exports = function remarkCustomPlugin(options = {}) {
   const {
     pattern = /%%(.+?)%%/g,
     dataFile = './data/terms.json',
-    componentName = 'CustomTooltip'
+    componentName = 'CustomTooltip',
   } = options;
 
   // Load external data if needed
@@ -54,7 +54,7 @@ module.exports = function remarkCustomPlugin(options = {}) {
         if (startIndex > lastIndex) {
           newNodes.push({
             type: 'text',
-            value: node.value.slice(lastIndex, startIndex)
+            value: node.value.slice(lastIndex, startIndex),
           });
         }
 
@@ -63,13 +63,13 @@ module.exports = function remarkCustomPlugin(options = {}) {
         if (termData) {
           newNodes.push({
             type: 'jsx',
-            value: `<${componentName} term="${termKey}" tooltip="${termData.tooltip}">${termData.display}</${componentName}>`
+            value: `<${componentName} term="${termKey}" tooltip="${termData.tooltip}">${termData.display}</${componentName}>`,
           });
         } else {
           // Fallback if term not found
           newNodes.push({
             type: 'text',
-            value: fullMatch
+            value: fullMatch,
           });
         }
 
@@ -80,7 +80,7 @@ module.exports = function remarkCustomPlugin(options = {}) {
       if (lastIndex < node.value.length) {
         newNodes.push({
           type: 'text',
-          value: node.value.slice(lastIndex)
+          value: node.value.slice(lastIndex),
         });
       }
 
@@ -95,7 +95,7 @@ module.exports = function remarkCustomPlugin(options = {}) {
         node.data = node.data || {};
         node.data.hProperties = {
           className: 'internal-link',
-          'data-internal': true
+          'data-internal': true,
         };
       }
     });
@@ -115,13 +115,11 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          remarkPlugins: [
-            require('./plugins/my-remark-plugin')
-          ]
-        }
-      }
-    ]
-  ]
+          remarkPlugins: [require('./plugins/my-remark-plugin')],
+        },
+      },
+    ],
+  ],
 };
 
 // With options
@@ -132,16 +130,19 @@ module.exports = {
       {
         docs: {
           remarkPlugins: [
-            [require('./plugins/my-remark-plugin'), {
-              pattern: /\[\[(.+?)\]\]/g,
-              dataFile: './glossary.json',
-              componentName: 'GlossaryTerm'
-            }]
-          ]
-        }
-      }
-    ]
-  ]
+            [
+              require('./plugins/my-remark-plugin'),
+              {
+                pattern: /\[\[(.+?)\]\]/g,
+                dataFile: './glossary.json',
+                componentName: 'GlossaryTerm',
+              },
+            ],
+          ],
+        },
+      },
+    ],
+  ],
 };
 
 // Execute BEFORE default Docusaurus plugins
@@ -151,19 +152,18 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          beforeDefaultRemarkPlugins: [
-            require('./plugins/my-remark-plugin')
-          ]
-        }
-      }
-    ]
-  ]
+          beforeDefaultRemarkPlugins: [require('./plugins/my-remark-plugin')],
+        },
+      },
+    ],
+  ],
 };
 ```
 
 ## Common Node Types
 
 ### Text Nodes
+
 ```javascript
 {
   type: 'text',
@@ -172,6 +172,7 @@ module.exports = {
 ```
 
 ### Link Nodes
+
 ```javascript
 {
   type: 'link',
@@ -181,6 +182,7 @@ module.exports = {
 ```
 
 ### Paragraph Nodes
+
 ```javascript
 {
   type: 'paragraph',
@@ -189,6 +191,7 @@ module.exports = {
 ```
 
 ### JSX Nodes (for MDX)
+
 ```javascript
 {
   type: 'jsx',
@@ -197,6 +200,7 @@ module.exports = {
 ```
 
 ### Heading Nodes
+
 ```javascript
 {
   type: 'heading',
@@ -249,7 +253,7 @@ module.exports = function glossaryPlugin(options = {}) {
   const {
     termsDir = './docs/terms',
     docsDir = './docs',
-    glossaryFilepath = './docs/glossary.md'
+    glossaryFilepath = './docs/glossary.md',
   } = options;
 
   // Load all term files
@@ -267,7 +271,7 @@ module.exports = function glossaryPlugin(options = {}) {
       terms[meta.id] = {
         title: meta.title,
         hoverText: meta.hoverText || body.slice(0, 200),
-        path: `terms/${file.replace('.md', '')}`
+        path: `terms/${file.replace('.md', '')}`,
       };
     });
 
@@ -299,14 +303,14 @@ module.exports = function glossaryPlugin(options = {}) {
         if (match.index > lastIndex) {
           newNodes.push({
             type: 'text',
-            value: node.value.slice(lastIndex, match.index)
+            value: node.value.slice(lastIndex, match.index),
           });
         }
 
         // Add glossary link with tooltip
         newNodes.push({
           type: 'jsx',
-          value: `<GlossaryTerm term="${termKey}" tooltip="${term.hoverText}" href="/${term.path}">${term.title}</GlossaryTerm>`
+          value: `<GlossaryTerm term="${termKey}" tooltip="${term.hoverText}" href="/${term.path}">${term.title}</GlossaryTerm>`,
         });
 
         lastIndex = match.index + fullMatch.length;
@@ -316,7 +320,7 @@ module.exports = function glossaryPlugin(options = {}) {
       if (lastIndex < node.value.length) {
         newNodes.push({
           type: 'text',
-          value: node.value.slice(lastIndex)
+          value: node.value.slice(lastIndex),
         });
       }
 
@@ -375,11 +379,9 @@ const remarkMdx = require('remark-mdx');
 const glossaryPlugin = require('../index');
 
 describe('Glossary Plugin', () => {
-  const processor = remark()
-    .use(remarkMdx)
-    .use(glossaryPlugin, {
-      termsDir: './__fixtures__/terms'
-    });
+  const processor = remark().use(remarkMdx).use(glossaryPlugin, {
+    termsDir: './__fixtures__/terms',
+  });
 
   it('transforms glossary syntax', async () => {
     const input = 'This is a [[test-term]] example.';
@@ -413,18 +415,23 @@ describe('Glossary Plugin', () => {
 ## Common Patterns
 
 ### Auto-linking Terms
+
 Transform text patterns into links automatically.
 
 ### Custom Syntax
+
 Add markdown extensions like `::note[text]` or `%%term%%`.
 
 ### Content Generation
+
 Generate tables, lists, or summaries from markdown structure.
 
 ### Link Validation
+
 Check internal links exist, add attributes to external links.
 
 ### Metadata Injection
+
 Add frontmatter data as HTML attributes or classes.
 
 ## Debugging
@@ -442,4 +449,5 @@ visit(ast, 'link', (node) => {
 ```
 
 Use online AST explorers:
+
 - https://astexplorer.net/ (select "Markdown" and "remark")

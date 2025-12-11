@@ -5,21 +5,27 @@ This directory contains GitHub Actions workflows for automated checks and proces
 ## Workflows
 
 ### CI (`test.yml`)
+
 Runs tests on pull requests and pushes to main branch.
 
 ### Readability Report (`lexi.yml`)
+
 Analyzes readability of markdown files in pull requests.
 
 ### Link Checker (`linknator.yml`)
+
 Checks for broken links in the documentation.
 
 ### Spell Check (`spellcheck.yml`)
+
 Checks spelling in documentation files.
 
 ### Claude PR Summary (`claude-pr-summary.yml`)
+
 Automatically generates AI-powered summaries of pull requests using Claude.
 
 ### Claude Documentation Generator (`claude-docs-generator.yml`)
+
 Analyzes code changes in pull requests and generates documentation suggestions using Claude.
 
 ## Setup Instructions
@@ -44,7 +50,9 @@ To enable the Claude-powered workflows, you need to add your Anthropic API key a
    - Reopened pull requests
 
 #### PR Summary Workflow
+
 Posts a summary comment on each PR with:
+
 - An overview of the main changes
 - Key files or components modified
 - Any notable patterns or concerns
@@ -52,7 +60,9 @@ Posts a summary comment on each PR with:
 **Note:** If a PR diff is larger than 100KB, the workflow will skip analysis and leave a comment suggesting to break the PR into smaller changes.
 
 #### Documentation Generator Workflow
+
 Analyzes changed code files (`.js`, `.jsx`, `.ts`, `.tsx`) and posts a comment with:
+
 - Description of what each changed file does
 - Key functions/components and their purposes
 - Usage notes and examples
