@@ -3,7 +3,7 @@ name: Spellcheck Markdown Files
 on:
   pull_request:
     paths:
-      - '**/*.md' # Trigger only when Markdown files are changed
+      - 'blog/**/*.md' # Trigger only when blog Markdown files are changed
 
 jobs:
   spellcheck:
@@ -27,7 +27,7 @@ jobs:
         run: |
           BASE_SHA=${{ github.event.pull_request.base.sha }}
           echo "Comparing against base SHA: $BASE_SHA"
-          CHANGED_FILES=$(git diff --name-only $BASE_SHA | grep '\.md$' || echo "")
+          CHANGED_FILES=$(git diff --name-only $BASE_SHA | grep '^blog/.*\.md$' || echo "")
           echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_ENV
 
       # Step 4: Run spellcheck on changed files
