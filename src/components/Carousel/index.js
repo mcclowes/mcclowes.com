@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from './styles.module.css';
 
-const Carousel = ({ images, variant }) => {
+const Carousel = ({ images, variant, ariaLabel = 'Image carousel', altTexts = [] }) => {
   const [scrollState, setScrollState] = useState({
     isAtStart: true,
     isAtEnd: false,
@@ -88,13 +88,20 @@ const Carousel = ({ images, variant }) => {
   };
 
   return (
-    <div ref={wrapperRef} className={getWrapperClassName()}>
-      <div className={styles.carouselTrack}>
+    <div
+      ref={wrapperRef}
+      className={getWrapperClassName()}
+      role="region"
+      aria-label={ariaLabel}
+      aria-roledescription="carousel"
+      tabIndex={0}
+    >
+      <div className={styles.carouselTrack} role="group" aria-label="Carousel images">
         {images.map((image, index) => (
           <p key={index} className={getImageContainerClassName()}>
             <img
               src={image}
-              alt={`Imagem ${index}`}
+              alt={altTexts[index] || `Image ${index + 1} of ${images.length}`}
               className={`${styles.image} markdown-img`}
               onLoad={handleImageLoad}
             />
