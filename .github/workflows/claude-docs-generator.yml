@@ -62,8 +62,8 @@ jobs:
             if [ -f "$file" ]; then
               echo "Processing $file..."
 
-              # Get the full diff for this file
-              FILE_DIFF=$(gh pr diff ${{ github.event.pull_request.number }} -- "$file")
+              # Get the full diff for this file using git diff with the PR base
+              FILE_DIFF=$(git diff origin/${{ github.event.pull_request.base.ref }}...HEAD -- "$file")
 
               # Get the current file content
               FILE_CONTENT=$(cat "$file")
