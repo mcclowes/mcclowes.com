@@ -164,6 +164,146 @@
   filter: saturate(1) brightness(1.1);
 }
 
+/* Foil Texture Variants: modify background pattern */
+
+.textureWaves {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 0px,
+      transparent 2px,
+      transparent 8px,
+      rgba(255, 255, 255, 0.1) 10px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.08) 0px,
+      transparent 2px,
+      transparent 8px,
+      rgba(255, 255, 255, 0.08) 10px
+    ),
+    var(--foil-spectrum);
+  background-blend-mode: overlay, overlay, normal;
+}
+
+.textureSparkle {
+  background:
+    radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 25% 50%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 45% 15%, rgba(255, 255, 255, 0.85), transparent),
+    radial-gradient(1px 1px at 60% 70%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 75% 35%, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(1px 1px at 85% 80%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 30% 85%, rgba(255, 255, 255, 0.85), transparent),
+    radial-gradient(1px 1px at 55% 45%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 90% 10%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 5% 65%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 40% 90%, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(1px 1px at 70% 55%, rgba(255, 255, 255, 0.85), transparent),
+    var(--foil-spectrum);
+  background-blend-mode: screen, screen, screen, screen, screen, screen, screen, screen, screen, screen, screen, screen, normal;
+  animation: twinkleSparkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkleSparkle {
+  0%, 100% {
+    filter: saturate(1) brightness(1.1);
+  }
+  50% {
+    filter: saturate(1.2) brightness(1.3);
+  }
+}
+
+.textureGlitch {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 0, 0, 0.05) 0px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 255, 255, 0.05) 0px,
+      transparent 3px,
+      transparent 6px
+    ),
+    var(--foil-spectrum);
+  background-blend-mode: screen, screen, normal;
+  animation: glitch 0.5s steps(2) infinite;
+}
+
+@keyframes glitch {
+  0%, 100% {
+    transform: translateZ(2px) translateX(0);
+  }
+  25% {
+    transform: translateZ(2px) translateX(1px);
+  }
+  75% {
+    transform: translateZ(2px) translateX(-1px);
+  }
+}
+
+.textureHoneycomb {
+  background:
+    radial-gradient(circle at 50% 50%, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%),
+    radial-gradient(circle at 0% 50%, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%),
+    radial-gradient(circle at 100% 50%, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%),
+    var(--foil-spectrum);
+  background-size: 20px 34.64px, 20px 34.64px, 20px 34.64px, 100% 100%;
+  background-position: 0 0, 10px 17.32px, 10px 17.32px, 0 0;
+  background-blend-mode: soft-light, soft-light, soft-light, normal;
+}
+
+.textureCircuit {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 2px, transparent 3px),
+    var(--foil-spectrum);
+  background-size: 20px 20px, 20px 20px, 20px 20px, 100% 100%;
+  background-blend-mode: overlay, overlay, overlay, normal;
+}
+
+.textureDiagonal {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.15) 0px,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px,
+      transparent 6px
+    ),
+    var(--foil-spectrum);
+  background-blend-mode: overlay, normal;
+}
+
+.textureNoise {
+  background:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+    var(--foil-spectrum);
+  background-blend-mode: soft-light, normal;
+  background-size: 100px 100px, 100% 100%;
+}
+
+.texturePrismatic {
+  background:
+    repeating-linear-gradient(
+      var(--angle, 37deg),
+      rgba(255, 0, 0, 0.1) 0px,
+      rgba(255, 127, 0, 0.1) 2px,
+      rgba(255, 255, 0, 0.1) 4px,
+      rgba(0, 255, 0, 0.1) 6px,
+      rgba(0, 0, 255, 0.1) 8px,
+      rgba(75, 0, 130, 0.1) 10px,
+      rgba(148, 0, 211, 0.1) 12px,
+      transparent 14px
+    ),
+    var(--foil-spectrum);
+  background-blend-mode: color, normal;
+}
+
 /* Palettes: override --foil-spectrum to change color set */
 .paletteClassic {
   --foil-spectrum: conic-gradient(
@@ -226,6 +366,239 @@
   );
 }
 
+/* New Palette Variants */
+
+.paletteCosmic {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #1a0033,
+    #4b0082,
+    #8b00ff,
+    #ffd700,
+    #ff6b00,
+    #4b0082,
+    #1a0033
+  );
+}
+
+.paletteSunset {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #ff4500,
+    #ff6347,
+    #ff1493,
+    #ff00ff,
+    #9400d3,
+    #ff4500
+  );
+}
+
+.paletteOcean {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #001f3f,
+    #003366,
+    #006994,
+    #00ced1,
+    #48d1cc,
+    #20b2aa,
+    #001f3f
+  );
+}
+
+.paletteNeon {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #ff00ff,
+    #00ff00,
+    #00ffff,
+    #ff00ff,
+    #ffff00,
+    #ff00ff
+  );
+}
+
+.paletteGold {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #b8860b,
+    #daa520,
+    #ffd700,
+    #ffec8b,
+    #f0e68c,
+    #daa520,
+    #b8860b
+  );
+}
+
+.paletteSilver {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #708090,
+    #a9a9a9,
+    #c0c0c0,
+    #e8e8e8,
+    #ffffff,
+    #c0c0c0,
+    #708090
+  );
+}
+
+.palettePastel {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #ffb3ba,
+    #ffdfba,
+    #ffffba,
+    #baffc9,
+    #bae1ff,
+    #e0b3ff,
+    #ffb3ba
+  );
+}
+
+.paletteToxic {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #39ff14,
+    #7fff00,
+    #adff2f,
+    #caff70,
+    #dfff00,
+    #9acd32,
+    #39ff14
+  );
+}
+
+.paletteEmber {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #8b0000,
+    #b22222,
+    #ff4500,
+    #ff6347,
+    #ffa500,
+    #ff8c00,
+    #8b0000
+  );
+}
+
+.paletteVaporwave {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #ff71ce,
+    #01cdfe,
+    #05ffa1,
+    #b967ff,
+    #fffb96,
+    #ff71ce
+  );
+}
+
+.paletteMidnight {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #0d0221,
+    #0f084b,
+    #26408b,
+    #0f084b,
+    #240046,
+    #3c096c,
+    #0d0221
+  );
+}
+
+.palettePrism {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #ff0000 0deg,
+    #ff8000 51deg,
+    #ffff00 102deg,
+    #00ff00 153deg,
+    #0080ff 204deg,
+    #8000ff 255deg,
+    #ff0080 306deg,
+    #ff0000 360deg
+  );
+}
+
+.paletteIce {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #e0ffff,
+    #afeeee,
+    #87ceeb,
+    #b0e0e6,
+    #add8e6,
+    #e0ffff
+  );
+}
+
+.paletteFire {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #ff0000,
+    #ff4500,
+    #ff8c00,
+    #ffd700,
+    #ffff00,
+    #ff8c00,
+    #ff0000
+  );
+}
+
+.paletteForest {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #013220,
+    #228b22,
+    #32cd32,
+    #90ee90,
+    #006400,
+    #2e8b57,
+    #013220
+  );
+}
+
+.paletteHologram {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #00ffff,
+    #ff00ff,
+    #00ffff,
+    #ff00ff,
+    #00ffff,
+    #ff00ff,
+    #00ffff
+  );
+}
+
+.paletteRose {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #ff007f,
+    #ff69b4,
+    #ffb6c1,
+    #ffc0cb,
+    #ff69b4,
+    #ff1493,
+    #ff007f
+  );
+}
+
+.paletteLavender {
+  --foil-spectrum: conic-gradient(
+    from var(--angle, 37deg),
+    #e6e6fa,
+    #dda0dd,
+    #da70d6,
+    #ba55d3,
+    #9932cc,
+    #dda0dd,
+    #e6e6fa
+  );
+}
+
 @keyframes twinkle {
   0% {
     background-position:
@@ -269,6 +642,104 @@
     rgba(255, 255, 255, 0.12) 60%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+
+/* New Shine Variants */
+
+.shineSweep {
+  background: linear-gradient(
+    calc(var(--angle, 37deg) + 45deg),
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.08) 30%,
+    rgba(255, 255, 255, 0.5) 48%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.5) 52%,
+    rgba(255, 255, 255, 0.08) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.shineStar {
+  background:
+    linear-gradient(
+      var(--angle, 37deg),
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 48%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.4) 52%,
+      transparent 100%
+    ),
+    linear-gradient(
+      calc(var(--angle, 37deg) + 90deg),
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 48%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0.3) 52%,
+      transparent 100%
+    );
+}
+
+.shineDual {
+  background:
+    radial-gradient(
+      100px 100px at calc(var(--mx) - 15%) calc(var(--my) - 15%),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.1) 40%,
+      transparent 60%
+    ),
+    radial-gradient(
+      100px 100px at calc(var(--mx) + 15%) calc(var(--my) + 15%),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.08) 40%,
+      transparent 60%
+    );
+}
+
+.shineSparkle {
+  background:
+    radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 70% 20%, rgba(255, 255, 255, 0.85), transparent),
+    radial-gradient(2px 2px at 80% 60%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 50% 50%, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(2px 2px at 15% 80%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 30% 10%, rgba(255, 255, 255, 0.85), transparent),
+    radial-gradient(
+      120px 120px at var(--mx) var(--my),
+      rgba(255, 255, 255, 0.4),
+      transparent 50%
+    );
+  animation: sparkle 3s ease-in-out infinite alternate;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.shineDiamond {
+  background:
+    conic-gradient(
+      from var(--angle, 0deg) at var(--mx) var(--my),
+      transparent 0deg,
+      rgba(255, 255, 255, 0.5) 45deg,
+      transparent 90deg,
+      rgba(255, 255, 255, 0.5) 135deg,
+      transparent 180deg,
+      rgba(255, 255, 255, 0.5) 225deg,
+      transparent 270deg,
+      rgba(255, 255, 255, 0.5) 315deg,
+      transparent 360deg
+    );
+}
+
+.shineNone {
+  background: none;
 }
 
 .overlay {

@@ -14,7 +14,7 @@ function getOverlaySrc(originalSrc) {
   return `${originalSrc}-overlay`;
 }
 
-function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic', overlay }) {
+function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic', texture, overlay }) {
   const [showOverlay, setShowOverlay] = useState(true);
   const [motionEnabled, setMotionEnabled] = useState(false);
   const cardRef = useRef(null);
@@ -165,25 +165,53 @@ function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic'
 
   const foilClassName = useMemo(() => {
     let base = styles.foil;
+
     // Apply palette variant
-    switch (palette) {
-      case 'cool':
-        base = `${base} ${styles.paletteCool}`;
-        break;
-      case 'warm':
-        base = `${base} ${styles.paletteWarm}`;
-        break;
-      case 'aurora':
-        base = `${base} ${styles.paletteAurora}`;
-        break;
-      case 'electric':
-        base = `${base} ${styles.paletteElectric}`;
-        break;
-      case 'classic':
-      default:
-        base = `${base} ${styles.paletteClassic}`;
-        break;
+    const paletteClasses = {
+      cool: styles.paletteCool,
+      warm: styles.paletteWarm,
+      aurora: styles.paletteAurora,
+      electric: styles.paletteElectric,
+      cosmic: styles.paletteCosmic,
+      sunset: styles.paletteSunset,
+      ocean: styles.paletteOcean,
+      neon: styles.paletteNeon,
+      gold: styles.paletteGold,
+      silver: styles.paletteSilver,
+      pastel: styles.palettePastel,
+      toxic: styles.paletteToxic,
+      ember: styles.paletteEmber,
+      vaporwave: styles.paletteVaporwave,
+      midnight: styles.paletteMidnight,
+      prism: styles.palettePrism,
+      ice: styles.paletteIce,
+      fire: styles.paletteFire,
+      forest: styles.paletteForest,
+      hologram: styles.paletteHologram,
+      rose: styles.paletteRose,
+      lavender: styles.paletteLavender,
+      classic: styles.paletteClassic,
+    };
+    base = `${base} ${paletteClasses[palette] || paletteClasses.classic}`;
+
+    // Apply texture variant
+    if (texture) {
+      const textureClasses = {
+        waves: styles.textureWaves,
+        sparkle: styles.textureSparkle,
+        glitch: styles.textureGlitch,
+        honeycomb: styles.textureHoneycomb,
+        circuit: styles.textureCircuit,
+        diagonal: styles.textureDiagonal,
+        noise: styles.textureNoise,
+        prismatic: styles.texturePrismatic,
+      };
+      if (textureClasses[texture]) {
+        base = `${base} ${textureClasses[texture]}`;
+      }
     }
+
+    // Apply mask mode variant
     switch (maskMode) {
       case 'refined-alpha':
         return `${base} ${styles.refinedAlpha}`;
@@ -195,12 +223,21 @@ function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic'
       default:
         return `${base} ${styles.luminanceMode}`;
     }
-  }, [maskMode, palette]);
+  }, [maskMode, palette, texture]);
 
   const shineClassName = useMemo(() => {
     const base = styles.shine;
-    if (gradient === 'linear') return `${base} ${styles.shineLinear}`;
-    return `${base} ${styles.shineRadial}`; // default radial
+    const shineClasses = {
+      linear: styles.shineLinear,
+      sweep: styles.shineSweep,
+      star: styles.shineStar,
+      dual: styles.shineDual,
+      sparkle: styles.shineSparkle,
+      diamond: styles.shineDiamond,
+      none: styles.shineNone,
+      radial: styles.shineRadial,
+    };
+    return `${base} ${shineClasses[gradient] || shineClasses.radial}`;
   }, [gradient]);
 
   return (
@@ -241,7 +278,7 @@ function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic'
 }
 
 export default function HoloCardsGrid({ items, images, titles }) {
-  // Normalize inputs to a single array of { src, title }
+  // Normalize inputs to a single array of { src, title, ... }
   const normalizedItems = useMemo(() => {
     if (Array.isArray(items)) {
       return items.map((item) => {
@@ -252,16 +289,18 @@ export default function HoloCardsGrid({ items, images, titles }) {
             maskMode: undefined,
             gradient: undefined,
             palette: undefined,
+            texture: undefined,
             overlay: undefined,
           };
         }
-        // Expecting shape: { src, title, maskMode?, gradient?, palette?, overlay? }
+        // Expecting shape: { src, title, maskMode?, gradient?, palette?, texture?, overlay? }
         return {
           src: item.src,
           title: item.title,
           maskMode: item.maskMode,
           gradient: item.gradient,
           palette: item.palette,
+          texture: item.texture,
           overlay: item.overlay,
         };
       });
@@ -273,6 +312,7 @@ export default function HoloCardsGrid({ items, images, titles }) {
         maskMode: undefined,
         gradient: undefined,
         palette: undefined,
+        texture: undefined,
         overlay: undefined,
       }));
     }
@@ -284,7 +324,7 @@ export default function HoloCardsGrid({ items, images, titles }) {
       <div className={styles.grid}>
         {normalizedItems.map(
           (
-            { src, title, maskMode: itemMaskMode, gradient: itemGradient, palette: itemPalette, overlay: itemOverlay },
+            { src, title, maskMode: itemMaskMode, gradient: itemGradient, palette: itemPalette, texture: itemTexture, overlay: itemOverlay },
             idx
           ) => (
             <div key={`${src}-${idx}`} className={styles.item}>
@@ -294,6 +334,7 @@ export default function HoloCardsGrid({ items, images, titles }) {
                 maskMode={itemMaskMode || 'alpha'}
                 gradient={itemGradient || 'radial'}
                 palette={itemPalette || 'classic'}
+                texture={itemTexture}
                 overlay={itemOverlay}
               />
               {title ? <div className={styles.caption}>{title}</div> : null}
