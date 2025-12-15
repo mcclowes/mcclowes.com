@@ -1,95 +1,14 @@
 # Giscus Comments Setup Guide
 
-This guide explains how to complete the setup for Giscus comments on your blog.
+Giscus is a comments system powered by GitHub Discussions. It allows visitors to leave comments on blog posts using their GitHub accounts.
 
-## Overview
+## Current Status
 
-Giscus is a comments system powered by GitHub Discussions. It allows visitors to leave comments on your blog posts using their GitHub accounts. The system is already integrated into this site, but requires configuration to work.
+✅ **Fully configured** - Giscus is set up and working.
 
-## Prerequisites
+Component: `/src/components/GiscusComponent/index.jsx`
 
-✅ **Already completed:**
-
-- `@giscus/react` package installed
-- Giscus component created at `/src/components/GiscusComponent/index.jsx`
-- BlogPostItem wrapper created at `/src/theme/BlogPostItem/index.js`
-
-⚠️ **Still needed:**
-
-1. Enable GitHub Discussions on your repository
-2. Get your Giscus configuration IDs
-3. Update the Giscus component with your IDs
-
-## Step 1: Enable GitHub Discussions
-
-1. Go to https://github.com/mcclowes/mcclowes.com/settings
-2. Scroll down to the "Features" section
-3. Check the box next to "Discussions"
-4. Click "Set up discussions" and create a welcome post (optional)
-
-## Step 2: Install Giscus GitHub App
-
-1. Go to https://github.com/apps/giscus
-2. Click "Install"
-3. Select your repository: `mcclowes/mcclowes.com`
-4. Click "Install"
-
-## Step 3: Get Your Configuration IDs
-
-1. Visit https://giscus.app
-2. In the "Configuration" section:
-   - **Repository:** Enter `mcclowes/mcclowes.com`
-   - The tool will verify your repository meets the criteria:
-     - ✅ The repository is public
-     - ✅ The giscus app is installed
-     - ✅ Discussions feature is enabled
-3. Scroll down to see your generated configuration
-4. Copy the following values:
-   - `data-repo-id` → This is your **REPO_ID**
-   - `data-category` → Usually "General" or "Announcements"
-   - `data-category-id` → This is your **CATEGORY_ID**
-
-## Step 4: Update the Giscus Component
-
-Open `/src/components/GiscusComponent/index.jsx` and replace the placeholder values:
-
-```jsx
-<Giscus
-  repo="mcclowes/mcclowes.com"
-  repoId="YOUR_REPO_ID" // ← Replace with your actual repo ID
-  category="General" // ← Replace with your chosen category
-  categoryId="YOUR_CATEGORY_ID" // ← Replace with your actual category ID
-  mapping="pathname"
-  strict="0"
-  reactionsEnabled="1"
-  emitMetadata="0"
-  inputPosition="top"
-  theme={colorMode}
-  lang="en"
-  loading="lazy"
-/>
-```
-
-### Example (with real values):
-
-```jsx
-<Giscus
-  repo="mcclowes/mcclowes.com"
-  repoId="R_kgDOG1234567"
-  category="General"
-  categoryId="DIC_kwDOG1234567"
-  mapping="pathname"
-  strict="0"
-  reactionsEnabled="1"
-  emitMetadata="0"
-  inputPosition="top"
-  theme={colorMode}
-  lang="en"
-  loading="lazy"
-/>
-```
-
-## Step 5: Enable Comments on Blog Posts
+## Enable Comments on Blog Posts
 
 To enable comments on a blog post, add `enableComments: true` to the frontmatter:
 
@@ -239,9 +158,11 @@ theme = { colorMode }; // Not theme="dark" or theme="light"
 - [GitHub Discussions](https://docs.github.com/en/discussions)
 - [Docusaurus Swizzling](https://docusaurus.io/docs/swizzling)
 
-## Next Steps
+## Reconfiguration
 
-1. ✅ Complete Step 1-4 above to configure Giscus
-2. Add `enableComments: true` to blog posts you want to have comments
-3. Test on your local development server
-4. Deploy and share your blog posts with comments enabled!
+If you need to change the Giscus configuration:
+
+1. Visit https://giscus.app
+2. Enter repository `mcclowes/mcclowes.com`
+3. Copy the new `repoId` and `categoryId` values
+4. Update `/src/components/GiscusComponent/index.jsx`
