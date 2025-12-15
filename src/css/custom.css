@@ -42,9 +42,25 @@
   --color-background-primary: var(--color-offwhite);
   --color-background-alt: var(--color-green);
 
+  /* Primary color scale */
   --ifm-color-primary: var(--color-green);
   --ifm-color-primary-dark: var(--color-green-dark);
+  --ifm-color-primary-darker: var(--color-green-darker);
+  --ifm-color-primary-darkest: var(--color-green-darkest);
+  --ifm-color-primary-light: var(--color-green-light);
+  --ifm-color-primary-lighter: var(--color-green-lighter);
+  --ifm-color-primary-lightest: var(--color-green-lightest);
+  --ifm-color-primary-contrast-foreground: var(--color-offwhite);
 
+  /* Secondary color */
+  --ifm-color-secondary: var(--color-offwhite-alt);
+  --ifm-color-secondary-dark: var(--color-offwhite-alt-dark);
+  --ifm-color-secondary-contrast-foreground: var(--color-green);
+
+  /* Background colors */
+  --ifm-background-color: var(--color-background-primary);
+  --ifm-background-surface-color: var(--color-offwhite-light);
+  --ifm-card-background-color: var(--color-offwhite-light);
   --ifm-navbar-background-color: var(--color-background-primary);
   --ifm-footer-background-color: var(--color-background-alt);
   --ifm-hr-background-color: var(--ifm-color-primary);
@@ -56,6 +72,17 @@
   --ifm-link-color: var(--color-red);
   --ifm-blockquote-color: var(--color-offwhite-alt-dark);
 
+  /* Font colors */
+  --ifm-font-color-base: var(--color-font-primary);
+  --ifm-font-color-secondary: var(--color-offwhite-alt-dark);
+  --ifm-font-color-base-inverse: var(--color-offwhite);
+
+  /* Borders */
+  --ifm-toc-border-color: var(--color-offwhite-alt);
+
+  /* Typography */
+  --ifm-font-family-base: var(--font-mono);
+  --ifm-font-family-monospace: var(--font-mono);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
@@ -63,18 +90,18 @@
   --ifm-footer-title-color: var(--color-font-header);
   --ifm-footer-link-color: var(--color-font-header);
 
+  /* Code blocks */
+  --ifm-code-background: rgba(75, 95, 95, 0.1);
+  --ifm-pre-background: var(--color-green-darkest);
+
+  /* Global styling */
+  --ifm-global-radius: 8px;
+
   --font-mono: 'Roboto Mono', monospace;
   --font-serif: 'Inknut Antiqua', 'Merriweather', serif;
 }
 
 [data-theme='dark'] {
-  /*  --white: #18191A;
-  --primary-light: #DDA1B7;
-  --primary: #DDA1B7;
-  --primary-dark: #DDA1B7;
-  --gray: #ccc;
-  --black: #ffffff;*/
-
   --color-font-primary: var(--color-offwhite);
   --color-font-header: var(--color-offwhite);
   --color-font-alt: var(--color-green);
@@ -83,9 +110,37 @@
   --color-background-primary: var(--color-green);
   --color-background-alt: var(--color-offwhite);
 
+  /* Primary color scale (inverted for dark mode) */
   --ifm-color-primary: var(--color-offwhite);
   --ifm-color-primary-dark: var(--color-offwhite-dark);
+  --ifm-color-primary-darker: var(--color-offwhite-alt-dark);
+  --ifm-color-primary-darkest: var(--color-offwhite-alt-dark);
+  --ifm-color-primary-light: var(--color-offwhite-light);
+  --ifm-color-primary-lighter: var(--color-offwhite-light);
+  --ifm-color-primary-lightest: var(--color-offwhite-light);
+  --ifm-color-primary-contrast-foreground: var(--color-green);
 
+  /* Secondary color */
+  --ifm-color-secondary: var(--color-green-light);
+  --ifm-color-secondary-dark: var(--color-green-dark);
+  --ifm-color-secondary-contrast-foreground: var(--color-offwhite);
+
+  /* Background colors */
+  --ifm-background-color: var(--color-background-primary);
+  --ifm-background-surface-color: var(--color-green-dark);
+  --ifm-card-background-color: var(--color-green-dark);
+
+  /* Font colors */
+  --ifm-font-color-base: var(--color-font-primary);
+  --ifm-font-color-secondary: var(--color-offwhite-alt);
+  --ifm-font-color-base-inverse: var(--color-green);
+
+  /* Borders */
+  --ifm-toc-border-color: var(--color-green-light);
+
+  /* Code blocks */
+  --ifm-code-background: rgba(255, 250, 225, 0.1);
+  --ifm-pre-background: var(--color-green-darkest);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   --ifm-color-content: var(--color-font-primary) !important;
