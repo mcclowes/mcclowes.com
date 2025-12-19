@@ -144,19 +144,18 @@ const config = {
         hideOnScroll: true,
         items: [
           { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            type: 'docSidebar',
+            sidebarId: 'projectsSidebar',
+            position: 'left',
+            label: 'Projects',
+          },
           { to: '/about-me', label: 'About', position: 'left' },
           {
             href: 'https://cv.mcclowes.com/',
             label: 'CV',
             position: 'left',
           },
-          //{ to: '/docs', label: 'Docs', position: 'left' },
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'tutorialSidebar',
-          //   position: 'left',
-          //   label: 'Tutorial',
-          // },
           {
             href: 'https://github.com/mcclowes',
             label: 'GitHub',
@@ -173,6 +172,10 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              },
+              {
+                label: 'Projects',
+                to: '/docs/intro',
               },
               {
                 label: 'About',
