@@ -1,8 +1,8 @@
 name: Broken Links Check
 
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
+  schedule:
+    - cron: '0 9 * * 1' # Runs weekly on Monday at 9am UTC
   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
 jobs:
@@ -22,53 +22,68 @@ jobs:
         run: npm install -g linkinator
 
       - name: Run linkinator
-        run: npx linkinator https://mcclowes.com --recurse --retry --verbosity error --skip .*github.* --format json > link-results.json
+        run: npx linkinator https://mcclowes.com --recurse --retry --verbosity error --skip ".*github.*" --skip ".*linkedin.com.*" --format json > link-results.json
         continue-on-error: true # Ensure the workflow continues even if linkinator finds broken links
 
-      - name: Delete Previous Comments
+      - name: Process Results and Create Issue
         uses: actions/github-script@v7
-        if: github.event_name == 'pull_request'
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const issue_number = context.issue.number;
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
-            const comments = await github.rest.issues.listComments({
-              issue_number,
-              owner,
-              repo,
-            });
-            const actionComments = comments.data.filter(comment => comment.user.login === 'github-actions[bot]' && comment.body.includes('Link check results'));
-            for (const comment of actionComments) {
-              await github.rest.issues.deleteComment({
-                owner,
-                repo,
-                comment_id: comment.id,
-              });
-            }
-
-      - name: Filter and Post Results
-        uses: actions/github-script@v7
-        if: github.event_name == 'pull_request'
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const fs = require('fs');
             const results = JSON.parse(fs.readFileSync('link-results.json', 'utf8'));
             const filtered = results.links
-              .filter(link => link.status !== 403 && link.status !== 500 && link.status !== 0)
+              .filter(link => link.status !== 403 && link.status !== 429 && link.status !== 500 && link.status !== 0)
 
-            const printList = filtered
-              .map(link => `[${link.status}] ${link.url}`);
-            const output = `Link check results (filtered):\n\`\`\`\n${JSON.stringify(printList, null, 2)}\n\`\`\``;
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: output,
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issueTitle = 'Broken Links Report';
+
+            // Find existing issue
+            const issues = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'open',
+              labels: 'broken-links',
             });
+            const existingIssue = issues.data.find(issue => issue.title === issueTitle);
 
             if (filtered.length > 0) {
-              core.setFailed("There are broken links in the documentation.");
+              const printList = filtered.map(link => `- [${link.status}] ${link.url}`).join('\n');
+              const body = `## Broken Links Found\n\nThe weekly link check found the following broken links:\n\n${printList}\n\n---\n*This issue is automatically updated by the weekly link check workflow.*`;
+
+              if (existingIssue) {
+                // Update existing issue
+                await github.rest.issues.update({
+                  owner,
+                  repo,
+                  issue_number: existingIssue.number,
+                  body,
+                });
+                console.log(`Updated issue #${existingIssue.number}`);
+              } else {
+                // Create new issue
+                await github.rest.issues.create({
+                  owner,
+                  repo,
+                  title: issueTitle,
+                  body,
+                  labels: ['broken-links'],
+                });
+                console.log('Created new broken links issue');
+              }
+              core.setFailed('There are broken links in the documentation.');
+            } else {
+              console.log('No broken links found!');
+              if (existingIssue) {
+                // Close existing issue since no more broken links
+                await github.rest.issues.update({
+                  owner,
+                  repo,
+                  issue_number: existingIssue.number,
+                  state: 'closed',
+                  state_reason: 'completed',
+                });
+                console.log(`Closed issue #${existingIssue.number} - no more broken links`);
+              }
             }
