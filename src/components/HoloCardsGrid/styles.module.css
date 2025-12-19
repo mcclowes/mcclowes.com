@@ -201,12 +201,15 @@
     radial-gradient(1px 1px at 40% 90%, rgba(255, 255, 255, 0.75), transparent),
     radial-gradient(1px 1px at 70% 55%, rgba(255, 255, 255, 0.85), transparent),
     var(--foil-spectrum);
-  background-blend-mode: screen, screen, screen, screen, screen, screen, screen, screen, screen, screen, screen, screen, normal;
+  background-blend-mode:
+    screen, screen, screen, screen, screen, screen, screen, screen, screen, screen, screen, screen,
+    normal;
   animation: twinkleSparkle 4s ease-in-out infinite alternate;
 }
 
 @keyframes twinkleSparkle {
-  0%, 100% {
+  0%,
+  100% {
     filter: saturate(1) brightness(1.1);
   }
   50% {
@@ -216,25 +219,16 @@
 
 .textureGlitch {
   background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 0, 0, 0.05) 0px,
-      transparent 2px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(0, 255, 255, 0.05) 0px,
-      transparent 3px,
-      transparent 6px
-    ),
+    repeating-linear-gradient(0deg, rgba(255, 0, 0, 0.05) 0px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(90deg, rgba(0, 255, 255, 0.05) 0px, transparent 3px, transparent 6px),
     var(--foil-spectrum);
   background-blend-mode: screen, screen, normal;
   animation: glitch 0.5s steps(2) infinite;
 }
 
 @keyframes glitch {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateZ(2px) translateX(0);
   }
   25% {
@@ -247,12 +241,35 @@
 
 .textureHoneycomb {
   background:
-    radial-gradient(circle at 50% 50%, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%),
-    radial-gradient(circle at 0% 50%, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%),
-    radial-gradient(circle at 100% 50%, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 45%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 0% 50%,
+      transparent 45%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      transparent 45%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 55%
+    ),
     var(--foil-spectrum);
-  background-size: 20px 34.64px, 20px 34.64px, 20px 34.64px, 100% 100%;
-  background-position: 0 0, 10px 17.32px, 10px 17.32px, 0 0;
+  background-size:
+    20px 34.64px,
+    20px 34.64px,
+    20px 34.64px,
+    100% 100%;
+  background-position:
+    0 0,
+    10px 17.32px,
+    10px 17.32px,
+    0 0;
   background-blend-mode: soft-light, soft-light, soft-light, normal;
 }
 
@@ -262,7 +279,11 @@
     linear-gradient(0deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 2px, transparent 3px),
     var(--foil-spectrum);
-  background-size: 20px 20px, 20px 20px, 20px 20px, 100% 100%;
+  background-size:
+    20px 20px,
+    20px 20px,
+    20px 20px,
+    100% 100%;
   background-blend-mode: overlay, overlay, overlay, normal;
 }
 
@@ -284,7 +305,9 @@
     url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
     var(--foil-spectrum);
   background-blend-mode: soft-light, normal;
-  background-size: 100px 100px, 100% 100%;
+  background-size:
+    100px 100px,
+    100% 100%;
 }
 
 .texturePrismatic {
@@ -705,11 +728,7 @@
     radial-gradient(2px 2px at 15% 80%, rgba(255, 255, 255, 0.8), transparent),
     radial-gradient(2px 2px at 90% 40%, rgba(255, 255, 255, 0.7), transparent),
     radial-gradient(2px 2px at 30% 10%, rgba(255, 255, 255, 0.85), transparent),
-    radial-gradient(
-      120px 120px at var(--mx) var(--my),
-      rgba(255, 255, 255, 0.4),
-      transparent 50%
-    );
+    radial-gradient(120px 120px at var(--mx) var(--my), rgba(255, 255, 255, 0.4), transparent 50%);
   animation: sparkle 3s ease-in-out infinite alternate;
 }
 
@@ -723,19 +742,18 @@
 }
 
 .shineDiamond {
-  background:
-    conic-gradient(
-      from var(--angle, 0deg) at var(--mx) var(--my),
-      transparent 0deg,
-      rgba(255, 255, 255, 0.5) 45deg,
-      transparent 90deg,
-      rgba(255, 255, 255, 0.5) 135deg,
-      transparent 180deg,
-      rgba(255, 255, 255, 0.5) 225deg,
-      transparent 270deg,
-      rgba(255, 255, 255, 0.5) 315deg,
-      transparent 360deg
-    );
+  background: conic-gradient(
+    from var(--angle, 0deg) at var(--mx) var(--my),
+    transparent 0deg,
+    rgba(255, 255, 255, 0.5) 45deg,
+    transparent 90deg,
+    rgba(255, 255, 255, 0.5) 135deg,
+    transparent 180deg,
+    rgba(255, 255, 255, 0.5) 225deg,
+    transparent 270deg,
+    rgba(255, 255, 255, 0.5) 315deg,
+    transparent 360deg
+  );
 }
 
 .shineNone {
