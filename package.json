@@ -63,6 +63,8 @@
     "@docusaurus/plugin-ideal-image": "^3.6.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.26.3",
     "prettier": "^3.6.2"
   }
 }
