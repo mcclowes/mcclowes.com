@@ -2,11 +2,13 @@
 sidebar_position: 2
 ---
 
+import GitHubRepoCard from '@site/src/components/GitHubRepoCard';
+
 # OMG
 
 **OAS Markdown Grammar** - a human-first domain-specific language for API specification.
 
-[GitHub](https://github.com/mcclowes/omg)
+<GitHubRepoCard repo="mcclowes/omg" />
 
 ## The Problem
 

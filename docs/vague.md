@@ -2,11 +2,17 @@
 sidebar_position: 4
 ---
 
+import GitHubRepoCard from '@site/src/components/GitHubRepoCard';
+import NpmPackageCard from '@site/src/components/NpmPackageCard';
+
 # Vague
 
 A constraint and probability-based programming language for describing and generating realistic data.
 
-[GitHub](https://github.com/mcclowes/vague)
+<div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <GitHubRepoCard repo="mcclowes/vague" style={{flex: '1 1 300px'}} />
+  <NpmPackageCard package="vague-lang" style={{flex: '1 1 300px'}} />
+</div>
 
 ## The Problem
 

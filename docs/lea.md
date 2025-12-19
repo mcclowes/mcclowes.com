@@ -2,11 +2,13 @@
 sidebar_position: 3
 ---
 
+import GitHubRepoCard from '@site/src/components/GitHubRepoCard';
+
 # Lea
 
 A pipe-oriented functional programming language with a tree-walk interpreter written in TypeScript.
 
-[GitHub](https://github.com/mcclowes/lea)
+<GitHubRepoCard repo="mcclowes/lea" />
 
 ## The Problem
 
