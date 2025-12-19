@@ -14,7 +14,15 @@ function getOverlaySrc(originalSrc) {
   return `${originalSrc}-overlay`;
 }
 
-function HoloCard({ src, alt, maskMode, gradient = 'radial', palette = 'classic', texture, overlay }) {
+function HoloCard({
+  src,
+  alt,
+  maskMode,
+  gradient = 'radial',
+  palette = 'classic',
+  texture,
+  overlay,
+}) {
   const [showOverlay, setShowOverlay] = useState(true);
   const [motionEnabled, setMotionEnabled] = useState(false);
   const cardRef = useRef(null);
@@ -324,7 +332,15 @@ export default function HoloCardsGrid({ items, images, titles }) {
       <div className={styles.grid}>
         {normalizedItems.map(
           (
-            { src, title, maskMode: itemMaskMode, gradient: itemGradient, palette: itemPalette, texture: itemTexture, overlay: itemOverlay },
+            {
+              src,
+              title,
+              maskMode: itemMaskMode,
+              gradient: itemGradient,
+              palette: itemPalette,
+              texture: itemTexture,
+              overlay: itemOverlay,
+            },
             idx
           ) => (
             <div key={`${src}-${idx}`} className={styles.item}>

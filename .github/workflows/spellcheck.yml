@@ -54,14 +54,14 @@ jobs:
 
             const output = `### 📝 Spellcheck Results
 
-**Checked files:** \`${process.env.CHANGED_FILES}\`
+            **Checked files:** \`${process.env.CHANGED_FILES}\`
 
-**Spelling issues found:**
-\`\`\`
-${result.trim()}
-\`\`\`
+            **Spelling issues found:**
+            \`\`\`
+            ${result.trim()}
+            \`\`\`
 
-💡 *Add words to \`.cspell.json\` if they are valid technical terms or proper nouns.*`;
+            💡 *Add words to \`.cspell.json\` if they are valid technical terms or proper nouns.*`;
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,

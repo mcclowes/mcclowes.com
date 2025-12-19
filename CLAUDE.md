@@ -48,11 +48,11 @@ npm run serve        # Serve production build locally
 
 ```yaml
 ---
-title: "Post Title"
+title: 'Post Title'
 authors: mcclowes
 tags: [tag1, tag2]
-draft: true              # Optional: hide from production
-enableComments: true     # Optional: enable Giscus comments
+draft: true # Optional: hide from production
+enableComments: true # Optional: enable Giscus comments
 ---
 ```
 
@@ -127,22 +127,22 @@ Components follow this pattern:
 
 ### Key Components
 
-| Component          | Purpose                                    |
-| ------------------ | ------------------------------------------ |
-| GiscusComponent    | GitHub Discussions comments                |
-| TrackedComponent   | PostHog-tracked wrapper                    |
-| TrackedLink        | PostHog-tracked link                       |
-| BlogPostTracker    | Blog post view tracking                    |
-| GitHubRepoCard     | GitHub repository embed                    |
-| NpmPackageCard     | NPM package embed                          |
-| PDFViewer          | PDF document viewer                        |
-| Loom               | Loom video embed                           |
-| Arcade             | Arcade.software demo embed                 |
-| LocalStorageChecklist | Persistent checklist                    |
-| Carousel           | Image carousel                             |
-| Masonry            | Masonry grid layout                        |
-| Modal              | Modal dialog                               |
-| Diff               | Code diff viewer                           |
+| Component             | Purpose                     |
+| --------------------- | --------------------------- |
+| GiscusComponent       | GitHub Discussions comments |
+| TrackedComponent      | PostHog-tracked wrapper     |
+| TrackedLink           | PostHog-tracked link        |
+| BlogPostTracker       | Blog post view tracking     |
+| GitHubRepoCard        | GitHub repository embed     |
+| NpmPackageCard        | NPM package embed           |
+| PDFViewer             | PDF document viewer         |
+| Loom                  | Loom video embed            |
+| Arcade                | Arcade.software demo embed  |
+| LocalStorageChecklist | Persistent checklist        |
+| Carousel              | Image carousel              |
+| Masonry               | Masonry grid layout         |
+| Modal                 | Modal dialog                |
+| Diff                  | Code diff viewer            |
 
 ## Theme Customization
 
@@ -201,14 +201,14 @@ Environment variables are injected via `scripts/generate-env.js` into `static/en
 
 GitHub Actions (`.github/workflows/`):
 
-| Workflow         | Trigger              | Purpose                     |
-| ---------------- | -------------------- | --------------------------- |
-| build.yml        | push/PR              | Build verification          |
-| test.yml         | push/PR              | Run tests                   |
-| format.yml       | push/PR              | Prettier formatting check   |
-| spellcheck.yml   | push/PR              | Spell checking              |
-| linknator.yml    | push/PR              | Link validation             |
-| lexi.yml         | push/PR              | Lexical analysis            |
+| Workflow       | Trigger | Purpose                   |
+| -------------- | ------- | ------------------------- |
+| build.yml      | push/PR | Build verification        |
+| test.yml       | push/PR | Run tests                 |
+| format.yml     | push/PR | Prettier formatting check |
+| spellcheck.yml | push/PR | Spell checking            |
+| linknator.yml  | push/PR | Link validation           |
+| lexi.yml       | push/PR | Lexical analysis          |
 
 ## Testing
 

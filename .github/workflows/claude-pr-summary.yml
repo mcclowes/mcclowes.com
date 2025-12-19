@@ -97,6 +97,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh pr comment ${{ github.event.pull_request.number }} \
-            --body "## 🤖 Claude PR Summary
-
-Unable to generate summary - the PR diff is too large to analyze. Consider breaking this PR into smaller changes."
+            --body "$(printf '## 🤖 Claude PR Summary\n\nUnable to generate summary - the PR diff is too large to analyze. Consider breaking this PR into smaller changes.')"
