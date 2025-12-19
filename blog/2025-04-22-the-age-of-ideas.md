@@ -3,6 +3,7 @@ title: "The Age of Ideas"
 authors: mcclowes
 tags: [ai, product, tech]
 draft: false
+enableComments: true
 ---
 
 As a teenager, I was all ideas and no follow-through. Every week brought a new concept, a new scheme, a new startup in my head. I wore my imagination like a badge. But over time, I had to confront something uncomfortable: ideas weren't rare. They were a ten a penny, a kind of noise that kept me from actually doing the hard work.

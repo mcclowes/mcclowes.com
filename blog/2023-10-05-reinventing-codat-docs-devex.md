@@ -2,6 +2,7 @@
 title: "Reinventing Codat's docs and developer experience"
 authors: mcclowes
 tags: [devex, documentation]
+enableComments: true
 ---
 
 As part of the annual [API the Docs](https://apithedocs.org/) Dev Portal Awards, my team spoke to our reimagining of Codat's documentation and wider developer experience.

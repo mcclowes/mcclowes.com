@@ -3,6 +3,7 @@ title: "Ownership in product"
 authors: mcclowes
 tags: [product, teams, leadership]
 draft: false
+enableComments: true
 ---
 
 A Product Manager is supposed to be the great connector—the person who brings engineering, design, and business together. PMs are expected to be curious, collaborative, and customer-obsessed. They align stakeholders, navigate ambiguity, and create clarity from chaos. They're not the boss, but they lead. Not the expert, but the glue.
