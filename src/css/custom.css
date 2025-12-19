@@ -306,6 +306,35 @@ iframe {
   background-color: var(--color-background-primary) !important;
 }
 
+/* Cookie Consent Buttons - Light mode (green text/border on offwhite background) */
+.cookie-consent-modal button,
+.cookie-consent-toast button {
+  background-color: transparent !important;
+  border: 2px solid var(--color-green) !important;
+  color: var(--color-green) !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cookie-consent-modal button:hover,
+.cookie-consent-toast button:hover {
+  background-color: var(--color-green) !important;
+  color: var(--color-offwhite) !important;
+}
+
+/* Cookie Consent Buttons - Dark mode (cream text/border on green background) */
+[data-theme='dark'] .cookie-consent-modal button,
+[data-theme='dark'] .cookie-consent-toast button {
+  background-color: transparent !important;
+  border: 2px solid var(--color-offwhite) !important;
+  color: var(--color-offwhite) !important;
+}
+
+[data-theme='dark'] .cookie-consent-modal button:hover,
+[data-theme='dark'] .cookie-consent-toast button:hover {
+  background-color: var(--color-offwhite) !important;
+  color: var(--color-green) !important;
+}
+
 /* Screen reader only - visually hidden but accessible to screen readers */
 .sr-only {
   position: absolute;
