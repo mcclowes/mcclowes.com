@@ -312,7 +312,9 @@ iframe {
   background-color: transparent !important;
   border: 2px solid var(--color-green) !important;
   color: var(--color-green) !important;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .cookie-consent-modal button:hover,
