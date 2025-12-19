@@ -3,6 +3,7 @@ title: "Strategy in motion"
 authors: mcclowes
 tags: [leadership, teams]
 draft: false
+enableComments: true
 ---
 
 Even a small change in strategy can be profoundly disruptive.

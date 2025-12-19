@@ -2,6 +2,7 @@
 title: "Opinionated autonomy"
 authors: mcclowes
 tags: [leadership, management]
+enableComments: true
 ---
 
 > “Freedom is not the absence of commitments, but the ability to choose – and commit myself to – what is best for me.” — Paulo Coelho

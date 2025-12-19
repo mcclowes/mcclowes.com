@@ -38,14 +38,18 @@ const Modal = ({ isOpen, onClose, children, ariaLabel = 'Dialog' }) => {
       document.body.style.overflow = 'hidden';
       document.addEventListener('keydown', handleKeyDown);
 
-      // Focus the modal container for screen readers
-      setTimeout(() => {
+      // Focus the modal container for screen readers using requestAnimationFrame
+      // for reliable timing after React's DOM update
+      requestAnimationFrame(() => {
         modalRef.current?.focus();
-      }, 0);
+      });
     } else {
       document.body.style.overflow = 'unset';
       // Restore focus to the element that opened the modal
-      previousActiveElement.current?.focus();
+      // Use requestAnimationFrame to ensure DOM is ready
+      requestAnimationFrame(() => {
+        previousActiveElement.current?.focus();
+      });
     }
 
     return () => {
