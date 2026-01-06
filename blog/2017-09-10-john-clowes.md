@@ -4,8 +4,10 @@ authors: mcclowes
 tags: [music]
 ---
 
+import Spotify from '@site/src/components/Spotify';
+
 A record my late grandpa recorded.
 
-<iframe style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/album/6Zhm4cplZhtoUD84zJfrtA?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<Spotify id="6Zhm4cplZhtoUD84zJfrtA" type="album" />
 
 <!--truncate-->
