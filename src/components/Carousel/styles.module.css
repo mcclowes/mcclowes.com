@@ -5,7 +5,6 @@
   max-height: 75vh;
   overflow-x: scroll;
   overflow-y: hidden;
-  margin: 2em 0;
   scroll-behavior: smooth;
   position: relative;
 }
@@ -65,4 +64,33 @@
   object-fit: contain;
   /* Ensure image maintains aspect ratio */
   aspect-ratio: auto;
+}
+
+.carouselContainer {
+  margin: 2em 0;
+}
+
+.scrollBarTrack {
+  position: relative;
+  height: 4px;
+  background-color: var(--color-offwhite-alt);
+  border-radius: 2px;
+  margin-top: 1em;
+  overflow: hidden;
+}
+
+.scrollBarThumb {
+  position: absolute;
+  height: 100%;
+  background-color: var(--color-green);
+  border-radius: 2px;
+  transition: left 0.05s ease-out;
+}
+
+[data-theme='dark'] .scrollBarTrack {
+  background-color: var(--color-green-dark);
+}
+
+[data-theme='dark'] .scrollBarThumb {
+  background-color: var(--color-offwhite);
 }
