@@ -10,7 +10,7 @@ The problem starts with not knowing what you actually need.
 
 <!--truncate-->
 
-I've [written before about the 5Ds](/blog/the-5ds-of-product) - the idea that every PM should have an angle in Design, Development, Delivery, Domain, or Data. You don't need a unicorn. You need someone whose strengths match what your team actually lacks.
+I've [written before about the 5Ds](/blog/2023/01/15/the-5ds-of-product) - the idea that every PM should have an angle in Design, Development, Delivery, Domain, or Data. You don't need a unicorn. You need someone whose strengths match what your team actually lacks.
 
 That framework should drive your hiring. Here's how.
 
