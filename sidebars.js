@@ -12,7 +12,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Tools',
-      items: ['omg'],
+      items: ['omg', 'reqon'],
     },
   ],
 };

@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm outdated --json)",
+      "Bash(pkill -f \"docusaurus swizzle\")",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd Claude-powered GitHub Actions workflows\n\nAdded two new workflows that use Claude AI to assist with pull requests:\n- PR Summary: Automatically generates concise summaries of pull request changes\n- Documentation Generator: Analyzes code changes and suggests documentation updates\n\nBoth workflows require ANTHROPIC_API_KEY to be set in repository secrets.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "WebSearch",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm install:*)",
+      "Bash(npm run clear:*)",
+      "Bash(pkill:*)",
+      "Bash(npm run serve:*)",
+      "Skill(docusaurus-config)",
+      "Skill(docusaurus-plugins)",
+      "Skill(google-style-guide)",
+      "Skill(docusaurus-documentation)",
+      "Skill(docusaurus-migration)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd Documentation Tooling section to projects page\n\nAdded new section showcasing Docusaurus plugins:\n- docusaurus-plugin-banner\n- docusaurus-plugin-cookie-consent\n- docusaurus-plugin-glossary\n- docusaurus-plugin-statuspage\n- docusaurus-post-notifications\n- docusaurus-plugin-starter\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Skill(code-frontmatter)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd blog post on code frontmatter experiment\n\nExplores the idea of adding YAML frontmatter to code files as an index\nfor AI assistants, with notes on theoretical vs realized efficiency\ngains from initial benchmarking.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(npm run build:*)",
+      "Bash(git commit:*)",
+      "WebFetch(domain:reqon.mcclowes.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
