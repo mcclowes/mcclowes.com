@@ -26,4 +26,47 @@ On paper, the numbers look good. A 300-line file's frontmatter might use ~50 tok
 
 There's a secondary benefit: it doubles as documentation. Unlike comments buried in the code, frontmatter sits at the entrance.
 
-I'm not convinced yet. It's extra friction on every file, and the actual efficiency gains are hard to measure. A benchmarking test I conducted seemed to show the context window consumption reduced to 40% of it's previous size, much smaller than the theoretical. But it's an interesting direction—treating code like a searchable index rather than a pile of files to grep through. 
+I'm not convinced yet. It's extra friction on every file, and the actual efficiency gains are hard to measure. A benchmarking test I conducted seemed to show the context window consumption reduced to 40% of it's previous size, much smaller than the theoretical. But it's an interesting direction—treating code like a searchable index rather than a pile of files to grep through.
+
+## A fuller example
+
+Here's what this might look like across a real project—a serverless data pipeline that mirrors the Fantasy Premier League API into Postgres:
+
+```typescript
+// app/api/cron/route.ts
+/**
+ * ---
+ * purpose: Cron endpoint triggered by GitHub Actions hourly
+ * inputs:
+ *   - Authorization header (cron secret)
+ * outputs:
+ *   - Triggers data collection job
+ * related:
+ *   - ./lib/collector.ts - actual collection logic
+ *   - ./lib/db/jobs.ts - job tracking
+ * ---
+ */
+```
+
+```typescript
+// lib/collector.ts
+/**
+ * ---
+ * purpose: Fetches fresh data from FPL API and writes snapshots
+ * inputs:
+ *   - None (fetches from external API)
+ * outputs:
+ *   - Immutable snapshots in player_snapshots table
+ *   - Updated master tables (players, teams)
+ * related:
+ *   - ./db/snapshots.ts - snapshot storage
+ *   - ./db/players.ts - player master table
+ *   - ./fpl-client.ts - API client
+ * domain: FPL data is time-sensitive; snapshots preserve history
+ * ---
+ */
+```
+
+The pattern particularly starts to pay off when files reference each other. An AI looking for "how team optimization works" can read the headers, see that `genetic.ts` depends on `fitness.ts` for scoring, and load only the relevant files. Without frontmatter, it would likely load the entire `lib/` directory to understand the relationships. 
+
+Obviously this requires some maintenance to keep the frontmatter fresh/accurate, but Claude Code helps do that.
