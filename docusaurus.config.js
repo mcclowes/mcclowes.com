@@ -132,12 +132,17 @@ const config = {
         language: ['en'],
         indexDocs: true,
         indexBlog: true,
-        indexPages: true,
+        indexPages: false,
         docsRouteBasePath: '/docs',
         blogRouteBasePath: '/blog',
         highlightSearchTermsOnTargetPage: true,
         searchResultLimits: 8,
         searchBarShortcutHint: true,
+        explicitSearchResultPath: true,
+        // Ignore glossary pages to prevent duplicate results from glossary terms
+        ignoreFiles: [/\/glossary\/.*/],
+        // Ignore glossary tooltip elements during indexing
+        ignoreCssSelectors: ['.glossary-tooltip', '[data-glossary-term]'],
       },
     ],
   ],
