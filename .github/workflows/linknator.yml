@@ -5,6 +5,10 @@ on:
     - cron: '0 9 * * 1' # Runs weekly on Monday at 9am UTC
   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   link-check:
     runs-on: ubuntu-latest

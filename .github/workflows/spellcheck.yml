@@ -5,6 +5,10 @@ on:
     paths:
       - 'blog/**/*.md' # Trigger only when blog Markdown files are changed
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   spellcheck:
     runs-on: ubuntu-latest
