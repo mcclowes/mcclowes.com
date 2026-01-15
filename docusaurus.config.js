@@ -143,6 +143,7 @@ const config = {
         },
         hideOnScroll: true,
         items: [
+          { to: '/start-here', label: 'Start here', position: 'left' },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
             type: 'docSidebar',

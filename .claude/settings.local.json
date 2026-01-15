@@ -24,7 +24,15 @@
       "Bash(git push:*)",
       "Bash(npm run build:*)",
       "Bash(git commit:*)",
-      "WebFetch(domain:reqon.mcclowes.com)"
+      "WebFetch(domain:reqon.mcclowes.com)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "mcp__github__list_issues",
+      "mcp__github__issue_write",
+      "Bash(grep:*)",
+      "mcp__github__get_me",
+      "mcp__github__search_repositories",
+      "mcp__github__add_issue_comment"
     ],
     "deny": [],
     "ask": []
