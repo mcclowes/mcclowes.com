@@ -11,12 +11,12 @@ A hands-on session for product teams to assess their PM coverage and identify hi
 
 ## Overview
 
-| Aspect | Detail |
-|--------|--------|
-| Duration | 60-90 minutes |
-| Participants | 4-12 (PMs, hiring managers, leadership) |
-| Materials | Whiteboard/Miro, sticky notes, this guide |
-| Output | Team 5Ds map, hiring priorities, development areas |
+| Aspect       | Detail                                             |
+| ------------ | -------------------------------------------------- |
+| Duration     | 60-90 minutes                                      |
+| Participants | 4-12 (PMs, hiring managers, leadership)            |
+| Materials    | Whiteboard/Miro, sticky notes, this guide          |
+| Output       | Team 5Ds map, hiring priorities, development areas |
 
 ---
 
@@ -70,10 +70,10 @@ Discuss as a group:
 
 Create concrete actions:
 
-| Gap | Action | Owner | Timeline |
-|-----|--------|-------|----------|
-| e.g., Data | Hire analytics-focused PM | [Name] | Q2 |
-| e.g., Domain | Partner with industry advisor | [Name] | Q1 |
+| Gap          | Action                        | Owner  | Timeline |
+| ------------ | ----------------------------- | ------ | -------- |
+| e.g., Data   | Hire analytics-focused PM     | [Name] | Q2       |
+| e.g., Domain | Partner with industry advisor | [Name] | Q1       |
 
 ---
 
