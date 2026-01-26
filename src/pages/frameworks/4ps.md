@@ -20,6 +20,7 @@ Each P needs to be in place, in order, or you're doomed.
 The gravitational pull at the center of everything you do. Not just your mission statement—the quiet whisper guiding your hardest choices.
 
 **Questions to ask:**
+
 - Why does this business exist beyond making money?
 - What would be lost if we disappeared?
 - Does this purpose hold steady in uncertainty?
@@ -29,6 +30,7 @@ The gravitational pull at the center of everything you do. Not just your mission
 Not resources—partners, collaborators, and co-creators of your vision. Greatness emerges when people feel safe to explore, fail, and flourish.
 
 **Questions to ask:**
+
 - Do people feel safe to take risks here?
 - Are relationships built on genuine trust?
 - Is humanity at the heart of how we work?
@@ -38,6 +40,7 @@ Not resources—partners, collaborators, and co-creators of your vision. Greatne
 The invisible infrastructure that turns ideals into outcomes. Neither bureaucracy nor checklist—the deliberate pursuit of doing things intentionally and sustainably.
 
 **Questions to ask:**
+
 - Do our processes enable or constrain creativity?
 - Are we doing things intentionally or by habit?
 - Can teams innovate within our structures?
@@ -47,6 +50,7 @@ The invisible infrastructure that turns ideals into outcomes. Neither bureaucrac
 Your promise made tangible. Not just what you sell—the expression of everything you believe in and represent.
 
 **Questions to ask:**
+
 - Does our product align with our purpose?
 - Does it respect all the people involved?
 - Does it leave the world slightly better?

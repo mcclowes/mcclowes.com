@@ -11,12 +11,12 @@ A diagnostic session for leadership teams to assess organizational health and id
 
 ## Overview
 
-| Aspect | Detail |
-|--------|--------|
-| Duration | 90-120 minutes |
-| Participants | 4-8 (leadership team, founders, key stakeholders) |
-| Materials | Whiteboard/Miro, scoring cards, this guide |
-| Output | 4Ps health score, constraint identification, action plan |
+| Aspect       | Detail                                                   |
+| ------------ | -------------------------------------------------------- |
+| Duration     | 90-120 minutes                                           |
+| Participants | 4-8 (leadership team, founders, key stakeholders)        |
+| Materials    | Whiteboard/Miro, scoring cards, this guide               |
+| Output       | 4Ps health score, constraint identification, action plan |
 
 ---
 
@@ -45,21 +45,25 @@ Each participant scores each P from 1-5 anonymously:
 **Scoring prompts:**
 
 #### Purpose
+
 - Can everyone articulate why we exist?
 - Does our purpose guide hard decisions?
 - Would anyone notice if we disappeared?
 
 #### People
+
 - Do people feel safe to take risks?
 - Are relationships built on genuine trust?
 - Do we treat people as partners or resources?
 
 #### Process
+
 - Do our processes enable or constrain creativity?
 - Are we intentional or just habitual?
 - Can teams innovate within our structures?
 
 #### Product
+
 - Does our product align with our purpose?
 - Does it respect all the people involved?
 - Does it leave the world slightly better?
@@ -89,10 +93,10 @@ The 4Ps work in sequence. Your constraint is your lowest-scored P.
 
 Focus ONLY on the constraint. Improving higher Ps without fixing lower ones is wasted effort.
 
-| Observation | Action | Owner | Check-in |
-|-------------|--------|-------|----------|
-| e.g., Purpose unclear to new hires | Write and share purpose doc | [Name] | 2 weeks |
-| e.g., People don't feel safe | Anonymous feedback mechanism | [Name] | 1 week |
+| Observation                        | Action                       | Owner  | Check-in |
+| ---------------------------------- | ---------------------------- | ------ | -------- |
+| e.g., Purpose unclear to new hires | Write and share purpose doc  | [Name] | 2 weeks  |
+| e.g., People don't feel safe       | Anonymous feedback mechanism | [Name] | 1 week   |
 
 Limit to 2-3 actions. Do less, better.
 
