@@ -1,8 +1,7 @@
 ---
-title: "LLMs as compression"
+title: "LLMs are compression algorithms"
 authors: mcclowes
 tags: [ai]
-draft: true
 ---
 
 Here's a mental model I find useful: LLMs are a compression technique for knowledge, combined with a clever decompression algorithm.
@@ -28,8 +27,4 @@ It explains several things:
 - **Capability limits**: You can't decompress what wasn't compressed. Knowledge outside the training data isn't there.
 - **Prompt sensitivity**: Different keys access different regions. Small prompt changes can produce very different outputs.
 
-## What it doesn't explain
-
-This model is incomplete. It doesn't capture emergence, reasoning, or the way models generalise to novel situations. Compression alone doesn't explain everything.
-
-But as a starting intuition, it's useful. LLMs store compressed knowledge and reconstruct it on demand. The magic is in how good that reconstruction has become.
+This model is incomplete. It doesn't capture emergence, reasoning, or the way models generalise to novel situations. Compression alone doesn't explain everything. But as a starting intuition, it's useful. LLMs store compressed knowledge and reconstruct it on demand. The magic is in how good that reconstruction has become.
