@@ -1,6 +1,17 @@
 import React from 'react';
 
-const Spotify = ({ id, type = 'track', height = 352 }) => {
+const DEFAULT_HEIGHTS = {
+  track: 352,
+  album: 500,
+  playlist: 500,
+  artist: 352,
+  episode: 352,
+  show: 352,
+};
+
+const Spotify = ({ id, type = 'track', height }) => {
+  const resolvedHeight = height || DEFAULT_HEIGHTS[type] || 352;
+
   if (!id) {
     return (
       <div
@@ -12,7 +23,7 @@ const Spotify = ({ id, type = 'track', height = 352 }) => {
           color: '#888',
           padding: '2rem',
           borderRadius: '12px',
-          height,
+          height: resolvedHeight,
         }}
       >
         <span>Spotify embed not available</span>
@@ -27,7 +38,7 @@ const Spotify = ({ id, type = 'track', height = 352 }) => {
       style={{ borderRadius: '12px' }}
       src={src}
       width="100%"
-      height={height}
+      height={resolvedHeight}
       frameBorder="0"
       allowFullScreen
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
