@@ -1,6 +1,19 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["Docusaurus", "frontend", "Codat", "mcclowes", "Monzo"],
+  "words": [
+    "Codat",
+    "colonised",
+    "Danann",
+    "defence",
+    "Docusaurus",
+    "frontend",
+    "mcclowes",
+    "Monzo",
+    "postcolonialism",
+    "recognised",
+    "Sidhe",
+    "Tuatha"
+  ],
   "ignorePaths": ["node_modules/**", "build/**"]
 }

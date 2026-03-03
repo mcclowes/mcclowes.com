@@ -56,6 +56,11 @@ jobs:
             const fs = require('fs');
             const result = fs.readFileSync('spellcheck-result.txt', 'utf8');
 
+            // Extract unique unknown words
+            const words = [...new Set(
+              result.match(/Unknown word \((\w+)\)/g)?.map(m => m.match(/\((\w+)\)/)[1]) || []
+            )].sort();
+
             const output = `### 📝 Spellcheck Results
 
             **Checked files:** \`${process.env.CHANGED_FILES}\`
@@ -65,7 +70,8 @@ jobs:
             ${result.trim()}
             \`\`\`
 
-            💡 *Add words to \`.cspell.json\` if they are valid technical terms or proper nouns.*`;
+            💡 Reply with \`/add-words\` to automatically add these words to \`.cspell.json\`:
+            <!-- cspell-words: ${words.join(',')} -->`;
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,
