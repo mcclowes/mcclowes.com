@@ -1,7 +1,7 @@
 ---
-title: "The Dragon-Guarded Land: A Postcolonial Reading of Yeats' 'The Realists'"
+title: "The Dragon-Guarded Land"
 authors: mcclowes
-tags: [poetry, literature, postcolonialism]
+tags: [poetry, literature]
 ---
 
 _A postcolonial reading of Yeats' "The Realists"._
