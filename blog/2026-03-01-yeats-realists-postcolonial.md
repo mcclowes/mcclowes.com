@@ -6,14 +6,14 @@ tags: [poetry, literature]
 
 _A postcolonial reading of Yeats' "The Realists"._
 
-> HOPE that you may understand!
-> What can books of men that wive
-> In a dragon-guarded land,
-> Paintings of the dolphin-drawn
-> Sea-nymphs in their pearly wagons
-> Do, but awake a hope to live
-> That had gone
-> With the dragons?
+> HOPE that you may understand!  
+> What can books of men that wive  
+> In a dragon-guarded land,  
+> Paintings of the dolphin-drawn  
+> Sea-nymphs in their pearly wagons  
+> Do, but awake a hope to live  
+> That had gone  
+> With the dragons?  
 >
 > — W. B. Yeats, *Responsibilities* (1914)
 
@@ -24,26 +24,29 @@ On Saturday, I took part in a course on of the works of Yeats from his early and
 The standard reading of "The Realists" is philosophical, and rooted primarily in its title. The dragons represent materialism, empiricism, the disenchanted worldview of the modern rationalist. The poem is taken as Yeats's defence of imagination against those who would reduce the world to measurable fact and dismiss myth, art, and vision as escapism.
 
 The second part of the poem is a long, grammatically complex sentence to unpick, but here's my simplification:
-> It is inevitable that imaginative stories of men in a dragon-guarded land
-> inspire a hope to live in other men
+> It is inevitable that imaginative stories of men in a land guarded by dragons
+> inspire a hope to live (in other men)
 > that was lost when those dragons came to guard that land.
 
 A land *guarded* by dragons, which is to say, a land under occupation. The dragons are not indigenous, they are wardens. Hope departed when the dragons arrived - something came, and when it came, hope left.
 
 At this exact time, Yeats writes frequently about the Irish struggle for independence and Irish unity, and is particularly fixated on the collective mythologies that inspire the Irish identity and Irish nationalism, such as in [September 1913](https://www.poetryfoundation.org/poems/57309/september-1913). 
 
-Yeats co-founded the [Abbey Theatre](https://www.abbeytheatre.ie/about/history/), and was central to the Irish Literary Revival. He championed the revival of Irish mythology, folklore, song, and language as a deliberate counter to the cultural erasure that accompanied British political and economic domination. His entire creative project was, at root, an act of cultural resistance: the construction of an imaginative infrastructure for a nation that colonialism had attempted to strip of one. Yeats understands from an early age the [power of myth](https://fs.blog/why-humans-dominate-earth/), as laid out very clearly in [Sapiens](https://www.goodreads.com/book/show/23692271-sapiens). Indeed, much of his early work is devoted to Irish myth. Even when embroiled in romanticism, he transposes his own pantheon of romanticism - [Love](https://www.poetryfoundation.org/poems/43283/when-you-are-old), [Beauty](https://www.researchgate.net/publication/304483365_Yeats's_Goddess_of_Beauty_Maud_Gonne) - onto a reconstituted, Nationalist Celtic mythology.
+Yeats co-founded the [Abbey Theatre](https://www.abbeytheatre.ie/about/history/), and was central to the Irish Literary Revival. He championed the revival of Irish mythology, folklore, song, and language as a deliberate counter to the cultural erasure that accompanied British political and economic domination. His entire creative project was, at root, an act of cultural resistance: the construction of an imaginative infrastructure for a nation that colonialism had attempted to strip of one. Yeats understands from an early age the [power of myth](https://fs.blog/why-humans-dominate-earth/), as laid out very clearly in [Sapiens](https://www.goodreads.com/book/show/23692271-sapiens). Much of his early work is devoted to Irish myth. Even when embroiled in romanticism, he transposes his own pantheon of romanticism - [Love](https://www.poetryfoundation.org/poems/43283/when-you-are-old), [Beauty](https://www.researchgate.net/publication/304483365_Yeats's_Goddess_of_Beauty_Maud_Gonne) - onto a reconstituted, Nationalist Celtic mythology.
 
-> Through Irish folklore, myths and legends, Yeats not only depicted Ireland’s past, but also restored Irish people’s confidence. This awakened Irish people’s heroic spirits and memories, and revealed the importance of the unity of Celtic Irish and Anglo-Irish in the construction of Irish national and cultural identity.
-**[The Construction of Irish Cultural Identity in Yeats’s Poetry, ZUO Li-xiang](https://www.davidpublisher.com/Public/uploads/Contribute/5f432b4c4a85a.pdf)**
+> Through Irish folklore, myths and legends, Yeats not only depicted Ireland’s past, but also restored Irish people’s confidence. This awakened Irish people’s heroic spirits and memories, and revealed the importance of the unity of Celtic Irish and Anglo-Irish in the construction of Irish national and cultural identity.  
+**[The Construction of Irish Cultural Identity in Yeats’s Poetry, Zuo Li-xiang](https://www.davidpublisher.com/Public/uploads/Contribute/5f432b4c4a85a.pdf)**
 
-If we read the dragons as the guards of Yeats' homeland - British colonial power - the poem transforms. It is no longer an abstract meditation on imagination versus materialism. It becomes a precise and urgent statement about the function of art under occupation. What can books and paintings do for people living in a dragon-guarded land? They can reawaken the hope that colonial power extinguished. That is not a minor or decorative function, but the essential one.
+If we read the dragons as the guards of Yeats' homeland - British colonial power - the poem transforms, and is no longer an abstract meditation on imagination versus materialism. It becomes a precise and urgent statement about the function of art under occupation. What can books and paintings do for people living in a dragon-guarded land? They can reawaken the hope that colonial power extinguished. That is not a minor or decorative function, but the essential one.
+
+An even simpler translation:
+> Oppressed people inevitably dream of freedom
 
 The title sharpens under this reading. The "realists" are not merely philosophical materialists, but are pragmatists who counsel acceptance — the voices, both Irish and British, who insist that the occupied should deal with things as they are rather than dreaming of how they might be. They are the people who look at a colonised nation's mythology and dismiss it as irrelevant fantasy.
 
 Yeats's opening line — "Hope that you may understand!" — is not a gentle invitation; he is addressing people who should know better.
 
-This reading is not a stretch. It is, arguably, the most natural one — the reading that becomes obvious once you stop treating Yeats as a philosopher and start treating him as what he was: an Irish cultural nationalist working in the period of British colonial rule.
+This reading is not a stretch and is, arguably, the most natural one — the reading that becomes obvious once you stop treating Yeats as a proponent of romanticism and start treating him as what he was: an Irish cultural nationalist working in a tumultuous period of British colonial rule.
 
 "The Realists" sits within the *Responsibilities* collection of 1914, a volume already recognised as marking Yeats's turn toward a more direct, politically engaged voice. The same collection contains "September 1913," with its bitter refrain about Romantic Ireland being dead and gone. It contains "To a Wealthy Man," his attack on Dublin's bourgeoisie for refusing to fund a public art gallery. These are not abstract philosophical poems. They are poems about the cultural politics of a colonised country. Why should "The Realists" be read as the lone exception?
 
