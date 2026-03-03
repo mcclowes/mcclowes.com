@@ -138,6 +138,10 @@
   /* Borders */
   --ifm-toc-border-color: var(--color-green-light);
 
+  /* Blockquotes */
+  --ifm-blockquote-color: var(--color-offwhite-dark);
+  --ifm-blockquote-border-left-color: var(--color-offwhite-alt-dark);
+
   /* Code blocks */
   --ifm-code-background: rgba(255, 250, 225, 0.1);
   --ifm-pre-background: var(--color-green-darkest);
