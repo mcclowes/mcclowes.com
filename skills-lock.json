@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "docusaurus-config": {
+      "source": "mcclowes/claude-docusaurus-skills",
+      "sourceType": "github",
+      "computedHash": "03a89ae91127af918c835872c7a733b2fcca76eba43f9d655556cf5b53553f3a"
+    },
+    "docusaurus-documentation": {
+      "source": "mcclowes/claude-docusaurus-skills",
+      "sourceType": "github",
+      "computedHash": "bf8ae4fc4b3cb372ff327bccc166f286808991ee5e9387983d056098be8029ba"
+    },
+    "docusaurus-plugins": {
+      "source": "mcclowes/claude-docusaurus-skills",
+      "sourceType": "github",
+      "computedHash": "9546576e0eb96bb7199ef9c192c4c862e5c887f993ce7884cd3b31a7b2c832aa"
+    },
+    "docusaurus-themes": {
+      "source": "mcclowes/claude-docusaurus-skills",
+      "sourceType": "github",
+      "computedHash": "29c0a29d19fdd94e57d9cd7e543910597399eeb82aac6578e4435871e274f8bc"
+    },
+    "docusaurus-v2-to-v3-migration": {
+      "source": "mcclowes/claude-docusaurus-skills",
+      "sourceType": "github",
+      "computedHash": "ebaeb38eb4e04d96599fa090181104cf8bcf26fb085b30d9c31052fdff00ad5a"
+    },
+    "google-style-guide": {
+      "source": "mcclowes/claude-docusaurus-skills",
+      "sourceType": "github",
+      "computedHash": "d674634235bb75e8188653b47354b53a5ec3837d940b82df34474a2996e74f35"
+    }
+  }
+}
