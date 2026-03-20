@@ -1,5 +1,5 @@
 ---
-title: 'Does AI Change the Best Approach to Separation of Concerns?'
+title: 'Does AI change the best approach to separation of concerns?'
 authors: mcclowes
 tags: [ai, programming, dev, react]
 enableComments: true

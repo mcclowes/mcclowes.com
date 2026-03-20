@@ -1,5 +1,5 @@
 ---
-title: 'Claude Skills Are Incredible (But Claude Won''t Use Them)'
+title: 'Claude skills are incredible (but Claude won''t use them)'
 authors: mcclowes
 tags: [ai, programming, dev, claude]
 enableComments: true
