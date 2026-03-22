@@ -10,12 +10,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --color-green: #4b5f5f;
-  --color-green-dark: #3c6c5e;
-  --color-green-darker: #396658;
-  --color-green-darkest: #2f5449;
-  --color-green-light: #4a8472;
-  --color-green-lighter: #4d8a78;
+  --color-green: #2f5449;
+  --color-green-dark: #264439;
+  --color-green-darker: #1e362e;
+  --color-green-darkest: #172a23;
+  --color-green-light: #3c6c5e;
+  --color-green-lighter: #4a8472;
   --color-green-lightest: #579c87;
 
   --color-offwhite-light: #fffdf3;
@@ -36,10 +36,10 @@
 
   --color-font-primary: #333;
   --color-font-header: var(--color-green);
-  --color-font-alt: var(--color-offwhite);
+  --color-font-alt: var(--color-offwhite-light);
   --color-font-highlight: #817365;
 
-  --color-background-primary: var(--color-offwhite);
+  --color-background-primary: var(--color-offwhite-light);
   --color-background-alt: var(--color-green);
 
   /* Primary color scale */
@@ -59,8 +59,8 @@
 
   /* Background colors */
   --ifm-background-color: var(--color-background-primary);
-  --ifm-background-surface-color: var(--color-offwhite-light);
-  --ifm-card-background-color: var(--color-offwhite-light);
+  --ifm-background-surface-color: var(--color-offwhite);
+  --ifm-card-background-color: var(--color-offwhite);
   --ifm-navbar-background-color: var(--color-background-primary);
   --ifm-footer-background-color: var(--color-background-alt);
   --ifm-hr-background-color: var(--ifm-color-primary);
@@ -102,13 +102,13 @@
 }
 
 [data-theme='dark'] {
-  --color-font-primary: var(--color-offwhite);
+  --color-font-primary: var(--color-offwhite-light);
   --color-font-header: var(--color-offwhite);
   --color-font-alt: var(--color-green);
-  --color-font-highlight: var(--color-darker-offwhite);
+  --color-font-highlight: var(--color-offwhite-dark);
 
   --color-background-primary: var(--color-green);
-  --color-background-alt: var(--color-offwhite);
+  --color-background-alt: var(--color-offwhite-light);
 
   /* Primary color scale (inverted for dark mode) */
   --ifm-color-primary: var(--color-offwhite);
@@ -127,8 +127,8 @@
 
   /* Background colors */
   --ifm-background-color: var(--color-background-primary);
-  --ifm-background-surface-color: var(--color-green-dark);
-  --ifm-card-background-color: var(--color-green-dark);
+  --ifm-background-surface-color: var(--color-green-light);
+  --ifm-card-background-color: var(--color-green-light);
 
   /* Font colors */
   --ifm-font-color-base: var(--color-font-primary);
@@ -136,7 +136,7 @@
   --ifm-font-color-base-inverse: var(--color-green);
 
   /* Borders */
-  --ifm-toc-border-color: var(--color-green-light);
+  --ifm-toc-border-color: var(--color-green-lighter);
 
   /* Blockquotes */
   --ifm-blockquote-color: var(--color-offwhite-dark);
