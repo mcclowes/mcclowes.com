@@ -36,7 +36,7 @@
 
   --color-font-primary: #333;
   --color-font-header: var(--color-green);
-  --color-font-alt: var(--color-offwhite-light);
+  --color-font-alt: var(--color-offwhite);
   --color-font-highlight: #817365;
 
   --color-background-primary: var(--color-offwhite-light);
