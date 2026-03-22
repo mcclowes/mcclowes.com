@@ -39,7 +39,7 @@
   --color-font-alt: var(--color-offwhite);
   --color-font-highlight: #817365;
 
-  --color-background-primary: var(--color-offwhite-light);
+  --color-background-primary: var(--color-offwhite);
   --color-background-alt: var(--color-green);
 
   /* Primary color scale */
@@ -59,8 +59,8 @@
 
   /* Background colors */
   --ifm-background-color: var(--color-background-primary);
-  --ifm-background-surface-color: var(--color-offwhite);
-  --ifm-card-background-color: var(--color-offwhite);
+  --ifm-background-surface-color: var(--color-offwhite-light);
+  --ifm-card-background-color: var(--color-offwhite-light);
   --ifm-navbar-background-color: var(--color-background-primary);
   --ifm-footer-background-color: var(--color-background-alt);
   --ifm-hr-background-color: var(--ifm-color-primary);
@@ -102,13 +102,13 @@
 }
 
 [data-theme='dark'] {
-  --color-font-primary: var(--color-offwhite-light);
+  --color-font-primary: var(--color-offwhite);
   --color-font-header: var(--color-offwhite);
   --color-font-alt: var(--color-green);
-  --color-font-highlight: var(--color-offwhite-dark);
+  --color-font-highlight: var(--color-darker-offwhite);
 
   --color-background-primary: var(--color-green);
-  --color-background-alt: var(--color-offwhite-light);
+  --color-background-alt: var(--color-offwhite);
 
   /* Primary color scale (inverted for dark mode) */
   --ifm-color-primary: var(--color-offwhite);
