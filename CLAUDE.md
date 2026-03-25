@@ -2,20 +2,6 @@
 
 Personal website and blog for mcclowes, built with Docusaurus.
 
-## Stack
-
-- Docusaurus 3.x (not Next.js)
-- React 18
-- SCSS modules for custom styling
-- Deployed via Vercel
-
-## Commands
-
-- `npm run start` - dev server
-- `npm run build` - production build
-- `npm run test` - run tests
-- `npm run format:fix` - format with Prettier
-
 ## Structure
 
 - `/api` - Vercel serverless functions (e.g., newsletter subscribe)
@@ -27,6 +13,14 @@ Personal website and blog for mcclowes, built with Docusaurus.
 - `/src/theme` - swizzled Docusaurus theme components
 - `/src/plugins` - custom Docusaurus plugins (e.g., PostHog)
 
+## Stack
+
+- **Framework**: Docusaurus 3.6.x (not Next.js)
+- **React**: 18.x
+- **Styling**: SCSS modules + Infima CSS framework
+- **Deployment**: Vercel
+- **Node**: 16.14+ required (20.x recommended)
+
 ## Features
 
 - Giscus comments (configured, add `enableComments: true` to frontmatter)
@@ -36,11 +30,6 @@ Personal website and blog for mcclowes, built with Docusaurus.
 - Image zoom
 - Mermaid diagrams
 - Live code blocks
-- **Framework**: Docusaurus 3.6.x (not Next.js)
-- **React**: 18.x
-- **Styling**: SCSS modules + Infima CSS framework
-- **Deployment**: Vercel
-- **Node**: 16.14+ required (20.x recommended)
 
 ## Commands
 
@@ -147,6 +136,14 @@ enableComments: true # Optional: enable Giscus comments
 - Terms defined in `/glossary/glossary.json`
 - Route: `/glossary`
 
+### Resend Newsletter
+
+- Monthly email sent via GitHub Action (`newsletter.yml`) on the 1st of each month
+- Script: `scripts/send-newsletter.mjs` scans `/blog` for posts from the previous month
+- Subscribe endpoint: `api/subscribe.js` (Vercel serverless function)
+- Subscribe form: `src/components/NewsletterSignup/` (rendered in footer)
+- Environment variables: `RESEND_API_KEY`, `RESEND_AUDIENCE_ID`
+
 ## Components
 
 Components follow this pattern:
@@ -176,12 +173,17 @@ Components follow this pattern:
 | Masonry               | Masonry grid layout         |
 | Modal                 | Modal dialog                |
 | Diff                  | Code diff viewer            |
+| NewsletterSignup      | Email subscribe form        |
+| YouTube               | YouTube video embed         |
+| Spotify               | Spotify embed               |
+| Lottie                | Lottie animation player     |
 
 ## Theme Customization
 
 ### Swizzled Components
 
 - `BlogPostItem` - Adds Giscus comments support
+- `Footer` - Adds newsletter signup form above the default footer
 
 ### CSS Variables
 
@@ -207,6 +209,8 @@ Create `.env` file (see `.env.example`):
 POSTHOG_KEY=phc-your-key-here
 # POSTHOG_HOST=https://app.posthog.com
 # NODE_ENV=development
+RESEND_API_KEY=re_your_api_key_here
+RESEND_AUDIENCE_ID=your_audience_id_here
 ```
 
 Environment variables are injected via `scripts/generate-env.js` into `static/env.js`.
@@ -242,6 +246,8 @@ GitHub Actions (`.github/workflows/`):
 | spellcheck.yml | push/PR | Spell checking            |
 | linknator.yml  | push/PR | Link validation           |
 | lexi.yml       | push/PR | Lexical analysis          |
+| newsletter.yml | cron/manual | Monthly newsletter send |
+| claude-pr-summary.yml | PR | AI PR summaries      |
 
 ## Testing
 
