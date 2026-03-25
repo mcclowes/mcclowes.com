@@ -4,7 +4,7 @@ import path from 'path';
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const RESEND_AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
 const SITE_URL = 'https://mcclowes.com';
-const FROM_EMAIL = 'newsletter@mcclowes.com'; // Must be verified in Resend
+const FROM_EMAIL = 'newsletter@whatthefpl.com'; // Must be verified in Resend
 
 async function getRecentPosts() {
   const blogDir = path.resolve('blog');
