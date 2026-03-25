@@ -1,0 +1,18 @@
+.newsletter {
+  background: var(--ifm-color-emphasis-100);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-font-color-base);
+}

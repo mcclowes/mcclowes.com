@@ -22,6 +22,24 @@ A constraint and probability-based programming language for describing and gener
 
 OAS Markdown Grammar - a human-first domain-specific language for API specification. OMG transforms verbose OpenAPI specs into readable Markdown, reducing typical specifications by ~6x in line count.
 
+## Other projects
+
+### [CV](https://github.com/mcclowes/cv)
+
+My resume, built as a web page. HTML/CSS CV that can be rendered to PDF.
+
+### [BitBar plugins](https://github.com/mcclowes/bitbar-plugins)
+
+A collection of plugins for BitBar, the macOS menu bar customisation tool.
+
+### [Handbooker](https://github.com/metamagic-games/handbooker)
+
+Turn markdown into a Player's Handbook. A tool for generating beautifully styled D&D-style PDFs from simple markdown content.
+
+### [D&D homebrews](https://github.com/metamagic-games/dnd-homebrews)
+
+Homebrew 5e D&D content with accompanying MPMB (MorePurpleMoreBetter) character sheet functionality.
+
 ## Documentation Tooling
 
 Docusaurus plugins for enhancing documentation sites.

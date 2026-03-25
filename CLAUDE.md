@@ -18,6 +18,7 @@ Personal website and blog for mcclowes, built with Docusaurus.
 
 ## Structure
 
+- `/api` - Vercel serverless functions (e.g., newsletter subscribe)
 - `/blog` - blog posts (markdown)
 - `/docs` - documentation pages
 - `/src/components` - React components
@@ -30,6 +31,7 @@ Personal website and blog for mcclowes, built with Docusaurus.
 
 - Giscus comments (configured, add `enableComments: true` to frontmatter)
 - PostHog analytics
+- Resend newsletter (monthly via GitHub Action, subscribe form in footer)
 - Cookie consent
 - Image zoom
 - Mermaid diagrams
@@ -55,10 +57,11 @@ npm run serve        # Serve production build locally
 ## Directory Structure
 
 ```
+/api                     # Vercel serverless functions (subscribe endpoint)
 /blog                    # Blog posts (markdown with frontmatter)
 /docs                    # Documentation pages (currently minimal)
 /glossary                # Glossary terms (glossary.json)
-/scripts                 # Build scripts (e.g., generate-env.js)
+/scripts                 # Build & utility scripts (generate-env.js, send-newsletter.mjs)
 /static                  # Static assets (images, env.js)
 /src
 ├── /clientModules       # Client-side modules (PostHog init)
@@ -68,7 +71,7 @@ npm run serve        # Serve production build locally
 ├── /hooks               # React hooks (usePostHog, useFeatureFlag)
 ├── /pages               # Standalone pages (index.js, about-me)
 ├── /plugins             # Custom Docusaurus plugins
-├── /theme               # Swizzled theme components
+├── /theme               # Swizzled theme components (BlogPostItem, Footer)
 └── /utils               # Utility functions
 ```
 
