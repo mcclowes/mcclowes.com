@@ -3,17 +3,20 @@
 ## Required Dependency Updates
 
 ### Core Packages
+
 - `@docusaurus/core`: ^2.x.x → ^3.0.0
 - `@docusaurus/preset-classic`: ^2.x.x → ^3.0.0
 - `@mdx-js/react`: ^1.6.22 → ^3.0.0
 - `prism-react-renderer`: ^1.3.5 → ^2.1.0
 
 ### Runtime Requirements
+
 - **Node.js**: >=16.14 → >=18.0
 - **React**: ^17.0.2 → ^18.2.0
 - **TypeScript**: ~4.7.4 → ~5.2.2
 
 ### TypeScript Configuration
+
 Replace `@tsconfig/docusaurus` with `@docusaurus/tsconfig`:
 
 ```json
@@ -32,51 +35,62 @@ The transition from MDX v1 to MDX v3 is the main challenge in adopting Docusauru
 ### Common MDX Issues
 
 #### Invalid `{` Characters
+
 **Problem**: Bare braces are now invalid in MDX unless part of JSX expressions.
 
 **Bad**:
+
 ```md
 Use the {key} to access the value
 ```
 
 **Good**:
+
 ```md
 Use the `{key}` to access the value
 Use the \{key\} to access the value
 ```
 
 #### Invalid `<` Characters
+
 **Problem**: Bare angle brackets are invalid unless part of HTML/JSX.
 
 **Bad**:
+
 ```md
 If x < 5, then...
 ```
 
 **Good**:
+
 ```md
 If `x < 5`, then...
 If x \< 5, then...
 ```
 
 #### GFM Autolinks Removed
+
 **Problem**: `<email@example.com>` and `<https://example.com>` no longer work.
 
 **Bad**:
+
 ```md
 Contact us at <support@example.com>
 ```
 
 **Good**:
+
 ```md
 Contact us at [support@example.com](mailto:support@example.com)
 Visit [https://example.com](https://example.com)
 ```
 
 #### Indented Code Blocks
+
 **Problem**: Indented code blocks (4 spaces) are no longer recognized.
 
 **Bad**:
+
 ```md
 Example code:
 
@@ -84,6 +98,7 @@ Example code:
 ```
 
 **Good**:
+
 ```md
 Example code:
 
@@ -93,14 +108,17 @@ const foo = 'bar';
 ```
 
 #### Emphasis Adjacent to Spaces
+
 **Problem**: Emphasis marks next to spaces may not work as expected.
 
 **Bad**:
+
 ```md
 This is _really _ important
 ```
 
 **Good**:
+
 ```md
 This is _really_ important
 ```
@@ -108,20 +126,24 @@ This is _really_ important
 ## Prism React Renderer Changes
 
 ### Theme Import Syntax
+
 **Old (v1)**:
+
 ```js
 const lightTheme = require('prism-react-renderer/themes/github');
 const darkTheme = require('prism-react-renderer/themes/dracula');
 ```
 
 **New (v2)**:
+
 ```js
-const {themes} = require('prism-react-renderer');
+const { themes } = require('prism-react-renderer');
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 ```
 
 ### Additional Languages
+
 Prism React Renderer v2 includes fewer languages by default. Add required languages:
 
 ```js
@@ -137,9 +159,11 @@ module.exports = {
 ## React 18 Migration
 
 ### Automatic JSX Runtime
+
 React imports are no longer required in files using JSX:
 
 **Before**:
+
 ```jsx
 import React from 'react';
 
@@ -149,6 +173,7 @@ export default function MyComponent() {
 ```
 
 **After**:
+
 ```jsx
 // No React import needed
 export default function MyComponent() {
@@ -157,7 +182,9 @@ export default function MyComponent() {
 ```
 
 ### Hydration Changes
+
 React 18 has stricter hydration requirements. Ensure:
+
 - Server and client render the same content
 - No conditional rendering based on `typeof window`
 - Use `useEffect` for client-only code
@@ -224,6 +251,7 @@ npx docusaurus-mdx-checker
 ```
 
 Common fixes:
+
 - Wrap `{` and `<` in backticks or escape them
 - Convert GFM autolinks to standard Markdown links
 - Replace indented code blocks with fenced code blocks
@@ -233,7 +261,7 @@ Common fixes:
 Update Prism configuration:
 
 ```js
-const {themes} = require('prism-react-renderer');
+const { themes } = require('prism-react-renderer');
 
 module.exports = {
   themeConfig: {
@@ -253,6 +281,7 @@ npm start
 ```
 
 Visit http://localhost:3000 and check:
+
 - All pages load without errors
 - MDX components render correctly
 - Code blocks display properly
@@ -269,10 +298,11 @@ Fix any build errors before deploying.
 ## Optional Improvements
 
 ### Migrate to ESM
+
 Convert `docusaurus.config.js` to `docusaurus.config.mjs`:
 
 ```js
-import {themes} from 'prism-react-renderer';
+import { themes } from 'prism-react-renderer';
 
 export default {
   // config
@@ -280,11 +310,12 @@ export default {
 ```
 
 ### Use TypeScript Config
+
 Rename to `docusaurus.config.ts`:
 
 ```typescript
-import type {Config} from '@docusaurus/types';
-import {themes} from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
+import { themes } from 'prism-react-renderer';
 
 const config: Config = {
   // config
@@ -294,6 +325,7 @@ export default config;
 ```
 
 ### Rename MD to MDX
+
 For files containing JSX, rename `.md` → `.mdx`:
 
 ```bash
@@ -302,6 +334,7 @@ mv blog/my-post.md blog/my-post.mdx
 ```
 
 ### Update Math Packages
+
 If using math support:
 
 ```json
@@ -314,25 +347,32 @@ If using math support:
 ## Troubleshooting
 
 ### MDX Parse Errors
+
 Use the [MDX Playground](https://mdxjs.com/playground/) to debug:
+
 1. Enable "remark-gfm" plugin
 2. Enable "remark-directive" plugin
 3. Paste your MDX content
 4. Fix reported errors
 
 ### Build Failures
+
 Common causes:
+
 - Outdated plugins or themes
 - Custom components using React 17 APIs
 - Invalid MDX syntax not caught by checker
 
 ### Hydration Mismatches
+
 React 18 is stricter about hydration. Check for:
+
 - Client-only code in render
 - Conditional rendering based on `window`
 - Inconsistent server/client output
 
 ### Missing Prism Languages
+
 If code blocks don't highlight properly, add to `additionalLanguages`:
 
 ```js
