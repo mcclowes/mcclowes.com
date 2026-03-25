@@ -27,17 +27,21 @@ Apply Google's documentation style guide principles to technical writing:
 ## Common Patterns
 
 ### Voice and Tense
+
 Use active voice and present tense. Example: "The API returns..." not "The API will return..."
 
 ### Headings
+
 Use sentence case for headings. Make them descriptive and actionable.
 
 ### Lists and Procedures
+
 - Numbered lists: For sequential steps
 - Bulleted lists: For non-sequential items
 - Start each item with a capital letter
 
 ### Code and UI Elements
+
 - Use `code font` for code elements, filenames, and UI elements
 - Use **bold** for UI elements users interact with
 - Use descriptive placeholder names like `YOUR_PROJECT_ID`
@@ -45,6 +49,7 @@ Use sentence case for headings. Make them descriptive and actionable.
 ## Reference Files
 
 For detailed documentation, see:
+
 - [references/language-grammar.md](references/language-grammar.md) - Voice, tense, pronouns
 - [references/formatting.md](references/formatting.md) - Dates, numbers, lists
 - [references/inclusive-language.md](references/inclusive-language.md) - Accessibility guidelines
