@@ -257,7 +257,7 @@ li[class*='sidebarItem'] a {
   max-width: 860px;
   margin: 16px auto;
   background-color: rgba(255, 250, 225, 0.92);
-  border-radius: 100px;
+  border-radius: 8px;
   padding: 10px 24px;
   box-shadow:
     0 4px 24px rgba(0, 0, 0, 0.08),
