@@ -78,7 +78,7 @@
   --ifm-font-color-base-inverse: var(--color-offwhite);
 
   /* Borders */
-  --ifm-toc-border-color: var(--color-offwhite-alt);
+  --ifm-toc-border-color: var(--color-offwhite-dark);
 
   /* Typography */
   --ifm-font-family-base: var(--font-mono);
@@ -136,7 +136,7 @@
   --ifm-font-color-base-inverse: var(--color-green);
 
   /* Borders */
-  --ifm-toc-border-color: var(--color-green-lighter);
+  --ifm-toc-border-color: var(--color-green-light);
 
   /* Blockquotes */
   --ifm-blockquote-color: var(--color-offwhite-dark);
@@ -254,24 +254,34 @@ li[class*='sidebarItem'] a {
 }
 
 .navbar > .navbar__inner {
-  max-width: 860px;
+  max-width: 1020px;
   margin: 16px auto;
-  background-color: rgba(255, 250, 225, 0.92);
+  background-color: rgba(47, 84, 73, 0.9);
   border-radius: 8px;
   padding: 10px 24px;
   box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(0, 0, 0, 0.04);
+    0 4px 24px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   pointer-events: auto;
 }
 
+.navbar .navbar__link,
+.navbar .navbar__item {
+  color: var(--color-offwhite);
+}
+
 [data-theme='dark'] .navbar > .navbar__inner {
-  background-color: rgba(47, 84, 73, 0.9);
+  background-color: rgba(255, 250, 225, 0.92);
   box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.06);
+    0 4px 24px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='dark'] .navbar .navbar__link,
+[data-theme='dark'] .navbar .navbar__item {
+  color: var(--color-green);
 }
 
 /* Smooth hide on scroll */
@@ -288,14 +298,37 @@ li[class*='sidebarItem'] a {
 
 .navbar__title {
   font-family: var(--font-serif);
-  background-color: var(--color-font-header);
-  color: var(--color-font-alt);
+  background-color: var(--color-offwhite);
+  color: var(--color-green);
   padding: 0.25em 0.5em;
   border-radius: 4px;
 }
 
+[data-theme='dark'] .navbar__title {
+  background-color: var(--color-green);
+  color: var(--color-offwhite);
+}
+
 .navbar__logo {
   display: none;
+}
+
+/* Hide logo/brand in doc sidebar */
+@media (min-width: 997px) {
+  [class*='sidebarLogo'][class*='sidebarLogo'] {
+    display: none !important;
+  }
+}
+
+/* Dark mode toggle */
+[class*='toggle_'] {
+  --docusaurus-toggle-background-color: var(--color-offwhite) !important;
+  color: var(--color-offwhite);
+}
+
+[data-theme='dark'] [class*='toggle_'] {
+  --docusaurus-toggle-background-color: var(--color-green) !important;
+  color: var(--color-green);
 }
 
 .navbar__item:hover {

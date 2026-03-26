@@ -35,7 +35,8 @@
       "mcp__github__add_issue_comment",
       "WebFetch(domain:skills.sh)",
       "Bash(gh repo:*)",
-      "Bash(gh search:*)"
+      "Bash(gh search:*)",
+      "Bash(tr '}' '\\\\n')"
     ],
     "deny": [],
     "ask": []
