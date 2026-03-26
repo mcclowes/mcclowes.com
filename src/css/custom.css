@@ -239,11 +239,46 @@ li[class*='sidebarItem'] a {
   }
 }
 
-/* Navbar */
+/* Navbar - Floating pill style */
 
 .navbar {
-  box-shadow: none;
+  box-shadow: none !important;
   font-family: var(--font-serif);
+  background: transparent !important;
+  height: auto !important;
+  padding: 0 !important;
+  position: sticky;
+  top: 0;
+  z-index: var(--ifm-z-index-fixed);
+  pointer-events: none;
+}
+
+.navbar > .navbar__inner {
+  max-width: 860px;
+  margin: 16px auto;
+  background-color: rgba(255, 250, 225, 0.92);
+  border-radius: 100px;
+  padding: 10px 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  pointer-events: auto;
+}
+
+[data-theme='dark'] .navbar > .navbar__inner {
+  background-color: rgba(47, 84, 73, 0.9);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* Smooth hide on scroll */
+.navbar[class*='navbarHideable'] {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar[class*='navbarHidden'] {
+  transform: translateY(-110%) !important;
+  opacity: 0;
 }
 
 .navbar__title {
@@ -267,6 +302,26 @@ li[class*='sidebarItem'] a {
   [class*='navbarHideable'] .navbar__items {
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+
+  .navbar > .navbar__inner {
+    margin: 10px 16px;
+    border-radius: 24px;
+    padding: 8px 16px;
+  }
+
+  /* Mobile sidebar needs standard layout */
+  .navbar-sidebar,
+  .navbar-sidebar__backdrop {
+    top: 0;
+  }
+
+  .navbar-sidebar .navbar__inner {
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    background: var(--ifm-navbar-background-color);
+    pointer-events: auto;
   }
 }
 
