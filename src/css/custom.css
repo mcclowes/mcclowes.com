@@ -239,11 +239,41 @@ li[class*='sidebarItem'] a {
   }
 }
 
-/* Navbar */
+/* Navbar - Floating pill style */
 
 .navbar {
   box-shadow: none;
   font-family: var(--font-serif);
+  background: transparent !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--ifm-z-index-fixed);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar > .navbar__inner {
+  max-width: 860px;
+  margin: 12px auto;
+  background-color: rgba(255, 250, 225, 0.85);
+  border-radius: 100px;
+  padding: 6px 20px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme='dark'] .navbar > .navbar__inner {
+  background-color: rgba(47, 84, 73, 0.85);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* Hide navbar on scroll */
+.navbar--fixed-top[class*='navbarHidden'] {
+  transform: translateY(-110%);
+  opacity: 0;
 }
 
 .navbar__title {
@@ -263,10 +293,34 @@ li[class*='sidebarItem'] a {
   opacity: 0.75;
 }
 
+/* Offset page content for floating navbar */
+.main-wrapper {
+  padding-top: 16px;
+}
+
 @media screen and (max-width: 997px) {
   [class*='navbarHideable'] .navbar__items {
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+
+  .navbar > .navbar__inner {
+    margin: 8px 12px;
+    border-radius: 20px;
+    padding: 4px 12px;
+  }
+
+  /* Mobile sidebar needs to not be pill-shaped */
+  .navbar-sidebar,
+  .navbar-sidebar__backdrop {
+    top: 0;
+  }
+
+  .navbar-sidebar .navbar__inner {
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    background: var(--ifm-navbar-background-color);
   }
 }
 
