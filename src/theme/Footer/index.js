@@ -8,7 +8,7 @@ export default function FooterWrapper(props) {
     <>
       <div className={styles.newsletter}>
         <div className={styles.container}>
-          <p className={styles.heading}>Get new posts in your inbox</p>
+          <p className={styles.heading}>Maybe I'll send an email once in a while</p>
           <NewsletterSignup />
           <p className={styles.subtext}>Monthly digest. No spam.</p>
         </div>
