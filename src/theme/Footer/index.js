@@ -10,6 +10,7 @@ export default function FooterWrapper(props) {
         <div className={styles.container}>
           <p className={styles.heading}>Get new posts in your inbox</p>
           <NewsletterSignup />
+          <p className={styles.subtext}>Monthly digest. No spam.</p>
         </div>
       </div>
       <Footer {...props} />
