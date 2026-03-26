@@ -32,19 +32,21 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="your@email.com"
-        required
-        className={styles.input}
-      />
-      <button type="submit" disabled={status === 'loading'} className={styles.button}>
-        {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
-      </button>
+    <div>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="your@email.com"
+          required
+          className={styles.input}
+        />
+        <button type="submit" disabled={status === 'loading'} className={styles.button}>
+          {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+        </button>
+      </form>
       {status === 'error' && <p className={styles.error}>Something went wrong. Try again.</p>}
-    </form>
+    </div>
   );
 }
