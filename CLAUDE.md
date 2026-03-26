@@ -238,16 +238,16 @@ Environment variables are injected via `scripts/generate-env.js` into `static/en
 
 GitHub Actions (`.github/workflows/`):
 
-| Workflow       | Trigger | Purpose                   |
-| -------------- | ------- | ------------------------- |
-| build.yml      | push/PR | Build verification        |
-| test.yml       | push/PR | Run tests                 |
-| format.yml     | push/PR | Prettier formatting check |
-| spellcheck.yml | push/PR | Spell checking            |
-| linknator.yml  | push/PR | Link validation           |
-| lexi.yml       | push/PR | Lexical analysis          |
-| newsletter.yml | cron/manual | Monthly newsletter send |
-| claude-pr-summary.yml | PR | AI PR summaries      |
+| Workflow              | Trigger     | Purpose                   |
+| --------------------- | ----------- | ------------------------- |
+| build.yml             | push/PR     | Build verification        |
+| test.yml              | push/PR     | Run tests                 |
+| format.yml            | push/PR     | Prettier formatting check |
+| spellcheck.yml        | push/PR     | Spell checking            |
+| linknator.yml         | push/PR     | Link validation           |
+| lexi.yml              | push/PR     | Lexical analysis          |
+| newsletter.yml        | cron/manual | Monthly newsletter send   |
+| claude-pr-summary.yml | PR          | AI PR summaries           |
 
 ## Testing
 
