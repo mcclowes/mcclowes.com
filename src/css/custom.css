@@ -352,6 +352,7 @@ li[class*='sidebarItem'] a {
   .navbar-sidebar,
   .navbar-sidebar__backdrop {
     top: 0;
+    pointer-events: auto;
   }
 
   .navbar-sidebar .navbar__inner {
