@@ -19,14 +19,16 @@
   position: relative;
   max-width: 90%;
   max-height: 90vh;
-  overflow-y: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   animation: slideIn 0.3s ease-out;
-  height: 100%;
 }
 
 .modalContent {
   overflow-y: auto;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
 }
 
 .closeButton {
