@@ -331,6 +331,14 @@ li[class*='sidebarItem'] a {
   color: var(--color-green);
 }
 
+.navbar__toggle {
+  color: var(--color-offwhite);
+}
+
+[data-theme='dark'] .navbar__toggle {
+  color: var(--color-green);
+}
+
 .navbar__item:hover {
   text-decoration: underline;
   opacity: 0.75;
