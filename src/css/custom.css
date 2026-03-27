@@ -348,6 +348,23 @@ li[class*='sidebarItem'] a {
     padding: 8px 16px;
   }
 
+  /* Hamburger menu toggle - match navbar pill style */
+  .navbar__toggle {
+    color: var(--color-offwhite);
+  }
+
+  .navbar__toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  [data-theme='dark'] .navbar__toggle {
+    color: var(--color-green);
+  }
+
+  [data-theme='dark'] .navbar__toggle:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
+
   /* Mobile sidebar needs standard layout */
   .navbar-sidebar,
   .navbar-sidebar__backdrop {
@@ -361,6 +378,15 @@ li[class*='sidebarItem'] a {
     box-shadow: none;
     background: var(--ifm-navbar-background-color);
     pointer-events: auto;
+  }
+
+  /* Sidebar hamburger should use page colors, not pill colors */
+  .navbar-sidebar .navbar__toggle {
+    color: var(--color-green);
+  }
+
+  [data-theme='dark'] .navbar-sidebar .navbar__toggle {
+    color: var(--color-offwhite);
   }
 }
 
