@@ -123,7 +123,29 @@ const config = {
     },
   ],
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    '@docusaurus/theme-mermaid',
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        language: ['en'],
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: false,
+        docsRouteBasePath: '/docs',
+        blogRouteBasePath: '/blog',
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        searchBarShortcutHint: true,
+        explicitSearchResultPath: true,
+        // Ignore glossary pages to prevent duplicate results from glossary terms
+        ignoreFiles: [/\/glossary\/.*/],
+        // Ignore glossary tooltip elements during indexing
+        ignoreCssSelectors: ['.glossary-tooltip', '[data-glossary-term]'],
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
