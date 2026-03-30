@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import usePostHog from '../../hooks/usePostHog';
 import styles from './styles.module.scss';
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
+  const { trackEvent } = usePostHog();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -19,6 +21,7 @@ export default function NewsletterSignup() {
       if (res.ok) {
         setStatus('success');
         setEmail('');
+        trackEvent('newsletter_signup', { source: 'footer' });
       } else {
         setStatus('error');
       }
