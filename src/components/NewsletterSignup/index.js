@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { track } from '@vercel/analytics';
 import styles from './styles.module.scss';
 
 export default function NewsletterSignup() {
@@ -19,6 +20,7 @@ export default function NewsletterSignup() {
       if (res.ok) {
         setStatus('success');
         setEmail('');
+        track('newsletter_signup', { source: 'footer' });
       } else {
         setStatus('error');
       }
