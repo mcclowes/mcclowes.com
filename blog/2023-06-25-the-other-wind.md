@@ -2,6 +2,7 @@
 title: "The Other Wind - Ursula Le Guin"
 authors: mcclowes
 tags: [book, review]
+enableComments: true
 ---
 
 I recently read *The Other Wind* by Ursula K. Le Guin. It strikes a perfect balance between the mundane aspects of real, believable human lives and exciting high magic and wonder, reminiscent of "Lord of the Rings" and other classic fantasies.

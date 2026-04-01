@@ -2,6 +2,7 @@
 title: "xbar plugins for Things 3"
 authors: mcclowes
 tags: [dev, open source, productivity]
+enableComments: true
 ---
 
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';

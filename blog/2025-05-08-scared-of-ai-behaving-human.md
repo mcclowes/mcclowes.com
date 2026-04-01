@@ -3,6 +3,7 @@ title: "We're scared of AI behaving like humans"
 authors: mcclowes
 tags: [ai]
 draft: true
+enableComments: true
 ---
 
 The things that unsettle people most about AI are often the things that make it more human-like. We say we want human-level AI, but we're disturbed when we get it.

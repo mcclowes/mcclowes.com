@@ -2,6 +2,7 @@
 title: "Paintings May 25"
 authors: mcclowes
 tags: [art, painting]
+enableComments: true
 ---
 
 import Carousel from '@site/src/components/Carousel';

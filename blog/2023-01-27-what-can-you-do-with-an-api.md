@@ -2,6 +2,7 @@
 title: "Documenting what you can do with an API"
 authors: mcclowes
 tags: [ai, product]
+enableComments: true
 ---
 
 Application Programming Interfaces, or APIs, are an essential component of modern software development. APIs allow different software systems to interact with each other, facilitating the exchange of data and functionality between them. However, while APIs have become ubiquitous in modern software development, their documentation often leaves much to be desired.

@@ -3,6 +3,7 @@ title: "Design is not a veneer"
 authors: mcclowes
 tags: [product]
 draft: true
+enableComments: true
 ---
 
 Design isn't a coat of paint you apply after the product requirements are done.

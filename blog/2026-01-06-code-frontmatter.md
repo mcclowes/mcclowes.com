@@ -2,6 +2,7 @@
 title: 'Code Frontmatter: An Index for AI?'
 authors: mcclowes
 tags: [ai, coding]
+enableComments: true
 ---
 
 When an AI assistant explores your codebase, it reads files. Each file costs tokens. A lot of that reading turns out to be unnecessary—the AI loads a file just to discover it's irrelevant.

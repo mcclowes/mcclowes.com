@@ -3,6 +3,7 @@ title: The right tool for the job
 description: A round up of the tools I use for organization
 authors: mcclowes
 tags: [productivity]
+enableComments: true
 ---
 
 A list of tools I'm currently using

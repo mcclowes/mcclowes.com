@@ -2,6 +2,7 @@
 title: "Tennis player Elo modelling"
 authors: mcclowes
 tags: [dev, politics]
+enableComments: true
 ---
 
 ![](/img/posts/tennis-elo/tennis-1.png)

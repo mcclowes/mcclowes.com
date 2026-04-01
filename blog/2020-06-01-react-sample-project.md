@@ -2,6 +2,7 @@
 title: "A React starter template"
 authors: mcclowes
 tags: [dev, open source]
+enableComments: true
 ---
 
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';

@@ -2,6 +2,7 @@
 title: 5 reasons to keep a notebook
 authors: mcclowes
 tags: [productivity]
+enableComments: true
 ---
 
 Expressing ideas and thoughts — whether by some hurried doodle on a post-it or with a finely crafted sentence in a leather-bound journal — is incredibly important.

@@ -2,6 +2,7 @@
 title: "What the FPL!? v1"
 authors: mcclowes
 tags: [dev, fantasy football, fpl]
+enableComments: true
 ---
 
 I built my first version of **What the FPL!?** in 2019 as a simple tool to help me make better decisions in Fantasy Premier League. It was a basic web app that collected player data and predicted points using a straightforward algorithm.

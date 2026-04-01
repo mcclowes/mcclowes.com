@@ -2,6 +2,7 @@
 title: "It just works... finally"
 authors: mcclowes
 tags: [apple, tech]
+enableComments: true
 ---
 
 As a lifelong Apple user - yep my parents were designers and I've never owned a PC - I've always slightly tongue-in-cheekily said that Apple products _just work_. And, of course, they do work pretty well. 

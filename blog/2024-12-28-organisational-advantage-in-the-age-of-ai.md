@@ -2,6 +2,7 @@
 title: "Apple's organisational disadvantage in the age of AI"
 authors: mcclowes
 tags: [ai, tech]
+enableComments: true
 ---
 
 A useful way to understand the successes—and the stagnation—of big tech is through the lens of organisational advantage. Not just what a company did, but how it was set up to win.

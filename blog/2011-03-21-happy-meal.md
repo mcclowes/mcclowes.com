@@ -2,6 +2,7 @@
 title: "Food for Thought"
 authors: mcclowes
 tags: [design, foundation]
+enableComments: true
 ---
 
 import Carousel from '@site/src/components/Carousel';

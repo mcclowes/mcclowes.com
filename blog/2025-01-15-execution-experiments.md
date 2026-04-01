@@ -3,6 +3,7 @@ title: "If you don't execute well, your experiments don't prove anything"
 authors: mcclowes
 tags: [product]
 draft: true
+enableComments: true
 ---
 
 A poorly run experiment doesn't disprove a hypothesis. It proves nothing at all.

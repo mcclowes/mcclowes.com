@@ -3,6 +3,7 @@ title: Examining expected problems
 description: A product lesson from a very cold window
 authors: mcclowes
 tags: [product]
+enableComments: true
 ---
 
 A little while ago I (finally) got myself a decent desk and set up my workspace. It’s set up next to a window, which is nice (even if the view is of a brick wall). I’ve even got a window box - look Ma, I’m a proper adult.

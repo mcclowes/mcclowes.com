@@ -3,6 +3,7 @@ title: "Opinionated product management"
 authors: mcclowes
 tags: [product]
 draft: true
+enableComments: true
 ---
 
 The best PMs I've worked with have opinions. Strong ones. They don't hide behind data or defer every decision to stakeholders.

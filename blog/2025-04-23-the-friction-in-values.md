@@ -3,6 +3,7 @@ title: "What's in a value?"
 authors: mcclowes
 tags: [leadership, thinking]
 draft: false
+enableComments: true
 ---
 
 I recently ran a values exercise with a team of engineers in 1-1s. Each had to select three sticky-notes from a predefined set of values. Every single one of them chose Cooperation.

@@ -3,6 +3,7 @@ title: "The depersonalisation of shifting attention"
 authors: mcclowes
 tags: [culture]
 draft: true
+enableComments: true
 ---
 
 When your interests and attention shift rapidly, it becomes hard to maintain a stable sense of self. Who are you if your passions change constantly?

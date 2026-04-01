@@ -2,6 +2,7 @@
 title: "The America tax"
 authors: mcclowes
 tags: [politics, economics, tech, journalism]
+enableComments: true
 ---
 
 The rapid rise of social media and digital platforms has reshaped global society, economics, and politics. Over the past two decades, America has notably thrived economically compared to Europe and other regions, which have experienced far slower growth. Rather than social media itself being inherently problematic, perhaps the real issue is what we've collectively lost in its ascendance—primarily local journalism, community vitality, and economic independence.

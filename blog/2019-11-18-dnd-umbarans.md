@@ -2,6 +2,7 @@
 title: "DND: Umbarans"
 authors: mcclowes
 tags: [dnd, gaming, homebrew]
+enableComments: true
 ---
 
 A custom DND concept: The Umbarans. This PDF contains the complete rules and mechanics for this homebrew race or faction with unique abilities and lore.

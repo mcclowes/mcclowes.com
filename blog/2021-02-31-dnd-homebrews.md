@@ -2,6 +2,7 @@
 title: "D&D Homebrews: Custom Content with MPMB Integration"
 authors: mcclowes
 tags: [dev, open source, gaming, dnd, homebrew]
+enableComments: true
 ---
 
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';

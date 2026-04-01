@@ -3,6 +3,7 @@ title: "Product-led orgs"
 authors: mcclowes
 tags: [apple, tech]
 draft: true
+enableComments: true
 ---
 
 As I recently posted, I bought the AirPods Max and one of the nice features there was its massive 20-hour battery life.

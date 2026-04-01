@@ -3,6 +3,7 @@ title: "The New Generalist"
 authors: mcclowes
 tags: [ai, career, productivity]
 draft: false
+enableComments: true
 ---
 
 The 20th century belonged to specialists. Experts carved out narrow domains and dug deep. The system rewarded it — the best knee surgeon, the best COBOL programmer, the best ad copywriter. Depth was the differentiator. But AI tilts the game board.

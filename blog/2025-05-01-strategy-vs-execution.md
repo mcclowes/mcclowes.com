@@ -3,6 +3,7 @@ title: "It might not be the wrong strategy"
 authors: mcclowes
 tags: [product]
 draft: true
+enableComments: true
 ---
 
 When something isn't working, we rush to blame the strategy. But often the strategy was fine. We just didn't execute it well.

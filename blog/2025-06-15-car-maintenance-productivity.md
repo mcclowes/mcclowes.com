@@ -3,6 +3,7 @@ title: "Cars and productivity"
 authors: mcclowes
 tags: [culture]
 draft: true
+enableComments: true
 ---
 
 Here's a theory: the cost of car ownership is a massive drag on productivity that we don't account for properly.

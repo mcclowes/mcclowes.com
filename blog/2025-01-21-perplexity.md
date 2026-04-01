@@ -2,6 +2,7 @@
 title: "Perplexity vs. Google for Search"
 authors: mcclowes
 tags: [productivity, ai]
+enableComments: true
 ---
 
 A week ago I tried switching my web browser's default search engine from Google to [Perplexity](https://www.perplexity.ai/).

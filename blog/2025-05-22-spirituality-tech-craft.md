@@ -3,6 +3,7 @@ title: "Spirituality, tech, and craft"
 authors: mcclowes
 tags: [culture, tech]
 draft: true
+enableComments: true
 ---
 
 There's a spiritual dimension to making things well that we've largely stripped out of tech work. I think we lost something important.

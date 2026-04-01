@@ -2,6 +2,7 @@
 title: "Paintings"
 authors: mcclowes
 tags: [art]
+enableComments: true
 ---
 
 Some recent paintings I've been working on.

@@ -2,6 +2,7 @@
 title: "API The Docs Podcast - Documentation by humans, for humans"
 authors: mcclowes
 tags: [podcast, tech]
+enableComments: true
 ---
 
 import Spotify from '@site/src/components/Spotify';

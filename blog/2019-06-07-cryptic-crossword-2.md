@@ -2,6 +2,7 @@
 title: "Cryptic crossword #2"
 authors: mcclowes
 tags: [puzzles]
+enableComments: true
 ---
 
 import PDFViewer from '@site/src/components/PDFViewer';

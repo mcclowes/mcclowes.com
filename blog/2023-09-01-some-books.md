@@ -2,6 +2,7 @@
 title: "Some books I've read recently"
 authors: mcclowes
 tags: [blog]
+enableComments: true
 ---
 
 I decided to make 2023 my year of reading. These are a few of my recent reads.

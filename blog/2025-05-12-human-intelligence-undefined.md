@@ -3,6 +3,7 @@ title: "We don't understand human intelligence"
 authors: mcclowes
 tags: [ai]
 draft: true
+enableComments: true
 ---
 
 We're building artificial intelligence without a clear definition of the natural kind. This seems like a problem.

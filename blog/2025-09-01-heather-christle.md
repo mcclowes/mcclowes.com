@@ -2,6 +2,7 @@
 title: "Ode to Heather Christle"
 authors: mcclowes
 tags: [writing, poetry]
+enableComments: true
 ---
 
 I own like six nail clippers  

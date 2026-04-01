@@ -2,6 +2,7 @@
 title: "Deleting social media"
 authors: mcclowes
 tags: [blog]
+enableComments: true
 ---
 
 I've deleted my Facebook, Twitter, and Instagram accounts.

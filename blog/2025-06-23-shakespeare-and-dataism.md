@@ -2,6 +2,7 @@
 title: "Shakespeare and Dataism"
 authors: mcclowes
 tags: [tech, thinking]
+enableComments: true
 ---
 
 If perfect knowledge is the theoretical endpoint of human understanding—an omniscient, frictionless clarity—then perhaps its inverse, incomplete information, is the essential condition of drama, comedy, and life itself.

@@ -3,6 +3,7 @@ title: "Numbers and colours"
 authors: ["mcclowes"]
 tags: ["synesthesia", "perception", "personal", "visual"]
 draft: false
+enableComments: true
 ---
 
 ![Numbers with their associated colours](/img/posts/numbers/numbers.png)

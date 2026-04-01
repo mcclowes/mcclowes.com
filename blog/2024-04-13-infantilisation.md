@@ -3,6 +3,7 @@ title: "Infantilisation"
 authors: mcclowes
 tags: [blog]
 draft: true
+enableComments: true
 ---
 
 The trend of eg the balloon museum continues a trend of infantilisation,

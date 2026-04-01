@@ -3,6 +3,7 @@ title: "Your PMs don't need more time writing PRDs"
 authors: mcclowes
 tags: [product]
 draft: true
+enableComments: true
 ---
 
 I've seen teams obsess over PRD templates, documentation standards, and specification formats. Meanwhile, their PMs barely use the product they're building.

@@ -2,6 +2,7 @@
 title: "Toys, tools, products"
 authors: mcclowes
 tags: [product, tech]
+enableComments: true
 ---
 
 A foundational part of product management, often overlooked, is understanding the nuanced difference between toys, tools, and products.

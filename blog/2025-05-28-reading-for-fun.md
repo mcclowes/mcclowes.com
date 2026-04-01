@@ -3,6 +3,7 @@ title: "Reading for fun, not knowledge"
 authors: mcclowes
 tags: [culture]
 draft: true
+enableComments: true
 ---
 
 At some point I started treating reading as self-improvement. Every book had to teach me something. I'm trying to undo that.

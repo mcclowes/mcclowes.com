@@ -3,6 +3,7 @@ title: "An argument for scepticism"
 authors: mcclowes
 tags: [blog]
 draft: true
+enableComments: true
 ---
 
 Scepticism is not cynicism. This distinction matters.

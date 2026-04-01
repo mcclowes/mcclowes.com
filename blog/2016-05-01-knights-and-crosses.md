@@ -2,6 +2,7 @@
 title: "Knights and Crosses"
 authors: mcclowes
 tags: [uni, dev]
+enableComments: true
 ---
 
 import Carousel from '@site/src/components/Carousel';

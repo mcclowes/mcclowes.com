@@ -3,6 +3,7 @@ title: "Doing things well"
 authors: mcclowes
 tags: [product]
 draft: true
+enableComments: true
 ---
 
 I've historically thought of myself as someone who *can* do things well but often does so haphazardly or inconsistently.

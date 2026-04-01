@@ -2,6 +2,7 @@
 title: "The Bar for AI Keeps Shifting"
 authors: mcclowes
 tags: [tech, ai]
+enableComments: true
 ---
 
 During my computer science studies, our introduction to artificial intelligence didn’t begin with neural networks or robotics, but with a parade of definitions:

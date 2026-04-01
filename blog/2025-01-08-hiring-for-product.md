@@ -2,6 +2,7 @@
 title: "Hiring for product: what actually matters"
 authors: mcclowes
 tags: [product, hiring, leadership]
+enableComments: true
 ---
 
 Most PM hiring is broken. Companies copy generic interview processes, ask "tell me about a time when..." questions, and end up with people who can talk about product but can't actually do it.

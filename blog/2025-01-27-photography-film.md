@@ -3,6 +3,7 @@ title: "Photography film"
 authors: [mcclowes]
 tags: [photography, art]
 draft: false
+enableComments: true
 ---
 
 ![Film photograph 1](/img/posts/photography-film/film-1.jpeg)

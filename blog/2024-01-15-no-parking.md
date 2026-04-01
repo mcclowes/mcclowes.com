@@ -2,6 +2,7 @@
 title: "No parking"
 authors: mcclowes
 tags: [photography, urbanism, street]
+enableComments: true
 ---
 
 import Masonry from '@site/src/components/Masonry';

@@ -3,6 +3,7 @@ title: "Digital drain"
 authors: mcclowes
 tags: [culture, tech]
 draft: true
+enableComments: true
 ---
 
 Digital technology was supposed to make life easier. Instead, it absorbs attention and resources that used to go to the physical world. No wonder things feel like they're falling apart.

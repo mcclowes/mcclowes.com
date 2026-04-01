@@ -2,6 +2,7 @@
 title: "UK Technical Communication Awards 2024"
 authors: mcclowes
 tags: [blog]
+enableComments: true
 ---
 
 ![ISTC Award badge](/img/posts/istcmeritaward.png)
