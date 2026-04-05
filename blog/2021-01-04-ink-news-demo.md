@@ -2,6 +2,7 @@
 title: "Interactive news articles with Ink"
 authors: mcclowes
 tags: [dev, open source, journalism, interactive]
+enableComments: true
 ---
 
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';

@@ -2,6 +2,7 @@
 title: "Zine draft"
 authors: mcclowes
 tags: [blog]
+enableComments: true
 ---
 
 import PDFViewer from '@site/src/components/PDFViewer';

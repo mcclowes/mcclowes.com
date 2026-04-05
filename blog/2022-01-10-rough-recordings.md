@@ -2,6 +2,7 @@
 title: "Rough recordings of old songs from isolation."
 authors: mcclowes
 tags: [music]
+enableComments: true
 ---
 
 import Spotify from '@site/src/components/Spotify';

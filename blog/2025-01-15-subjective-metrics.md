@@ -3,6 +3,7 @@ title: "Traffic lights and other subjective metrics"
 authors: mcclowes
 tags: [product]
 draft: true
+enableComments: true
 ---
 
 Sometimes the most useful metrics are subjective.

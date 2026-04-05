@@ -3,6 +3,7 @@ title: "Bidirectional product management"
 authors: mcclowes
 tags: [product]
 draft: true
+enableComments: true
 ---
 
 Product management isn't purely top-down strategy or bottom-up discovery. The best product work moves in both directions simultaneously.

@@ -2,6 +2,7 @@
 title: "Godfreys.co - still driving around London 12 years later"
 authors: mcclowes
 tags: [work]
+enableComments: true
 ---
 
 In 2012, I created a website for Godfreys, a London-based butcher, where I also worked as an assistant butcher for 4 years. Twelve years later, I still see the branding I created driving around London weekly.

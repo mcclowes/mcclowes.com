@@ -2,6 +2,7 @@
 title: "Election prediction and poll aggregation"
 authors: mcclowes
 tags: [dev, politics]
+enableComments: true
 ---
 
 ![](/img/posts/british-opinions/bo3.png)

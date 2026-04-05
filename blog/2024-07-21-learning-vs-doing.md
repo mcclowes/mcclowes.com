@@ -2,6 +2,7 @@
 title: "10% more learning"
 authors: mcclowes
 tags: [productivity, learning, leadership]
+enableComments: true
 ---
 
 I've been thinking lately that I should spend 10% less time doing, and 10% more time learning.

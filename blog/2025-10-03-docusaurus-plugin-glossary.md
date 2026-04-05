@@ -2,6 +2,7 @@
 title: "A glossary plugin for Docusaurus"
 authors: mcclowes
 tags: [dev, open source, documentation]
+enableComments: true
 ---
 
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';

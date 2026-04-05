@@ -2,6 +2,7 @@
 title: "What the FPL!?"
 authors: mcclowes
 tags: [dev, fantasy football, fpl]
+enableComments: true
 ---
 
 I've been working on a revamped version of my [Fantasy Premier League](https://fantasy.premierleague.com/) helper tool, **What the FPL!?** I initially built the [first version back in 2019](/blog/2019/01/15/what-the-fpl), and this version is a complete rebuild with a much more solid technical foundation. The original version used a simpler predicted points algorithm, but this rebuild takes a more sophisticated approach.

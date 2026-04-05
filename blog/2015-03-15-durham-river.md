@@ -2,6 +2,7 @@
 title: "Durham's river deaths"
 authors: mcclowes
 tags: [news, uni]
+enableComments: true
 ---
 
 import Carousel from '@site/src/components/Carousel';

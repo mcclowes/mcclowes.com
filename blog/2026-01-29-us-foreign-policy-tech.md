@@ -2,6 +2,7 @@
 title: "American foreign policy threatens American tech dominance"
 authors: mcclowes
 tags: [tech, ai, politics]
+enableComments: true
 ---
 
 For years, America has held a unique power through its global technology dominance. The US has greatly benefited from this position, but historically, it has not been overtly exploited in ways that were blatantly only for America's benefit.

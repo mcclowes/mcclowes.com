@@ -3,6 +3,7 @@ title: "Product management is digital transformation"
 authors: mcclowes
 tags: [product]
 draft: true
+enableComments: true
 ---
 
 Digital transformation has become a buzzword that means everything and nothing. But strip away the consultant-speak, and what you're left with is product management.

@@ -2,6 +2,7 @@
 title: 'Synthesism'
 authors: mcclowes
 tags: [art, writing, creativity]
+enableComments: true
 ---
 
 Every craft form is a new way of seeing. A method of producing new thoughts.

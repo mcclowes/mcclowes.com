@@ -2,6 +2,7 @@
 title: "LLMs are compression algorithms"
 authors: mcclowes
 tags: [ai]
+enableComments: true
 ---
 
 Here's a mental model I find useful: LLMs are a compression technique for knowledge, combined with a clever decompression algorithm.

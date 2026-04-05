@@ -2,6 +2,7 @@
 title: "AI's debt colony"
 authors: mcclowes
 tags: [ai, tech, history]
+enableComments: true
 ---
 
 In 1528, the Welser banking family of Augsburg struck a deal with Emperor Charles V: in exchange for debts the Emperor couldn't repay, they'd receive the Province of Venezuela to colonise and exploit. They called it Klein-Venedig — Little Venice. It lasted eighteen years, and it's one of the most instructive failures in colonial history.

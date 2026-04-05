@@ -3,6 +3,7 @@ title: Habit tracking
 description: Preventing task paralysis and over-commitment
 authors: mcclowes
 tags: [productivity]
+enableComments: true
 ---
 
 If a task MUST be done, it belongs in a to-do list

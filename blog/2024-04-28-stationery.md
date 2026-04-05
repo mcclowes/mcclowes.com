@@ -2,6 +2,7 @@
 title: "The allure of stationery"
 authors: mcclowes
 tags: [apple, tech]
+enableComments: true
 ---
 
 I absolutely love wandering around stationery shops and it's taken me a good long while to begin to resist buying absolutely unnecessary notebooks which I inevitably end up not using very much of. 

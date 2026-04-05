@@ -2,6 +2,7 @@
 title: "DND: Combat Medic"
 authors: mcclowes
 tags: [dnd, gaming, homebrew]
+enableComments: true
 ---
 
 A custom DND concept: The Combat Medic. This PDF contains the complete rules and mechanics for this homebrew class or subclass focused on battlefield healing and support.

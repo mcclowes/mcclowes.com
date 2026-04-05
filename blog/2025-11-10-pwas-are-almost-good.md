@@ -2,6 +2,7 @@
 title: "PWAs could still be good"
 authors: mcclowes
 tags: [dev]
+enableComments: true
 ---
 
 I just upgraded my [Fantasy Premier League helper](https://mcclowes.com/blog/2025/11/04/what-the-fpl) into a Progressive Web App (PWA).

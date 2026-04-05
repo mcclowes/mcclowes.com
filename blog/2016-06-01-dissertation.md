@@ -2,6 +2,7 @@
 title: "The Use of Genetic AI in the Balancing of Competitive Multiplayer Games"
 authors: mcclowes
 tags: [uni, dev]
+enableComments: true
 ---
 
 ![Screenshot of the game in progress](/img/posts/sigil/sigil.png)

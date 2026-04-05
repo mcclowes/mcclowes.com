@@ -4,6 +4,7 @@ title: The art of fast decision-making
 description: In the fast-paced world of product management, making quick decisions is essential to success. Learn why being agile and adaptable, measuring success, and reversing decisions when necessary can help you drive effective product strategies.
 authors: mcclowes
 tags: [ai, product]
+enableComments: true
 ---
 
 As a product manager, making decisions is a big part of the job. While we all want to make the right decision every time, sometimes things don't go as planned. It can be tempting to try to stick with a decision, even when it's not working, but I've learned that it's better to be able to reverse course and make a new decision.

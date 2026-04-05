@@ -3,6 +3,7 @@ title: "The anxiety of an unreliable lifeline"
 authors: mcclowes
 tags: [health]
 draft: true
+enableComments: true
 ---
 
 I use a continuous glucose monitor (Libre) and Shuggah app to manage my health. When they're unreliable, the anxiety is particular. Your lifeline becomes a source of stress.

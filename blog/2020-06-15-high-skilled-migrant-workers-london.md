@@ -2,6 +2,7 @@
 title: "The financial reality for migrant workers"
 authors: mcclowes
 tags: [politics]
+enableComments: true
 ---
 
 You're a high-skilled migrant worker and you've chosen to come work in London...

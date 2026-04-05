@@ -2,6 +2,7 @@
 title: "Hand Typed"
 authors: mcclowes
 tags: [typography, design, art]
+enableComments: true
 ---
 
 import Carousel from '@site/src/components/Carousel';

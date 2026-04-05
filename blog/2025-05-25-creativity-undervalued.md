@@ -3,6 +3,7 @@ title: "Creativity is undervalued"
 authors: mcclowes
 tags: [culture]
 draft: true
+enableComments: true
 ---
 
 We pay lip service to creativity while systematically undervaluing it. The gap between what we say and what we reward is vast.

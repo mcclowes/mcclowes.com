@@ -2,6 +2,7 @@
 title: "Feelings in product management"
 authors: mcclowes
 tags: [product]
+enableComments: true
 ---
 
 The push to remove feelings from product management is misguided. We've somehow convinced ourselves that good product decisions must be purely rational, backed by data, stripped of intuition. This is mad.

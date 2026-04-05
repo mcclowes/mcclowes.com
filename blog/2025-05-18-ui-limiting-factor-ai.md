@@ -3,6 +3,7 @@ title: "UI is the limiting factor for AI"
 authors: mcclowes
 tags: [ai, product]
 draft: true
+enableComments: true
 ---
 
 AI capabilities are racing ahead. The interfaces for using them aren't keeping up. UI is becoming the bottleneck.

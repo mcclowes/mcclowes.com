@@ -2,6 +2,7 @@
 title: "Progress doesn't always feel like progress"
 authors: mcclowes
 tags: [blog, productivity]
+enableComments: true
 ---
 
 I've long embraced generalism—dipping into different disciplines, interests, and ideas. I often worried this approach meant sacrificing depth for breadth, leaving me moving slowly in many directions rather than swiftly in one.

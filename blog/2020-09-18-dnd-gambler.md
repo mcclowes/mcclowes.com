@@ -2,6 +2,7 @@
 title: "DND: Gambler"
 authors: mcclowes
 tags: [dnd, gaming, homebrew]
+enableComments: true
 ---
 
 A custom DND concept: The Gambler. This PDF contains the complete rules and mechanics for this homebrew class or subclass that embraces risk and chance in combat.

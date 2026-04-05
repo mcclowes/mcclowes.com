@@ -2,6 +2,7 @@
 title: 'End of the Line'
 authors: mcclowes
 tags: [writing]
+enableComments: true
 ---
 
 I awoke in an atrium hurtling through a dark abyss. The beautiful terrazzo floor, embedded with blue like sapphires, shook beneath my feet, quaking, groaning, screeching.

@@ -2,6 +2,7 @@
 title: "Handbooker: Turn Markdown into D&D Player's Handbooks"
 authors: mcclowes
 tags: [dev, open source, gaming, dnd, documentation]
+enableComments: true
 ---
 
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';

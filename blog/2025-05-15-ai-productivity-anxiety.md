@@ -3,6 +3,7 @@ title: "AI makes going offline anxiety-inducing"
 authors: mcclowes
 tags: [ai]
 draft: true
+enableComments: true
 ---
 
 AI tools have made me so productive that disconnecting now feels like a liability. This is a new kind of anxiety.

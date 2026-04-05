@@ -3,6 +3,7 @@ slug: user-experience-business-model
 title: "Everything starts with user experience and business model"
 authors: mcclowes
 tags: [product, tech]
+enableComments: true
 ---
 
 1. users are understanding the value of paying for products and the risk of giving away data - friends moving away from google to Apple

@@ -3,6 +3,7 @@ title: "High production value misinformation"
 authors: mcclowes
 tags: [culture, tech]
 draft: true
+enableComments: true
 ---
 
 TikTok democratised high-quality video production. One consequence: misinformation now comes in professional packaging. People aren't calibrated for this.

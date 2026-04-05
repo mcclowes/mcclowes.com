@@ -2,6 +2,7 @@
 title: "The 5Ds of product management"
 authors: mcclowes
 tags: [product, leadership]
+enableComments: true
 ---
 
 Every PM should have an angle - a specific area of depth that makes them genuinely useful. I think of these as the 5Ds:

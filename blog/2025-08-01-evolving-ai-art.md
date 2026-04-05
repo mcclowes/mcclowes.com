@@ -3,6 +3,7 @@ title: "Evolving AI art"
 authors: ["mcclowes"]
 tags: ["ai", "art", "automation", "github", "projects"]
 draft: false
+enableComments: true
 ---
 
 import Carousel from '@site/src/components/Carousel';

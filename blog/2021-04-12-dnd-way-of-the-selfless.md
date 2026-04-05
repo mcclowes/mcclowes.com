@@ -2,6 +2,7 @@
 title: "DND: Way of the Selfless"
 authors: mcclowes
 tags: [dnd, gaming, homebrew]
+enableComments: true
 ---
 
 A custom DND concept: The Way of the Selfless. This PDF contains the complete rules and mechanics for this homebrew monk subclass focused on self-sacrifice and altruism.

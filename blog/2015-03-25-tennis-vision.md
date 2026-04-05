@@ -3,6 +3,7 @@ title: "Tennis vision: computer vision for match analysis"
 authors: mcclowes
 tags: [dev, uni]
 draft: false
+enableComments: true
 ---
 
 import GitHubRepoCard from '@site/src/components/GitHubRepoCard';

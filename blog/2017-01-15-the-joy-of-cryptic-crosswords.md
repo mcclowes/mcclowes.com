@@ -2,6 +2,7 @@
 title: "Cryptic crossword #1"
 authors: mcclowes
 tags: [puzzles]
+enableComments: true
 ---
 
 ![A completed cryptic crossword puzzle](/img/posts/crosswords/crossword-1.png)

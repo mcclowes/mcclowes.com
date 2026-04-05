@@ -3,6 +3,7 @@ title: "Religion was right about self-restraint"
 authors: mcclowes
 tags: [blog]
 draft: true
+enableComments: true
 ---
 
 Religious traditions have always emphasised self-restraint. Modern society has systematically dismantled it.

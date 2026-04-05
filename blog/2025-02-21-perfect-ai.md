@@ -2,6 +2,7 @@
 title: "AI is not a hammer"
 authors: mcclowes
 tags: [ai, tech, society]
+enableComments: true
 ---
 
 We seem to have stumbled into a strange contradiction: we demand perfection from our machines, while tolerating imperfection from ourselves. The same people who chuckle at human error in the workplace will denounce AI systems for the slightest misstep. "It hallucinated a fact!" Yes. And you never have?

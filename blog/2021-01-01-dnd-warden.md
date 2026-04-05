@@ -2,6 +2,7 @@
 title: "DND: Warden"
 authors: mcclowes
 tags: [dnd, gaming, homebrew]
+enableComments: true
 ---
 
 A custom DND concept: The Warden. This PDF contains the complete rules and mechanics for this homebrew class or subclass focused on protection and guardianship.

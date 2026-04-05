@@ -2,6 +2,7 @@
 title: "John Clowes - At Last!"
 authors: mcclowes
 tags: [music]
+enableComments: true
 ---
 
 import Spotify from '@site/src/components/Spotify';

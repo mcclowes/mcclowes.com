@@ -3,6 +3,7 @@ title: "The 4 Ps of Good Business"
 authors: mcclowes
 tags: [business, leadership, management]
 draft: false
+enableComments: true
 ---
 
 Each of these Ps need to be in place, in order, or you're doomed. 
