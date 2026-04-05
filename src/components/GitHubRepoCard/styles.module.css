@@ -1,7 +1,7 @@
 .card {
   display: block;
   border: 1px solid var(--ifm-toc-border-color);
-  border-radius: 10px;
+  border-radius: var(--ifm-global-radius);
   padding: 16px;
   text-decoration: none;
   color: inherit;
@@ -64,8 +64,8 @@
   font-size: 12px;
   padding: 2px 8px;
   border-radius: 999px;
-  background: #b00020;
-  color: #fff;
+  background: var(--color-red);
+  color: var(--color-offwhite);
 }
 
 .description {

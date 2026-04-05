@@ -57,7 +57,7 @@
   border-radius: 16px;
   font-size: 0.875rem;
   text-transform: capitalize;
-  color: white;
+  color: var(--color-offwhite);
   font-weight: 500;
 }
 
@@ -136,7 +136,7 @@
 
 .pokemonId {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--color-gray-dark);
   margin-bottom: 0.25rem;
 }
 

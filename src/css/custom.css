@@ -256,7 +256,7 @@ li[class*='sidebarItem'] a {
 .navbar > .navbar__inner {
   max-width: 1020px;
   margin: 16px auto;
-  background-color: rgba(47, 84, 73, 0.9);
+  background-color: rgba(47, 84, 73, 0.97);
   border-radius: 8px;
   padding: 10px 24px;
   box-shadow:
@@ -537,7 +537,7 @@ iframe {
   }
 
   .printable-page hr {
-    border-top-color: #333;
+    border-top-color: var(--color-font-primary);
   }
 
   .framework-footer {
@@ -545,9 +545,9 @@ iframe {
     bottom: 0;
     left: 0;
     right: 0;
-    background: white;
+    background: var(--color-offwhite-light);
     padding: 0.5em;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--color-offwhite-dark);
   }
 
   body {

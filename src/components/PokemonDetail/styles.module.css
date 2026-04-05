@@ -52,7 +52,7 @@
   border-radius: 20px;
   font-size: 1rem;
   text-transform: capitalize;
-  color: white;
+  color: var(--color-offwhite);
   font-weight: 500;
 }
 
