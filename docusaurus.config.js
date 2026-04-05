@@ -62,7 +62,7 @@ const config = {
   ],
 
   plugins: [
-    'vercel-analytics',
+
     'docusaurus-plugin-sass',
     [
       'docusaurus-plugin-cookie-consent',
@@ -73,27 +73,27 @@ const config = {
           'We use cookies and browser storage to enhance your browsing experience, analyze site traffic, and improve future content. Read our [Privacy Policy](/privacy) for details.',
         storageKey: 'mcclowes-cookie-consent',
         toastMode: true,
-        acceptAllText: 'Accept All',
-        rejectOptionalText: 'Essential Only',
-        rejectAllText: 'Reject All',
+        acceptAllText: 'Accept all',
+        rejectOptionalText: 'Essential only',
+        rejectAllText: 'Reject all',
         categories: {
           necessary: {
-            label: 'Essential Cookies',
+            label: 'Essential cookies',
             description:
               'Required for the website to function properly, including storing your cookie preferences. These cannot be disabled.',
           },
           analytics: {
-            label: 'Analytics Cookies',
+            label: 'Analytics cookies',
             description:
               'Help us understand how visitors interact with the site through PostHog analytics. Includes web vitals tracking and optional session recording.',
           },
           marketing: {
-            label: 'Marketing Cookies',
+            label: 'Marketing cookies',
             description: 'Currently not used on this site.',
             enabled: false,
           },
           functional: {
-            label: 'Functional Cookies',
+            label: 'Functional cookies',
             description:
               'Enable enhanced functionality like Giscus comments (requires GitHub authentication). Stores authentication tokens in browser storage.',
           },

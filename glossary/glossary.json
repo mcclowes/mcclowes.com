@@ -5,18 +5,12 @@
       "term": "API",
       "abbreviation": "Application Programming Interface",
       "definition": "A set of rules and protocols that allows different software applications to communicate with each other. APIs define the methods and data formats that applications can use to request and exchange information.",
-      "relatedTerms": ["REST", "GraphQL", "SDK"]
+      "relatedTerms": ["GraphQL", "SDK"]
     },
-    {
-      "term": "REST",
-      "abbreviation": "Representational State Transfer",
-      "definition": "An architectural style for designing networked applications. REST uses HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources identified by URLs.",
-      "relatedTerms": ["API", "HTTP"]
-    },
-    {
+{
       "term": "GraphQL",
       "definition": "A query language for APIs and a runtime for executing those queries. GraphQL provides a complete and understandable description of the data in your API and gives clients the power to ask for exactly what they need.",
-      "relatedTerms": ["API", "REST"]
+      "relatedTerms": ["API"]
     },
     {
       "term": "SDK",
@@ -28,7 +22,7 @@
       "term": "HTTP",
       "abbreviation": "Hypertext Transfer Protocol",
       "definition": "The foundation of data communication on the World Wide Web. HTTP is an application-layer protocol used for transmitting hypermedia documents, such as HTML.",
-      "relatedTerms": ["REST", "HTTPS"]
+      "relatedTerms": ["HTTPS"]
     },
     {
       "term": "HTTPS",
