@@ -75,6 +75,8 @@ authors: mcclowes
 tags: [tag1, tag2]
 draft: true # Optional: hide from production
 enableComments: true # Optional: enable Giscus comments
+description: 'Short description for social sharing and SEO' # Optional: overrides auto-generated excerpt
+image: /img/blog/your-image.png # Optional: social share image (og:image/twitter:image), falls back to site default
 ---
 ```
 
