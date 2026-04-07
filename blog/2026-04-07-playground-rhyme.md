@@ -1,7 +1,7 @@
 ---
 title: 'Playground rhyme'
 authors: mcclowes
-tags: [poetry, GloPoWriMo, NaPoWriMo]
+tags: [poetry, GloPoWriMo, napowrimo]
 ---
 
 Hoochie grumpy bumblebee!  
