@@ -21,7 +21,7 @@ then everyone will respect me.
   
 Hoochie dour notary!  
 One day I'll have property,  
-a mortgage. By seventy, 
+a mortgage. By seventy,  
 maybe I will be Debt free.  
   
 Hoochie lonely divorcee!  
