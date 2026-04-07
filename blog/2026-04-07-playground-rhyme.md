@@ -25,8 +25,8 @@ a mortgage. By seventy,
 maybe I will be Debt free.  
   
 Hoochie lonely divorcee!  
-My kids will not speak to me
-and I'll see out my final years
+My kids will not speak to me  
+and I'll see out my final years  
 in regret.  
   
 <!-- truncate -->
