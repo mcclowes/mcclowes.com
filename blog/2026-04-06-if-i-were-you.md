@@ -1,7 +1,7 @@
 ---
 title: 'If I were you…'
 authors: mcclowes
-tags: [poetry, GloPoWriMo, NaPoWriMo]
+tags: [poetry, GloPoWriMo, napowrimo]
 ---
   
 If I were you, I just wouldn’t take it.  
