@@ -16,7 +16,17 @@ A pipe-oriented functional programming language with a tree-walk interpreter wri
 
 A constraint and probability-based programming language for describing and generating realistic data. Vague treats ambiguity as a first-class primitive, combining schema definition with probabilistic data generation.
 
-## Developer Tools
+## macOS apps
+
+### [Clipped](/docs/clipped)
+
+A lightweight, native macOS clipboard manager. Tracks clipboard history with content type detection, format preservation, pinning, search, and a global hotkey (`⌘⇧V`). Built with Swift 6 and SwiftUI.
+
+### [Barred](/docs/barred)
+
+A macOS menu bar manager. Detects and organises menu bar items from other apps — hide, reorder, or tuck them into a collapsible secondary bar. Built with Swift 6 and SwiftUI.
+
+## Developer tools
 
 ### [OMG](/docs/omg)
 

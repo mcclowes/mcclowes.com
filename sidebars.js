@@ -11,6 +11,11 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'macOS apps',
+      items: ['clipped', 'barred'],
+    },
+    {
+      type: 'category',
       label: 'Tools',
       items: ['omg', 'reqon'],
     },
