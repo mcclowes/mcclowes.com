@@ -103,6 +103,7 @@ const config = {
     '@docusaurus/theme-live-codeblock',
     'docusaurus-plugin-image-zoom',
     [require.resolve('./src/plugins/posthog-plugin'), {}],
+    [require.resolve('./src/plugins/latest-blog-plugin'), {}],
     [
       '@docusaurus/plugin-ideal-image',
       {
