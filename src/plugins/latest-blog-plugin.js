@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
+const { marked } = require('marked');
 
 function parseFrontMatter(content) {
   const match = content.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) return {};
+  if (!match) return { body: content };
   const fm = {};
   for (const line of match[1].split('\n')) {
     const [key, ...rest] = line.split(':');
@@ -16,6 +17,7 @@ function parseFrontMatter(content) {
       fm[key.trim()] = value;
     }
   }
+  fm.body = content.slice(match[0].length).trim();
   return fm;
 }
 
@@ -40,9 +42,17 @@ module.exports = function latestBlogPlugin(context) {
         const defaultSlug = `/${dateMatch[1]}/${dateMatch[2]}/${dateMatch[3]}/${textSlug}`;
         const slug = fm.slug || defaultSlug;
 
+        // Extract content before truncate marker
+        const truncatePattern = /<!--\s*truncate\s*-->/;
+        const excerpt = truncatePattern.test(fm.body)
+          ? fm.body.split(truncatePattern)[0].trim()
+          : fm.body;
+        const excerptHtml = marked.parse(excerpt);
+
         return {
           title: fm.title || textSlug,
           permalink: `/blog${slug}`,
+          excerptHtml,
         };
       }
       return null;

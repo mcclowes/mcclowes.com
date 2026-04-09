@@ -11,14 +11,21 @@
 }
 
 .postLink {
-  font-size: 1.5rem;
-  font-weight: 600;
+  text-decoration: none;
   color: var(--ifm-heading-color);
 
   &:hover {
     opacity: 0.75;
     color: var(--ifm-heading-color);
   }
+}
+
+.postTitle {
+  margin-bottom: 0.5rem;
+}
+
+.excerpt {
+  margin-bottom: 1rem;
 }
 
 .seeMore {

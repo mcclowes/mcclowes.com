@@ -16,9 +16,15 @@ export default function LatestPost() {
       <div className="container">
         <p className={styles.label}>Latest post</p>
         <Link className={styles.postLink} to={latestPost.permalink}>
-          {latestPost.title}
+          <h2 className={styles.postTitle}>{latestPost.title}</h2>
         </Link>
+        <div
+          className={styles.excerpt}
+          dangerouslySetInnerHTML={{ __html: latestPost.excerptHtml }}
+        />
         <div className={styles.seeMore}>
+          <Link to={latestPost.permalink}>Read more &rarr;</Link>
+          {' | '}
           <Link to="/blog">See all posts &rarr;</Link>
         </div>
       </div>
