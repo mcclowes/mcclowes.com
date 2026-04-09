@@ -17,6 +17,24 @@
   }
 }
 
+.main {
+  padding: 2rem 0;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media screen and (max-width: 768px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 .buttons {
   display: flex;
   align-items: center;

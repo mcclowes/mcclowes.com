@@ -1,0 +1,33 @@
+.latestPost {
+  padding: 0;
+}
+
+.label {
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+
+.postLink {
+  text-decoration: none;
+  color: var(--ifm-heading-color);
+
+  &:hover {
+    opacity: 0.75;
+    color: var(--ifm-heading-color);
+  }
+}
+
+.postTitle {
+  margin-bottom: 0.5rem;
+}
+
+.excerpt {
+  margin-bottom: 1rem;
+}
+
+.seeMore {
+  margin-top: 0.75rem;
+}

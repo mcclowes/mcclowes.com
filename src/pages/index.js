@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import HomepageHeader from '@site/src/components/HomepageHeader';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import LatestPost from '@site/src/components/LatestPost';
 import { usePageTracking } from '@site/src/hooks/usePostHog';
 
 import styles from './index.module.css';
@@ -20,8 +21,17 @@ export default function Home() {
     >
       <HomepageHeader />
 
-      <main>
-        <HomepageFeatures />
+      <main className={styles.main}>
+        <div className="container">
+          <div className={styles.twoCol}>
+            <div className={styles.colPrimary}>
+              <LatestPost />
+            </div>
+            <div className={styles.colSecondary}>
+              <HomepageFeatures />
+            </div>
+          </div>
+        </div>
       </main>
     </Layout>
   );
