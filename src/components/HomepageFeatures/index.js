@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 
@@ -23,14 +22,11 @@ const FeatureList = [
 
 function Feature({ title, description, link }) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="padding-horiz--md">
-        <Link className={styles.featureLink} to={link}>
-          <h3>{title}</h3>
-        </Link>
-
-        <p>{description}</p>
-      </div>
+    <div className={styles.feature}>
+      <Link className={styles.featureLink} to={link}>
+        <h3>{title}</h3>
+      </Link>
+      <p>{description}</p>
     </div>
   );
 }
@@ -38,13 +34,9 @@ function Feature({ title, description, link }) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
+      {FeatureList.map((props, idx) => (
+        <Feature key={idx} {...props} />
+      ))}
     </section>
   );
 }

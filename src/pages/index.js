@@ -21,9 +21,17 @@ export default function Home() {
     >
       <HomepageHeader />
 
-      <main>
-        <LatestPost />
-        <HomepageFeatures />
+      <main className={styles.main}>
+        <div className="container">
+          <div className={styles.twoCol}>
+            <div className={styles.colPrimary}>
+              <LatestPost />
+            </div>
+            <div className={styles.colSecondary}>
+              <HomepageFeatures />
+            </div>
+          </div>
+        </div>
       </main>
     </Layout>
   );
