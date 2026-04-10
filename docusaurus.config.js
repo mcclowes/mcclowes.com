@@ -62,7 +62,7 @@ const config = {
   ],
 
   plugins: [
-
+    'vercel-analytics',
     'docusaurus-plugin-sass',
     [
       'docusaurus-plugin-cookie-consent',
