@@ -37,7 +37,8 @@
       "Bash(gh repo:*)",
       "Bash(gh search:*)",
       "Bash(tr '}' '\\\\n')",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(npm view:*)"
     ],
     "deny": [],
     "ask": []
