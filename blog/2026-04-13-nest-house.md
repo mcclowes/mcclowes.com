@@ -5,23 +5,22 @@ tags: [poetry, GloPoWriMo, napowrimo]
 ---
 
 ![Nest house](/img/posts/nest-house.png)
-
+<!-- truncate -->
 We brighten our eyes  
 to the smell of wildness  
 and singed sausages  
 and consider the day and  
-lavender clouded possibilities.
-<!-- truncate -->
+lavender-clouded possibilities.
 
 Our escape is  
 submerged by weir-drone,  
-the brick indellibly etched in flood  
+the brick indellibly etched in flood.  
 Higher than you'd guess, scored to my chest  
 to your light shoulders.
 
 Plunge into the river-brisk  
-to clear heads  
-give up to currents  
+to clear heads,  
+give up to currents,  
 before scrambling up banks,  
 mud hiding in our toes and thumb nails
 
