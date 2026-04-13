@@ -22,7 +22,7 @@ Plunge into the river-brisk
 to clear heads,  
 give up to currents,  
 before scrambling up banks,  
-mud hiding in our toes and thumb nails
+mud hiding in our toes and thumbnails
 
 Our rest is overseen by the portraits of others' lives  
 as we browse books by the ebb-fire  
@@ -30,7 +30,7 @@ surrounded by steaming socks.
 We curl on the sofa  
 and snore with the mice.
 
-I think: **I will marry you here.**
+I think: *I will marry you here.*
 
 ---
 
