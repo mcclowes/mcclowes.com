@@ -7,7 +7,7 @@
       "definition": "A set of rules and protocols that allows different software applications to communicate with each other. APIs define the methods and data formats that applications can use to request and exchange information.",
       "relatedTerms": ["GraphQL", "SDK"]
     },
-{
+    {
       "term": "GraphQL",
       "definition": "A query language for APIs and a runtime for executing those queries. GraphQL provides a complete and understandable description of the data in your API and gives clients the power to ask for exactly what they need.",
       "relatedTerms": ["API"]
