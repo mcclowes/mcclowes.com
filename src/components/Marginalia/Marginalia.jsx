@@ -1,0 +1,303 @@
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import clsx from 'clsx';
+import { MarginaliaContext } from './MarginaliaContext';
+import styles from './styles.module.scss';
+
+const GAP = 10;
+const READING_LINE = 0.32;
+
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+
+export default function Marginalia({ children, showProgress = true }) {
+  const [asides, setAsides] = useState([]);
+  const [hotId, setHotId] = useState(null);
+  const [nowReading, setNowReading] = useState('');
+  const [progress, setProgress] = useState(0);
+  const [lineGeom, setLineGeom] = useState(null);
+
+  const wrapRef = useRef(null);
+  const mainRef = useRef(null);
+  const marginRef = useRef(null);
+  const cardRefs = useRef(new Map());
+  const anchorRefs = useRef(new Map());
+  const asidesRef = useRef(asides);
+  asidesRef.current = asides;
+
+  const register = useCallback((id, data) => {
+    setAsides((prev) => {
+      const idx = prev.findIndex((a) => a.id === id);
+      if (idx >= 0) {
+        const next = prev.slice();
+        next[idx] = { id, ...data };
+        return next;
+      }
+      return [...prev, { id, ...data }];
+    });
+  }, []);
+
+  const unregister = useCallback((id) => {
+    setAsides((prev) => prev.filter((a) => a.id !== id));
+    cardRefs.current.delete(id);
+    anchorRefs.current.delete(id);
+  }, []);
+
+  const setAnchorRef = useCallback((id, el) => {
+    if (el) anchorRefs.current.set(id, el);
+    else anchorRefs.current.delete(id);
+  }, []);
+
+  const setCardRef = useCallback((id, el) => {
+    if (el) cardRefs.current.set(id, el);
+    else cardRefs.current.delete(id);
+  }, []);
+
+  const scrollCardIntoView = useCallback((id) => {
+    const cardEl = cardRefs.current.get(id);
+    if (!cardEl) return;
+    cardEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    cardEl.animate([{ transform: 'translateX(-10px)' }, { transform: 'translateX(-4px)' }], {
+      duration: 300,
+      easing: 'cubic-bezier(.2,.7,.2,1)',
+    });
+  }, []);
+
+  const positionCards = useCallback(() => {
+    const margin = marginRef.current;
+    if (!margin) return;
+    const marginRect = margin.getBoundingClientRect();
+    if (marginRect.width < 100) return;
+
+    const items = asidesRef.current
+      .map((a) => {
+        const anchorEl = anchorRefs.current.get(a.id);
+        const cardEl = cardRefs.current.get(a.id);
+        if (!anchorEl || !cardEl) return null;
+        const r = anchorEl.getBoundingClientRect();
+        return {
+          id: a.id,
+          cardEl,
+          naturalTop: r.top - marginRect.top + r.height / 2,
+          height: cardEl.offsetHeight,
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.naturalTop - b.naturalTop);
+
+    let cursor = 0;
+    items.forEach((it) => {
+      const desired = Math.max(it.naturalTop - it.height / 2, cursor);
+      it.cardEl.style.top = `${desired}px`;
+      it.cardEl.style.visibility = 'visible';
+      cursor = desired + it.height + GAP;
+    });
+  }, []);
+
+  const computeLine = useCallback((id) => {
+    if (!id) {
+      setLineGeom(null);
+      return;
+    }
+    const wrap = wrapRef.current;
+    const anchorEl = anchorRefs.current.get(id);
+    const cardEl = cardRefs.current.get(id);
+    if (!wrap || !anchorEl || !cardEl) {
+      setLineGeom(null);
+      return;
+    }
+    const wrapRect = wrap.getBoundingClientRect();
+    const aRect = anchorEl.getBoundingClientRect();
+    const cRect = cardEl.getBoundingClientRect();
+    const x1 = aRect.right - wrapRect.left;
+    const y1 = aRect.top + aRect.height / 2 - wrapRect.top;
+    const x2 = cRect.left - wrapRect.left;
+    const y2 = cRect.top + cRect.height / 2 - wrapRect.top;
+    if (x2 <= x1) {
+      setLineGeom(null);
+      return;
+    }
+    setLineGeom({ x1, y1, x2, y2 });
+  }, []);
+
+  useIsomorphicLayoutEffect(() => {
+    positionCards();
+  }, [asides, positionCards]);
+
+  useEffect(() => {
+    let raf = 0;
+    const schedule = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        positionCards();
+        computeLine(hotId);
+      });
+    };
+    window.addEventListener('resize', schedule);
+    const t1 = setTimeout(schedule, 300);
+    const t2 = setTimeout(schedule, 1200);
+
+    let ro;
+    if (typeof ResizeObserver !== 'undefined' && mainRef.current) {
+      ro = new ResizeObserver(schedule);
+      ro.observe(mainRef.current);
+    }
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', schedule);
+      clearTimeout(t1);
+      clearTimeout(t2);
+      ro?.disconnect();
+    };
+  }, [positionCards, computeLine, hotId]);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const readerY = window.innerHeight * READING_LINE;
+
+      if (mainRef.current) {
+        const mRect = mainRef.current.getBoundingClientRect();
+        const total = mRect.height - window.innerHeight;
+        const scrolled = -mRect.top;
+        const pct =
+          total > 0 ? Math.min(100, Math.max(0, (scrolled / total) * 100)) : scrolled > 0 ? 100 : 0;
+        setProgress(pct);
+
+        const headings = mainRef.current.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        let activeText = '';
+        headings.forEach((h) => {
+          if (h.getBoundingClientRect().top - readerY < 0) {
+            activeText = h.textContent || '';
+          }
+        });
+        setNowReading((prev) => (prev === activeText ? prev : activeText));
+      }
+
+      let best = null;
+      let bestDist = Infinity;
+      asidesRef.current.forEach((a) => {
+        const el = anchorRefs.current.get(a.id);
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        const mid = r.top + r.height / 2;
+        const inView = r.bottom > 0 && r.top < window.innerHeight;
+        const dist = Math.abs(mid - readerY);
+        if (inView && dist < bestDist) {
+          best = a.id;
+          bestDist = dist;
+        }
+      });
+      setHotId((prev) => {
+        if (prev === best) return prev;
+        return best;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    computeLine(hotId);
+  }, [hotId, computeLine]);
+
+  const stableApi = useMemo(
+    () => ({ register, unregister, setAnchorRef, setHotId, scrollCardIntoView }),
+    [register, unregister, setAnchorRef, scrollCardIntoView]
+  );
+
+  const ctx = useMemo(() => ({ ...stableApi, hotId }), [stableApi, hotId]);
+
+  return (
+    <MarginaliaContext.Provider value={ctx}>
+      <div ref={wrapRef} className={styles.wrap}>
+        <div ref={mainRef} className={styles.main}>
+          {children}
+        </div>
+        <aside ref={marginRef} className={styles.margin} aria-label="Marginalia">
+          {showProgress && (
+            <div className={styles.stickyTop}>
+              <h5 className={styles.stickyLabel}>Now reading</h5>
+              <div className={styles.now}>{nowReading || '—'}</div>
+              <div className={styles.progress}>
+                <span style={{ width: `${progress}%` }} />
+              </div>
+            </div>
+          )}
+          {asides.map((a) => (
+            <Card
+              key={a.id}
+              aside={a}
+              hot={hotId === a.id}
+              setHotId={setHotId}
+              setCardRef={setCardRef}
+              anchorRefs={anchorRefs}
+            />
+          ))}
+        </aside>
+        {lineGeom && (
+          <svg className={styles.lineLayer} aria-hidden="true" style={{ pointerEvents: 'none' }}>
+            <line
+              x1={lineGeom.x1}
+              y1={lineGeom.y1}
+              x2={lineGeom.x2}
+              y2={lineGeom.y2}
+              className={styles.line}
+            />
+          </svg>
+        )}
+      </div>
+    </MarginaliaContext.Provider>
+  );
+}
+
+function Card({ aside, hot, setHotId, setCardRef, anchorRefs }) {
+  const refCallback = useCallback((el) => setCardRef(aside.id, el), [setCardRef, aside.id]);
+  return (
+    <div
+      ref={refCallback}
+      data-kind={aside.kind || 'note'}
+      className={clsx(styles.card, hot && styles.hot)}
+      style={{ visibility: 'hidden' }}
+      onMouseEnter={() => setHotId(aside.id)}
+      onMouseLeave={() => setHotId(null)}
+      onClick={() => {
+        const el = anchorRefs.current.get(aside.id);
+        if (el) el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }}
+    >
+      <CardInner aside={aside} />
+    </div>
+  );
+}
+
+export function CardInner({ aside }) {
+  return (
+    <>
+      {aside.kindLabel && (
+        <div className={styles.kind}>
+          <span className={styles.kindSwatch} />
+          {aside.kindLabel}
+        </div>
+      )}
+      {aside.title && <div className={styles.title}>{aside.title}</div>}
+      {aside.body && <div className={styles.body}>{aside.body}</div>}
+      {aside.meta && aside.meta.length > 0 && (
+        <div className={styles.metaRow}>
+          {aside.meta.map((m, i) => (
+            <span key={i} className={styles.pill}>
+              {m}
+            </span>
+          ))}
+        </div>
+      )}
+      {aside.cta &&
+        (aside.ctaHref ? (
+          <a href={aside.ctaHref} className={styles.cta} onClick={(e) => e.stopPropagation()}>
+            {aside.cta}
+          </a>
+        ) : (
+          <span className={styles.cta}>{aside.cta}</span>
+        ))}
+    </>
+  );
+}

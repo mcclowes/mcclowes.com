@@ -38,7 +38,15 @@
       "Bash(gh search:*)",
       "Bash(tr '}' '\\\\n')",
       "Bash(npm uninstall:*)",
-      "Bash(npm view:*)"
+      "Bash(npm view:*)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(mkdir -p /tmp/anthropic-design)",
+      "Read(//tmp/**)",
+      "Bash(cp /Users/mcclowes/.claude/projects/-Users-mcclowes-Development-mcclowes-mcclowes-com/27a883ab-0c6a-421e-bf67-95c0f2402996/tool-results/webfetch-1776464975315-etow3m.bin ./design.gz)",
+      "Read(//private/tmp/anthropic-design/**)",
+      "Bash(gunzip -k design.gz)",
+      "Bash(mkdir -p extracted)",
+      "Bash(tar -xf design -C extracted)"
     ],
     "deny": [],
     "ask": []
