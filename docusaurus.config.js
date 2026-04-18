@@ -104,6 +104,7 @@ const config = {
     'docusaurus-plugin-image-zoom',
     [require.resolve('./src/plugins/posthog-plugin'), {}],
     [require.resolve('./src/plugins/latest-blog-plugin'), {}],
+    [require.resolve('./src/plugins/marginalia-plugin'), {}],
     [
       '@docusaurus/plugin-ideal-image',
       {
