@@ -8,16 +8,18 @@ const READING_LINE = 0.32;
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-export default function Marginalia({ children, showProgress = true }) {
+export default function Marginalia({ children, showToc = true }) {
   const [asides, setAsides] = useState([]);
   const [hotId, setHotId] = useState(null);
-  const [nowReading, setNowReading] = useState('');
+  const [headings, setHeadings] = useState([]);
+  const [activeHeadingId, setActiveHeadingId] = useState(null);
   const [progress, setProgress] = useState(0);
   const [lineGeom, setLineGeom] = useState(null);
 
   const wrapRef = useRef(null);
   const mainRef = useRef(null);
   const marginRef = useRef(null);
+  const tocRef = useRef(null);
   const cardRefs = useRef(new Map());
   const anchorRefs = useRef(new Map());
   const asidesRef = useRef(asides);
@@ -84,6 +86,10 @@ export default function Marginalia({ children, showProgress = true }) {
       .sort((a, b) => a.naturalTop - b.naturalTop);
 
     let cursor = 0;
+    if (tocRef.current) {
+      const tocRect = tocRef.current.getBoundingClientRect();
+      cursor = Math.max(cursor, tocRect.bottom - marginRect.top + GAP);
+    }
     items.forEach((it) => {
       const desired = Math.max(it.naturalTop - it.height / 2, cursor);
       it.cardEl.style.top = `${desired}px`;
@@ -151,6 +157,37 @@ export default function Marginalia({ children, showProgress = true }) {
   }, [positionCards, computeLine, hotId]);
 
   useEffect(() => {
+    if (!mainRef.current) return;
+    const collect = () => {
+      const els = mainRef.current.querySelectorAll(
+        'h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]'
+      );
+      const list = Array.from(els).map((el) => ({
+        id: el.id,
+        text: el.textContent || '',
+        level: Number(el.tagName.slice(1)),
+      }));
+      setHeadings((prev) => {
+        if (prev.length === list.length && prev.every((h, i) => h.id === list[i].id)) {
+          return prev;
+        }
+        return list;
+      });
+    };
+    collect();
+    let ro;
+    if (typeof ResizeObserver !== 'undefined') {
+      ro = new ResizeObserver(collect);
+      ro.observe(mainRef.current);
+    }
+    const t = setTimeout(collect, 400);
+    return () => {
+      ro?.disconnect();
+      clearTimeout(t);
+    };
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => {
       const readerY = window.innerHeight * READING_LINE;
 
@@ -162,14 +199,16 @@ export default function Marginalia({ children, showProgress = true }) {
           total > 0 ? Math.min(100, Math.max(0, (scrolled / total) * 100)) : scrolled > 0 ? 100 : 0;
         setProgress(pct);
 
-        const headings = mainRef.current.querySelectorAll('h1, h2, h3, h4, h5, h6');
-        let activeText = '';
-        headings.forEach((h) => {
+        const headingEls = mainRef.current.querySelectorAll(
+          'h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]'
+        );
+        let activeId = null;
+        headingEls.forEach((h) => {
           if (h.getBoundingClientRect().top - readerY < 0) {
-            activeText = h.textContent || '';
+            activeId = h.id;
           }
         });
-        setNowReading((prev) => (prev === activeText ? prev : activeText));
+        setActiveHeadingId((prev) => (prev === activeId ? prev : activeId));
       }
 
       let best = null;
@@ -197,6 +236,12 @@ export default function Marginalia({ children, showProgress = true }) {
   }, []);
 
   useEffect(() => {
+    if (typeof document === 'undefined') return;
+    document.body.classList.add('marginalia-active');
+    return () => document.body.classList.remove('marginalia-active');
+  }, []);
+
+  useEffect(() => {
     computeLine(hotId);
   }, [hotId, computeLine]);
 
@@ -214,14 +259,27 @@ export default function Marginalia({ children, showProgress = true }) {
           {children}
         </div>
         <aside ref={marginRef} className={styles.margin} aria-label="Marginalia">
-          {showProgress && (
-            <div className={styles.stickyTop}>
-              <h5 className={styles.stickyLabel}>Now reading</h5>
-              <div className={styles.now}>{nowReading || '—'}</div>
+          {showToc && headings.length > 0 && (
+            <nav ref={tocRef} className={styles.toc} aria-label="Table of contents">
+              <h5 className={styles.tocLabel}>On this page</h5>
+              <ol className={styles.tocList}>
+                {headings.map((h) => (
+                  <li
+                    key={h.id}
+                    className={clsx(
+                      styles.tocItem,
+                      styles[`tocLevel${h.level}`],
+                      activeHeadingId === h.id && styles.tocActive
+                    )}
+                  >
+                    <a href={`#${h.id}`}>{h.text}</a>
+                  </li>
+                ))}
+              </ol>
               <div className={styles.progress}>
                 <span style={{ width: `${progress}%` }} />
               </div>
-            </div>
+            </nav>
           )}
           {asides.map((a) => (
             <Card

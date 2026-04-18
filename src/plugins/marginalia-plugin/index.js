@@ -6,6 +6,9 @@ function marginaliaPlugin(context, options) {
     getThemePath() {
       return path.resolve(__dirname, './src/theme');
     },
+    getClientModules() {
+      return [path.resolve(__dirname, './src/globalStyles.css')];
+    },
   };
 }
 
