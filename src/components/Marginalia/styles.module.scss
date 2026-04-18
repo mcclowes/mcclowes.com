@@ -1,0 +1,405 @@
+/* ============================================================
+   Marginalia — ref-anchored cards in the right margin
+============================================================ */
+
+.wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 48px;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+.main {
+  min-width: 0;
+}
+
+.margin {
+  position: relative;
+  min-height: 100%;
+  padding-top: 8px;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: var(--color-font-primary);
+}
+
+/* ---- Sticky "now reading" pill ---- */
+
+.stickyTop {
+  position: sticky;
+  top: calc(var(--ifm-navbar-height, 60px) + 16px);
+  background: var(--color-background-primary);
+  padding: 0 0 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-offwhite-dark);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stickyLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-font-highlight);
+  margin: 0;
+  font-weight: 600;
+}
+
+.now {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-font-header);
+  line-height: 1.3;
+}
+
+.progress {
+  height: 2px;
+  background: var(--color-offwhite-dark);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress > span {
+  display: block;
+  height: 100%;
+  background: var(--color-green);
+  width: 0;
+  transition: width 0.2s ease-out;
+}
+
+[data-theme='dark'] .stickyTop {
+  background: var(--color-green);
+  border-bottom-color: var(--color-green-lighter);
+}
+
+[data-theme='dark'] .progress {
+  background: var(--color-green-lighter);
+}
+
+[data-theme='dark'] .progress > span {
+  background: var(--color-offwhite);
+}
+
+/* ---- Inline anchor ---- */
+
+.anchor {
+  cursor: pointer;
+  border-bottom: 1px dashed color-mix(in oklab, var(--color-green) 45%, transparent);
+  background: transparent;
+  padding: 0 1px;
+  scroll-margin-top: calc(var(--ifm-navbar-height, 60px) + 24px);
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    color 0.12s ease;
+}
+
+.anchor:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 2px;
+  border-bottom-color: transparent;
+}
+
+[data-theme='dark'] .anchor:focus-visible {
+  outline-color: var(--color-offwhite);
+}
+
+.anchor:hover,
+.anchor.hot {
+  background: color-mix(in oklab, var(--color-green) 8%, transparent);
+  border-bottom-color: var(--color-green);
+}
+
+[data-theme='dark'] .anchor {
+  border-bottom-color: color-mix(in oklab, var(--color-offwhite) 45%, transparent);
+}
+
+[data-theme='dark'] .anchor:hover,
+[data-theme='dark'] .anchor.hot {
+  background: color-mix(in oklab, var(--color-offwhite) 12%, transparent);
+  border-bottom-color: var(--color-offwhite);
+}
+
+/* ---- Margin card ---- */
+
+.card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: var(--color-offwhite-light);
+  border: 1px solid var(--color-offwhite-dark);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--color-font-primary);
+  opacity: 0.68;
+  transform: translateX(0);
+  cursor: pointer;
+  scroll-margin-top: calc(var(--ifm-navbar-height, 60px) + 100px);
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    opacity 0.25s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  will-change: transform, opacity, top;
+}
+
+.card.hot {
+  opacity: 1;
+  border-color: var(--color-green);
+  box-shadow:
+    0 6px 18px rgba(47, 84, 73, 0.12),
+    0 0 0 1px var(--color-green);
+  transform: translateX(-4px);
+}
+
+[data-theme='dark'] .card {
+  background: var(--color-green-light);
+  border-color: var(--color-green-lighter);
+  color: var(--color-offwhite);
+}
+
+[data-theme='dark'] .card.hot {
+  border-color: var(--color-offwhite);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.25),
+    0 0 0 1px var(--color-offwhite);
+}
+
+.kind {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-font-highlight);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.kindSwatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--color-green);
+  flex-shrink: 0;
+}
+
+.card[data-kind='warning'] .kindSwatch {
+  background: var(--color-red);
+}
+.card[data-kind='concept'] .kindSwatch {
+  background: var(--color-green);
+}
+.card[data-kind='value'] .kindSwatch {
+  background: var(--color-font-highlight);
+}
+.card[data-kind='link'] .kindSwatch {
+  background: var(--color-green-lighter);
+}
+.card[data-kind='code'] .kindSwatch {
+  background: var(--color-green-dark);
+}
+.card[data-kind='note'] .kindSwatch {
+  background: var(--color-offwhite-alt-dark);
+}
+.card[data-kind='endpoint'] .kindSwatch {
+  background: var(--color-red);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.92rem;
+  line-height: 1.3;
+  color: var(--color-font-header);
+  margin-bottom: 4px;
+}
+
+[data-theme='dark'] .title {
+  color: var(--color-offwhite);
+}
+
+.body {
+  margin: 0;
+  color: var(--color-font-primary);
+}
+
+[data-theme='dark'] .body {
+  color: var(--color-offwhite);
+}
+
+.body > :first-child {
+  margin-top: 0;
+}
+
+.body > :last-child {
+  margin-bottom: 0;
+}
+
+.body p {
+  margin: 0 0 0.5em;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.body code {
+  font-size: 0.92em;
+}
+
+.metaRow {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--color-green) 8%, transparent);
+  border: 1px solid var(--color-offwhite-dark);
+  color: var(--color-font-highlight);
+}
+
+[data-theme='dark'] .pill {
+  background: var(--color-green-dark);
+  border-color: var(--color-green-lighter);
+  color: var(--color-offwhite);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-green);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.cta:hover {
+  border-bottom-color: var(--color-green);
+}
+
+[data-theme='dark'] .cta {
+  color: var(--color-offwhite);
+}
+
+[data-theme='dark'] .cta:hover {
+  border-bottom-color: var(--color-offwhite);
+}
+
+/* ---- Connecting line ---- */
+
+.lineLayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.line {
+  stroke: var(--color-green);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+  opacity: 0.6;
+  animation: lineFade 0.2s ease-out;
+}
+
+[data-theme='dark'] .line {
+  stroke: var(--color-offwhite);
+}
+
+@keyframes lineFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+/* ---- Endpoint inline chip ---- */
+
+.endpoint {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  padding: 2px 8px;
+  background: var(--color-offwhite-light);
+  border: 1px solid var(--color-offwhite-dark);
+  border-radius: 5px;
+  color: var(--color-font-primary);
+  vertical-align: baseline;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+
+.endpointMethod {
+  font-weight: 700;
+  font-size: 0.85em;
+  padding: 0 5px;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+}
+
+.endpoint[data-method='GET'] .endpointMethod {
+  color: #1e8a5a;
+  background: #e2f3ea;
+}
+
+.endpoint[data-method='POST'] .endpointMethod {
+  color: #c97b1f;
+  background: #faf0dd;
+}
+
+.endpoint[data-method='PUT'] .endpointMethod,
+.endpoint[data-method='PATCH'] .endpointMethod {
+  color: var(--color-green-dark);
+  background: color-mix(in oklab, var(--color-green) 12%, transparent);
+}
+
+.endpoint[data-method='DELETE'] .endpointMethod {
+  color: #c0423e;
+  background: #fbe7e6;
+}
+
+[data-theme='dark'] .endpoint {
+  background: var(--color-green-light);
+  border-color: var(--color-green-lighter);
+  color: var(--color-offwhite);
+}
+
+.endpointPath {
+  color: inherit;
+}
+
+/* ---- Responsive collapse ---- */
+
+@media (max-width: 1200px) {
+  .wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .margin {
+    display: none;
+  }
+  .lineLayer {
+    display: none;
+  }
+}

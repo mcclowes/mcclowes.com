@@ -1,0 +1,38 @@
+---
+title: 'A reader in two columns'
+authors: mcclowes
+tags: [design, typography, web]
+draft: true
+---
+
+import { Marginalia, Aside, Endpoint } from '@site/src/components/Marginalia';
+
+A small experiment in editorial layout: margin notes that know where they belong.
+
+<!--truncate-->
+
+<Marginalia>
+
+## The classical margin
+
+A reader moves through the main column at their own pace, and the author — quietly, in a second register — can gloss, caveat, link, or point. Edward Tufte made a career of it; medieval scribes made an art of it. The web, generally, threw it away.
+
+There are reasons for that. Margins on the web are fragile: they compete with sidebars, they evaporate at mobile widths, and they force a layout discipline most CMSs don't encourage. But the idea is worth reviving, because there is real content that doesn't belong in the main flow — <Aside anchor="pattern language" kind="concept" title="Christopher Alexander" meta={["1977", "253 patterns"]} cta="Read on archive.org →">*A Pattern Language* (1977) catalogued 253 patterns for towns and buildings, from "Mosaic of Subcultures" to "Six-Foot Balcony". It's also the root of much software-architecture thinking.</Aside> footnotes, digressions, references — and shoving all of it into a separate "Notes" section at the end is a concession, not a solution.
+
+## How it works
+
+Inline anchors in the prose, with dashed underlines, each paired with a card floating in the right margin. Scroll past an anchor and its card lights up. Hover the card and the anchor lights up. Click either and they pulse in agreement. It is, at minimum, a more honest rendering of how reading actually <Aside anchor="works" kind="warning" title="One caveat" meta={["viewport < 1200px"]}>The margin collapses on viewports under 1200px. On phones, readers only see the anchor underline, not the card body. Accept the tradeoff or build a mobile popover — don't pretend it's the same experience.</Aside> — nonlinear, parenthetical, cross-referenced.
+
+## The implementation
+
+A React context, a little geometry. Each `<Aside>` registers itself with a `<Marginalia>` container, handing over a ref to its inline anchor. The container measures, packs the cards top-to-bottom without overlap, and listens for scroll to pick out the "hot" reference — the one closest to the reader's eye line, roughly a third of the way down the viewport.
+
+It also supports inline API chips for doc-flavored posts: <Endpoint method="POST" path="/login" />, <Endpoint method="GET" path="/users/{id}" />, or <Endpoint method="DELETE" path="/session" />. Wrap one in an `<Aside>` to pair it with a <Aside anchor="rich reference card" kind="endpoint" title="Login endpoint" meta={["POST", "Auth", "200 / 400 / 401"]} cta="Open in API reference →">Authenticates a user with email + password. Returns a bearer token that scopes subsequent calls to that user's session.</Aside> in the margin.
+
+## Type as apparatus
+
+The visual language borrows from editorial print: <Aside anchor="serif for titles, monospace for the apparatus" kind="value" title="The type stack" meta={["Inknut Antiqua", "Merriweather", "Roboto Mono"]}>Inknut Antiqua for titles, Merriweather as a fallback serif, Roboto Mono for body and marginalia. The mono signals *apparatus* rather than *prose*.</Aside>, generous line height, and a faint dashed underline that only hardens to a solid line when the reader shows interest.
+
+None of this is new. The novelty is only that it still feels novel, which tells you how thoroughly the web has been flattened into a single-column Medium article. There's another reading experience available, and it fits on the right.
+
+</Marginalia>
