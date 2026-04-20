@@ -10,20 +10,16 @@ body.marginalia-active [class*='tableOfContents'] {
 }
 
 /* Docusaurus blog layout uses .col--7 for the article with .col--3 sidebar
- * and .col--2 right gutter. With the native TOC gone, let the article span
- * the whole row (minus the sidebar, which the theme already handles).
+ * and .col--2 right gutter. Hide the right gutter and let the article grow
+ * into that space — do NOT force 100%, or the left sidebar will wrap above.
  */
 body.marginalia-active main.col.col--7,
 body.marginalia-active main[class*='col--7'] {
-  --ifm-col-width: 100% !important;
-  max-width: 100% !important;
-  flex: 0 0 100% !important;
+  flex-grow: 1 !important;
+  max-width: none !important;
 }
 
-/* And suppress the orphaned right gutter col */
-body.marginalia-active
-  .container.margin-vert--lg
-  > .row
-  > [class*='col--2']:empty {
+/* Suppress the right gutter column that held the now-hidden native TOC */
+body.marginalia-active .container.margin-vert--lg > .row > [class*='col--2'] {
   display: none !important;
 }
