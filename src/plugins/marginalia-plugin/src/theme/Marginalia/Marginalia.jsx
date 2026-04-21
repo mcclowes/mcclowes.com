@@ -205,7 +205,7 @@ export default function Marginalia({ children, showToc = true }) {
     if (!mainRef.current) return;
     const collect = () => {
       const els = mainRef.current.querySelectorAll(
-        'h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]'
+        'h1[id], h2[id]'
       );
       const list = Array.from(els).map((el) => ({
         id: el.id,
@@ -245,7 +245,7 @@ export default function Marginalia({ children, showToc = true }) {
         setProgress(pct);
 
         const headingEls = mainRef.current.querySelectorAll(
-          'h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]'
+          'h1[id], h2[id]'
         );
         let activeId = null;
         headingEls.forEach((h) => {
