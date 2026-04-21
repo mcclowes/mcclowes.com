@@ -5,23 +5,30 @@ import styles from './styles.module.scss';
 
 const GAP = 10;
 const READING_LINE = 0.32;
+const TOC_RESERVE = 34;
+const CASCADE_TOLERANCE = 60;
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-export default function Marginalia({ children, showProgress = true }) {
+export default function Marginalia({ children, showToc = true }) {
   const [asides, setAsides] = useState([]);
   const [hotId, setHotId] = useState(null);
-  const [nowReading, setNowReading] = useState('');
+  const [headings, setHeadings] = useState([]);
+  const [activeHeadingId, setActiveHeadingId] = useState(null);
   const [progress, setProgress] = useState(0);
   const [lineGeom, setLineGeom] = useState(null);
+  const [compactIds, setCompactIds] = useState(() => new Set());
 
   const wrapRef = useRef(null);
   const mainRef = useRef(null);
   const marginRef = useRef(null);
+  const tocRef = useRef(null);
   const cardRefs = useRef(new Map());
   const anchorRefs = useRef(new Map());
   const asidesRef = useRef(asides);
   asidesRef.current = asides;
+  const compactIdsRef = useRef(compactIds);
+  compactIdsRef.current = compactIds;
 
   const register = useCallback((id, data) => {
     setAsides((prev) => {
@@ -63,7 +70,8 @@ export default function Marginalia({ children, showProgress = true }) {
 
   const positionCards = useCallback(() => {
     const margin = marginRef.current;
-    if (!margin) return;
+    const main = mainRef.current;
+    if (!margin || !main) return;
     const marginRect = margin.getBoundingClientRect();
     if (marginRect.width < 100) return;
 
@@ -84,12 +92,40 @@ export default function Marginalia({ children, showProgress = true }) {
       .sort((a, b) => a.naturalTop - b.naturalTop);
 
     let cursor = 0;
-    items.forEach((it) => {
-      const desired = Math.max(it.naturalTop - it.height / 2, cursor);
+    if (tocRef.current) {
+      cursor = tocRef.current.offsetHeight + TOC_RESERVE;
+    }
+
+    const mainHeight = main.offsetHeight;
+    const overflowIds = [];
+    const cascadeCulprits = [];
+
+    items.forEach((it, i) => {
+      const naturalCentered = it.naturalTop - it.height / 2;
+      const desired = Math.max(naturalCentered, cursor);
       it.cardEl.style.top = `${desired}px`;
       it.cardEl.style.visibility = 'visible';
       cursor = desired + it.height + GAP;
+      if (desired + it.height > mainHeight) {
+        overflowIds.push(it.id);
+      }
+      if (i > 0 && desired - naturalCentered > CASCADE_TOLERANCE) {
+        cascadeCulprits.push(items[i - 1].id);
+      }
     });
+
+    let toCompact = null;
+    if (cascadeCulprits.length > 0) toCompact = cascadeCulprits[0];
+    else if (overflowIds.length > 0) toCompact = overflowIds[overflowIds.length - 1];
+
+    if (toCompact) {
+      const current = compactIdsRef.current;
+      if (!current.has(toCompact)) {
+        const next = new Set(current);
+        next.add(toCompact);
+        setCompactIds(next);
+      }
+    }
   }, []);
 
   const computeLine = useCallback((id) => {
@@ -118,9 +154,24 @@ export default function Marginalia({ children, showProgress = true }) {
     setLineGeom({ x1, y1, x2, y2 });
   }, []);
 
+  useEffect(() => {
+    setCompactIds((prev) => {
+      if (prev.size === 0) return prev;
+      const liveIds = new Set(asides.map((a) => a.id));
+      let changed = false;
+      const next = new Set();
+      prev.forEach((id) => {
+        if (liveIds.has(id)) next.add(id);
+        else changed = true;
+      });
+      if (!changed && next.size === prev.size) return prev;
+      return next;
+    });
+  }, [asides]);
+
   useIsomorphicLayoutEffect(() => {
     positionCards();
-  }, [asides, positionCards]);
+  }, [asides, compactIds, positionCards]);
 
   useEffect(() => {
     let raf = 0;
@@ -151,6 +202,37 @@ export default function Marginalia({ children, showProgress = true }) {
   }, [positionCards, computeLine, hotId]);
 
   useEffect(() => {
+    if (!mainRef.current) return;
+    const collect = () => {
+      const els = mainRef.current.querySelectorAll(
+        'h1[id], h2[id]'
+      );
+      const list = Array.from(els).map((el) => ({
+        id: el.id,
+        text: el.textContent || '',
+        level: Number(el.tagName.slice(1)),
+      }));
+      setHeadings((prev) => {
+        if (prev.length === list.length && prev.every((h, i) => h.id === list[i].id)) {
+          return prev;
+        }
+        return list;
+      });
+    };
+    collect();
+    let ro;
+    if (typeof ResizeObserver !== 'undefined') {
+      ro = new ResizeObserver(collect);
+      ro.observe(mainRef.current);
+    }
+    const t = setTimeout(collect, 400);
+    return () => {
+      ro?.disconnect();
+      clearTimeout(t);
+    };
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => {
       const readerY = window.innerHeight * READING_LINE;
 
@@ -162,14 +244,16 @@ export default function Marginalia({ children, showProgress = true }) {
           total > 0 ? Math.min(100, Math.max(0, (scrolled / total) * 100)) : scrolled > 0 ? 100 : 0;
         setProgress(pct);
 
-        const headings = mainRef.current.querySelectorAll('h1, h2, h3, h4, h5, h6');
-        let activeText = '';
-        headings.forEach((h) => {
+        const headingEls = mainRef.current.querySelectorAll(
+          'h1[id], h2[id]'
+        );
+        let activeId = null;
+        headingEls.forEach((h) => {
           if (h.getBoundingClientRect().top - readerY < 0) {
-            activeText = h.textContent || '';
+            activeId = h.id;
           }
         });
-        setNowReading((prev) => (prev === activeText ? prev : activeText));
+        setActiveHeadingId((prev) => (prev === activeId ? prev : activeId));
       }
 
       let best = null;
@@ -197,6 +281,12 @@ export default function Marginalia({ children, showProgress = true }) {
   }, []);
 
   useEffect(() => {
+    if (typeof document === 'undefined') return;
+    document.body.classList.add('marginalia-active');
+    return () => document.body.classList.remove('marginalia-active');
+  }, []);
+
+  useEffect(() => {
     computeLine(hotId);
   }, [hotId, computeLine]);
 
@@ -214,20 +304,34 @@ export default function Marginalia({ children, showProgress = true }) {
           {children}
         </div>
         <aside ref={marginRef} className={styles.margin} aria-label="Marginalia">
-          {showProgress && (
-            <div className={styles.stickyTop}>
-              <h5 className={styles.stickyLabel}>Now reading</h5>
-              <div className={styles.now}>{nowReading || '—'}</div>
+          {showToc && headings.length > 0 && (
+            <nav ref={tocRef} className={styles.toc} aria-label="Table of contents">
+              <h5 className={styles.tocLabel}>On this page</h5>
+              <ol className={styles.tocList}>
+                {headings.map((h) => (
+                  <li
+                    key={h.id}
+                    className={clsx(
+                      styles.tocItem,
+                      styles[`tocLevel${h.level}`],
+                      activeHeadingId === h.id && styles.tocActive
+                    )}
+                  >
+                    <a href={`#${h.id}`}>{h.text}</a>
+                  </li>
+                ))}
+              </ol>
               <div className={styles.progress}>
                 <span style={{ width: `${progress}%` }} />
               </div>
-            </div>
+            </nav>
           )}
           {asides.map((a) => (
             <Card
               key={a.id}
               aside={a}
               hot={hotId === a.id}
+              compact={compactIds.has(a.id)}
               setHotId={setHotId}
               setCardRef={setCardRef}
               anchorRefs={anchorRefs}
@@ -250,13 +354,13 @@ export default function Marginalia({ children, showProgress = true }) {
   );
 }
 
-function Card({ aside, hot, setHotId, setCardRef, anchorRefs }) {
+function Card({ aside, hot, compact, setHotId, setCardRef, anchorRefs }) {
   const refCallback = useCallback((el) => setCardRef(aside.id, el), [setCardRef, aside.id]);
   return (
     <div
       ref={refCallback}
       data-kind={aside.kind || 'note'}
-      className={clsx(styles.card, hot && styles.hot)}
+      className={clsx(styles.card, hot && styles.hot, compact && styles.compact)}
       style={{ visibility: 'hidden' }}
       onMouseEnter={() => setHotId(aside.id)}
       onMouseLeave={() => setHotId(null)}
@@ -265,8 +369,27 @@ function Card({ aside, hot, setHotId, setCardRef, anchorRefs }) {
         if (el) el.scrollIntoView({ block: 'center', behavior: 'smooth' });
       }}
     >
-      <CardInner aside={aside} />
+      {compact ? <CompactFace aside={aside} /> : <CardInner aside={aside} />}
+      {compact && (
+        <div className={styles.compactExpanded} aria-hidden={!hot}>
+          <CardInner aside={aside} />
+        </div>
+      )}
     </div>
+  );
+}
+
+function CompactFace({ aside }) {
+  return (
+    <>
+      {aside.kindLabel && (
+        <div className={styles.kind}>
+          <span className={styles.kindSwatch} />
+          {aside.kindLabel}
+        </div>
+      )}
+      {aside.title && <div className={styles.title}>{aside.title}</div>}
+    </>
   );
 }
 

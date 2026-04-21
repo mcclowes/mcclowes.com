@@ -219,6 +219,15 @@ article img {
 
 /* Sidebar */
 
+aside:has([class*='sidebarItemTitle']) {
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+aside:has([class*='sidebarItemTitle']):hover {
+  opacity: 1;
+}
+
 [class*='sidebarItemTitle'] {
   font-family: var(--font-serif);
   color: var(--color-font-header);
