@@ -33,4 +33,4 @@ in regret.
 
 ---
 
-[Day seven](https://www.napowrimo.net/day-seven-13/).
+[Day seven](https://www.napowrimo.net/day-seven-12/).
