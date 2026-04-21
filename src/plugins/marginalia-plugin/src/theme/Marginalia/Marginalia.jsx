@@ -204,9 +204,7 @@ export default function Marginalia({ children, showToc = true }) {
   useEffect(() => {
     if (!mainRef.current) return;
     const collect = () => {
-      const els = mainRef.current.querySelectorAll(
-        'h1[id], h2[id]'
-      );
+      const els = mainRef.current.querySelectorAll('h1[id], h2[id]');
       const list = Array.from(els).map((el) => ({
         id: el.id,
         text: el.textContent || '',
@@ -244,9 +242,7 @@ export default function Marginalia({ children, showToc = true }) {
           total > 0 ? Math.min(100, Math.max(0, (scrolled / total) * 100)) : scrolled > 0 ? 100 : 0;
         setProgress(pct);
 
-        const headingEls = mainRef.current.querySelectorAll(
-          'h1[id], h2[id]'
-        );
+        const headingEls = mainRef.current.querySelectorAll('h1[id], h2[id]');
         let activeId = null;
         headingEls.forEach((h) => {
           if (h.getBoundingClientRect().top - readerY < 0) {
