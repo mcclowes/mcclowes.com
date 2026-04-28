@@ -11,8 +11,34 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'macOS apps',
-      items: ['clipped', 'barred'],
+      label: 'Marginal Utility',
+      items: [
+        {
+          type: 'link',
+          label: 'Clipped',
+          href: 'https://marginalutility.dev/clipped',
+        },
+        {
+          type: 'link',
+          label: 'Barred',
+          href: 'https://marginalutility.dev/barred',
+        },
+        {
+          type: 'link',
+          label: 'Broadsheet',
+          href: 'https://marginalutility.dev/broadsheet',
+        },
+        {
+          type: 'link',
+          label: 'Keyed',
+          href: 'https://marginalutility.dev/keyed',
+        },
+        {
+          type: 'link',
+          label: 'Reach',
+          href: 'https://marginalutility.dev/reach',
+        },
+      ],
     },
     {
       type: 'category',

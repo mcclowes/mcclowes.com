@@ -16,15 +16,29 @@ A pipe-oriented functional programming language with a tree-walk interpreter wri
 
 A constraint and probability-based programming language for describing and generating realistic data. Vague treats ambiguity as a first-class primitive, combining schema definition with probabilistic data generation.
 
-## macOS apps
+## Marginal Utility
 
-### [Clipped](/docs/clipped)
+A small suite of tools that get out of the way — see [marginalutility.dev](https://marginalutility.dev).
 
-A lightweight, native macOS clipboard manager. Tracks clipboard history with content type detection, format preservation, pinning, search, and a global hotkey (`⌘⇧V`). Built with Swift 6 and SwiftUI.
+### [Clipped](https://marginalutility.dev/clipped)
 
-### [Barred](/docs/barred)
+A lightweight, native macOS clipboard manager. Tracks clipboard history with content type detection, format preservation, pinning, search, and a global hotkey (`⌘⇧V`). Built with Swift 6 and SwiftUI. [Docs](https://marginalutility.dev/clipped/docs/getting-started).
 
-A macOS menu bar manager. Detects and organises menu bar items from other apps — hide, reorder, or tuck them into a collapsible secondary bar. Built with Swift 6 and SwiftUI.
+### [Barred](https://marginalutility.dev/barred)
+
+A macOS menu bar manager. Detects and organises menu bar items from other apps — hide, reorder, or tuck them into a collapsible secondary bar. Built with Swift 6 and SwiftUI. [Docs](https://marginalutility.dev/barred/docs/getting-started).
+
+### [Broadsheet](https://marginalutility.dev/broadsheet)
+
+A web app (and Chrome extension) for saving articles and reading them later — cleanly, without the clutter. A modern, open alternative to Pocket. [Docs](https://marginalutility.dev/broadsheet/docs/getting-started).
+
+### [Keyed](https://marginalutility.dev/keyed)
+
+Native macOS text expansion. Type a short abbreviation, get a longer snippet — case-aware, with placeholders and per-app rules. [Docs](https://marginalutility.dev/keyed/docs/getting-started).
+
+### [Reach](https://marginalutility.dev/reach)
+
+A macOS and web contact book for people who still believe in keeping in touch. In development.
 
 ## Developer tools
 
