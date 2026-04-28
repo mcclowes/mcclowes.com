@@ -7,9 +7,7 @@ Editorial sidenotes for Docusaurus blog posts and docs. Inline anchors in prose 
 This plugin lives in-tree. Register it in `docusaurus.config.js`:
 
 ```js
-plugins: [
-  [require.resolve('./src/plugins/marginalia-plugin'), {}],
-];
+plugins: [[require.resolve('./src/plugins/marginalia-plugin'), {}]];
 ```
 
 Requires `docusaurus-plugin-sass` (the components use SCSS modules).
@@ -21,7 +19,7 @@ import { Marginalia, Aside, Endpoint } from '@theme/Marginalia';
 
 <Marginalia>
 
-The concept of <Aside anchor="pattern languages" kind="concept" title="Christopher Alexander" meta={["1977", "253 patterns"]}>*A Pattern Language* catalogued 253 design patterns for towns and buildings.</Aside> has shaped software thinking.
+The concept of <Aside anchor="pattern languages" kind="concept" title="Christopher Alexander" meta={["1977", "253 patterns"]}>_A Pattern Language_ catalogued 253 design patterns for towns and buildings.</Aside> has shaped software thinking.
 
 </Marginalia>
 ```
@@ -32,24 +30,24 @@ The concept of <Aside anchor="pattern languages" kind="concept" title="Christoph
 
 Container establishing the two-column reading layout. Props:
 
-| Prop | Type | Default | Notes |
-| --- | --- | --- | --- |
-| `showProgress` | `boolean` | `true` | Sticky "Now reading" pill + scroll progress bar |
+| Prop           | Type      | Default | Notes                                           |
+| -------------- | --------- | ------- | ----------------------------------------------- |
+| `showProgress` | `boolean` | `true`  | Sticky "Now reading" pill + scroll progress bar |
 
 ### `<Aside>`
 
 Inline anchor paired with a margin card. Props:
 
-| Prop | Type | Default | Notes |
-| --- | --- | --- | --- |
-| `anchor` | `ReactNode` | `children` | Inline text in prose (if omitted, children is used) |
-| `title` | `string` | — | Card heading |
-| `kind` | `'note' \| 'concept' \| 'warning' \| 'info' \| 'link' \| 'value' \| 'code' \| 'endpoint'` | `'note'` | Color swatch |
-| `kindLabel` | `string` | Derived from `kind` | Override the uppercase label |
-| `meta` | `string[]` | — | Pill tags shown below body |
-| `cta` | `string` | — | Call-to-action text at bottom |
-| `ctaHref` | `string` | — | CTA href. If omitted, renders as `<span>` |
-| `children` | `ReactNode` | — | Card body (when `anchor` is set) or inline anchor (when not) |
+| Prop        | Type                                                                                      | Default             | Notes                                                        |
+| ----------- | ----------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------ |
+| `anchor`    | `ReactNode`                                                                               | `children`          | Inline text in prose (if omitted, children is used)          |
+| `title`     | `string`                                                                                  | —                   | Card heading                                                 |
+| `kind`      | `'note' \| 'concept' \| 'warning' \| 'info' \| 'link' \| 'value' \| 'code' \| 'endpoint'` | `'note'`            | Color swatch                                                 |
+| `kindLabel` | `string`                                                                                  | Derived from `kind` | Override the uppercase label                                 |
+| `meta`      | `string[]`                                                                                | —                   | Pill tags shown below body                                   |
+| `cta`       | `string`                                                                                  | —                   | Call-to-action text at bottom                                |
+| `ctaHref`   | `string`                                                                                  | —                   | CTA href. If omitted, renders as `<span>`                    |
+| `children`  | `ReactNode`                                                                               | —                   | Card body (when `anchor` is set) or inline anchor (when not) |
 
 ### `<Endpoint>`
 

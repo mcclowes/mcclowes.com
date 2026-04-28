@@ -48,9 +48,7 @@ module.exports = function latestBlogPlugin(context) {
           ? fm.body.split(truncatePattern)[0].trim()
           : fm.body;
         // Strip MDX import/export statements so they don't render as text
-        const cleaned = excerpt
-          .replace(/^\s*(?:import|export)\s+[^\n]*\n?/gm, '')
-          .trim();
+        const cleaned = excerpt.replace(/^\s*(?:import|export)\s+[^\n]*\n?/gm, '').trim();
         const excerptHtml = marked.parse(cleaned);
 
         return {
