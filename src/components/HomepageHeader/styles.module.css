@@ -1,11 +1,47 @@
 .heroBanner {
+  position: relative;
+  isolation: isolate;
   background-color: var(--color-background-alt);
   padding: 25px;
   max-height: 300px;
   overflow: hidden;
 }
 
+/* Dithered atmosphere: stippled "stars" fading in from the top.
+   The radial fade mask keeps the centre clean so the grid reads. */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: var(--dither-stipple-light);
+  background-size: calc(8 * var(--dither-scale)) calc(8 * var(--dither-scale));
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+  opacity: 0.85;
+  image-rendering: pixelated;
+}
+
+/* Dithered "horizon": a 25% Bayer texture fading in from the bottom edge,
+   simulating dithered shading rising up out of the floor. */
+.heroBanner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: var(--dither-25-light);
+  background-size: calc(4 * var(--dither-scale)) calc(4 * var(--dither-scale));
+  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 60%);
+  mask-image: linear-gradient(to top, black 0%, transparent 60%);
+  opacity: 0.5;
+  image-rendering: pixelated;
+}
+
 .grid {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -15,21 +51,32 @@
 }
 
 .square {
+  position: relative;
   margin: 5px;
   width: 50px;
   height: 50px;
-  border-radius: 4px;
   background-color: var(--color-background-primary);
+  background-image: var(--dither-25-dark);
+  background-size: calc(4 * var(--dither-scale)) calc(4 * var(--dither-scale));
+  image-rendering: pixelated;
+  box-shadow: 0 0 0 2px var(--color-background-primary);
   transition:
     opacity 0.5s ease,
-    background-color 0.3s ease;
+    background-color 0.3s ease,
+    background-image 0.3s ease,
+    transform 0.15s ease;
   cursor: pointer;
 
   &:hover {
     opacity: 1 !important;
+    transform: translate(-1px, -1px);
   }
 
+  /* Toggled squares cycle through denser dither patterns to give a sense of
+     building up "ink" — matches the retro aesthetic. */
   &.toggled {
     background-color: var(--ifm-color-primary);
+    background-image: var(--dither-50-light);
+    box-shadow: 0 0 0 2px var(--ifm-color-primary);
   }
 }

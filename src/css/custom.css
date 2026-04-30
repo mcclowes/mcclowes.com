@@ -99,6 +99,70 @@
 
   --font-mono: 'Roboto Mono', monospace;
   --font-serif: 'Inknut Antiqua', 'Merriweather', serif;
+
+  /* ==========================================================================
+     Dither textures
+     Ordered (Bayer-style) pixel patterns, encoded as SVG data URIs.
+     Each pattern is offered in two ink colours: light (offwhite) for use on
+     dark surfaces, and dark (green) for use on light surfaces.
+     The "pixel" size is controlled by --dither-scale (px per source pixel).
+     ========================================================================== */
+
+  --dither-scale: 2px;
+
+  /* Sparse stipple — 1 dot per 8x8 (~1.5%) */
+  --dither-stipple-light: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' shape-rendering='crispEdges'><rect x='0' y='0' width='1' height='1' fill='%23fffae1'/><rect x='4' y='4' width='1' height='1' fill='%23fffae1'/></svg>");
+  --dither-stipple-dark: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' shape-rendering='crispEdges'><rect x='0' y='0' width='1' height='1' fill='%232f5449'/><rect x='4' y='4' width='1' height='1' fill='%232f5449'/></svg>");
+
+  /* 25% Bayer dither */
+  --dither-25-light: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' shape-rendering='crispEdges'><rect x='0' y='0' width='1' height='1' fill='%23fffae1'/><rect x='2' y='1' width='1' height='1' fill='%23fffae1'/><rect x='1' y='2' width='1' height='1' fill='%23fffae1'/><rect x='3' y='3' width='1' height='1' fill='%23fffae1'/></svg>");
+  --dither-25-dark: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' shape-rendering='crispEdges'><rect x='0' y='0' width='1' height='1' fill='%232f5449'/><rect x='2' y='1' width='1' height='1' fill='%232f5449'/><rect x='1' y='2' width='1' height='1' fill='%232f5449'/><rect x='3' y='3' width='1' height='1' fill='%232f5449'/></svg>");
+
+  /* 50% checker */
+  --dither-50-light: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2' height='2' shape-rendering='crispEdges'><rect x='0' y='0' width='1' height='1' fill='%23fffae1'/><rect x='1' y='1' width='1' height='1' fill='%23fffae1'/></svg>");
+  --dither-50-dark: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2' height='2' shape-rendering='crispEdges'><rect x='0' y='0' width='1' height='1' fill='%232f5449'/><rect x='1' y='1' width='1' height='1' fill='%232f5449'/></svg>");
+
+  /* 75% Bayer dither (inverse of 25%) */
+  --dither-75-light: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' shape-rendering='crispEdges'><rect x='0' y='0' width='4' height='4' fill='%23fffae1'/><rect x='1' y='0' width='1' height='1' fill='%232f5449'/><rect x='3' y='1' width='1' height='1' fill='%232f5449'/><rect x='0' y='2' width='1' height='1' fill='%232f5449'/><rect x='2' y='3' width='1' height='1' fill='%232f5449'/></svg>");
+
+  /* Horizontal scanlines — 1px every 2 rows */
+  --dither-scanlines-light: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2' height='2' shape-rendering='crispEdges'><rect x='0' y='0' width='2' height='1' fill='%23fffae1'/></svg>");
+  --dither-scanlines-dark: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2' height='2' shape-rendering='crispEdges'><rect x='0' y='0' width='2' height='1' fill='%232f5449'/></svg>");
+}
+
+/* Reusable dither utility classes
+   Apply directly, or compose with .dither-fade-* to mask the texture into a
+   gradient (creates a dithered-gradient effect). */
+.dither {
+  position: relative;
+  isolation: isolate;
+}
+
+.dither::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-size: calc(8 * var(--dither-scale)) calc(8 * var(--dither-scale));
+  background-image: var(--dither-pattern, var(--dither-25-light));
+  opacity: var(--dither-opacity, 0.35);
+  mix-blend-mode: var(--dither-blend, normal);
+  -webkit-mask-image: var(--dither-mask, none);
+  mask-image: var(--dither-mask, none);
+  image-rendering: pixelated;
+}
+
+.dither-fade-down {
+  --dither-mask: linear-gradient(to bottom, black 0%, transparent 100%);
+}
+
+.dither-fade-up {
+  --dither-mask: linear-gradient(to top, black 0%, transparent 100%);
+}
+
+.dither-fade-radial {
+  --dither-mask: radial-gradient(circle at center, black 0%, transparent 75%);
 }
 
 [data-theme='dark'] {
@@ -180,10 +244,31 @@ article > header > h2 {
 
 article h1,
 article h2 {
+  position: relative;
+  isolation: isolate;
   background: var(--color-background-alt);
   padding: 0.25em 0.5em;
   border-radius: 4px;
   color: var(--color-font-alt);
+  overflow: hidden;
+}
+
+/* Dithered shimmer behind article headings. A right-fading 25% Bayer
+   texture in offwhite reads as a "screen" of light receding into the
+   solid green ink — a classic dither-gradient cue. */
+article h1::before,
+article h2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: var(--dither-25-light);
+  background-size: calc(4 * var(--dither-scale)) calc(4 * var(--dither-scale));
+  -webkit-mask-image: linear-gradient(to right, black 0%, transparent 70%);
+  mask-image: linear-gradient(to right, black 0%, transparent 70%);
+  opacity: 0.45;
+  image-rendering: pixelated;
 }
 
 article h2 a {
@@ -263,6 +348,8 @@ li[class*='sidebarItem'] a {
 }
 
 .navbar > .navbar__inner {
+  position: relative;
+  isolation: isolate;
   max-width: 1020px;
   margin: 16px auto;
   background-color: rgba(47, 84, 73, 0.97);
@@ -274,6 +361,27 @@ li[class*='sidebarItem'] a {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   pointer-events: auto;
+  overflow: hidden;
+}
+
+/* Subtle dither shimmer on the navbar pill. Sparse stipple, fading off
+   to the right edge so the centre stays calm. */
+.navbar > .navbar__inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: var(--dither-stipple-light);
+  background-size: calc(8 * var(--dither-scale)) calc(8 * var(--dither-scale));
+  -webkit-mask-image: linear-gradient(to right, black 0%, transparent 65%);
+  mask-image: linear-gradient(to right, black 0%, transparent 65%);
+  opacity: 0.5;
+  image-rendering: pixelated;
+}
+
+[data-theme='dark'] .navbar > .navbar__inner::before {
+  background-image: var(--dither-stipple-dark);
 }
 
 .navbar .navbar__link,
@@ -384,8 +492,28 @@ li[class*='sidebarItem'] a {
 /* Footer */
 
 .footer {
+  position: relative;
+  isolation: isolate;
   background-color: var(--color-green);
   color: var(--color-offwhite);
+  overflow: hidden;
+}
+
+/* Dithered "horizon" at the top of the footer — fades the cream stipple in
+   from the seam between content and footer, so the transition reads as a
+   gradient rather than a hard edge. */
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: var(--dither-25-light);
+  background-size: calc(4 * var(--dither-scale)) calc(4 * var(--dither-scale));
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 50%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 50%);
+  opacity: 0.4;
+  image-rendering: pixelated;
 }
 
 .footer__title,

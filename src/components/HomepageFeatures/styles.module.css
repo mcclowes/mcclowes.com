@@ -7,7 +7,43 @@
 }
 
 .feature {
+  position: relative;
+  isolation: isolate;
   margin: 0;
+  padding: 0.75rem 1rem 0.75rem 1.25rem;
+  border-left: 3px solid var(--ifm-color-primary);
+  background-color: transparent;
+  overflow: hidden;
+  transition: transform 0.15s ease;
+}
+
+/* Dithered fill that fades from the accent edge inward — gives each card a
+   subtle "ink wash" without a hard background block. */
+.feature::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: var(--dither-25-dark);
+  background-size: calc(4 * var(--dither-scale)) calc(4 * var(--dither-scale));
+  -webkit-mask-image: linear-gradient(to right, black 0%, transparent 60%);
+  mask-image: linear-gradient(to right, black 0%, transparent 60%);
+  opacity: 0.18;
+  image-rendering: pixelated;
+  transition: opacity 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateX(2px);
+}
+
+.feature:hover::before {
+  opacity: 0.4;
+}
+
+[data-theme='dark'] .feature::before {
+  background-image: var(--dither-25-light);
 }
 
 .featureSvg {
