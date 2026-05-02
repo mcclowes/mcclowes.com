@@ -5,6 +5,8 @@ tags: [dev]
 enableComments: true
 ---
 
+**Edit:** In the end, I've gotten fed up with consistent problems with PWAs caching stale code and auth states. I'm just going to focus on React Native apps from now on.
+
 I just upgraded my [Fantasy Premier League helper](https://mcclowes.com/blog/2025/11/04/what-the-fpl) into a Progressive Web App (PWA).
 
 <!--truncate -->
