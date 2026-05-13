@@ -45,6 +45,11 @@ const sidebars = {
       label: 'Tools',
       items: ['omg', 'reqon'],
     },
+    {
+      type: 'category',
+      label: 'Writing',
+      items: ['whats-wrong-with-britain/thesis'],
+    },
   ],
 };
 
