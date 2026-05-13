@@ -44,6 +44,7 @@ const config = {
           routePath: '/glossary',
         },
         docs: {
+          routeBasePath: '/projects',
           sidebarPath: require.resolve('./sidebars.js'),
           // editUrl:
           //   'https://github.com/mcclowes/mcclowes.com',
@@ -64,6 +65,26 @@ const config = {
   plugins: [
     'vercel-analytics',
     'docusaurus-plugin-sass',
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          { from: '/docs/intro', to: '/projects/intro' },
+          { from: '/docs/lea', to: '/projects/lea' },
+          { from: '/docs/vague', to: '/projects/vague' },
+          { from: '/docs/omg', to: '/projects/omg' },
+          { from: '/docs/reqon', to: '/projects/reqon' },
+          {
+            from: '/docs/vercel-deployment-monitor',
+            to: '/projects/vercel-deployment-monitor',
+          },
+          {
+            from: '/docs/whats-wrong-with-britain/thesis',
+            to: '/projects/whats-wrong-with-britain/thesis',
+          },
+        ],
+      },
+    ],
     [
       'docusaurus-plugin-cookie-consent',
       {
@@ -178,7 +199,7 @@ const config = {
               },
               {
                 label: 'Projects',
-                to: '/docs/intro',
+                to: '/projects/intro',
               },
               {
                 label: 'About',

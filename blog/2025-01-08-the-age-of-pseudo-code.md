@@ -40,7 +40,7 @@ Different languages unlock different ideas.
 
 A few weeks ago, I was generating sample data and hit a wall. I wanted a clean way to express a schema and generate realistic data that respected constraints. TypeScript can define that `age` is a number, but it can't easily express that age should follow a realistic distribution, or that a customer's invoices should reference that specific customer, or that amounts should correlate with account type.
 
-So I built [Vague](/docs/vague).
+So I built [Vague](/projects/vague).
 
 Vague is a constraint and probability-based language for describing and generating data. It's TypeScript under the hood, but it's also its own syntax:
 
@@ -72,7 +72,7 @@ Previously, creating a new language meant hoping others would invest months lear
 
 Now? If you're interested in Vague, you don't need to learn it. You can just ask your LLM to generate Vague code, provide links to the documentation, or use the inference engine to generate schemas from existing data. I've even packaged the Vague syntax into a Claude skill that can be downloaded to any project.
 
-The same applies to [Lea](/docs/lea), a pipe-oriented functional language I built to make data transformations read left-to-right, and [Reqon](/docs/reqon), a DSL for declarative data pipelines that handles pagination, retries, and rate limiting automatically. None of these languages need mass adoption to be useful. They just need to be expressive enough that LLMs can work with them—and efficient enough that they save time for whoever does use them.
+The same applies to [Lea](/projects/lea), a pipe-oriented functional language I built to make data transformations read left-to-right, and [Reqon](/projects/reqon), a DSL for declarative data pipelines that handles pagination, retries, and rate limiting automatically. None of these languages need mass adoption to be useful. They just need to be expressive enough that LLMs can work with them—and efficient enough that they save time for whoever does use them.
 
 ## The new literacy
 

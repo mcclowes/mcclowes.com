@@ -236,7 +236,6 @@ aside:has([class*='sidebarItemTitle']):hover {
 li[class*='sidebarItem'] {
   font-family: var(--font-mono);
   margin-top: 0.2em;
-  text-decoration: underline;
 }
 
 li[class*='sidebarItem'] a {
@@ -246,6 +245,11 @@ li[class*='sidebarItem'] a {
     color: var(--color-font-body);
     opacity: 0.75;
   }
+}
+
+/* Drop the harsh vertical seam between sidebar and content */
+.theme-doc-sidebar-container {
+  border-right: none !important;
 }
 
 /* Navbar - Floating pill style */
