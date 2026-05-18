@@ -1,7 +1,7 @@
 ---
 title: The language of comedy
 authors: mcclowes
-tags: [projects, clipped, macos, side-project]
+tags: [language, comedy, writing, essay]
 enableComments: true
 ---
 
