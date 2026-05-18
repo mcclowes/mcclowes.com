@@ -10,7 +10,7 @@ This is actually the third device I've bought in six months where battery life h
 
 <!--truncate-->
 
-![pattern](/img/posts/battery.png)
+![pattern](/img/posts/battery/battery.png)
 
 I purposely bought the previous two devices just for the battery life. I had an iPhone 12 and whether it would make it through the day was unpredictable. 
 I also had a MacBook Pro from 2017 which really struggled to make it through one hour on the go. Its battery had degraded that much and of course within 20 minutes it was on energy saving mode and it had to slow down.
@@ -27,4 +27,4 @@ I know this might feel obvious but I think in 2024 this is the first time in my 
 aren't lasting the day with me. Whenever I need to do something with them they're able to do it. 
 I no longer have power access anxiety, and it's just such a sort of simple but brilliant quality of life improvement.
 
-![pattern](/img/posts/battery-low.png)
+![pattern](/img/posts/battery/battery-low.png)

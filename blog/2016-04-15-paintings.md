@@ -9,9 +9,9 @@ Some recent paintings I've been working on.
 
 <!--truncate-->
 
-![Painting from March 27th](/img/posts/2016-03-27_23_29_13-3.jpg)
+![Painting from March 27th](/img/posts/paintings-2016/2016-03-27_23_29_13-3.jpg)
 
-![Painting from March 28th](/img/posts/2016-03-28_15_41_08-1.jpg)
+![Painting from March 28th](/img/posts/paintings-2016/2016-03-28_15_41_08-1.jpg)
 
 I'm new to painting, especially acrylics, so just trying it out.
 
