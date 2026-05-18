@@ -19,9 +19,12 @@ Based on this one single data point, my intuition is:
 
 The idea:
 
-1. British humour relies on awareness of class and power.  
-    1. Satire, the form most often claimed as a British strength, has nowhere to point its weapon without a clear sense of who is up and who is down. Comedy that doesn't speak truth to power tends to feel limp — observational at best, decorative at worst.  
+1. Humour relies on class and power.  
     1. The British comic tradition — from Swift through Wodehouse to Armando Iannucci — is built on the friction between registers: the deflation of the pompous, the puncturing of pretence, the awkward gap between what someone says and what their accent, vocabulary, or posture quietly admits.
+    2. Comedy punches up (think court jester). 
+        1. Satire, the form most often claimed as a British strength, has nowhere to point its weapon without a clear sense of who is up and who is down. Comedy that doesn't speak truth to power tends to feel limp — observational at best, decorative at worst.  
+    2. Comedy punches those striving upwards, who don't deserve it.
+        Comedy lives in the gap between someone's self-image and reality, and that gap is most reliably found in people reaching for status they don't merit.
 1. English itself encodes class hierarchy in its vocabulary.
     1. English is unusual in carrying [two parallel lexicons](https://en.wikipedia.org/wiki/List_of_English_words_with_dual_French_and_Old_English_variations) stitched together by history. 
         1. There is the Anglo-Saxon strand — short, blunt, concrete: house, eat, ask, kingly. 
