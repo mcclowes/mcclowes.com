@@ -1,6 +1,36 @@
 const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
+const dropCaps = require('../components/DropCap/letters');
+
+/**
+ * Turn `<DropCap ... />` MDX tags into plain HTML for the excerpt.
+ *
+ * The excerpt is rendered with `dangerouslySetInnerHTML`, so the React
+ * <DropCap> component never runs here — left as-is the tag is an unknown
+ * element the browser drops. This mirrors the component's output using
+ * the global `.dropCapExcerpt` class (see src/css/custom.css).
+ */
+function renderDropCaps(markdown) {
+  return markdown.replace(/<DropCap\b([^>]*?)\/>/g, (_full, attrs) => {
+    const letter = (attrs.match(/letter\s*=\s*"([^"]*)"/) || [])[1] || '';
+    const srcAttr = (attrs.match(/src\s*=\s*"([^"]*)"/) || [])[1];
+    const variantMatch = attrs.match(/variant\s*=\s*(?:"(\d+)"|\{(\d+)\})/);
+    const variant = variantMatch ? Number(variantMatch[1] || variantMatch[2]) : 1;
+
+    const key = letter ? letter.toUpperCase() : null;
+    const variants = !srcAttr && key ? dropCaps[key] : null;
+    const art = variants ? variants[Math.min(Math.max(variant, 1), variants.length) - 1] : null;
+
+    if (art) {
+      return `<span class="dropCapExcerpt" role="img" aria-label="${letter}" style="aspect-ratio:${art.width}/${art.height};-webkit-mask-image:url(${art.src});mask-image:url(${art.src})"></span>`;
+    }
+    if (srcAttr) {
+      return `<img class="dropCapExcerpt dropCapExcerpt--img" src="${srcAttr}" alt="${letter}" />`;
+    }
+    return `<span class="dropCapExcerpt dropCapExcerpt--text">${letter}</span>`;
+  });
+}
 
 function parseFrontMatter(content) {
   const match = content.match(/^---\n([\s\S]*?)\n---/);
@@ -49,7 +79,7 @@ module.exports = function latestBlogPlugin(context) {
           : fm.body;
         // Strip MDX import/export statements so they don't render as text
         const cleaned = excerpt.replace(/^\s*(?:import|export)\s+[^\n]*\n?/gm, '').trim();
-        const excerptHtml = marked.parse(cleaned);
+        const excerptHtml = marked.parse(renderDropCaps(cleaned));
 
         return {
           title: fm.title || textSlug,

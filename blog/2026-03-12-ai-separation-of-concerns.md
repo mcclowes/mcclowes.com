@@ -5,7 +5,11 @@ tags: [ai, programming, dev, react]
 enableComments: true
 ---
 
-I used to be fairly extreme about separation of concerns in my React code. A smart component file for logic. A dumb component file for rendering. A styled-components file for styles. An index file to tie them together. Four files per component, minimum.
+import DropCap from '@site/src/components/DropCap';
+
+<DropCap letter="I" />
+
+used to be fairly extreme about separation of concerns in my React code. A smart component file for logic. A dumb component file for rendering. A styled-components file for styles. An index file to tie them together. Four files per component, minimum.
 
 It made each individual file very readable. You could generally fit one on a screen. If you needed to understand the render logic, you opened one file. If you needed the business logic, you opened another. The mental overhead of jumping between co-located files was low.
 

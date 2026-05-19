@@ -209,6 +209,51 @@ article img {
   border-radius: 8px;
 }
 
+/*
+ * Drop cap inside a blog excerpt (homepage "Latest post").
+ *
+ * The excerpt is injected as raw HTML, so it can't use the DropCap
+ * component's SCSS module — these globals mirror it. The plugin
+ * `latest-blog-plugin` emits the matching markup.
+ */
+.dropCapExcerpt {
+  float: left;
+  display: block;
+  height: 3.1em;
+  width: auto;
+  margin: 0.08em 0.7rem 0 0;
+  line-height: 1;
+  user-select: none;
+  background-color: var(--color-green);
+  border-radius: 0;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}
+
+[data-theme='dark'] .dropCapExcerpt {
+  background-color: var(--color-offwhite);
+}
+
+.dropCapExcerpt--img {
+  background: none;
+}
+
+.dropCapExcerpt--text {
+  height: auto;
+  font-family: var(--font-serif);
+  font-size: 3.4em;
+  color: var(--color-green);
+  background: none;
+}
+
+[data-theme='dark'] .dropCapExcerpt--text {
+  color: var(--color-offwhite);
+}
+
 [class*='authorCol'] {
   display: none;
 }

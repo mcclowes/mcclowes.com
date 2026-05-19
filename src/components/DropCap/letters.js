@@ -7,6 +7,9 @@
  *
  * To add a letter: drop the SVG in `static/img/drop-caps/` and add an
  * entry here with its `width`/`height` (from the SVG's root attributes).
+ *
+ * Exported via CommonJS so the build-time `latest-blog-plugin` can share
+ * this registry; webpack's interop still resolves the default import.
  */
 const dropCaps = {
   A: [
@@ -18,4 +21,4 @@ const dropCaps = {
   R: [{ src: '/img/drop-caps/r-1.svg', width: 90, height: 116 }],
 };
 
-export default dropCaps;
+module.exports = dropCaps;

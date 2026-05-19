@@ -26,9 +26,7 @@ export default function DropCap({ src, alt, letter, variant = 1 }) {
   // Resolve hand-drawn artwork from the registry, unless an explicit
   // `src` overrides it.
   const variants = !src && key ? dropCaps[key] : null;
-  const art = variants
-    ? variants[Math.min(Math.max(variant, 1), variants.length) - 1]
-    : null;
+  const art = variants ? variants[Math.min(Math.max(variant, 1), variants.length) - 1] : null;
 
   if (art) {
     return (

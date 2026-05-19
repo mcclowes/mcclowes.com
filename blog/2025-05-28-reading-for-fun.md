@@ -6,7 +6,11 @@ draft: true
 enableComments: true
 ---
 
-At some point I started treating reading as self-improvement. Every book had to teach me something. I'm trying to undo that.
+import DropCap from '@site/src/components/DropCap';
+
+<DropCap letter="A" variant={2} />
+
+t some point I started treating reading as self-improvement. Every book had to teach me something. I'm trying to undo that.
 
 <!--truncate-->
 

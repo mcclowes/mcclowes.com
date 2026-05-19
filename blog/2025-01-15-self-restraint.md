@@ -6,7 +6,11 @@ draft: true
 enableComments: true
 ---
 
-Religious traditions have always emphasised self-restraint. Modern society has systematically dismantled it.
+import DropCap from '@site/src/components/DropCap';
+
+<DropCap letter="R" />
+
+eligious traditions have always emphasised self-restraint. Modern society has systematically dismantled it.
 
 <!--truncate-->
 
