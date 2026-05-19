@@ -5,7 +5,11 @@ tags: [language, comedy, writing, essay]
 enableComments: true
 ---
 
-Elif Shafak says [she finds it easier to write sorrow and grief in Turkish, her mother tongue, and comedy and satire in English](https://youtu.be/tpGCRk6m838?si=rDX__74kAQgZbNfh&t=3092). The observation lodged with me. If English is hospitable to humour in a way other languages aren't, the question is why — and one answer is that the language carries the structures of British comedy inside its own vocabulary.
+import DropCap from '@site/src/components/DropCap';
+
+<DropCap letter="E" />
+
+lif Shafak says [she finds it easier to write sorrow and grief in Turkish, her mother tongue, and comedy and satire in English](https://youtu.be/tpGCRk6m838?si=rDX__74kAQgZbNfh&t=3092). The observation lodged with me. If English is hospitable to humour in a way other languages aren't, the question is why — and one answer is that the language carries the structures of British comedy inside its own vocabulary.
 
 <!--truncate-->
 

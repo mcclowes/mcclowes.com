@@ -1,0 +1,42 @@
+.dropCap {
+  float: left;
+  // Span roughly three lines of body text.
+  height: 3.1em;
+  width: auto;
+  margin: 0.08em 0.7rem 0 0;
+  line-height: 1;
+  user-select: none;
+  // Opt out of the global `article img { border-radius: 8px }`, which
+  // otherwise clips the edge-to-edge strokes of the hand-drawn cap.
+  border-radius: 0;
+}
+
+// Registry variant: the artwork is an alpha mask and the fill comes from
+// `background-color`, so the cap follows the light/dark theme. The
+// aspect ratio is set inline, per letter.
+.dropCapMask {
+  display: block;
+  background-color: var(--color-green);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+}
+
+[data-theme='dark'] .dropCapMask {
+  background-color: var(--color-offwhite);
+}
+
+// Fallback variant: a large initial in the serif display face.
+.dropCapText {
+  height: auto;
+  font-family: var(--font-serif);
+  font-size: 3.4em;
+  color: var(--color-green);
+}
+
+[data-theme='dark'] .dropCapText {
+  color: var(--color-offwhite);
+}
