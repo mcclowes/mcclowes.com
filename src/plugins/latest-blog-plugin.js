@@ -58,16 +58,20 @@ module.exports = function latestBlogPlugin(context) {
       const blogDir = path.join(context.siteDir, 'blog');
       const files = fs
         .readdirSync(blogDir)
-        .filter((f) => f.match(/^\d{4}-\d{2}-\d{2}-.+\.md$/))
-        .sort()
-        .reverse();
+        .filter((f) => f.match(/^\d{4}-\d{2}-\d{2}-.+\.mdx?$/))
+        .sort((a, b) => {
+          const dateA = a.slice(0, 10);
+          const dateB = b.slice(0, 10);
+          if (dateA !== dateB) return dateB.localeCompare(dateA);
+          return a.localeCompare(b);
+        });
 
       for (const file of files) {
         const content = fs.readFileSync(path.join(blogDir, file), 'utf-8');
         const fm = parseFrontMatter(content);
         if (fm.draft) continue;
 
-        const dateMatch = file.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/);
+        const dateMatch = file.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)\.mdx?$/);
         const textSlug = dateMatch[4];
         const defaultSlug = `/${dateMatch[1]}/${dateMatch[2]}/${dateMatch[3]}/${textSlug}`;
         const slug = fm.slug || defaultSlug;
