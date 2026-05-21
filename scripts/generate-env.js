@@ -19,6 +19,10 @@ if (fs.existsSync(envPath)) {
   process.exit(0);
 }
 
+// Only these keys are safe to expose in the public client bundle.
+// Never add server-only secrets (e.g. RESEND_API_KEY) here.
+const CLIENT_SAFE_KEYS = ['POSTHOG_KEY', 'POSTHOG_HOST', 'NODE_ENV'];
+
 // Parse environment variables
 const envVars = {};
 envContent.split('\n').forEach((line) => {
@@ -31,12 +35,17 @@ envContent.split('\n').forEach((line) => {
   }
 });
 
-// Generate env.js content
+// Drop anything not on the allowlist before it can reach the public bundle.
+const safeVars = Object.fromEntries(
+  Object.entries(envVars).filter(([key]) => CLIENT_SAFE_KEYS.includes(key))
+);
+
+// Generate env.js content (JSON.stringify keeps values safely escaped)
 const envJsContent = `// Environment variables for client-side use
 // This file is generated during build and contains safe environment variables
 window.__ENV__ = {
-${Object.entries(envVars)
-  .map(([key, value]) => `  ${key}: '${value}'`)
+${Object.entries(safeVars)
+  .map(([key, value]) => `  ${key}: ${JSON.stringify(value)}`)
   .join(',\n')}
 };
 `;

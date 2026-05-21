@@ -6,9 +6,11 @@ on:
 
 jobs:
   add-words:
+    # Only trusted users may trigger this — it has write access and runs on PR input.
     if: >
       github.event.issue.pull_request &&
-      contains(github.event.comment.body, '/add-words')
+      contains(github.event.comment.body, '/add-words') &&
+      contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.comment.author_association)
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -63,17 +65,20 @@ jobs:
             console.log(`Found words: ${words.join(', ')}`);
 
       - name: Add words to cspell.json
+        # WORDS is passed via env (never interpolated into the script body) to
+        # prevent shell/JS injection from untrusted comment content.
+        env:
+          WORDS: ${{ steps.words.outputs.words }}
         run: |
-          WORDS='${{ steps.words.outputs.words }}'
-          node -e "
-            const fs = require('fs');
-            const config = JSON.parse(fs.readFileSync('cspell.json', 'utf8'));
-            const newWords = JSON.parse(process.argv[1]);
-            const merged = [...new Set([...config.words, ...newWords])].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+          node -e '
+            const fs = require("fs");
+            const config = JSON.parse(fs.readFileSync("cspell.json", "utf8"));
+            const newWords = JSON.parse(process.env.WORDS);
+            const merged = [...new Set([...config.words, ...newWords])].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
             config.words = merged;
-            fs.writeFileSync('cspell.json', JSON.stringify(config, null, 2) + '\n');
-            console.log('Updated cspell.json with words:', newWords.join(', '));
-          " "$WORDS"
+            fs.writeFileSync("cspell.json", JSON.stringify(config, null, 2) + "\n");
+            console.log("Updated cspell.json with words:", newWords.join(", "));
+          '
 
       - name: Commit and push
         run: |
@@ -87,6 +92,8 @@ jobs:
 
       - name: React to comment
         uses: actions/github-script@v7
+        env:
+          WORDS: ${{ steps.words.outputs.words }}
         with:
           script: |
             await github.rest.reactions.createForIssueComment({
@@ -96,7 +103,7 @@ jobs:
               content: '+1',
             });
 
-            const words = JSON.parse('${{ steps.words.outputs.words }}');
+            const words = JSON.parse(process.env.WORDS);
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
