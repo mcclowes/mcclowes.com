@@ -10,11 +10,17 @@ updates:
       time: "11:00"
     open-pull-requests-limit: 5
     groups:
-      # One PR/month for all minor + patch bumps. Majors stay separate so
-      # breaking changes are reviewed individually.
-      npm-minor-patch:
+      # One PR/month for all minor + patch version bumps. Majors stay
+      # separate so breaking changes are reviewed individually.
+      npm-version-updates:
+        applies-to: version-updates
         patterns:
           - "*"
         update-types:
           - "minor"
           - "patch"
+      # Batch security fixes too, so CVE bumps don't trickle in one-per-PR.
+      npm-security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
