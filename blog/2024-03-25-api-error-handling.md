@@ -33,7 +33,6 @@ Errors and warnings share the same shape and the same need — context, traceabi
 {
   "issues": [
     {
-      "type": "unauthorized",
       "issue": "payment.unauthorized.token_expired",
       "severity": "error",
       "correlationId": "4b3a2c1d-0000-0000-0000-abcdef123456",
@@ -55,33 +54,21 @@ Errors and warnings share the same shape and the same need — context, traceabi
 
 ## Fields
 
-### `type`
-
-**Type:** `enum (string)` — **Required:** Yes
-
-Top-level category of the issue. A stable, versioned set of values.
-
-| Value | Description |
-|---|---|
-| `unauthorized` | Authentication or permission failure |
-| `validation` | Request payload failed validation |
-| `conflict` | State conflict (e.g. duplicate resource) |
-| `rate_limit` | Too many requests |
-| `internal` | Server-side error (e.g. 500s) |
-
-Expand as the taxonomy matures.
-
 ### `issue`
 
 **Type:** `string (namespaced)` — **Required:** Yes
 
-A more specific, machine-readable code within the `type`. Format: `{domain}.{type}.{detail}` — e.g. `payment.unauthorized.token_expired`, `payment.validation.missing_field`.
+The single machine-readable identity of the issue. Format: `{domain}.{class}.{reason}`, read left to right from broadest to most specific — e.g. `payment.unauthorized.token_expired`, `payment.validation.missing_field`.
 
-The `{domain}` is the resource or area the issue belongs to — `payment`, `verification`, `account`. Leading with it keeps codes unambiguous when issues from several resources flow through one channel, such as an aggregated webhook stream, where `unauthorized.token_expired` on its own wouldn't say *what* was unauthorised. It also mirrors the `type` field — the second segment — so the code is legible without its envelope.
+- **`{domain}`** — the resource or area the issue belongs to (`payment`, `verification`, `account`). Leading with it keeps codes unambiguous when issues from several resources flow through one channel, such as an aggregated webhook stream, where `unauthorized.token_expired` on its own wouldn't say _what_ was unauthorised.
+- **`{class}`** — the kind of problem: `unauthorized`, `validation`, `conflict`, `rate_limit`, `internal`. The broad bucket most error handling branches on. Expand the set as the taxonomy matures.
+- **`{reason}`** — the specific cause within that class: `token_expired`, `missing_field`, `invalid_format`.
 
-I'd recommend keeping these as strings rather than strict enums initially, to allow the taxonomy to evolve without introducing breaking changes. Consumers should handle unknown values gracefully.
+This one code carries the whole classification — there is deliberately no separate `type` field. A standalone `type` would only restate the `{class}` segment, and two fields that must always agree are a bug waiting to happen. Consumers that need the class read it from the code instead.
 
-Namespaced codes let you express hierarchy without proliferating top-level values — `payment.validation.missing_field` and `payment.validation.invalid_format` are obviously related, where `missing_field` and `invalid_format` in isolation are just noise.
+**Parsing, and strings vs enums.** Read the code by splitting on `.` and matching prefixes — branch on `payment.unauthorized`, treat any segment you don't recognise as "more specific than I handle," and never assume a fixed depth. Keep the values as plain strings rather than a strict enum at first: the taxonomy will grow, and an exhaustive `switch` over an enum turns every new code into a breaking change for your consumers. Fall back to the `{class}` you do know, or to `severity`, when a `{reason}` is unfamiliar. Commit to an enum only once the set has genuinely stopped moving.
+
+Namespaced codes also let you express hierarchy without proliferating top-level values — `payment.validation.missing_field` and `payment.validation.invalid_format` are obviously related, where `missing_field` and `invalid_format` in isolation are just noise.
 
 Prefer descriptive strings to numeric status and error codes.
 
@@ -196,13 +183,6 @@ import { useState } from 'react'
 
 type IssueSeverity = 'error' | 'warning' | 'info'
 
-type IssueType =
-  | 'unauthorized'
-  | 'validation'
-  | 'conflict'
-  | 'rate_limit'
-  | 'internal'
-
 interface IssueMessage {
   title: string
   detail: string
@@ -221,7 +201,6 @@ interface IssueThirdParty {
 }
 
 interface Issue {
-  type: IssueType
   issue: string
   severity: IssueSeverity
   dateTime: string
@@ -327,7 +306,8 @@ If your API has an SDK or wrapper, you can surface issues through a provider pat
 ```tsx
 function EmbedderApp() {
   function handleIssue(issues: Issue[], correlationId: string) {
-    const unauthorized = issues.find((i) => i.type === 'unauthorized')
+    // The class is the second segment of the issue code — parse, don't store twice.
+    const unauthorized = issues.find((i) => i.issue.split('.')[1] === 'unauthorized')
 
     if (unauthorized) {
       redirectToLogin({

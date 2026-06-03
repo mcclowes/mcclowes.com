@@ -49,11 +49,13 @@ Note what the picture forces into the open. A decline has two edges, not one —
 
 ## Three things every status should carry
 
+A well-formed status is three segments in one string — `{domain}.{state}.{substate}` — so `purchase.pending.payment_method` reads as a purchase (domain) that is pending (state), awaiting a payment method (substate). Each segment is broader than the one after it.
+
 **Domain.** The status belongs to a purchase. You may assume this is implied by context, and in a single endpoint it usually is. It stops being implied the moment you have an aggregated webhook consumer fielding events from several resource types, or more than one kind of purchase exposed through one stream. Encode the domain so the status is legible without its envelope. A status that only makes sense once you know which endpoint delivered it is half a status.
 
-**Category.** The primary state: `draft`, `pending`, `succeeded`, `failed`, `cancelled`. This is the part most people mean when they say "status."
+**State.** The condition the resource is in: `draft`, `pending`, `succeeded`, `failed`, `cancelled`. This is the part most people mean when they say "status."
 
-**Subcategory.** Genuine substructure within a state. `pending` almost always has it — authorising, awaiting capture, awaiting asynchronous settlement — and those may nest further, because each substate has different transitions. Be careful what you let in here, though. The subcategory is for *where* the resource is, not *why* it got there. The reason a payment failed, and whether it's recoverable, is a separate concern with a separate home, covered below. A status subcategory that starts absorbing failure reasons is quietly turning into an error field.
+**Substate.** Genuine substructure within a state. `pending` almost always has it — authorising, awaiting capture, awaiting asynchronous settlement — and those may nest further, because each substate has different transitions. Be careful what you let in here, though. The substate is for *where* the resource is, not *why* it got there. The reason a payment failed, and whether it's recoverable, is a separate concern with a separate home, covered below. A substate that starts absorbing failure reasons is quietly turning into an error field.
 
 ## Naming
 
@@ -79,7 +81,7 @@ The dot-separated string is the usual middle path:
 }
 ```
 
-The whole string carries a specific meaning. The consumer can also `split('.')` it and act on the parts — branch on the domain, group by category, drill into the subcategory. It degrades gracefully: code that only cares about `purchase.pending` can match the prefix and ignore what follows.
+The whole string carries a specific meaning. The consumer can also `split('.')` it and act on the parts — branch on the domain, group by state, drill into the substate. It degrades gracefully: code that only cares about `purchase.pending` can match the prefix and ignore what follows.
 
 But be honest about what you've traded. You haven't removed the breaking-change problem; you've moved it somewhere less visible. The moment consumers parse the string, its *grammar* is your contract — the segment count, the ordering, the meaning of each position. Add a fourth segment (`purchase.pending.payment_method.expired`) and you break anyone doing exact-match; you spare anyone doing prefix-match. So tell consumers which discipline to use. Match on prefixes, treat unknown deeper segments as "more specific than I handle," and never assume a fixed depth. An implicit grammar that nobody documented is more fragile than an enum, precisely because nobody agreed to it.
 
@@ -97,7 +99,7 @@ The failure case shows why the separation pays. When a card is declined: the eve
 
 This also retires the bespoke reason field floated a moment ago. The sibling that holds the *why* isn't an ad-hoc `last_decline_reason`; it's a consistent issues structure, the same shape across API responses, webhooks, and UI callbacks. One pattern, every surface.
 
-And the two namespaced strings — the status subcategory and the issue code — should answer to one decision, not two. Both face the same enum-or-string question: commit to a closed set and risk breaking consumers when it grows, or expose an evolvable dot-string parsed by prefix, with unknown segments handled gracefully. Answer it once. Shipping the issue code as a forgiving string and the status as a strict enum, or the reverse, is a seam with nothing behind it.
+And the two namespaced strings — the status and the issue code — share one grammar: `{domain}.{primary}.{detail}`, read left to right from broadest to most specific, parsed by prefix. The domain plays the same role in each: the resource or area the code belongs to. The middle segment does not — in a status it's the *state* the resource is in (`pending`), in an issue it's the *class* of problem (`unauthorized`). That difference is the convention, not an inconsistency: a status answers *where the resource is*, an issue answers *why something went wrong*. The shape is shared so the parsing discipline can be too. Which means both face the same enum-or-string question: commit to a closed set and risk breaking consumers when it grows, or expose an evolvable dot-string parsed by prefix, with unknown segments handled gracefully. Answer it once. Shipping the issue code as a forgiving string and the status as a strict enum, or the reverse, is a seam with nothing behind it.
 
 ## Where this is unresolved: `active`
 
