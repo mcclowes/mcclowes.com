@@ -34,7 +34,7 @@ Errors and warnings share the same shape and the same need — context, traceabi
   "issues": [
     {
       "type": "unauthorized",
-      "issue": "unauthorized.token_expired",
+      "issue": "payment.unauthorized.token_expired",
       "severity": "error",
       "correlationId": "4b3a2c1d-0000-0000-0000-abcdef123456",
       "dateTime": "2024-11-01T12:34:56Z",
@@ -75,11 +75,13 @@ Expand as the taxonomy matures.
 
 **Type:** `string (namespaced)` — **Required:** Yes
 
-A more specific, machine-readable code within the `type`. Format: `{type}.{detail}` — e.g. `unauthorized.token_expired`, `validation.missing_field`.
+A more specific, machine-readable code within the `type`. Format: `{domain}.{type}.{detail}` — e.g. `payment.unauthorized.token_expired`, `payment.validation.missing_field`.
+
+The `{domain}` is the resource or area the issue belongs to — `payment`, `verification`, `account`. Leading with it keeps codes unambiguous when issues from several resources flow through one channel, such as an aggregated webhook stream, where `unauthorized.token_expired` on its own wouldn't say *what* was unauthorised. It also mirrors the `type` field — the second segment — so the code is legible without its envelope.
 
 I'd recommend keeping these as strings rather than strict enums initially, to allow the taxonomy to evolve without introducing breaking changes. Consumers should handle unknown values gracefully.
 
-Namespaced codes let you express hierarchy without proliferating top-level values — `validation.missing_field` and `validation.invalid_format` are obviously related, where `missing_field` and `invalid_format` in isolation are just noise.
+Namespaced codes let you express hierarchy without proliferating top-level values — `payment.validation.missing_field` and `payment.validation.invalid_format` are obviously related, where `missing_field` and `invalid_format` in isolation are just noise.
 
 Prefer descriptive strings to numeric status and error codes.
 
