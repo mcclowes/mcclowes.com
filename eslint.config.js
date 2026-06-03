@@ -43,6 +43,13 @@ module.exports = [
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'react/no-unescaped-entities': 'off',
+      // eslint-plugin-react-hooks v7 folds the new React Compiler / rules-of-react
+      // checks into `recommended`. They flag intentional, working patterns here
+      // (the latest-ref idiom, state-sync effects), so keep them off until the code
+      // is deliberately migrated. The classic rules-of-hooks and exhaustive-deps stay on.
+      'react-hooks/set-state-in-effect': 'off',
+      'react-hooks/refs': 'off',
+      'react-hooks/purity': 'off',
       'no-unused-vars': [
         'warn',
         {
