@@ -77,7 +77,7 @@ This generates:
 - PDF handbooks styled like official D&D publications
 - JavaScript files for MPMB character sheet import
 
-## MPMB integration: The game changer
+## MPMB integration: the payoff
 
 The real power comes from MPMB integration. Players can import these files directly into the [MorePurpleMoreBetter Character Sheet](https://www.dmsguild.com/product/186823/), and suddenly:
 
@@ -88,7 +88,7 @@ The real power comes from MPMB integration. Players can import these files direc
 - Resources track uses per rest
 - Everything works exactly like official content
 
-No more referencing external documents during character creation. No more manual calculations. Just seamless integration.
+No more referencing external documents during character creation. No more manual calculations. It just slots in.
 
 ## Building on Handbooker
 

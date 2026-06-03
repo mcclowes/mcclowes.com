@@ -35,7 +35,7 @@ What's most satisfying about this project isn't the award itself, but seeing the
 
 ![Additional website examples](/img/posts/godfreys/godfreys2.png)
 
-## Lessons Learned
+## Lessons learned
 
 This project taught me that the best design work isn't just about winning awards or creating something that looks good in a portfolio. It's about creating something that serves the business and its customers for years to come. The fact that Godfreys is still using the branding I created in 2012 speaks to the value of thoughtful, strategic design.
 

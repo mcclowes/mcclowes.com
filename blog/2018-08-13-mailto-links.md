@@ -1,7 +1,7 @@
 ---
 slug: mailto-links
 title: "Creating mailto: links that actually work"
-description: "A comprehensive guide to creating mailto: links that work across all email clients."
+description: "How to create mailto: links that work across all email clients."
 authors: mcclowes
 tags: [dev]
 enableComments: true
@@ -30,7 +30,7 @@ Even the Wikipedia page for mailto: gives instructions that won't work by defaul
 
 ## Getting it right
 
-Here is an example of a complex, robust, href link:
+Here is an example of a fuller href link that holds up across clients:
 
 ```
 mailto:example@email.com%3B%20other@email.com?cc=another@email.com%3B%20someother@email.com&bcc=mother@email.com%3B%20brother@email.com&subject=Your%20email%20subject&body=Content%20of%20your%20email

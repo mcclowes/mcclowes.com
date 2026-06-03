@@ -19,7 +19,7 @@ This is lossy compression. Details get lost. But the broad structure remains.
 
 When you prompt an LLM, you're running a decompression algorithm. The model reconstructs plausible text based on the compressed patterns it learned.
 
-The prompt is like a key that unlocks a particular region of the compressed knowledge.
+The prompt is like a key that opens a particular region of the compressed knowledge.
 
 ## Why this model helps
 

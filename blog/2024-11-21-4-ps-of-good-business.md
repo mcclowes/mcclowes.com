@@ -12,16 +12,16 @@ Each of these Ps need to be in place, in order, or you're doomed.
 
 ## 1. Purpose
 
-Purpose is the gravitational pull at the center of everything you do. It's not just your mission statement or vision deck; it's the quiet whisper guiding your hardest choices, shaping your culture, and drawing others to your cause. A business without true purpose drifts aimlessly, subject to whims and fashions. True purpose remains steady, shining brightest in times of uncertainty.
+Purpose is the reason the business exists beyond making money. Not the mission statement on the wall, but the thing you fall back on when a hard choice has no obvious answer. Without it you drift towards whatever's fashionable that quarter, whereas a clear purpose tells you what to say no to.
 
 ## 2. People
 
-People aren't resources—they are partners, collaborators, and co-creators of your vision. Good businesses cherish relationships, cultivating empathy, authenticity, and trust. Greatness emerges when people feel safe to explore, to fail, and ultimately, to flourish. Remember: businesses are made by and for humans, and humanity should always stay at the heart.
+People aren't resources to be allocated; they're the ones who actually do the work, and they do it best when they feel safe to try things, get them wrong, and try again. Businesses are made by and for humans, and if you forget that the other three Ps don't count for much.
 
 ## 3. Process
 
-Process is the invisible infrastructure that turns ideals into outcomes. It's neither bureaucracy nor a checklist; it's the quiet, relentless pursuit of doing things intentionally and sustainably. Effective processes should feel natural yet deliberate, offering clarity without stifling creativity. Well-designed processes set teams free to innovate rather than tethering them to routine.
+Process is how purpose and people turn into results: not bureaucracy or a checklist for its own sake, just a sensible way of doing the same thing twice. Done well it gives people clarity without boxing them in, and done badly it becomes the box itself.
 
 ## 4. Product
 
-Your product is your promise made tangible. It's not just what you sell, but the expression of everything you believe in and represent. A meaningful product aligns seamlessly with your purpose, respects the people involved, and is delivered through thoughtful processes. At its best, your product leaves the world slightly better, easier, or more beautiful than you found it.
+Your product is the promise made real, not only what you sell but the evidence of what you actually believe. A good one fits the purpose, respects the people who made it, and comes out of a process that wasn't a fight. At its best it leaves things a little better than you found them.

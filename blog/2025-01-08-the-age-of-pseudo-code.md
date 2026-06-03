@@ -34,7 +34,7 @@ Consider Prolog. Compare propositional logic written in Prolog versus its equiva
 
 Some concepts demand certain syntaxes. You *can* write inline styles in React, but the extra boilerplate of quotation marks everywhere is limiting. CSS's cascading rules—contradicting, layering, automatically resolved by the browser—are simpler in many ways than their imperative equivalent.
 
-Different languages unlock different ideas.
+Different languages make different ideas easy to think.
 
 ## Why I built Vague
 

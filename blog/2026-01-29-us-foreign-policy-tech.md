@@ -7,7 +7,7 @@ enableComments: true
 
 For years, America has held a unique power through its global technology dominance. The US has greatly benefited from this position, but historically, it has not been overtly exploited in ways that were blatantly only for America's benefit.
 
-The past few months of foreign affairs show a new America (or perhaps the same old America, but one) that is willing to openly leverage global dependence on American business for its own ends. As an example, the use of tariffs as part of a multi-pronged effort to acquire Greenland. The world has responded quickly to American destabilisation - [35% of Britons see US as unfriendly or hostile to Europe](https://yougov.co.uk/politics/articles/53913-where-do-britons-stand-on-europes-relationship-with-the-usa).
+The past few months of foreign affairs show a new America (or perhaps the same old America, but one) that is willing to openly exploit global dependence on American business for its own ends. As an example, the use of tariffs as part of a multi-pronged effort to acquire Greenland. The world has responded quickly to American destabilisation - [35% of Britons see US as unfriendly or hostile to Europe](https://yougov.co.uk/politics/articles/53913-where-do-britons-stand-on-europes-relationship-with-the-usa).
 
 The timing of this could not be worse... for American tech.
 

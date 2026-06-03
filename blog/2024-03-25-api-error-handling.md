@@ -5,7 +5,7 @@ tags: [programming, dev, api, design]
 enableComments: true
 ---
 
-Errors and warnings are a minefield for developers, and very inconsistently implemented across APIs. I've been thinking about what a consistent, developer-friendly approach to surfacing issues looks like — one that helps both developers and their end users.
+Errors and warnings are a minefield for developers, and very inconsistently implemented across APIs. I've been thinking about what a consistent, developer-friendly approach to surfacing issues looks like, one that helps both developers and their end users.
 
 This is focused on API responses and logs rather than native SDKs.
 
@@ -14,18 +14,18 @@ This is focused on API responses and logs rather than native SDKs.
 ## Principles
 
 1. **The client can see what happened.** No mystery failures.
-2. **The client can understand why and how to resolve it** — with links to docs, support, and related resources.
+2. **The client can understand why and how to resolve it**, with links to docs, support, and related resources.
 3. **The client can communicate the issue to their user.** The API should help them do this.
 4. **The client isn't forced into complex change management.** Breaking changes to error shapes are painful.
 5. **Issue persistence is captured where appropriate.** Some issues are transient, some are ongoing.
-6. **Issue structure is consistent across contexts** — API responses, webhooks, component callbacks, UI.
+6. **Issue structure is consistent across contexts**: API responses, webhooks, component callbacks, UI.
 7. **It's clear where action is required** vs where the issue is advisory.
 
 ## The `issues` array
 
 All non-success API responses should include an `issues` array. This surfaces errors, warnings, and informational notices in a consistent structure, giving developers enough context to understand what went wrong, whether it's resolved, and where to go next.
 
-Errors and warnings share the same shape and the same need — context, traceability, a path forward — so splitting them into separate arrays would force developers to check two places for information that belongs to the same moment in a request's lifecycle.
+Errors and warnings share the same shape and the same need (context, traceability, a path forward), so splitting them into separate arrays would force developers to check two places for information that belongs to the same moment in a request's lifecycle.
 
 ### Example response
 
@@ -56,33 +56,34 @@ Errors and warnings share the same shape and the same need — context, traceabi
 
 ### `issue`
 
-**Type:** `string (namespaced)` — **Required:** Yes
+**Type:** `string (namespaced)`. **Required:** Yes
 
-The single machine-readable identity of the issue. Format: `{domain}.{class}.{reason}`, read left to right from broadest to most specific — e.g. `payment.unauthorized.token_expired`, `payment.validation.missing_field`.
+The single machine-readable identity of the issue. Format: `{domain}.{class}.{reason}`, read left to right from broadest to most specific, e.g. `payment.unauthorized.token_expired`, `payment.validation.missing_field`.
 
-- **`{domain}`** — the resource or area the issue belongs to (`payment`, `verification`, `account`). Leading with it keeps codes unambiguous when issues from several resources flow through one channel, such as an aggregated webhook stream, where `unauthorized.token_expired` on its own wouldn't say _what_ was unauthorised.
-- **`{class}`** — the kind of problem: `unauthorized`, `validation`, `conflict`, `rate_limit`, `internal`. The broad bucket most error handling branches on. Expand the set as the taxonomy matures.
-- **`{reason}`** — the specific cause within that class: `token_expired`, `missing_field`, `invalid_format`.
+- **`{domain}`**: the resource or area the issue belongs to (`payment`, `verification`, `account`). Leading with it keeps codes unambiguous when issues from several resources flow through one channel, such as an aggregated webhook stream, where `unauthorized.token_expired` on its own wouldn't say _what_ was unauthorised.
+- **`{class}`**: the kind of problem: `unauthorized`, `validation`, `conflict`, `rate_limit`, `internal`. The broad bucket most error handling branches on. Expand the set as the taxonomy matures.
+- **`{reason}`**: the specific cause within that class: `token_expired`, `missing_field`, `invalid_format`.
 
-This one code carries the whole classification — there is deliberately no separate `type` field. A standalone `type` would only restate the `{class}` segment, and two fields that must always agree are a bug waiting to happen. Consumers that need the class read it from the code instead.
+This one code carries the whole classification, and there is deliberately no separate `type` field. A standalone `type` would only restate the `{class}` segment, and two fields that must always agree are a bug waiting to happen. Consumers that need the class read it from the code instead.
 
-**Parsing, and strings vs enums.** Read the code by splitting on `.` and matching prefixes — branch on `payment.unauthorized`, treat any segment you don't recognise as "more specific than I handle," and never assume a fixed depth. Keep the values as plain strings rather than a strict enum at first: the taxonomy will grow, and an exhaustive `switch` over an enum turns every new code into a breaking change for your consumers. Fall back to the `{class}` you do know, or to `severity`, when a `{reason}` is unfamiliar. Commit to an enum only once the set has genuinely stopped moving.
+**Parsing, and strings vs enums.** Read the code by splitting on `.` and matching prefixes: branch on `payment.unauthorized`, treat any segment you don't recognise as "more specific than I handle," and never assume a fixed depth. Keep the values as plain strings rather than a strict enum at first: the taxonomy will grow, and an exhaustive `switch` over an enum turns every new code into a breaking change for your consumers. Fall back to the `{class}` you do know, or to `severity`, when a `{reason}` is unfamiliar. Commit to an enum only once the set has genuinely stopped moving.
 
-Namespaced codes also let you express hierarchy without proliferating top-level values — `payment.validation.missing_field` and `payment.validation.invalid_format` are obviously related, where `missing_field` and `invalid_format` in isolation are just noise.
+Namespaced codes also let you express hierarchy without proliferating top-level values. `payment.validation.missing_field` and `payment.validation.invalid_format` are obviously related, where `missing_field` and `invalid_format` in isolation are just noise.
 
 Prefer descriptive strings to numeric status and error codes.
 
 ### `correlationId`
 
-**Type:** `string (UUID)` — **Required:** Yes
+**Type:** `string (UUID)`. **Required:** Yes
 
-A unique identifier for the request. Use this when raising a support ticket or querying logs — it's the fastest way to locate the issue on the server side.
+A unique identifier for the request. Use this when raising a support ticket or querying logs; it's the fastest way to locate the issue on the server side.
 
 The API should generate a `correlationId` for every request. If the client supplies an `X-Correlation-ID` header, that value is echoed back, allowing them to correlate server logs with their own.
 
+
 ### `severity`
 
-**Type:** `enum (string)` — **Required:** Yes
+**Type:** `enum (string)`. **Required:** Yes
 
 Whether the issue blocks the request or is advisory.
 
@@ -94,29 +95,29 @@ Whether the issue blocks the request or is advisory.
 
 ### `dateTime`
 
-**Type:** `ISO 8601 string` — **Required:** Yes
+**Type:** `ISO 8601 string`. **Required:** Yes
 
 When the issue occurred, in UTC.
 
 ### `active`
 
-**Type:** `boolean` — **Required:** No
+**Type:** `boolean`. **Required:** No
 
 Whether the issue is still ongoing. This is key where issues are persistent or stateful rather than transient. Useful for platform-level problems (e.g. a service degradation) where the issue may resolve without developer action.
 
 The idea is that a developer can disregard issues where `active === false`.
 
 Some real-world examples:
-- A connected device goes offline — this is communicated as an active issue until the connection is re-established.
-- A user's authorised access to a third-party data source expires or is revoked — this is an active issue until re-authorisation.
+- A connected device goes offline, and stays an active issue until the connection is re-established.
+- A user's authorised access to a third-party data source expires or is revoked, and stays an active issue until re-authorisation.
 
 Omit this field if resolution state cannot be reliably tracked. A stale `active: true` is more harmful than no signal at all.
 
 ### `message`
 
-**Type:** `object` — **Required:** No
+**Type:** `object`. **Required:** No
 
-A human-readable summary of the issue, suitable for surfacing to end users. Provided as a convenience — integrators may override this copy to match their own tone or context.
+A human-readable summary of the issue, suitable for surfacing to end users. Provided as a convenience, so integrators may override this copy to match their own tone or context.
 
 ```json
 {
@@ -132,13 +133,13 @@ A human-readable summary of the issue, suitable for surfacing to end users. Prov
 | `title` | Short, stable label. Suitable for a toast or modal heading. |
 | `detail` | Fuller explanation. Suitable for inline help text or a support flow. |
 
-Copy is not localised — provided in English only. Localisation is the integrator's responsibility.
+Copy is not localised, and is provided in English only. Localisation is the integrator's responsibility.
 
 ### `thirdParty`
 
-**Type:** `object` — **Required:** No
+**Type:** `object`. **Required:** No
 
-Present when the issue originates from a third-party service (e.g. a KYC or payment provider). Passed through as-is — the API does not transform or interpret this data.
+Present when the issue originates from a third-party service (e.g. a KYC or payment provider). Passed through as-is; the API does not transform or interpret this data.
 
 ```json
 {
@@ -156,13 +157,13 @@ Present when the issue originates from a third-party service (e.g. a KYC or paym
 | `code` | The provider's own error code, if available |
 | `message` | The provider's own error message, if available |
 
-This data is unprocessed and may change if the underlying provider changes. Don't build logic that depends on specific `code` or `message` values — use the API's own `issue` field for that.
+This data is unprocessed and may change if the underlying provider changes. Don't build logic that depends on specific `code` or `message` values; use the API's own `issue` field for that.
 
 This information is likely **not** suitable for end users.
 
 ### `links`
 
-**Type:** `object` — **Required:** No
+**Type:** `object`. **Required:** No
 
 Relevant links to help the developer act on the issue.
 
@@ -306,7 +307,7 @@ If your API has an SDK or wrapper, you can surface issues through a provider pat
 ```tsx
 function EmbedderApp() {
   function handleIssue(issues: Issue[], correlationId: string) {
-    // The class is the second segment of the issue code — parse, don't store twice.
+    // The class is the second segment of the issue code: parse, don't store twice.
     const unauthorized = issues.find((i) => i.issue.split('.')[1] === 'unauthorized')
 
     if (unauthorized) {

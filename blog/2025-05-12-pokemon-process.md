@@ -7,15 +7,15 @@ enableComments: true
 
 import Carousel from '@site/src/components/Carousel';
 
-I've been making Fakemon (fake pokemon) using a combination of traditional sketching and modern AI tools. The journey takes us from initial concept sketches through ChatGPT refinement, and finally to Sora for animation.
+I've been making Fakemon (fake pokemon) using a combination of traditional sketching and modern AI tools. It runs from initial concept sketches through ChatGPT refinement, and finally to Sora for animation.
 
 <!--truncate-->
 
-In this post, I'll walk you through my process of creating Fakemon (fan-made Pokémon) using a combination of traditional sketching and modern AI tools. The journey takes us from initial concept sketches through ChatGPT refinement, and finally to Sora for animation.
+In this post, I'll walk you through my process of creating Fakemon (fan-made Pokémon) using a combination of traditional sketching and modern AI tools. It runs from initial concept sketches through ChatGPT refinement, and finally to Sora for animation.
 
-## Initial Sketching Phase
+## Initial sketching phase
 
-The process began with traditional pencil and paper sketches. This phase is crucial for getting the basic concept down and exploring different design possibilities. I usually start with a type combo, and try and come up with I focused on creating unique and interesting silhouettes while maintaining the distinctive Pokémon style. After the initial rough sketch, I refined the design with more detailed linework.
+The process began with traditional pencil and paper sketches. This phase is key for getting the basic concept down and exploring different design possibilities. I usually start with a type combo, and try and come up with I focused on creating unique and interesting silhouettes while maintaining the distinctive Pokémon style. After the initial rough sketch, I refined the design with more detailed linework.
 
 <Carousel 
   images={[

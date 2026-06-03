@@ -20,6 +20,6 @@ Scepticism isn't about being difficult. It's about caring enough to interrogate 
 
 Cynics disengage. Sceptics engage more deeply.
 
-The difference is crucial: a cynic says "this won't work because nothing works." A sceptic says "what evidence would convince me this works?"
+The difference matters: a cynic says "this won't work because nothing works." A sceptic says "what evidence would convince me this works?"
 
 One closes doors. The other keeps them open.

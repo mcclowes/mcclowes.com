@@ -13,6 +13,6 @@ Consider the scenario of a generic URL that, upon load, must determine through i
 
 Explicit logic, by contrast, provides clarity and robustness. Each user action maps directly to a clear, purposeful outcome. URLs, routes, and application states explicitly express intent and expected outcomes. The code becomes more readable and maintainable. Developers can quickly grasp the application's logic, reducing cognitive overhead and the likelihood of bugs.
 
-Moreover, explicit logic respects the user's journey. Rather than guessing what the user might want, explicit systems confidently guide users to the correct content or action. It creates transparency, builds trust, and simplifies debugging.
+Moreover, explicit logic respects the user's path. Rather than guessing what the user might want, explicit systems confidently guide users to the correct content or action. It creates transparency, builds trust, and simplifies debugging.
 
-Frontend engineering thrives on clarity, not cleverness. Explicit logic, though less superficially elegant, fosters dependable and maintainable software. Let's trade inference for intentionality. 
+Frontend engineering thrives on clarity, not cleverness. Explicit logic, though less superficially elegant, makes for dependable and maintainable software. Let's trade inference for intentionality. 
