@@ -19,7 +19,7 @@ The answer is cultural. We still think of tools as passive. A hammer doesn't nee
 
 This doesn't mean letting AI off the hook. As we rely on it more, the stakes rise, and our expectations should too. But our expectation should be excellence, not perfection. What we need is a shift in mindset: from demanding infallibility to designing for resilience.
 
-We should be building human-AI collaborations that are robust to failure—where the strengths of one offset the weaknesses of the other. This might look like tools that flag AI uncertainty, workflows that encourage human review, or processes that treat AI outputs as suggestions rather than truths. It's not that different from how we already work with people.
+We should be building human-AI collaborations that are resilient to failure, where the strengths of one offset the weaknesses of the other. This might look like tools that flag AI uncertainty, workflows that encourage human review, or processes that treat AI outputs as suggestions rather than truths. It's not that different from how we already work with people.
 
 The future of AI isn't about replacing flawed humans with flawless machines. It's about embracing the fact that both are imperfect, and building systems where those imperfections matter less.
 

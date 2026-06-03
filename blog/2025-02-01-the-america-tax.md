@@ -5,7 +5,7 @@ tags: [politics, economics, tech, journalism]
 enableComments: true
 ---
 
-The rapid rise of social media and digital platforms has reshaped global society, economics, and politics. Over the past two decades, America has notably thrived economically compared to Europe and other regions, which have experienced far slower growth. Rather than social media itself being inherently problematic, perhaps the real issue is what we've collectively lost in its ascendance—primarily local journalism, community vitality, and economic independence.
+The rapid rise of social media and digital platforms has reshaped global society, economics, and politics. Over the past two decades, America has notably thrived economically compared to Europe and other regions, which have experienced far slower growth. Rather than social media itself being inherently problematic, perhaps the real issue is what we've collectively lost in its ascendance: primarily local journalism, community vitality, and economic independence.
 
 <!--truncate-->
 
@@ -13,7 +13,7 @@ The rapid rise of social media and digital platforms has reshaped global society
 
 Three interconnected crises define our current moment:
 
-1. **Political dysfunction**, underpinned by the disruption of the fourth estate—journalism
+1. **Political dysfunction**, underpinned by the disruption of the fourth estate, journalism
 2. **Loneliness and isolation**, as community structures erode
 3. **Economic failure**, where productivity stagnates and the economy doesn't work for most people
 
@@ -21,7 +21,7 @@ These aren't separate problems. They're symptoms of a deeper shift: the systemat
 
 ## What we've lost: journalism and the attention problem
 
-Social media and YouTube emerged and became wildly successful—and addictive. Digital advertising took off and became mandatory. Businesses now spend 2-5% of revenue on advertising, money that once flowed to local newspapers and radio stations.
+Social media and YouTube emerged and became wildly successful, and addictive. Digital advertising took off and became mandatory. Businesses now spend 2-5% of revenue on advertising, money that once flowed to local newspapers and radio stations.
 
 Here's the vicious cycle:
 
@@ -29,7 +29,7 @@ Here's the vicious cycle:
 - Journalism struggles to make its business work online as advertising revenue migrates to Facebook, Google, and other platforms
 - As journalism struggles, local journalism particularly suffers, meaning local stories aren't covered
 - Without local, relevant stories, journalism becomes homogenized and even less appealing
-- The prevalence of the town square (positive in some ways) is difficult to monetize, exploitable, and further occupies the little attention that remains—but for unvetted, unverified voices on platforms with algorithms that tune feeds to confirm existing biases or inflame with controversy
+- The prevalence of the town square (positive in some ways) is difficult to monetize, exploitable, and further occupies the little attention that remains, but for unvetted, unverified voices on platforms with algorithms that tune feeds to confirm existing biases or inflame with controversy
 - More recently, AI accelerates the commoditization of the written word
 - This creates a vicious cycle that accelerates journalism's decline
 
@@ -45,11 +45,11 @@ As journalism collapses, politics is increasingly unchecked and not critically r
 - Politics has a weaker mouthpiece to celebrate actual wins, talk philosophy, and provide context
 - These two things combine to create political disconnect and ever-increasing inefficiency
 
-This is another vicious cycle. Without robust journalism to hold power accountable, politicians can operate with impunity. The public becomes more cynical, disengages further, and the system becomes less responsive to actual needs.
+This is another vicious cycle. Without strong, independent journalism to hold power accountable, politicians can operate with impunity. The public becomes more cynical, disengages further, and the system becomes less responsive to actual needs.
 
 ## Shopping: the death of the high street
 
-People live an increasingly large portion of their life online. That means the high street struggles. As we live online, people shop online — Amazon, run by America, extracting wealth and not paying taxes.
+People live an increasingly large portion of their life online. That means the high street struggles. As we live online, people shop online with Amazon, run by America, extracting wealth and not paying taxes.
 
 - Local stores suffer and close
 - Businesses that survive still have to advertise and have an online presence, paying American platforms
@@ -62,30 +62,30 @@ This is yet another vicious cycle. Amazon is objectively a better service and ch
 American businesses are already in an extremely strong position, and the digital economy has made this dominance structural:
 
 - **Web hosting** is paid to America (AWS, Google Cloud, Microsoft Azure)
-- **Digital advertising** is paid to America (PPC, Meta, Google Ads)—not local journalists
+- **Digital advertising** is paid to America (PPC, Meta, Google Ads), not local journalists
 - **E-commerce platforms** extract fees from every transaction
 - **Payment processing**: The duopoly of Mastercard and Visa charge a fee on every transaction, and [hike fees 25%](https://www.finextra.com/newsarticle/45615/psr-to-take-action-against-card-schemes-after-25-hike-in-fees?utm_medium=dailynewsletter&utm_source=2025-3-7&member=151684) with impunity
 
-All of this increases the costs of running a business—the minimum cost. Suddenly all businesses have these additional costs that didn't exist before. All of this decreases productivity. Local businesses either struggle, and America extracts wealth from those that do thrive.
+All of this increases the costs of running a business, the minimum cost. Suddenly all businesses have these additional costs that didn't exist before. All of this decreases productivity. Local businesses either struggle, and America extracts wealth from those that do thrive.
 
-There's also the tax of doing business in English rather than your native language—another structural advantage for American companies.
+There's also the tax of doing business in English rather than your native language, another structural advantage for American companies.
 
 ### Natural monopolistic behaviors
 
 Both within America and the rest of the world being extracted from, traditional class fractionation also occurs. The money goes from the poor of England to the billionaires of America, and we have no levers to influence them.
 
-Almost all of the top 50 websites in the world are American. America functions like a platform—you have to pay America money to play in many economies. This isn't just market dominance; it's natural monopolistic behavior that emerges from tech:
+Almost all of the top 50 websites in the world are American. America functions like a platform, where you have to pay America money to play in many economies. This isn't just market dominance; it's natural monopolistic behavior that emerges from tech:
 
 - Network effects create winner-take-all markets
 - Data advantages compound over time
 - Switching costs become prohibitive
 - Platform effects lock in users and businesses
 
-The state is pretty bad at regulating—look at Ofwat. So let's not assume that regulation is available even if you aren't opposed to regulation. And consumer choice isn't going to solve it because the products are objectively better. So do we just accept the end of British and European economies and societies as we know it?
+The state is pretty bad at regulating, look at Ofwat. So let's not assume that regulation is available even if you aren't opposed to regulation. And consumer choice isn't going to solve it because the products are objectively better. So do we just accept the end of British and European economies and societies as we know it?
 
 ## Jobs: meaningful work replaced with service labor
 
-Jobs are replaced—meaningful creative work replaced with pure service labor. Suddenly the only jobs available for well-educated Oxford physics grads are finance and software engineering.
+Jobs are replaced: meaningful creative work replaced with pure service labor. Suddenly the only jobs available for well-educated Oxford physics grads are finance and software engineering.
 
 - **Brain drain**: People leave for better opportunities in America
 - **Education extraction**: We spend money on education, America uses that talent, doesn't pay tax on the gains, and our education system peters out
@@ -94,7 +94,7 @@ Jobs are replaced—meaningful creative work replaced with pure service labor. S
 
 We need good jobs, not just jobs. But the good jobs are increasingly concentrated in American tech companies, and they're extracting the best talent from around the world.
 
-Bonuses for execs are increasing—Meta just upped theirs. Americans are willing to tolerate terrible conditions and work long hours, creating a competitive advantage that's difficult to match.
+Bonuses for execs are increasing, and Meta just upped theirs. Americans are willing to tolerate terrible conditions and work long hours, creating a competitive advantage that's difficult to match.
 
 ## Global redistribution and inequality
 
@@ -110,7 +110,7 @@ Those that don't participate also suffer, though, and are loosely still connecte
 
 Many of these factors are extremely destructive to America as well. America has struggled less because economic prosperity can offset other issues. The economic prosperity conferred by this economic extraction has potentially masked the symptoms of this dysfunction.
 
-At the latest election, finally we saw a government being brought down despite on-paper prosperity—because it doesn't reach the citizens. The wealth extraction benefits a small class of tech billionaires and executives, not the average American worker.
+At the latest election, finally we saw a government being brought down despite on-paper prosperity, because it doesn't reach the citizens. The wealth extraction benefits a small class of tech billionaires and executives, not the average American worker.
 
 ## What can be done?
 
@@ -126,4 +126,4 @@ But the fundamental challenge remains: American platforms are objectively better
 
 We're left with an uncomfortable question: Do we just accept the end of British and European economies and societies as we know it? Or do we find ways to build alternatives, redistribute wealth, and reclaim some measure of economic and cultural sovereignty?
 
-The America tax isn't just a metaphor—it's a real, systematic extraction of wealth, attention, and power that's reshaping the global economy. And we're all paying it, whether we realize it or not.
+The America tax isn't just a metaphor, it's a real, systematic extraction of wealth, attention, and power that's reshaping the global economy. And we're all paying it, whether we realize it or not.

@@ -11,7 +11,7 @@ enableComments: true
 
 For a fast-paced tech organization, autonomy is often celebrated as a cornerstone for innovation and job satisfaction. But what does true autonomy mean?
 
-For knowledge workers like product managers and software engineers, the freedom to find new solutions to and ways of tackling problems is key, playing a pivotal role in shaping strategies, defining success, and determining processes. However, this doesn't mean a free-for-all environment. True autonomy means freedom within a system that sets them up for success.
+For knowledge workers like product managers and software engineers, the freedom to find new solutions and new ways of tackling problems is key. It shapes strategies, defines success, and sets processes. However, this doesn't mean a free-for-all environment. True autonomy means freedom within a system that sets them up for success.
 
 Examples of the risks of unopinionated autonomy can be seen in some of the biases observed in software engineers' behavior. In the absence of a defined process, engineers often prioritize tasks they find more interesting or familiar, focus on quantity (lines of code) over quality, or perpetually tend towards novel approaches over tried practices for purely academic reasons.
 
@@ -31,7 +31,7 @@ Autonomy superficially might seem to undermine the concept of leadership, so wha
 
 At its core, leadership involves providing a clear sense of purpose and direction. Whether through tools like OKRs or broader mission statements, leaders articulate where the organization or team is headed, what success looks like, and why that direction is valuable.
 
-Achieving autonomy means a leader fosters an environment where teams feel safe to express ideas, take risks, and learn from failures. This includes encouraging open communication, ensuring psychological safety, and promoting a culture of continuous learning and growth.
+Achieving autonomy means a leader builds an environment where teams feel safe to express ideas, take risks, and learn from failures. That means encouraging open communication, protecting psychological safety, and backing a culture of continuous learning and growth.
 
 Actions often speak louder than words. Leaders demonstrate commitment, work ethic, integrity, and resilience, setting a standard for their teams. They are often the embodiment of the values and principles they wish to instill in their organization.
 
@@ -39,7 +39,7 @@ But leadership can be more specific than this, without compromising autonomy. Ha
 
 The magic of true leadership lies in striking a balance between guidance and deference. Leaders can (and should) suggest strategies, define processes, or share their experience, but they should also be open to feedback and alternative viewpoints from their teams. If a team has a different perspective and can back it up, leaders should be flexible enough to consider and, if appropriate, adopt it.
 
-Merely giving teams freedom without direction can lead to an aimless drift. Instead, teams should be actively encouraged to ideate, develop their own processes, and even challenge established norms. Engaging teams around vision, mission, and expectations is crucial. Ignoring this can result in teams not thinking about these aspects at all, which isn’t really autonomy. 
+Merely giving teams freedom without direction can lead to an aimless drift. Instead, teams should be actively encouraged to ideate, develop their own processes, and even challenge established norms. Engaging teams around vision, mission, and expectations matters. Ignore it and teams stop thinking about these things at all, which isn’t really autonomy. 
 
 ---
 

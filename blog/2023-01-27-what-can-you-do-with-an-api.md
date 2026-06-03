@@ -5,22 +5,16 @@ tags: [ai, product]
 enableComments: true
 ---
 
-Application Programming Interfaces, or APIs, are an essential component of modern software development. APIs allow different software systems to interact with each other, facilitating the exchange of data and functionality between them. However, while APIs have become ubiquitous in modern software development, their documentation often leaves much to be desired.
+Documenting how an API works is easy. Documenting what you can do with it is the hard part, and it's the part that actually matters.
 
 <!--truncate-->
 
-Documenting how an API works is a relatively straightforward process. It involves outlining the API's endpoints, detailing the parameters and responses of each endpoint, and providing sample code to illustrate how the API can be used. Good API documentation should be clear, concise, and easy to navigate. It should also be kept up to date to ensure that it accurately reflects the API's current functionality.
+The "how" is mechanical. List the endpoints, their parameters, and what they return. Add sample code. Keep it accurate and up to date. Most reference docs stop here, and most are a chore to read because of it. They tell you every lever the machine has and nothing about why you'd pull one.
 
-However, documenting what you can do with an API is a more challenging task. It requires not only describing the API's capabilities but also providing guidance on how those capabilities can be used to solve specific problems or achieve specific goals. This is where developer experience (DX) best practices come into play.
+The "what" is harder because it starts from the developer's problem, not your endpoint list. Someone integrating your API doesn't want to know that `POST /transactions` exists. They want to automate their month-end close, or reconcile a bank feed, or surface a cash-flow forecast. The job comes first, and the endpoints are just how you get there.
 
-DX is a concept that refers to the overall experience that developers have when working with a particular software product or service. DX encompasses all aspects of the developer's experience, including documentation, APIs, tools, and support. To create a positive DX, developers must be able to quickly and easily understand how to use a software product or service to achieve their goals.
+Writing that kind of documentation means doing work the reference can't. You have to know the problems people bring to your API, walk through solving one end to end, and break the hard concepts into pieces someone can hold in their head. Sample code does a lot of heavy lifting here, as long as it's real, runnable, and covers the cases people actually hit. A snippet someone can paste and adapt is worth a page of prose.
 
-To achieve this, API documentation should follow best practices for tutorializing documentation. This means providing clear and concise examples of how the API can be used to solve specific problems or achieve specific goals. It also means breaking down complex concepts into easily digestible chunks and using multimedia elements, such as videos and diagrams, to enhance understanding.
+At Codat, our APIs move financial data between accounting systems, banks, and the tools businesses run on. The reference tells you the shape of that data. The tutorials tell you how to turn it into something a business cares about, like automating bookkeeping or chasing late invoices. The second kind is harder to write and far more useful to read.
 
-Another key aspect of effective API documentation is providing sample code. Sample code is essential for developers to understand how to use an API in practice. It should be well-documented, easy to understand, and cover common use cases. Sample code can also be a valuable resource for developers to copy and paste into their own code, saving them time and effort.
-
-At Codat, we understand the importance of providing high-quality API documentation. Our APIs facilitate the exchange of financial data between different software systems, making it easier for businesses to manage their finances. To ensure that our APIs are easy to use and understand, we follow best practices for DX and tutorializing documentation.
-
-We provide clear and concise examples of how our APIs can be used to solve specific problems, such as automating accounting tasks or managing cash flow. We also provide sample code in multiple programming languages, including Python, Java, and Ruby. Our documentation includes multimedia elements, such as videos and diagrams, to enhance understanding.
-
-In conclusion, documenting how an API works is relatively easy, but documenting what you can do with an API is harder. To create effective API documentation, it is essential to follow best practices for DX and tutorializing documentation. This means providing clear and concise examples of how the API can be used to solve specific problems or achieve specific goals, using multimedia elements to enhance understanding, and providing sample code in multiple programming languages. At Codat, we understand the importance of providing high-quality API documentation, and we strive to make our APIs as easy to use and understand as possible.
+If you only have time to do one well, do the "what". People can usually reverse-engineer the "how" from a good example, but they rarely reverse-engineer the point of the thing.

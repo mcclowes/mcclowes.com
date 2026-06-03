@@ -16,7 +16,7 @@ Task: Track what I’m doing (today, tomorrow, months from now)
 
 I always recommend starting with a physical notebook. It is inherently the most flexible to-do list tool out there - great for when you’re just getting used to working with a to-do list. Plus, it comes with all the other benefits of a notebook. If this works for you, try out the Bullet Journal system (and then simplify it because it’s crazy overboard).
 
-Having said that, I kept finding myself without my notebook at crucial moments, and the most important thing with a to-do list is that you always have it: you need to write everything down, and can’t afford to miss anything due.
+Having said that, I kept finding myself without my notebook at the worst moments, and the most important thing with a to-do list is that you always have it: you need to write everything down, and can’t afford to miss anything due.
 
 Things is a great tool:
 - Clear UI
@@ -74,7 +74,7 @@ Google Sheets is the ultimate data dump and dashboard. I use it to track all my 
 
 If, for instance, you want to track your weight, you could reach for Apple Health or some Android equivalent. One year in you’ll probably realize that tracking this data doesn’t actually help you do anything with the data. Then you might try exporting data from the app, and realize it’s in a bloated XML format that’s incompatible with other software, and you can’t do anything with the data.
 
-I suggest you make a spreadsheet in Google Sheets and put the data in there. You can actually leverage your data and gain insight from it - create various charts to visualize it more effectively and create moving averages to pick out trends in the data.
+I suggest you make a spreadsheet in Google Sheets and put the data in there. You can actually use your data and get something out of it. Make charts to see it more clearly, and moving averages to pick out trends.
 
 Google Sheets →
 
