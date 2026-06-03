@@ -60,6 +60,12 @@
       "source": "vercel-labs/agent-skills",
       "sourceType": "github",
       "computedHash": "a6a44d5498f7e8f68289902f3dedfc6f38ae0cee1e96527c80724cf27f727c2a"
+    },
+    "writing-style": {
+      "source": "mcclowes/skills",
+      "sourceType": "github",
+      "skillPath": "skills/writing-style/SKILL.md",
+      "computedHash": "94675d8e3d4a36ab764c61c95f497cfc6adbbce1bc28b5592df1f6072bbb5206"
     }
   }
 }
