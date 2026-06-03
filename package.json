@@ -52,7 +52,7 @@
     "@mdx-js/react": "^3.0.1",
     "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
-    "docusaurus-plugin-cookie-consent": "^4.5.1",
+    "docusaurus-plugin-cookie-consent": "^4.6.0",
     "docusaurus-plugin-glossary": "^3.3.3",
     "docusaurus-plugin-image-zoom": "^3.0.1",
     "docusaurus-plugin-sass": "^0.2.6",
