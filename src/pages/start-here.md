@@ -3,9 +3,13 @@ title: Start here
 description: A curated introduction to my best writing and work
 ---
 
-# Start here
+I've got quite a few things going on on this site, so I'd called out a few of them here:
 
-With 160+ posts on this site, here's a curated selection to help you find what resonates.
+- **[Product thinking](#product-thinking)** — frameworks from a decade of building products
+- **[AI and the future](#ai-and-the-future)** — where the tools are heading, and what it means
+- **[Technical projects](#technical-projects)** — languages, plugins, and other things I've built
+- **[Creative work](#creative-work)** — poetry, music, and painting
+- **[Essays and reflections](#essays-and-reflections)** — on work, creativity, and life
 
 ## Product thinking
 
