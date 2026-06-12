@@ -1,0 +1,36 @@
+{
+  "at" : 1781249178.8309898,
+  "crew" : [
+
+  ],
+  "diagnostics" : 0,
+  "openFiles" : [
+    {
+      "active" : false,
+      "dirty" : false,
+      "name" : "README.md",
+      "path" : "\/Users\/mcclowes\/Development\/mcclowes\/mcclowes.com\/README.md"
+    },
+    {
+      "active" : false,
+      "dirty" : false,
+      "name" : "babel.config.js",
+      "path" : "\/Users\/mcclowes\/Development\/mcclowes\/mcclowes.com\/babel.config.js"
+    },
+    {
+      "active" : false,
+      "dirty" : false,
+      "name" : "AGENTS.md",
+      "path" : "\/Users\/mcclowes\/Development\/mcclowes\/mcclowes.com\/AGENTS.md"
+    },
+    {
+      "active" : true,
+      "dirty" : false,
+      "name" : "CLAUDE.md",
+      "path" : "\/Users\/mcclowes\/Development\/mcclowes\/mcclowes.com\/CLAUDE.md"
+    }
+  ],
+  "pendingProposals" : 0,
+  "viewMode" : "code",
+  "workspace" : "\/Users\/mcclowes\/Development\/mcclowes\/mcclowes.com"
+}
